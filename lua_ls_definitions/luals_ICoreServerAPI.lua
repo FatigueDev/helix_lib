@@ -1,0 +1,34 @@
+---@meta ICoreServerAPI
+---@class ICoreServerAPI
+---@field get_Event fun(): IServerEventAPI
+---@field get_WorldManager fun(): IWorldManagerAPI
+---@field get_Server fun(): IServerAPI
+---@field get_Permissions fun(): IPermissionManager
+---@field get_Groups fun(): IGroupManager
+---@field get_PlayerData fun(): IPlayerDataManager
+---@field get_Network fun(): IServerNetworkAPI
+---@field get_World fun(): IServerWorldAccessor
+---@field SendIngameError fun(player: IServerPlayer, errorCode: string, text: string, langparams: table[]): nil
+---@field SendIngameDiscovery fun(player: IServerPlayer, discoveryCode: string, text: string, langparams: table[]): nil
+---@field SendMessage fun(player: IPlayer, groupId: number, message: string, chatType: EnumChatany, data: string): nil
+---@field SendMessageToGroup fun(groupid: number, message: string, chatType: EnumChatany, data: string): nil
+---@field BroadcastMessageToAllGroups fun(message: string, chatType: EnumChatany, data: string): nil
+---@field InjectConsole fun(message: string): nil
+---@field HandleCommand fun(player: IServerPlayer, message: string): nil
+---@field RegisterItem fun(item: Item): nil
+---@field RegisterBlock fun(block: Block): nil
+---@field RegisterCraftingRecipe fun(recipe: GridRecipe): nil
+---@field RegisterTreeGenerator fun(generatorCode: AssetLocation, gen: ITreeGenerator): nil
+---@overload fun(generatorCode: AssetLocation, genhandler: GrowTreeDelegate): nil
+---@field RegisterCommand fun(chatcommand: ServerChatCommand): boolean
+---@overload fun(command: string, descriptionMsg: string, syntaxMsg: string, handler: ServerChatCommandDelegate, requiredPrivilege: string): boolean
+---@field TriggerOnAssetsFirstLoaded fun(): nil
+---@field Event IServerEventAPI
+---@field WorldManager IServerEventAPI
+---@field Server IServerEventAPI
+---@field Permissions IServerEventAPI
+---@field Groups IServerEventAPI
+---@field PlayerData IServerEventAPI
+---@field Network IServerEventAPI
+---@field World IServerEventAPI
+ICoreServerAPI = {}

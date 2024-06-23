@@ -1,0 +1,12 @@
+---@meta CachedCuboidList
+---@class CachedCuboidList: Object
+---@field ctor fun(): CachedCuboidList
+---@field Clear fun(): nil
+---@field Add fun(cuboids: Cuboidf[], x: number, y: number, z: number, block: Block): nil
+---@overload fun(cuboid: Cuboidf, x: number, y: number, z: number, block: Block): nil
+---@field GetEnumerator fun(): IEnumerator`1
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+CachedCuboidList = {}

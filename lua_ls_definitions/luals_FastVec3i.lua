@@ -1,0 +1,1 @@
+---@meta FastVec3i

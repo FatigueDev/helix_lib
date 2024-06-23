@@ -1,0 +1,56 @@
+---@meta GltfType
+---@class GltfType: Object
+---@field ctor fun(): GltfType
+---@field get_BaseTextures fun(): TextureAtlasPosition[]
+---@field set_BaseTextures fun(value: TextureAtlasPosition[]): nil
+---@field get_PBRTextures fun(): TextureAtlasPosition[]
+---@field set_PBRTextures fun(value: TextureAtlasPosition[]): nil
+---@field get_NormalTextures fun(): TextureAtlasPosition[]
+---@field set_NormalTextures fun(value: TextureAtlasPosition[]): nil
+---@field get_Asset fun(): GltfAsset
+---@field set_Asset fun(value: GltfAsset): nil
+---@field get_Animations fun(): GltfAnimation[]
+---@field set_Animations fun(value: GltfAnimation[]): nil
+---@field get_Scene fun(): Int64
+---@field set_Scene fun(value: Int64): nil
+---@field get_Scenes fun(): GltfScene[]
+---@field set_Scenes fun(value: GltfScene[]): nil
+---@field get_Nodes fun(): GltfNode[]
+---@field set_Nodes fun(value: GltfNode[]): nil
+---@field get_Materials fun(): GltfMaterial[]
+---@field set_Materials fun(value: GltfMaterial[]): nil
+---@field get_Meshes fun(): GltfMesh[]
+---@field set_Meshes fun(value: GltfMesh[]): nil
+---@field get_Textures fun(): GltfTextureElement[]
+---@field set_Textures fun(value: GltfTextureElement[]): nil
+---@field get_Images fun(): GltfImage[]
+---@field set_Images fun(value: GltfImage[]): nil
+---@field get_Accessors fun(): GltfAccessor[]
+---@field set_Accessors fun(value: GltfAccessor[]): nil
+---@field get_BufferViews fun(): GltfBufferView[]
+---@field set_BufferViews fun(value: GltfBufferView[]): nil
+---@field get_Samplers fun(): GltfImageSampler[]
+---@field set_Samplers fun(value: GltfImageSampler[]): nil
+---@field get_Buffers fun(): GltfBuffer[]
+---@field set_Buffers fun(value: GltfBuffer[]): nil
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+---@field BaseTextures TextureAtlasPosition[]
+---@field PBRTextures TextureAtlasPosition[]
+---@field NormalTextures TextureAtlasPosition[]
+---@field Asset TextureAtlasPosition[]
+---@field Animations TextureAtlasPosition[]
+---@field Scene TextureAtlasPosition[]
+---@field Scenes TextureAtlasPosition[]
+---@field Nodes TextureAtlasPosition[]
+---@field Materials TextureAtlasPosition[]
+---@field Meshes TextureAtlasPosition[]
+---@field Textures TextureAtlasPosition[]
+---@field Images TextureAtlasPosition[]
+---@field Accessors TextureAtlasPosition[]
+---@field BufferViews TextureAtlasPosition[]
+---@field Samplers TextureAtlasPosition[]
+---@field Buffers TextureAtlasPosition[]
+GltfType = {}

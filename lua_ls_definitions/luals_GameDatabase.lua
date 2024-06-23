@@ -1,0 +1,43 @@
+---@meta GameDatabase
+---@class GameDatabase: Object
+---@field ctor fun(logger: ILogger): GameDatabase
+---@field get_DatabaseFilename fun(): string
+---@field OpenConnection fun(databaseFilename: string, databaseVersion: number, corruptionProtection: boolean, doIntegrityCheck: boolean): boolean
+---@overload fun(databaseFilename: string, errorMessage: string&, corruptionProtection: boolean, doIntegrityCheck: boolean): boolean
+---@overload fun(databaseFilename: string, corruptionProtection: boolean, doIntegrityCheck: boolean): boolean
+---@overload fun(databaseFilename: string, databaseVersion: number, errorMessage: string&, requireWriteAccess: boolean, corruptionProtection: boolean, doIntegrityCheck: boolean): boolean
+---@field UpgradeToWriteAccess fun(): nil
+---@field IntegrityCheck fun(): boolean
+---@field ProbeOpenConnection fun(databaseFilename: string, corruptionProtection: boolean, foundVersion: number&, isReadonly: boolean&, requireWrite: boolean): SaveGame
+---@overload fun(databaseFilename: string, corruptionProtection: boolean, foundVersion: number&, errorMessage: string&, isReadonly: boolean&, requireWrite: boolean): SaveGame
+---@field GetAllChunks fun(): any[]
+---@field GetAllMapChunks fun(): any[]
+---@field GetAllMapRegions fun(): any[]
+---@field Vacuum fun(): nil
+---@field ChunkExists fun(x: number, y: number, z: number): boolean
+---@field MapChunkExists fun(x: number, y: number, z: number): boolean
+---@field MapRegionExists fun(x: number, y: number, z: number): boolean
+---@field GetChunk fun(x: number, y: number, z: number): number[]
+---@field GetMapChunk fun(x: number, z: number): number[]
+---@field GetMapRegion fun(x: number, z: number): number[]
+---@field SetChunks fun(chunks: any[]): nil
+---@field SetMapChunks fun(mapchunks: any[]): nil
+---@field SetMapRegions fun(mapregions: any[]): nil
+---@field DeleteChunks fun(coords: any[]): nil
+---@field DeleteMapChunks fun(coords: any[]): nil
+---@field DeleteMapRegions fun(coords: any[]): nil
+---@field GetPlayerData fun(playeruid: string): number[]
+---@field SetPlayerData fun(playeruid: string, data: number[]): nil
+---@field Dispose fun(): nil
+---@field CreateBackup fun(backupFilename: string): nil
+---@field GetSaveGame fun(): SaveGame
+---@field StoreSaveGame fun(savegame: SaveGame): nil
+---@overload fun(data: number[]): nil
+---@field HaveWriteAccessFolder fun(folderPath: string): boolean
+---@field HaveWriteAccessFile fun(file: FileInfo): boolean
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+---@field DatabaseFilename string
+GameDatabase = {}

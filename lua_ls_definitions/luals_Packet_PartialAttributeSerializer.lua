@@ -1,0 +1,15 @@
+---@meta Packet_PartialAttributeSerializer
+---@class Packet_PartialAttributeSerializer: Object
+---@field ctor fun(): Packet_PartialAttributeSerializer
+---@field DeserializeLengthDelimitedNew fun(stream: CitoMemoryStream): Packet_PartialAttribute
+---@field DeserializeBuffer fun(buffer: number[], length: number, instance: Packet_PartialAttribute): Packet_PartialAttribute
+---@field Deserialize fun(stream: CitoMemoryStream, instance: Packet_PartialAttribute): Packet_PartialAttribute
+---@field DeserializeLengthDelimited fun(stream: CitoMemoryStream, instance: Packet_PartialAttribute): Packet_PartialAttribute
+---@field Serialize fun(stream: CitoStream, instance: Packet_PartialAttribute): nil
+---@field SerializeToBytes fun(instance: Packet_PartialAttribute): number[]
+---@field SerializeLengthDelimited fun(stream: CitoStream, instance: Packet_PartialAttribute): nil
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+Packet_PartialAttributeSerializer = {}

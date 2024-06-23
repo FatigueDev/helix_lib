@@ -1,0 +1,28 @@
+---@meta NoChunkData
+---@class NoChunkData: Object
+---@field ctor fun(): NoChunkData
+---@field get_Item fun(index3d: number): number
+---@field set_Item fun(index3d: number, value: number): nil
+---@field get_Length fun(): number
+---@field set_Length fun(value: number): nil
+---@field CreateNew fun(chunksize: number): NoChunkData
+---@field ClearBlocks fun(): nil
+---@field ClearBlocksAndPrepare fun(): nil
+---@field SetBlockBulk fun(index3d: number, lenX: number, lenZ: number, value: number): nil
+---@field SetBlockUnsafe fun(index3d: number, blockId: number): nil
+---@field SetBlockAir fun(index3d: number): nil
+---@field GetBlockId fun(index: number, layer: number): number
+---@field GetBlockIdUnsafe fun(index3d: number): number
+---@field SetFluid fun(index3d: number, value: number): nil
+---@field GetFluid fun(index3d: number): number
+---@field TakeBulkReadLock fun(): nil
+---@field ReleaseBulkReadLock fun(): nil
+---@field ContainsBlock fun(id: number): boolean
+---@field FuzzyListBlockIds fun(reusableList: any[]): nil
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+---@field Item number
+---@field Length number
+NoChunkData = {}

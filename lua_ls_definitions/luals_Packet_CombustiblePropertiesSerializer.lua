@@ -1,0 +1,15 @@
+---@meta Packet_CombustiblePropertiesSerializer
+---@class Packet_CombustiblePropertiesSerializer: Object
+---@field ctor fun(): Packet_CombustiblePropertiesSerializer
+---@field DeserializeLengthDelimitedNew fun(stream: CitoMemoryStream): Packet_CombustibleProperties
+---@field DeserializeBuffer fun(buffer: number[], length: number, instance: Packet_CombustibleProperties): Packet_CombustibleProperties
+---@field Deserialize fun(stream: CitoMemoryStream, instance: Packet_CombustibleProperties): Packet_CombustibleProperties
+---@field DeserializeLengthDelimited fun(stream: CitoMemoryStream, instance: Packet_CombustibleProperties): Packet_CombustibleProperties
+---@field Serialize fun(stream: CitoStream, instance: Packet_CombustibleProperties): nil
+---@field SerializeToBytes fun(instance: Packet_CombustibleProperties): number[]
+---@field SerializeLengthDelimited fun(stream: CitoStream, instance: Packet_CombustibleProperties): nil
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+Packet_CombustiblePropertiesSerializer = {}

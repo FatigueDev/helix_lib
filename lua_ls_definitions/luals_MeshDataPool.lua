@@ -1,0 +1,18 @@
+---@meta MeshDataPool
+---@class MeshDataPool: Object
+---@field AllocateNewPool fun(capi: ICoreClientAPI, verticesPoolSize: number, indicesPoolSize: number, maxPartsPerPool: number, customFloats: CustomMeshDataPartFloat, customShorts: CustomMeshDataPartShort, customBytes: CustomMeshDataPartnumber, customInts: CustomMeshDataPartInt): MeshDataPool
+---@field TryAdd fun(capi: ICoreClientAPI, modeldata: MeshData, modelOrigin: Vec3i, dimension: number, frustumCullSphere: Sphere): ModelDataPoolLocation
+---@field RemoveLocation fun(location: ModelDataPoolLocation): nil
+---@field Draw fun(capi: ICoreClientAPI, frustumCuller: FrustumCulling, frustumCullMode: EnumFrustumCullMode): nil
+---@field FrustumCull fun(frustumCuller: FrustumCulling, frustumCullMode: EnumFrustumCullMode): nil
+---@field SetFullyVisible fun(): nil
+---@field IsEmpty fun(): boolean
+---@field Dispose fun(capi: ICoreClientAPI): nil
+---@field CalcFragmentation fun(): nil
+---@field GetFragmentation fun(): Single
+---@field RenderMesh fun(render: IRenderAPI): nil
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+MeshDataPool = {}

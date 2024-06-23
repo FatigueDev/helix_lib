@@ -1,0 +1,76 @@
+---@meta VSWebClient
+---@class VSWebClient: HttpClient
+---@field ctor fun(): VSWebClient
+---@field PostAsync fun(uri: Uri, postData: FormUrlEncodedContent, onFinished: PostCompleteHandler): nil
+---@field Post fun(uri: Uri, postData: FormUrlEncodedContent): string
+---@field DownloadAsync fun(requestUri: string, destination: Stream, progress: IProgress`1, cancellationToken: CancellationToken): Task
+---@field get_DefaultRequestHeaders fun(): HttpRequestHeaders
+---@field get_DefaultRequestVersion fun(): Version
+---@field set_DefaultRequestVersion fun(value: Version): nil
+---@field get_DefaultVersionPolicy fun(): HttpVersionPolicy
+---@field set_DefaultVersionPolicy fun(value: HttpVersionPolicy): nil
+---@field get_BaseAddress fun(): Uri
+---@field set_BaseAddress fun(value: Uri): nil
+---@field get_Timeout fun(): TimeSpan
+---@field set_Timeout fun(value: TimeSpan): nil
+---@field get_MaxResponseContentBufferSize fun(): Int64
+---@field set_MaxResponseContentBufferSize fun(value: Int64): nil
+---@field GetStringAsync fun(requestUri: string): Task`1
+---@overload fun(requestUri: Uri): Task`1
+---@overload fun(requestUri: string, cancellationToken: CancellationToken): Task`1
+---@overload fun(requestUri: Uri, cancellationToken: CancellationToken): Task`1
+---@field GetByteArrayAsync fun(requestUri: string): Task`1
+---@overload fun(requestUri: Uri): Task`1
+---@overload fun(requestUri: string, cancellationToken: CancellationToken): Task`1
+---@overload fun(requestUri: Uri, cancellationToken: CancellationToken): Task`1
+---@field GetStreamAsync fun(requestUri: string): Task`1
+---@overload fun(requestUri: string, cancellationToken: CancellationToken): Task`1
+---@overload fun(requestUri: Uri): Task`1
+---@overload fun(requestUri: Uri, cancellationToken: CancellationToken): Task`1
+---@field GetAsync fun(requestUri: string): Task`1
+---@overload fun(requestUri: Uri): Task`1
+---@overload fun(requestUri: string, completionOption: HttpCompletionOption): Task`1
+---@overload fun(requestUri: Uri, completionOption: HttpCompletionOption): Task`1
+---@overload fun(requestUri: string, cancellationToken: CancellationToken): Task`1
+---@overload fun(requestUri: Uri, cancellationToken: CancellationToken): Task`1
+---@overload fun(requestUri: string, completionOption: HttpCompletionOption, cancellationToken: CancellationToken): Task`1
+---@overload fun(requestUri: Uri, completionOption: HttpCompletionOption, cancellationToken: CancellationToken): Task`1
+---@overload fun(requestUri: string, content: HttpContent): Task`1
+---@overload fun(requestUri: Uri, content: HttpContent): Task`1
+---@overload fun(requestUri: string, content: HttpContent, cancellationToken: CancellationToken): Task`1
+---@overload fun(requestUri: Uri, content: HttpContent, cancellationToken: CancellationToken): Task`1
+---@field PutAsync fun(requestUri: string, content: HttpContent): Task`1
+---@overload fun(requestUri: Uri, content: HttpContent): Task`1
+---@overload fun(requestUri: string, content: HttpContent, cancellationToken: CancellationToken): Task`1
+---@overload fun(requestUri: Uri, content: HttpContent, cancellationToken: CancellationToken): Task`1
+---@field PatchAsync fun(requestUri: string, content: HttpContent): Task`1
+---@overload fun(requestUri: Uri, content: HttpContent): Task`1
+---@overload fun(requestUri: string, content: HttpContent, cancellationToken: CancellationToken): Task`1
+---@overload fun(requestUri: Uri, content: HttpContent, cancellationToken: CancellationToken): Task`1
+---@field DeleteAsync fun(requestUri: string): Task`1
+---@overload fun(requestUri: Uri): Task`1
+---@overload fun(requestUri: string, cancellationToken: CancellationToken): Task`1
+---@overload fun(requestUri: Uri, cancellationToken: CancellationToken): Task`1
+---@field Send fun(request: HttpRequestMessage): HttpResponseMessage
+---@overload fun(request: HttpRequestMessage, completionOption: HttpCompletionOption): HttpResponseMessage
+---@overload fun(request: HttpRequestMessage, cancellationToken: CancellationToken): HttpResponseMessage
+---@overload fun(request: HttpRequestMessage, completionOption: HttpCompletionOption, cancellationToken: CancellationToken): HttpResponseMessage
+---@field SendAsync fun(request: HttpRequestMessage): Task`1
+---@overload fun(request: HttpRequestMessage, cancellationToken: CancellationToken): Task`1
+---@overload fun(request: HttpRequestMessage, completionOption: HttpCompletionOption): Task`1
+---@overload fun(request: HttpRequestMessage, completionOption: HttpCompletionOption, cancellationToken: CancellationToken): Task`1
+---@field CancelPendingRequests fun(): nil
+---@field Dispose fun(): nil
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+---@field DefaultRequestHeaders HttpRequestHeaders
+---@field DefaultRequestVersion HttpRequestHeaders
+---@field DefaultVersionPolicy HttpRequestHeaders
+---@field BaseAddress HttpRequestHeaders
+---@field Timeout HttpRequestHeaders
+---@field MaxResponseContentBufferSize HttpRequestHeaders
+---@field Inst HttpRequestHeaders
+---@field PostCompleteHandler HttpRequestHeaders
+VSWebClient = {}

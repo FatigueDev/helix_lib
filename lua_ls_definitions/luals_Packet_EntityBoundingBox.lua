@@ -1,0 +1,11 @@
+---@meta Packet_EntityBoundingBox
+---@class Packet_EntityBoundingBox: Object
+---@field ctor fun(): Packet_EntityBoundingBox
+---@field SetSizeX fun(value: number): nil
+---@field SetSizeY fun(value: number): nil
+---@field SetSizeZ fun(value: number): nil
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+Packet_EntityBoundingBox = {}

@@ -1,0 +1,91 @@
+---@meta ServerPlayer
+---@class ServerPlayer: Object
+---@field ctor fun(server: ServerMain, worlddata: ServerWorldPlayerData): ServerPlayer
+---@field add_InWorldAction fun(value: OnEntityAction): nil
+---@field remove_InWorldAction fun(value: OnEntityAction): nil
+---@field get_Entitlements fun(): any[]
+---@field set_Entitlements fun(value: any[]): nil
+---@field get_ActiveSlot fun(): number
+---@field set_ActiveSlot fun(value: number): nil
+---@field get_PlayerUID fun(): string
+---@field get_ImmersiveFpMode fun(): boolean
+---@field set_ImmersiveFpMode fun(value: boolean): nil
+---@field get_ItemCollectMode fun(): number
+---@field set_ItemCollectMode fun(value: number): nil
+---@field get_ClientId fun(): number
+---@field get_ConnectionState fun(): EnumClientState
+---@field get_Entity fun(): EntityPlayer
+---@field get_InventoryManager fun(): IPlayerInventoryManager
+---@field get_LanguageCode fun(): string
+---@field set_LanguageCode fun(value: string): nil
+---@field get_IpAddress fun(): string
+---@field get_Ping fun(): Single
+---@field get_PlayerName fun(): string
+---@field GetSpawnPosition fun(consumeSpawnUse: boolean): FuzzyEntityPos
+---@field get_WorldData fun(): IWorldPlayerData
+---@field get_Groups fun(): PlayerGroupMembership[]
+---@field SetInventory fun(inv: InventoryBasePlayer): nil
+---@field BroadcastPlayerData fun(sendInventory: boolean): nil
+---@field Disconnect fun(): nil
+---@overload fun(message: string): nil
+---@field get_Role fun(): IPlayerRole
+---@field set_Role fun(value: IPlayerRole): nil
+---@field get_ServerData fun(): IServerPlayerData
+---@field get_Privileges fun(): string[]
+---@field get_CurrentChunkSentRadius fun(): number
+---@field set_CurrentChunkSentRadius fun(value: number): nil
+---@field get_CurrentBlockSelection fun(): BlockSelection
+---@field get_CurrentEntitySelection fun(): EntitySelection
+---@field get_CurrentUsingBlockSelection fun(): BlockSelection
+---@field set_CurrentUsingBlockSelection fun(value: BlockSelection): nil
+---@field get_CurrentUsingEntitySelection fun(): EntitySelection
+---@field set_CurrentUsingEntitySelection fun(value: EntitySelection): nil
+---@field get_LastReceivedClientPosition fun(): Int64
+---@field set_LastReceivedClientPosition fun(value: Int64): nil
+---@field HasPrivilege fun(privilegeCode: string): boolean
+---@field SendIngameError fun(code: string, message: string, langparams: table[]): nil
+---@field SendMessage fun(groupId: number, message: string, chatType: EnumChatany, data: string): nil
+---@field SendLocalisedMessage fun(groupId: number, message: string, args: table[]): nil
+---@field SendPositionToClient fun(): nil
+---@field SetSpawnPosition fun(pos: PlayerSpawnPos): nil
+---@field ClearSpawnPosition fun(): nil
+---@field GetGroups fun(): PlayerGroupMembership[]
+---@field GetGroup fun(groupId: number): PlayerGroupMembership
+---@field SetRole fun(roleCode: string): nil
+---@field SetModdata fun(key: string, data: number[]): nil
+---@field RemoveModdata fun(key: string): nil
+---@field GetModdata fun(key: string): number[]
+---@field SetModData fun(key: string, data: T): nil
+---@field GetModData fun(key: string, defaultValue: T): T
+---@field TriggerInWorldAction fun(action: EnumEntityAction, on: boolean): EnumHandling
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+---@field Entitlements any[]
+---@field ActiveSlot any[]
+---@field PlayerUID any[]
+---@field ImmersiveFpMode any[]
+---@field ItemCollectMode any[]
+---@field ClientId any[]
+---@field ConnectionState any[]
+---@field Entity any[]
+---@field InventoryManager any[]
+---@field LanguageCode any[]
+---@field IpAddress any[]
+---@field Ping any[]
+---@field PlayerName any[]
+---@field WorldData any[]
+---@field Groups any[]
+---@field Role any[]
+---@field ServerData any[]
+---@field Privileges any[]
+---@field CurrentChunkSentRadius any[]
+---@field CurrentBlockSelection any[]
+---@field CurrentEntitySelection any[]
+---@field CurrentUsingBlockSelection any[]
+---@field CurrentUsingEntitySelection any[]
+---@field LastReceivedClientPosition any[]
+---@field InWorldAction any[]
+---@field serverdata any[]
+ServerPlayer = {}

@@ -1,0 +1,17 @@
+---@meta DrawWorldInteractionUtil
+---@class DrawWorldInteractionUtil: Object
+---@field ctor fun(capi: ICoreClientAPI, composers: DlgComposers, composerSuffixCode: string): DrawWorldInteractionUtil
+---@field get_Composer fun(): GuiComposer
+---@field ComposeBlockWorldInteractionHelp fun(wis: WorldInteraction[]): nil
+---@field drawHelp fun(ctx: Context, surface: ImageSurface, currentBounds: ElementBounds, stacks: ItemStack[], lineheight: Double, wi: WorldInteraction): nil
+---@field Dispose fun(): nil
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+---@field Composer GuiComposer
+---@field ActualWidth GuiComposer
+---@field UnscaledLineHeight GuiComposer
+---@field FontSize GuiComposer
+---@field Color GuiComposer
+DrawWorldInteractionUtil = {}

@@ -1,0 +1,78 @@
+---@meta ServerCoreAPI
+---@class ServerCoreAPI: APIBase
+---@field ctor fun(server: ServerMain): ServerCoreAPI
+---@field get_ClassRegistryNative fun(): ClassRegistry
+---@field get_CmdlArguments fun(): string[]
+---@field get_ChatCommands fun(): IChatCommandApi
+---@field get_Side fun(): EnumAppSide
+---@field get_ClassRegistry fun(): IClassRegistryAPI
+---@field get_Assets fun(): IAssetManager
+---@field get_ModLoader fun(): IModLoader
+---@field get_Permissions fun(): IPermissionManager
+---@field get_Groups fun(): IGroupManager
+---@field get_PlayerData fun(): IPlayerDataManager
+---@field get_Event fun(): IServerEventAPI
+---@field get_WorldManager fun(): IWorldManagerAPI
+---@field get_Server fun(): IServerAPI
+---@field get_Network fun(): IServerNetworkAPI
+---@field get_World fun(): IServerWorldAccessor
+---@field get_Logger fun(): ILogger
+---@field RegisterEntityClass fun(entityClassName: string, config: EntityProperties): nil
+---@field SendIngameError fun(player: IServerPlayer, code: string, message: string, langparams: table[]): nil
+---@field SendIngameDiscovery fun(player: IServerPlayer, code: string, message: string, langparams: table[]): nil
+---@field SendMessage fun(player: IPlayer, groupid: number, message: string, chatType: EnumChatany, data: string): nil
+---@field SendMessageToGroup fun(groupid: number, message: string, chatType: EnumChatany, data: string): nil
+---@field BroadcastMessageToAllGroups fun(message: string, chatType: EnumChatany, data: string): nil
+---@field RegisterItem fun(item: Item): nil
+---@field RegisterBlock fun(block: Block): nil
+---@field RegisterCraftingRecipe fun(recipe: GridRecipe): nil
+---@field RegisterTreeGenerator fun(generatorCode: AssetLocation, gen: ITreeGenerator): nil
+---@overload fun(generatorCode: AssetLocation, dele: GrowTreeDelegate): nil
+---@field RegisterColorMap fun(map: ColorMap): nil
+---@field RegisterCommand fun(chatcommand: ServerChatCommand): boolean
+---@overload fun(command: string, descriptionMsg: string, syntaxMsg: string, handler: ServerChatCommandDelegate, requiredPrivilege: string): boolean
+---@field HandleCommand fun(player: IServerPlayer, message: string): nil
+---@field InjectConsole fun(message: string): nil
+---@field TriggerOnAssetsFirstLoaded fun(): nil
+---@field get_ObjectCache fun(): table<any, any>
+---@field RegisterRecipeRegistry fun(recipeRegistryCode: string): T
+---@field RegisterEntity fun(classsName: string, entity: any): nil
+---@field RegisterEntityBehaviorClass fun(className: string, entityBehavior: any): nil
+---@field RegisterBlockClass fun(blockClassName: string, type: any): nil
+---@field RegisterCropBehavior fun(className: string, type: any): nil
+---@field RegisterBlockEntityClass fun(className: string, blockentity: any): nil
+---@field RegisterItemClass fun(className: string, itemType: any): nil
+---@field RegisterBlockBehaviorClass fun(className: string, blockBehaviorType: any): nil
+---@field RegisterCollectibleBehaviorClass fun(className: string, blockBehaviorType: any): nil
+---@field RegisterBlockEntityBehaviorClass fun(className: string, blockEntityBehaviorType: any): nil
+---@field RegisterMountable fun(className: string, mountableInstancer: GetMountableDelegate): nil
+---@field get_DataBasePath fun(): string
+---@field GetOrCreateDataPath fun(foldername: string): string
+---@field LoadModConfig fun(filename: string): T
+---@field StoreModConfig fun(jsonSerializeableData: T, filename: string): nil
+---@overload fun(jobj: Jsontable, filename: string): nil
+---@overload fun(filename: string): Jsontable
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+---@field ClassRegistryNative ClassRegistry
+---@field CmdlArguments ClassRegistry
+---@field ChatCommands ClassRegistry
+---@field Side ClassRegistry
+---@field ClassRegistry ClassRegistry
+---@field Assets ClassRegistry
+---@field ModLoader ClassRegistry
+---@field Permissions ClassRegistry
+---@field Groups ClassRegistry
+---@field PlayerData ClassRegistry
+---@field Event ClassRegistry
+---@field WorldManager ClassRegistry
+---@field Server ClassRegistry
+---@field Network ClassRegistry
+---@field World ClassRegistry
+---@field Logger ClassRegistry
+---@field ObjectCache ClassRegistry
+---@field DataBasePath ClassRegistry
+---@field TreeGenWrapper ClassRegistry
+ServerCoreAPI = {}

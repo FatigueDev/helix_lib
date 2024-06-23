@@ -1,0 +1,15 @@
+---@meta Packet_ServerMapChunk
+---@class Packet_ServerMapChunk: Object
+---@field ctor fun(): Packet_ServerMapChunk
+---@field SetChunkX fun(value: number): nil
+---@field SetChunkZ fun(value: number): nil
+---@field SetYmax fun(value: number): nil
+---@field SetRainHeightMap fun(value: number[]): nil
+---@field SetTerrainHeightMap fun(value: number[]): nil
+---@field SetStructures fun(value: number[]): nil
+---@field SetModdata fun(value: number[]): nil
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+Packet_ServerMapChunk = {}

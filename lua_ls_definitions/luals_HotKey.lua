@@ -1,0 +1,12 @@
+---@meta HotKey
+---@class HotKey: Object
+---@field ctor fun(): HotKey
+---@field DidPress fun(keyEventargs: KeyEvent, world: IWorldAccessor, player: IPlayer, allowCharacterControls: boolean): boolean
+---@field FallbackDidPress fun(keyEventargs: KeyEvent, world: IWorldAccessor, player: IPlayer, allowCharacterControls: boolean): boolean
+---@field Clone fun(): HotKey
+---@field SetDefaultMapping fun(): nil
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+HotKey = {}

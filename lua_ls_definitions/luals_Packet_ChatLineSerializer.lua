@@ -1,0 +1,15 @@
+---@meta Packet_ChatLineSerializer
+---@class Packet_ChatLineSerializer: Object
+---@field ctor fun(): Packet_ChatLineSerializer
+---@field DeserializeLengthDelimitedNew fun(stream: CitoMemoryStream): Packet_ChatLine
+---@field DeserializeBuffer fun(buffer: number[], length: number, instance: Packet_ChatLine): Packet_ChatLine
+---@field Deserialize fun(stream: CitoMemoryStream, instance: Packet_ChatLine): Packet_ChatLine
+---@field DeserializeLengthDelimited fun(stream: CitoMemoryStream, instance: Packet_ChatLine): Packet_ChatLine
+---@field Serialize fun(stream: CitoStream, instance: Packet_ChatLine): nil
+---@field SerializeToBytes fun(instance: Packet_ChatLine): number[]
+---@field SerializeLengthDelimited fun(stream: CitoStream, instance: Packet_ChatLine): nil
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+Packet_ChatLineSerializer = {}

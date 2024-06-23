@@ -1,0 +1,31 @@
+---@meta ChunkServerThread
+---@class ChunkServerThread: ServerThread
+---@field ctor fun(server: ServerMain, threadname: string, cancellationToken: CancellationToken): ChunkServerThread
+---@field get_Logger fun(): ILogger
+---@field GetGeneratingChunkAtPos fun(posX: number, posY: number, posZ: number): ServerChunk
+---@overload fun(pos: BlockPos): ServerChunk
+---@field GetChunkRequestAtPos fun(posX: number, posZ: number): ChunkColumnLoadRequest
+---@field ChunkIndex3D fun(chunkX: number, chunkY: number, chunkZ: number): Int64
+---@field get_Alive fun(): boolean
+---@field Process fun(): nil
+---@field ShutDown fun(): nil
+---@field Update fun(): boolean
+---@field OnBeginInitialization fun(): nil
+---@field OnBeginConfiguration fun(): nil
+---@field OnPrepareAssets fun(): nil
+---@field OnBeginLoadGamePre fun(): nil
+---@field OnBeginLoadGame fun(savegame: SaveGame): nil
+---@field OnBeginRunGame fun(): nil
+---@field OnBeginShutdown fun(): nil
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+---@field Logger ILogger
+---@field Alive ILogger
+---@field runOffThreadSaveNow ILogger
+---@field peekMode ILogger
+---@field additionalWorldGenThreadsCount ILogger
+---@field ShouldPause ILogger
+---@field serversystems ILogger
+ChunkServerThread = {}

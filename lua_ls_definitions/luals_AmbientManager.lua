@@ -1,0 +1,54 @@
+---@meta AmbientManager
+---@class AmbientManager: Object
+---@field ctor fun(game: ClientMain): AmbientManager
+---@field get_BlendedFogColor fun(): Vec4f
+---@field set_BlendedFogColor fun(value: Vec4f): nil
+---@field get_BlendedAmbientColor fun(): Vec3f
+---@field set_BlendedAmbientColor fun(value: Vec3f): nil
+---@field get_BlendedFogDensity fun(): Single
+---@field set_BlendedFogDensity fun(value: Single): nil
+---@field get_BlendedFogMin fun(): Single
+---@field set_BlendedFogMin fun(value: Single): nil
+---@field get_BlendedFlatFogDensity fun(): Single
+---@field set_BlendedFlatFogDensity fun(value: Single): nil
+---@field get_BlendedFlatFogYOffset fun(): Single
+---@field set_BlendedFlatFogYOffset fun(value: Single): nil
+---@field get_BlendedCloudBrightness fun(): Single
+---@field set_BlendedCloudBrightness fun(value: Single): nil
+---@field get_BlendedCloudDensity fun(): Single
+---@field set_BlendedCloudDensity fun(value: Single): nil
+---@field get_BlendedCloudYPos fun(): Single
+---@field set_BlendedCloudYPos fun(value: Single): nil
+---@field get_BlendedFlatFogYPosForShader fun(): Single
+---@field set_BlendedFlatFogYPosForShader fun(value: Single): nil
+---@field get_BlendedSceneBrightness fun(): Single
+---@field set_BlendedSceneBrightness fun(value: Single): nil
+---@field get_BlendedFogBrightness fun(): Single
+---@field set_BlendedFogBrightness fun(value: Single): nil
+---@field get_CurrentModifiers fun(): Orderedtable<any, any>
+---@field get_ViewDistance fun(): Single
+---@field get_Base fun(): AmbientModifier
+---@field Init fun(): nil
+---@field SetFogRange fun(density: Single, min: Single): nil
+---@field UpdateAmbient fun(dt: Single): nil
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+---@field BlendedFogColor Vec4f
+---@field BlendedAmbientColor Vec4f
+---@field BlendedFogDensity Vec4f
+---@field BlendedFogMin Vec4f
+---@field BlendedFlatFogDensity Vec4f
+---@field BlendedFlatFogYOffset Vec4f
+---@field BlendedCloudBrightness Vec4f
+---@field BlendedCloudDensity Vec4f
+---@field BlendedCloudYPos Vec4f
+---@field BlendedFlatFogYPosForShader Vec4f
+---@field BlendedSceneBrightness Vec4f
+---@field BlendedFogBrightness Vec4f
+---@field CurrentModifiers Vec4f
+---@field ViewDistance Vec4f
+---@field Base Vec4f
+---@field ShadowQuality Vec4f
+AmbientManager = {}

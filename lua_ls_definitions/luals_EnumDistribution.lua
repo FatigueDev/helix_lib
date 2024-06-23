@@ -1,0 +1,15 @@
+---@meta EnumDistribution
+---@enum EnumDistribution
+EnumDistribution = {
+	UNIFORM = 0,
+	TRIANGLE = 1,
+	GAUSSIAN = 2,
+	NARROWGAUSSIAN = 3,
+	INVERSEGAUSSIAN = 4,
+	NARROWINVERSEGAUSSIAN = 5,
+	INVEXP = 6,
+	STRONGINVEXP = 7,
+	STRONGERINVEXP = 8,
+	DIRAC = 9,
+	VERYNARROWGAUSSIAN = 10
+}

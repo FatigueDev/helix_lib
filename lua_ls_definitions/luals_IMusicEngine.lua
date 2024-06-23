@@ -1,0 +1,11 @@
+---@meta IMusicEngine
+---@class IMusicEngine
+---@field LoadTrack fun(location: AssetLocation, onLoaded: any`1, volume: Single, pitch: Single): nil
+---@field get_CurrentTrack fun(): IMusicTrack
+---@field get_LastPlayedTrack fun(): IMusicTrack
+---@field get_MillisecondsSinceLastTrack fun(): Int64
+---@field StopTrack fun(musicTrack: IMusicTrack): nil
+---@field CurrentTrack IMusicTrack
+---@field LastPlayedTrack IMusicTrack
+---@field MillisecondsSinceLastTrack IMusicTrack
+IMusicEngine = {}

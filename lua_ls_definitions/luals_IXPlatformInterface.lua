@@ -1,0 +1,16 @@
+---@meta IXPlatformInterface
+---@class IXPlatformInterface
+---@field get_Window fun(): GameWindow
+---@field set_Window fun(value: GameWindow): nil
+---@field SetClipboardText fun(text: string): nil
+---@field GetClipboardText fun(): string
+---@field ShowMessageBox fun(title: string, text: string): nil
+---@field GetScreenSize fun(): Size2i
+---@field GetAviWriter fun(recordingBufferSize: number, framerate: Double, codeccode: string): IAviWriter
+---@field AvailableCodecs fun(): AvailableCodec[]
+---@field MoveFileToRecyclebin fun(filepath: string): nil
+---@field GetFreeDiskSpace fun(filepath: string): Int64
+---@field GetRamCapacity fun(): Int64
+---@field FocusWindow fun(): nil
+---@field Window GameWindow
+IXPlatformInterface = {}

@@ -1,0 +1,18 @@
+---@meta GuiCompositeSettings
+---@class GuiCompositeSettings: GuiComposite
+---@field ctor fun(handler: IGameSettingsHandler, onMainScreen: boolean): GuiCompositeSettings
+---@field get_IsCapturingHotKey fun(): boolean
+---@field ShouldCaptureAllInputs fun(): boolean
+---@field OnKeyDown fun(eventArgs: KeyEvent): nil
+---@field OnKeyUp fun(eventArgs: KeyEvent): nil
+---@field OnMouseDown fun(eventArgs: MouseEvent): nil
+---@field OnMouseUp fun(eventArgs: MouseEvent): nil
+---@field getLanguages fun(languageCodes: string[]&, languageNames: string[]&): nil
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+---@field IsCapturingHotKey boolean
+---@field IsInCreativeMode boolean
+---@field LanguageConfig boolean
+GuiCompositeSettings = {}

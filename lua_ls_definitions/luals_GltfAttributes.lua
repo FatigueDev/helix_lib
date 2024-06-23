@@ -1,0 +1,56 @@
+---@meta GltfAttributes
+---@class GltfAttributes: Object
+---@field ctor fun(): GltfAttributes
+---@field get_Position fun(): Nullable`1
+---@field set_Position fun(value: Nullable`1): nil
+---@field get_Normal fun(): Nullable`1
+---@field set_Normal fun(value: Nullable`1): nil
+---@field get_Tangent fun(): Nullable`1
+---@field set_Tangent fun(value: Nullable`1): nil
+---@field get_Texcoord0 fun(): Nullable`1
+---@field set_Texcoord0 fun(value: Nullable`1): nil
+---@field get_Texcoord1 fun(): Nullable`1
+---@field set_Texcoord1 fun(value: Nullable`1): nil
+---@field get_VertexColor fun(): Nullable`1
+---@field set_VertexColor fun(value: Nullable`1): nil
+---@field get_GlowLevel fun(): Nullable`1
+---@field set_GlowLevel fun(value: Nullable`1): nil
+---@field get_Reflective fun(): Nullable`1
+---@field set_Reflective fun(value: Nullable`1): nil
+---@field get_BMWindLeaves fun(): Nullable`1
+---@field set_BMWindLeaves fun(value: Nullable`1): nil
+---@field get_BMWindLeavesWeakBend fun(): Nullable`1
+---@field set_BMWindLeavesWeakBend fun(value: Nullable`1): nil
+---@field get_BMWindNormal fun(): Nullable`1
+---@field set_BMWindNormal fun(value: Nullable`1): nil
+---@field get_BMWindWater fun(): Nullable`1
+---@field set_BMWindWater fun(value: Nullable`1): nil
+---@field get_BMWindWeakBend fun(): Nullable`1
+---@field set_BMWindWeakBend fun(value: Nullable`1): nil
+---@field get_BMWindWeakWind fun(): Nullable`1
+---@field set_BMWindWeakWind fun(value: Nullable`1): nil
+---@field get_Joints0 fun(): Nullable`1
+---@field set_Joints0 fun(value: Nullable`1): nil
+---@field get_Weights0 fun(): Nullable`1
+---@field set_Weights0 fun(value: Nullable`1): nil
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+---@field Position Nullable`1
+---@field Normal Nullable`1
+---@field Tangent Nullable`1
+---@field Texcoord0 Nullable`1
+---@field Texcoord1 Nullable`1
+---@field VertexColor Nullable`1
+---@field GlowLevel Nullable`1
+---@field Reflective Nullable`1
+---@field BMWindLeaves Nullable`1
+---@field BMWindLeavesWeakBend Nullable`1
+---@field BMWindNormal Nullable`1
+---@field BMWindWater Nullable`1
+---@field BMWindWeakBend Nullable`1
+---@field BMWindWeakWind Nullable`1
+---@field Joints0 Nullable`1
+---@field Weights0 Nullable`1
+GltfAttributes = {}

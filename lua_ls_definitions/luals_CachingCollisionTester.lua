@@ -1,0 +1,14 @@
+---@meta CachingCollisionTester
+---@class CachingCollisionTester: CollisionTester
+---@field ctor fun(): CachingCollisionTester
+---@field NewTick fun(): nil
+---@field ApplyTerrainCollision fun(entity: Entity, entitypos: EntityPos, dtFac: Single, outposition: Vec3d&, stepHeight: Single, YExtra: Single): nil
+---@field IsColliding fun(blockAccessor: IBlockAccessor, entityBoxRel: Cuboidf, pos: Vec3d, alsoCheckTouch: boolean): boolean
+---@field GetCollidingBlock fun(blockAccessor: IBlockAccessor, entityBoxRel: Cuboidf, pos: Vec3d, alsoCheckTouch: boolean): Block
+---@field GetCollidingCollisionBox fun(blockAccessor: IBlockAccessor, entityBoxRel: Cuboidf, pos: Vec3d, alsoCheckTouch: boolean): Cuboidd
+---@overload fun(blockAccessor: IBlockAccessor, entityBoxRel: Cuboidf, pos: Vec3d, intoCubuid: Cuboidd&, alsoCheckTouch: boolean): boolean
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+CachingCollisionTester = {}

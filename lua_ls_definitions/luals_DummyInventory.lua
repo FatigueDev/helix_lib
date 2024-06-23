@@ -1,0 +1,99 @@
+---@meta DummyInventory
+---@class DummyInventory: InventoryBase
+---@field ctor fun(api: ICoreAPI, quantitySlots: number): DummyInventory
+---@field get_Slots fun(): ItemSlot[]
+---@field get_Item fun(slotId: number): ItemSlot
+---@field set_Item fun(slotId: number, value: ItemSlot): nil
+---@field get_Count fun(): number
+---@field FromTreeAttributes fun(tree: ITreeAttribute): nil
+---@field ToTreeAttributes fun(tree: ITreeAttribute): nil
+---@field GetTransitionSpeedMul fun(transType: EnumTransitionany, stack: ItemStack): Single
+---@field get_MaxContentDimensions fun(): Size3f
+---@field set_MaxContentDimensions fun(value: Size3f): nil
+---@field get_InventoryID fun(): string
+---@field get_ClassName fun(): string
+---@field get_LastChanged fun(): Int64
+---@field get_CountForNetworkPacket fun(): number
+---@field get_IsDirty fun(): boolean
+---@field get_DirtySlots fun(): HashSet`1
+---@field get_TakeLocked fun(): boolean
+---@field set_TakeLocked fun(value: boolean): nil
+---@field get_PutLocked fun(): boolean
+---@field set_PutLocked fun(value: boolean): nil
+---@field get_RemoveOnClose fun(): boolean
+---@field add_SlotModified fun(value: any`1): nil
+---@field remove_SlotModified fun(value: any`1): nil
+---@field add_SlotNotified fun(value: any`1): nil
+---@field remove_SlotNotified fun(value: any`1): nil
+---@field add_OnInventoryOpened fun(value: OnInventoryOpenedDelegate): nil
+---@field remove_OnInventoryOpened fun(value: OnInventoryOpenedDelegate): nil
+---@field add_OnInventoryClosed fun(value: OnInventoryClosedDelegate): nil
+---@field remove_OnInventoryClosed fun(value: OnInventoryClosedDelegate): nil
+---@field get_Empty fun(): boolean
+---@field get_FirstNonEmptySlot fun(): ItemSlot
+---@field LateInitialize fun(inventoryID: string, api: ICoreAPI): nil
+---@field AfterBlocksLoaded fun(world: IWorldAccessor): nil
+---@field ResolveBlocksOrItems fun(): nil
+---@field GetSlotId fun(slot: ItemSlot): number
+---@field GetBestSuitedSlot fun(sourceSlot: ItemSlot, skipSlots: any[]): WeightedSlot
+---@overload fun(sourceSlot: ItemSlot, op: ItemStackMoveOperation, skipSlots: any[]): WeightedSlot
+---@field GetSuitability fun(sourceSlot: ItemSlot, targetSlot: ItemSlot, isMerge: boolean): Single
+---@field CanContain fun(sinkSlot: ItemSlot, sourceSlot: ItemSlot): boolean
+---@field TryFlipItems fun(targetSlotId: number, itemSlot: ItemSlot): table
+---@field CanPlayerAccess fun(player: IPlayer, position: EntityPos): boolean
+---@field CanPlayerModify fun(player: IPlayer, position: EntityPos): boolean
+---@field OnSearchTerm fun(text: string): nil
+---@field ActivateSlot fun(slotId: number, sourceSlot: ItemSlot, op: ItemStackMoveOperation&): table
+---@field OnItemSlotModified fun(slot: ItemSlot): nil
+---@field DidModifyItemSlot fun(slot: ItemSlot, extractedStack: ItemStack): nil
+---@field PerformNotifySlot fun(slotId: number): nil
+---@field TryFlipItemStack fun(owningPlayer: IPlayer, invIds: string[], slotIds: number[], lastChanged: Int64[]): boolean
+---@field TryMoveItemStack fun(player: IPlayer, invIds: string[], slotIds: number[], op: ItemStackMoveOperation&): boolean
+---@field GetSlotsIfExists fun(player: IPlayer, invIds: string[], slotIds: number[]): ItemSlot[]
+---@field SlotsFromTreeAttributes fun(tree: ITreeAttribute, slots: ItemSlot[], modifiedSlots: any[]): ItemSlot[]
+---@field SlotsToTreeAttributes fun(slots: ItemSlot[], tree: ITreeAttribute): nil
+---@field GenEmptySlots fun(quantity: number): ItemSlot[]
+---@field MarkSlotDirty fun(slotId: number): nil
+---@field DiscardAll fun(): nil
+---@field DropSlotIfHot fun(slot: ItemSlot, player: IPlayer): nil
+---@field DropSlots fun(pos: Vec3d, slotsIds: number[]): nil
+---@field DropAll fun(pos: Vec3d, maxStackSize: number): nil
+---@field Clear fun(): nil
+---@field OnOwningEntityDeath fun(pos: Vec3d): nil
+---@field Open fun(player: IPlayer): table
+---@field Close fun(player: IPlayer): table
+---@field HasOpened fun(player: IPlayer): boolean
+---@field GetEnumerator fun(): IEnumerator`1
+---@field GetAutoPushIntoSlot fun(atBlockFace: BlockFacing, fromSlot: ItemSlot): ItemSlot
+---@field GetAutoPullFromSlot fun(atBlockFace: BlockFacing): ItemSlot
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+---@field Slots ItemSlot[]
+---@field Item ItemSlot[]
+---@field Count ItemSlot[]
+---@field MaxContentDimensions ItemSlot[]
+---@field InventoryID ItemSlot[]
+---@field ClassName ItemSlot[]
+---@field LastChanged ItemSlot[]
+---@field CountForNetworkPacket ItemSlot[]
+---@field IsDirty ItemSlot[]
+---@field DirtySlots ItemSlot[]
+---@field TakeLocked ItemSlot[]
+---@field PutLocked ItemSlot[]
+---@field RemoveOnClose ItemSlot[]
+---@field Empty ItemSlot[]
+---@field FirstNonEmptySlot ItemSlot[]
+---@field SlotModified ItemSlot[]
+---@field SlotNotified ItemSlot[]
+---@field OnInventoryOpened ItemSlot[]
+---@field OnInventoryClosed ItemSlot[]
+---@field Api ItemSlot[]
+---@field Pos ItemSlot[]
+---@field lastChangedSinceServerStart ItemSlot[]
+---@field openedByPlayerGUIds ItemSlot[]
+---@field InvNetworkUtil ItemSlot[]
+---@field dirtySlots ItemSlot[]
+---@field OnAcquireTransitionSpeed ItemSlot[]
+DummyInventory = {}

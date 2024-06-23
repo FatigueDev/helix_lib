@@ -1,0 +1,38 @@
+---@meta ISaveGame
+---@class ISaveGame
+---@field get_IsNew fun(): boolean
+---@field get_CreatedGameVersion fun(): string
+---@field get_LastSavedGameVersion fun(): string
+---@field get_Seed fun(): number
+---@field set_Seed fun(value: number): nil
+---@field get_SavegameIdentifier fun(): string
+---@field get_TotalGameSeconds fun(): Int64
+---@field set_TotalGameSeconds fun(value: Int64): nil
+---@field get_WorldName fun(): string
+---@field set_WorldName fun(value: string): nil
+---@field get_PlayStyle fun(): string
+---@field set_PlayStyle fun(value: string): nil
+---@field get_WorldType fun(): string
+---@field set_WorldType fun(value: string): nil
+---@field get_EntitySpawning fun(): boolean
+---@field set_EntitySpawning fun(value: boolean): nil
+---@field get_LandClaims fun(): any[]
+---@field set_LandClaims fun(value: any[]): nil
+---@field get_WorldConfiguration fun(): ITreeAttribute
+---@field GetData fun(key: string): number[]
+---@field StoreData fun(key: string, data: number[]): nil
+---@overload fun(key: string, defaultValue: T): T
+---@overload fun(key: string, data: T): nil
+---@field IsNew boolean
+---@field CreatedGameVersion boolean
+---@field LastSavedGameVersion boolean
+---@field Seed boolean
+---@field SavegameIdentifier boolean
+---@field TotalGameSeconds boolean
+---@field WorldName boolean
+---@field PlayStyle boolean
+---@field WorldType boolean
+---@field EntitySpawning boolean
+---@field LandClaims boolean
+---@field WorldConfiguration boolean
+ISaveGame = {}

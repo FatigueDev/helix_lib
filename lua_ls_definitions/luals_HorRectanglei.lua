@@ -1,0 +1,21 @@
+---@meta HorRectanglei
+---@class HorRectanglei: Object
+---@field ctor fun(): HorRectanglei
+---@overload fun(x1: number, z1: number, x2: number, z2: number): HorRectanglei
+---@field get_MinX fun(): number
+---@field get_MaxX fun(): number
+---@field get_MaxZ fun(): number
+---@field get_MinZ fun(): number
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+---@field MinX number
+---@field MaxX number
+---@field MaxZ number
+---@field MinZ number
+---@field X1 number
+---@field Z1 number
+---@field X2 number
+---@field Z2 number
+HorRectanglei = {}

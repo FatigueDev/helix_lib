@@ -1,0 +1,30 @@
+---@meta GameVersion
+---@class GameVersion: Object
+---@field get_ReleaseType fun(): EnumReleaseany
+---@field SplitVersionString fun(version: string): number[]
+---@field GetReleaseType fun(version: string): EnumReleaseany
+---@field IsCompatibleApiVersion fun(version: string): boolean
+---@field IsCompatibleNetworkVersion fun(version: string): boolean
+---@field IsAtLeastVersion fun(version: string): boolean
+---@overload fun(version: string, reference: string): boolean
+---@field IsLowerVersionThan fun(version: string, reference: string): boolean
+---@field IsNewerVersionThan fun(version: string, reference: string): boolean
+---@field EnsureEqualVersionOrKillExecutable fun(api: ICoreAPI, version: string, reference: string, modName: string): nil
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+---@field ReleaseType EnumReleaseany
+---@field LongGameVersion EnumReleaseany
+---@field DatabaseVersion EnumReleaseany
+---@field BlockItemMappingVersion EnumReleaseany
+---@field OverallVersion EnumReleaseany
+---@field Branch EnumReleaseany
+---@field ShortGameVersion EnumReleaseany
+---@field AssemblyVersion EnumReleaseany
+---@field APIVersion EnumReleaseany
+---@field NetworkVersion EnumReleaseany
+---@field WorldGenVersion EnumReleaseany
+---@field ChunkdataVersion EnumReleaseany
+---@field CopyRight EnumReleaseany
+GameVersion = {}

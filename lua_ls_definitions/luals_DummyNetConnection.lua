@@ -1,0 +1,14 @@
+---@meta DummyNetConnection
+---@class DummyNetConnection: NetConnection
+---@field ctor fun(): DummyNetConnection
+---@field Send fun(data: number[], compressed: boolean): EnumSendResult
+---@field HiPerformanceSend fun(box: BoxedPacket, Logger: ILogger, compressionAllowed: boolean): EnumSendResult
+---@field RemoteEndPoint fun(): IPEndPointCi
+---@field EqualsConnection fun(connection: NetConnection): boolean
+---@field Close fun(): nil
+---@field Shutdown fun(): nil
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+DummyNetConnection = {}

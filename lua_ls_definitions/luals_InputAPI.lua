@@ -1,0 +1,48 @@
+---@meta InputAPI
+---@class InputAPI: Object
+---@field ctor fun(game: ClientMain): InputAPI
+---@field add_InWorldAction fun(value: OnEntityAction): nil
+---@field remove_InWorldAction fun(value: OnEntityAction): nil
+---@field get_KeyboardKeyState fun(): boolean[]
+---@field get_MouseX fun(): number
+---@field get_MouseY fun(): number
+---@field TriggerInWorldAction fun(action: EnumEntityAction, on: boolean, handling: EnumHandling&): nil
+---@field TriggerOnMouseEnterSlot fun(slot: ItemSlot): nil
+---@field TriggerOnMouseLeaveSlot fun(itemSlot: ItemSlot): nil
+---@field TriggerOnMouseClickSlot fun(itemSlot: ItemSlot): nil
+---@field get_MouseWorldInteractAnyway fun(): boolean
+---@field set_MouseWorldInteractAnyway fun(value: boolean): nil
+---@field RegisterHotKey fun(hotkeyCode: string, name: string, key: GlKeys, type: Hotkeyany, altPressed: boolean, ctrlPressed: boolean, shiftPressed: boolean): nil
+---@field RegisterHotKeyFirst fun(hotkeyCode: string, name: string, key: GlKeys, type: Hotkeyany, altPressed: boolean, ctrlPressed: boolean, shiftPressed: boolean): nil
+---@field SetHotKeyHandler fun(hotkeyCode: string, handler: ActionConsumable`1): nil
+---@field GetHotKeyByCode fun(toggleKeyCombinationCode: string): HotKey
+---@field AddHotkeyListener fun(handler: OnHotKeyDelegate): nil
+---@field get_HotKeys fun(): Orderedtable<any, any>
+---@field get_MouseButton fun(): MouseButtonState
+---@field get_InWorldMouseButton fun(): MouseButtonState
+---@field get_KeyboardKeyStateRaw fun(): boolean[]
+---@field get_MouseGrabbed fun(): boolean
+---@field get_MouseYaw fun(): Single
+---@field set_MouseYaw fun(value: Single): nil
+---@field get_MousePitch fun(): Single
+---@field set_MousePitch fun(value: Single): nil
+---@field get_ClipboardText fun(): string
+---@field set_ClipboardText fun(value: string): nil
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+---@field KeyboardKeyState boolean[]
+---@field MouseX boolean[]
+---@field MouseY boolean[]
+---@field MouseWorldInteractAnyway boolean[]
+---@field HotKeys boolean[]
+---@field MouseButton boolean[]
+---@field InWorldMouseButton boolean[]
+---@field KeyboardKeyStateRaw boolean[]
+---@field MouseGrabbed boolean[]
+---@field MouseYaw boolean[]
+---@field MousePitch boolean[]
+---@field ClipboardText boolean[]
+---@field InWorldAction boolean[]
+InputAPI = {}

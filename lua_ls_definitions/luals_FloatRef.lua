@@ -1,0 +1,11 @@
+---@meta FloatRef
+---@class FloatRef: Object
+---@field ctor fun(): FloatRef
+---@field Create fun(value_: Single): FloatRef
+---@field GetValue fun(): Single
+---@field SetValue fun(value_: Single): nil
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+FloatRef = {}

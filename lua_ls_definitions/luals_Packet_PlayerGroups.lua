@@ -1,0 +1,13 @@
+---@meta Packet_PlayerGroups
+---@class Packet_PlayerGroups: Object
+---@field ctor fun(): Packet_PlayerGroups
+---@field GetGroups fun(): Packet_PlayerGroup[]
+---@field SetGroups fun(value: Packet_PlayerGroup[], count: number, length: number): nil
+---@overload fun(value: Packet_PlayerGroup[]): nil
+---@field GetGroupsCount fun(): number
+---@field GroupsAdd fun(value: Packet_PlayerGroup): nil
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+Packet_PlayerGroups = {}

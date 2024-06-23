@@ -1,0 +1,15 @@
+---@meta Packet_ClientPingReplySerializer
+---@class Packet_ClientPingReplySerializer: Object
+---@field ctor fun(): Packet_ClientPingReplySerializer
+---@field DeserializeLengthDelimitedNew fun(stream: CitoMemoryStream): Packet_ClientPingReply
+---@field DeserializeBuffer fun(buffer: number[], length: number, instance: Packet_ClientPingReply): Packet_ClientPingReply
+---@field Deserialize fun(stream: CitoMemoryStream, instance: Packet_ClientPingReply): Packet_ClientPingReply
+---@field DeserializeLengthDelimited fun(stream: CitoMemoryStream, instance: Packet_ClientPingReply): Packet_ClientPingReply
+---@field Serialize fun(stream: CitoStream, instance: Packet_ClientPingReply): nil
+---@field SerializeToBytes fun(instance: Packet_ClientPingReply): number[]
+---@field SerializeLengthDelimited fun(stream: CitoStream, instance: Packet_ClientPingReply): nil
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+Packet_ClientPingReplySerializer = {}

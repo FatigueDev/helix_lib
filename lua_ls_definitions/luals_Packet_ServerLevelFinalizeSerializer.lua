@@ -1,0 +1,15 @@
+---@meta Packet_ServerLevelFinalizeSerializer
+---@class Packet_ServerLevelFinalizeSerializer: Object
+---@field ctor fun(): Packet_ServerLevelFinalizeSerializer
+---@field DeserializeLengthDelimitedNew fun(stream: CitoMemoryStream): Packet_ServerLevelFinalize
+---@field DeserializeBuffer fun(buffer: number[], length: number, instance: Packet_ServerLevelFinalize): Packet_ServerLevelFinalize
+---@field Deserialize fun(stream: CitoMemoryStream, instance: Packet_ServerLevelFinalize): Packet_ServerLevelFinalize
+---@field DeserializeLengthDelimited fun(stream: CitoMemoryStream, instance: Packet_ServerLevelFinalize): Packet_ServerLevelFinalize
+---@field Serialize fun(stream: CitoStream, instance: Packet_ServerLevelFinalize): nil
+---@field SerializeToBytes fun(instance: Packet_ServerLevelFinalize): number[]
+---@field SerializeLengthDelimited fun(stream: CitoStream, instance: Packet_ServerLevelFinalize): nil
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+Packet_ServerLevelFinalizeSerializer = {}

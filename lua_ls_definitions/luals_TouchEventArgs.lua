@@ -1,0 +1,16 @@
+---@meta TouchEventArgs
+---@class TouchEventArgs: Object
+---@field ctor fun(): TouchEventArgs
+---@field GetX fun(): number
+---@field SetX fun(value: number): nil
+---@field GetY fun(): number
+---@field SetY fun(value: number): nil
+---@field GetId fun(): number
+---@field SetId fun(value: number): nil
+---@field GetHandled fun(): boolean
+---@field SetHandled fun(value: boolean): nil
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+TouchEventArgs = {}

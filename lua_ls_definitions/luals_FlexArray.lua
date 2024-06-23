@@ -1,0 +1,16 @@
+---@meta FlexArray
+---@class FlexArray: Object
+---@field ctor fun(Capacity: number): FlexArray
+---@field get_Item fun(i: number): number
+---@field set_Item fun(i: number, value: number): nil
+---@field get_Buffer fun(): number[]
+---@field get_Length fun(): number
+---@field set_Length fun(value: number): nil
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+---@field Item number
+---@field Buffer number
+---@field Length number
+FlexArray = {}

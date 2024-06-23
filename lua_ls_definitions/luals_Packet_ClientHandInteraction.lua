@@ -1,0 +1,25 @@
+---@meta Packet_ClientHandInteraction
+---@class Packet_ClientHandInteraction: Object
+---@field ctor fun(): Packet_ClientHandInteraction
+---@field SetUseType fun(value: number): nil
+---@field SetMouseButton fun(value: number): nil
+---@field SetInventoryId fun(value: string): nil
+---@field SetSlotId fun(value: number): nil
+---@field SetX fun(value: number): nil
+---@field SetY fun(value: number): nil
+---@field SetZ fun(value: number): nil
+---@field SetOnBlockFace fun(value: number): nil
+---@field SetHitX fun(value: Int64): nil
+---@field SetHitY fun(value: Int64): nil
+---@field SetHitZ fun(value: Int64): nil
+---@field SetOnEntityId fun(value: Int64): nil
+---@field SetEnumHandInteract fun(value: number): nil
+---@field SetUsingCount fun(value: number): nil
+---@field SetSelectionBoxIndex fun(value: number): nil
+---@field SetCancelReason fun(value: number): nil
+---@field SetFirstEvent fun(value: number): nil
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+Packet_ClientHandInteraction = {}

@@ -1,0 +1,16 @@
+---@meta TreeArrayAttribute
+---@class TreeArrayAttribute: ArrayAttribute`1
+---@field ctor fun(): TreeArrayAttribute
+---@overload fun(value: TreeAttribute[]): TreeArrayAttribute
+---@field ToBytes fun(stream: BinaryWriter): nil
+---@field FromBytes fun(stream: BinaryReader): nil
+---@field GetAttributeId fun(): number
+---@field Clone fun(): IAttribute
+---@field Equals fun(worldForResolve: IWorldAccessor, attr: IAttribute): boolean
+---@field GetValue fun(): table
+---@field ToJsonToken fun(): string
+---@field ToString fun(): string
+---@field GetHashCode fun(): number
+---@field GetType fun(): any
+---@field Equals fun(obj: table): boolean
+TreeArrayAttribute = {}

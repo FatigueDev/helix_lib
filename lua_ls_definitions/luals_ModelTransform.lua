@@ -1,0 +1,32 @@
+---@meta ModelTransform
+---@class ModelTransform: ModelTransformNoDefaults
+---@field ctor fun(baseTf: ModelTransformNoDefaults, defaults: ModelTransform): ModelTransform
+---@overload fun(): ModelTransform
+---@field get_NoTransform fun(): ModelTransform
+---@field BlockDefaultGui fun(): ModelTransform
+---@field BlockDefaultFp fun(): ModelTransform
+---@field BlockDefaultTp fun(): ModelTransform
+---@field BlockDefaultGround fun(): ModelTransform
+---@field ItemDefaultGui fun(): ModelTransform
+---@field ItemDefaultFp fun(): ModelTransform
+---@field ItemDefaultTp fun(): ModelTransform
+---@field ItemDefaultGround fun(): ModelTransform
+---@field EnsureDefaultValues fun(): ModelTransform
+---@field WithRotation fun(rot: Vec3f): ModelTransform
+---@field Clone fun(): ModelTransform
+---@field set_Scale fun(value: Single): nil
+---@field get_AsMatrix fun(): Single[]
+---@field Clear fun(): nil
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+---@field NoTransform ModelTransform
+---@field Scale ModelTransform
+---@field AsMatrix ModelTransform
+---@field Translation ModelTransform
+---@field Rotation ModelTransform
+---@field Origin ModelTransform
+---@field Rotate ModelTransform
+---@field ScaleXYZ ModelTransform
+ModelTransform = {}

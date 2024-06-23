@@ -1,0 +1,16 @@
+---@meta Packet_InventoryContents
+---@class Packet_InventoryContents: Object
+---@field ctor fun(): Packet_InventoryContents
+---@field SetClientId fun(value: number): nil
+---@field SetInventoryClass fun(value: string): nil
+---@field SetInventoryId fun(value: string): nil
+---@field GetItemstacks fun(): Packet_ItemStack[]
+---@field SetItemstacks fun(value: Packet_ItemStack[], count: number, length: number): nil
+---@overload fun(value: Packet_ItemStack[]): nil
+---@field GetItemstacksCount fun(): number
+---@field ItemstacksAdd fun(value: Packet_ItemStack): nil
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+Packet_InventoryContents = {}

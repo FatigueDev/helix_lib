@@ -1,0 +1,15 @@
+---@meta TextTextureUtil
+---@class TextTextureUtil: Object
+---@field ctor fun(capi: ICoreClientAPI): TextTextureUtil
+---@field GenTextTexture fun(text: string, font: CairoFont, width: number, height: number, background: TextBackground, orientation: EnumTextOrientation, demulAlpha: boolean): LoadedTexture
+---@field GenOrUpdateTextTexture fun(text: string, font: CairoFont, width: number, height: number, loadedTexture: LoadedTexture&, background: TextBackground, orientation: EnumTextOrientation, demulAlpha: boolean): nil
+---@overload fun(text: string, font: CairoFont, width: number, height: number, background: TextBackground): LoadedTexture
+---@overload fun(text: string, font: CairoFont, background: TextBackground): LoadedTexture
+---@overload fun(text: string, font: CairoFont, loadedTexture: LoadedTexture&, background: TextBackground): nil
+---@field GenUnscaledTextTexture fun(text: string, font: CairoFont, background: TextBackground): LoadedTexture
+---@field GenTextTexture fun(text: string, font: CairoFont, maxWidth: number, background: TextBackground, orientation: EnumTextOrientation): LoadedTexture
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+TextTextureUtil = {}

@@ -1,0 +1,12 @@
+---@meta HashsetExtensions
+---@class HashsetExtensions: Object
+---@field AddRange fun(hashset: HashSet`1, elements: any[]): nil
+---@overload fun(hashset: HashSet`1, elements: HashSet`1): nil
+---@overload fun(hashset: HashSet`1, elements: T[]): nil
+---@field Implode fun(hashset: HashSet`1, seperator: string): string
+---@field PopOne fun(items: Iany[]): T
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+HashsetExtensions = {}

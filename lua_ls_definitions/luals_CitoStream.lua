@@ -1,0 +1,17 @@
+---@meta CitoStream
+---@class CitoStream: Object
+---@field Read fun(buffer: number[], read: number, p: number): number
+---@field CanSeek fun(): boolean
+---@field Seek fun(length: number, seekOrigin: CitoSeekOrigin): nil
+---@field Write fun(val: number[], p: number, p_3: number): nil
+---@field Seek_ fun(p: number, seekOrigin: CitoSeekOrigin): nil
+---@field ReadByte fun(): number
+---@field WriteByte fun(p: number): nil
+---@field WriteSmallInt fun(v: number): nil
+---@field WriteKey fun(k: number, wiretype: number): nil
+---@field Position fun(): number
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+CitoStream = {}

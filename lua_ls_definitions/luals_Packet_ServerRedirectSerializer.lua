@@ -1,0 +1,15 @@
+---@meta Packet_ServerRedirectSerializer
+---@class Packet_ServerRedirectSerializer: Object
+---@field ctor fun(): Packet_ServerRedirectSerializer
+---@field DeserializeLengthDelimitedNew fun(stream: CitoMemoryStream): Packet_ServerRedirect
+---@field DeserializeBuffer fun(buffer: number[], length: number, instance: Packet_ServerRedirect): Packet_ServerRedirect
+---@field Deserialize fun(stream: CitoMemoryStream, instance: Packet_ServerRedirect): Packet_ServerRedirect
+---@field DeserializeLengthDelimited fun(stream: CitoMemoryStream, instance: Packet_ServerRedirect): Packet_ServerRedirect
+---@field Serialize fun(stream: CitoStream, instance: Packet_ServerRedirect): nil
+---@field SerializeToBytes fun(instance: Packet_ServerRedirect): number[]
+---@field SerializeLengthDelimited fun(stream: CitoStream, instance: Packet_ServerRedirect): nil
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+Packet_ServerRedirectSerializer = {}

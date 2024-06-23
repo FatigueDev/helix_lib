@@ -1,0 +1,13 @@
+---@meta Packet_BlockEntities
+---@class Packet_BlockEntities: Object
+---@field ctor fun(): Packet_BlockEntities
+---@field GetBlockEntitites fun(): Packet_BlockEntity[]
+---@field SetBlockEntitites fun(value: Packet_BlockEntity[], count: number, length: number): nil
+---@overload fun(value: Packet_BlockEntity[]): nil
+---@field GetBlockEntititesCount fun(): number
+---@field BlockEntititesAdd fun(value: Packet_BlockEntity): nil
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+Packet_BlockEntities = {}

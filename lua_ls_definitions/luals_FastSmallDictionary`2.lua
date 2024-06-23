@@ -1,0 +1,31 @@
+---@meta FastSmallDictionary`2
+---@class FastSmallDictionary`2: Object
+---@field ctor fun(size: number): FastSmallDictionary`2
+---@overload fun(key: string, value: CompositeTexture): FastSmallDictionary`2
+---@overload fun(dict: table<any, any>): FastSmallDictionary`2
+---@field get_Keys fun(): Iany[]
+---@field get_Values fun(): Iany[]
+---@field get_IsReadOnly fun(): boolean
+---@field Clone fun(): FastSmalltable<any, any>
+---@field GetFirstKey fun(): string
+---@field get_Item fun(key: string): CompositeTexture
+---@field set_Item fun(key: string, value: CompositeTexture): nil
+---@field ContainsKey fun(key: string): boolean
+---@field Add fun(key: string, value: CompositeTexture): nil
+---@field TryGetValue fun(key: string, value: CompositeTexture&): boolean
+---@field Clear fun(): nil
+---@field GetEnumerator fun(): IEnumerator`1
+---@field Add fun(item: KeyValuePair`2): nil
+---@field Contains fun(item: KeyValuePair`2): boolean
+---@field Remove fun(key: string): boolean
+---@overload fun(item: KeyValuePair`2): boolean
+---@field CopyTo fun(array: KeyValuePair`2[], arrayIndex: number): nil
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+---@field Keys Iany[]
+---@field Values Iany[]
+---@field IsReadOnly Iany[]
+---@field Item Iany[]
+FastSmallDictionary`2 = {}

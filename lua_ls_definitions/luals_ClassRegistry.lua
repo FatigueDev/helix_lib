@@ -1,0 +1,55 @@
+---@meta ClassRegistry
+---@class ClassRegistry: Object
+---@field ctor fun(): ClassRegistry
+---@field RegisterMountable fun(className: string, mountableInstancer: GetMountableDelegate): nil
+---@field CreateMountable fun(world: IWorldAccessor, tree: TreeAttribute): IMountable
+---@field RegisterInventoryClass fun(inventoryClass: string, inventory: any): nil
+---@field CreateInventory fun(inventoryClass: string, inventoryId: string, api: ICoreAPI): InventoryBase
+---@field RegisterRecipeRegistry fun(recipeRegistryCode: string, recipeRegistry: any): nil
+---@overload fun(recipeRegistryCode: string): nil
+---@field CreateRecipeRegistry fun(recipeRegistryCode: string): T
+---@field GetRecipeRegistryCode fun(): string
+---@field RegisterBlockClass fun(blockClass: string, block: any): nil
+---@field CreateBlock fun(blockClass: string): Block
+---@field GetBlockClass fun(blockClass: string): any
+---@field RegisterBlockBehaviorClass fun(code: string, block: any): nil
+---@field GetBlockBehaviorClassName fun(blockBehaviorType: any): string
+---@field CreateBlockBehavior fun(block: Block, blockClass: string): BlockBehavior
+---@field RegisterBlockEntityBehaviorClass fun(blockClass: string, blockentity: any): nil
+---@field GetBlockEntityBehaviorClassName fun(blockBehaviorType: any): string
+---@field CreateBlockEntityBehavior fun(blockentity: BlockEntity, blockEntityClass: string): BlockEntityBehavior
+---@field RegisterCollectibleBehaviorClass fun(code: string, block: any): nil
+---@field GetCollectibleBehaviorClassName fun(blockBehaviorType: any): string
+---@field CreateCollectibleBehavior fun(collectible: Collectibletable, code: string): CollectibleBehavior
+---@field GetCollectibleBehaviorClass fun(code: string): any
+---@field RegisterCropBehavior fun(cropBehaviorClass: string, block: any): nil
+---@field GetCropBehaviorClassName fun(cropBehaviorType: any): string
+---@field createCropBehavior fun(block: Block, cropBehaviorClass: string): CropBehavior
+---@field RegisterItemClass fun(itemClass: string, item: any): nil
+---@field CreateItem fun(itemClass: string): Item
+---@field GetItemClass fun(itemClass: string): any
+---@field RegisterEntityType fun(className: string, entity: any): nil
+---@field GetEntityClassName fun(entityType: any): string
+---@field CreateEntity fun(entityType: any): Entity
+---@overload fun(className: string): Entity
+---@field RegisterEntityRendererType fun(className: string, EntityRenderer: any): nil
+---@field GetEntityRendererClassName fun(EntityRendererType: any): string
+---@field CreateEntityRenderer fun(EntityRendererType: any): EntityRenderer
+---@overload fun(className: string, args: table[]): EntityRenderer
+---@field GetEntityBehaviorClass fun(entityBehaviorName: string): any
+---@field RegisterentityBehavior fun(className: string, entityBehavior: any): nil
+---@field GetEntityBehaviorClassName fun(entityBehaviorType: any): string
+---@field CreateEntityBehavior fun(forEntity: Entity, entityBehaviorType: any): EntityBehavior
+---@overload fun(forEntity: Entity, className: string): EntityBehavior
+---@field RegisterBlockEntityType fun(className: string, blockentity: any): nil
+---@field CreateBlockEntity fun(entityType: any): BlockEntity
+---@overload fun(className: string): BlockEntity
+---@field GetBlockEntityType fun(className: string): any
+---@field RegisterParticlePropertyProvider fun(className: string, ParticleProvider: any): nil
+---@field CreateParticlePropertyProvider fun(entityType: any): IParticlePropertiesProvider
+---@overload fun(className: string): IParticlePropertiesProvider
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+ClassRegistry = {}

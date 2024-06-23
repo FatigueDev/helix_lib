@@ -1,0 +1,11 @@
+---@meta IVertexShaderProgramShadowcoords
+---@class IVertexShaderProgramShadowcoords
+---@field set_ShadowRangeFar fun(value: Single): nil
+---@field set_ToShadowMapSpaceMatrixFar fun(value: Single[]): nil
+---@field set_ShadowRangeNear fun(value: Single): nil
+---@field set_ToShadowMapSpaceMatrixNear fun(value: Single[]): nil
+---@field ShadowRangeFar Single
+---@field ToShadowMapSpaceMatrixFar Single
+---@field ShadowRangeNear Single
+---@field ToShadowMapSpaceMatrixNear Single
+IVertexShaderProgramShadowcoords = {}

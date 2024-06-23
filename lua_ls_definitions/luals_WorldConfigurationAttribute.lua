@@ -1,0 +1,23 @@
+---@meta WorldConfigurationAttribute
+---@class WorldConfigurationAttribute: Object
+---@field ctor fun(): WorldConfigurationAttribute
+---@field stringToValue fun(text: string): table
+---@field valueToHumanReadable fun(value: string): string
+---@field get_TypedDefault fun(): table
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+---@field TypedDefault table
+---@field DataType table
+---@field Category table
+---@field Code table
+---@field Min table
+---@field Max table
+---@field Step table
+---@field OnCustomizeScreen table
+---@field Default table
+---@field Values table
+---@field Names table
+---@field OnlyDuringWorldCreate table
+WorldConfigurationAttribute = {}

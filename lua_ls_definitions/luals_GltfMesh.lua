@@ -1,0 +1,14 @@
+---@meta GltfMesh
+---@class GltfMesh: Object
+---@field ctor fun(): GltfMesh
+---@field get_Name fun(): string
+---@field set_Name fun(value: string): nil
+---@field get_Primitives fun(): GltfPrimitive[]
+---@field set_Primitives fun(value: GltfPrimitive[]): nil
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+---@field Name string
+---@field Primitives string
+GltfMesh = {}

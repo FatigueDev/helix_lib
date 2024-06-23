@@ -1,0 +1,13 @@
+---@meta ICompression
+---@class ICompression
+---@field Compress fun(data: number[]): number[]
+---@overload fun(data: number[], len: number, reserveOffset: number): number[]
+---@overload fun(data: UInt16[]): number[]
+---@overload fun(data: number[], length: number): number[]
+---@overload fun(data: Unumber[], length: number): number[]
+---@field Decompress fun(fi: number[]): number[]
+---@overload fun(fi: number[], offset: number, length: number): number[]
+---@field DecompressAndSize fun(fi: number[], buffer: number[]&): number
+---@overload fun(fi: number[], dest: number[]): nil
+---@overload fun(compressedData: number[], offset: number, length: number, buffer: number[]&): number
+ICompression = {}

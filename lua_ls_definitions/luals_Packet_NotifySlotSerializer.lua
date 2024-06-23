@@ -1,0 +1,15 @@
+---@meta Packet_NotifySlotSerializer
+---@class Packet_NotifySlotSerializer: Object
+---@field ctor fun(): Packet_NotifySlotSerializer
+---@field DeserializeLengthDelimitedNew fun(stream: CitoMemoryStream): Packet_NotifySlot
+---@field DeserializeBuffer fun(buffer: number[], length: number, instance: Packet_NotifySlot): Packet_NotifySlot
+---@field Deserialize fun(stream: CitoMemoryStream, instance: Packet_NotifySlot): Packet_NotifySlot
+---@field DeserializeLengthDelimited fun(stream: CitoMemoryStream, instance: Packet_NotifySlot): Packet_NotifySlot
+---@field Serialize fun(stream: CitoStream, instance: Packet_NotifySlot): nil
+---@field SerializeToBytes fun(instance: Packet_NotifySlot): number[]
+---@field SerializeLengthDelimited fun(stream: CitoStream, instance: Packet_NotifySlot): nil
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+Packet_NotifySlotSerializer = {}

@@ -1,0 +1,11 @@
+---@meta Packet_Recipes
+---@class Packet_Recipes: Object
+---@field ctor fun(): Packet_Recipes
+---@field SetCode fun(value: string): nil
+---@field SetQuantity fun(value: number): nil
+---@field SetData fun(value: number[]): nil
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+Packet_Recipes = {}

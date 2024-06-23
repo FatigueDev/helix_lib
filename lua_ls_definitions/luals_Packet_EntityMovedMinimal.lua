@@ -1,0 +1,18 @@
+---@meta Packet_EntityMovedMinimal
+---@class Packet_EntityMovedMinimal: Object
+---@field ctor fun(): Packet_EntityMovedMinimal
+---@field SetEntityId fun(value: Int64): nil
+---@field SetXint fun(value: number): nil
+---@field SetYint fun(value: number): nil
+---@field SetZint fun(value: number): nil
+---@field SetXfrac fun(value: number): nil
+---@field SetYfrac fun(value: number): nil
+---@field SetZfrac fun(value: number): nil
+---@field SetYaw fun(value: number): nil
+---@field SetPitch fun(value: number): nil
+---@field SetRoll fun(value: number): nil
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+Packet_EntityMovedMinimal = {}

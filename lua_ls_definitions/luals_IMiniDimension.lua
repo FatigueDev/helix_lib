@@ -1,0 +1,26 @@
+---@meta IMiniDimension
+---@class IMiniDimension
+---@field get_subDimensionId fun(): number
+---@field set_subDimensionId fun(value: number): nil
+---@field get_CurrentPos fun(): EntityPos
+---@field set_CurrentPos fun(value: EntityPos): nil
+---@field get_Dirty fun(): boolean
+---@field set_Dirty fun(value: boolean): nil
+---@field get_TrackSelection fun(): boolean
+---@field get_selectionTrackingOriginalPos fun(): BlockPos
+---@field set_selectionTrackingOriginalPos fun(value: BlockPos): nil
+---@field CollectChunksForSending fun(players: IPlayer[]): nil
+---@field ClearChunks fun(): nil
+---@field UnloadUnusedServerChunks fun(): nil
+---@field GetRenderOffset fun(dt: Single): FastVec3d
+---@field GetRenderTransformMatrix fun(currentModelViewMatrix: Single[], playerPos: Vec3d): Single[]
+---@field ReceiveClientChunk fun(chunkIndex3d: Int64, chunk: IWorldChunk, world: IWorldAccessor): nil
+---@field SetSubDimensionId fun(dimensionId: number): nil
+---@field SetSelectionTrackingSubId_Server fun(dimensionId: number): nil
+---@field AdjustPosForSubDimension fun(pos: BlockPos): nil
+---@field subDimensionId number
+---@field CurrentPos number
+---@field Dirty number
+---@field TrackSelection number
+---@field selectionTrackingOriginalPos number
+IMiniDimension = {}

@@ -1,0 +1,62 @@
+---@meta PlayerAnimationManager
+---@class PlayerAnimationManager: AnimationManager
+---@field ctor fun(): PlayerAnimationManager
+---@field Init fun(api: ICoreAPI, entity: Entity): nil
+---@field OnClientFrame fun(dt: Single): nil
+---@field ResetAnimation fun(animCode: string): nil
+---@field StartAnimation fun(configCode: string): boolean
+---@overload fun(animdata: AnimationMetaData): boolean
+---@field RegisterFrameCallback fun(trigger: AnimFrameCallback): nil
+---@field StopAnimation fun(code: string): nil
+---@field StopSelfAnimation fun(code: string): nil
+---@field IsAnimationActive fun(anims: string[]): boolean
+---@field GetAnimationState fun(anim: string): RunningAnimation
+---@field IsAnimationActiveOrRunning fun(anim: string, untilProgress: Single): boolean
+---@field OnReceivedServerAnimations fun(activeAnimations: number[], activeAnimationsCount: number, activeAnimationSpeeds: Single[]): nil
+---@field OnActiveSlotChanged fun(slot: ItemSlot): nil
+---@field StartHeldReadyAnim fun(heldReadyAnim: string, force: boolean): nil
+---@field StartHeldUseAnim fun(animCode: string): nil
+---@field StartHeldHitAnim fun(animCode: string): nil
+---@field StartRightHeldIdleAnim fun(animCode: string): nil
+---@field StartLeftHeldIdleAnim fun(animCode: string): nil
+---@field StopHeldReadyAnim fun(): nil
+---@field StopHeldUseAnim fun(): nil
+---@field StopHeldAttackAnim fun(): nil
+---@field StopRightHeldIdleAnim fun(): nil
+---@field StopLeftHeldIdleAnim fun(): nil
+---@field IsHeldHitAuthoritative fun(): boolean
+---@field IsAuthoritative fun(anim: string): boolean
+---@field IsHeldUseActive fun(): boolean
+---@field IsHeldHitActive fun(untilProgress: Single): boolean
+---@field IsLeftHeldActive fun(): boolean
+---@field IsRightHeldActive fun(): boolean
+---@field IsRightHeldReadyActive fun(): boolean
+---@field HeldRightReadyAnimChanged fun(nowHeldRightReadyAnim: string): boolean
+---@field HeldUseAnimChanged fun(nowHeldRightUseAnim: string): boolean
+---@field HeldHitAnimChanged fun(nowHeldRightHitAnim: string): boolean
+---@field RightHeldIdleChanged fun(nowHeldRightIdleAnim: string): boolean
+---@field LeftHeldIdleChanged fun(nowHeldLeftIdleAnim: string): boolean
+---@field FromAttributes fun(tree: ITreeAttribute, version: string): nil
+---@field ToAttributes fun(tree: ITreeAttribute, forClient: boolean): nil
+---@field get_AnimationsDirty fun(): boolean
+---@field set_AnimationsDirty fun(value: boolean): nil
+---@field get_Animator fun(): IAnimator
+---@field set_Animator fun(value: IAnimator): nil
+---@field get_HeadController fun(): EntityHeadController
+---@field set_HeadController fun(value: EntityHeadController): nil
+---@field OnServerTick fun(dt: Single): nil
+---@field Dispose fun(): nil
+---@field OnAnimationStopped fun(code: string): nil
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+---@field AnimationsDirty boolean
+---@field Animator boolean
+---@field HeadController boolean
+---@field UseFpAnmations boolean
+---@field lastRunningHeldHitAnimation boolean
+---@field lastRunningHeldUseAnimation boolean
+---@field ActiveAnimationsByAnimCode boolean
+---@field Triggers boolean
+PlayerAnimationManager = {}

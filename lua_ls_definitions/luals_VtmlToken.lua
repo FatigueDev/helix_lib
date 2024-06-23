@@ -1,0 +1,11 @@
+---@meta VtmlToken
+---@class VtmlToken: Object
+---@field ctor fun(): VtmlToken
+---@field get_StartPosition fun(): number
+---@field set_StartPosition fun(value: number): nil
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+---@field StartPosition number
+VtmlToken = {}

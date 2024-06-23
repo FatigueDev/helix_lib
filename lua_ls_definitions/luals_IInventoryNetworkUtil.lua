@@ -1,0 +1,14 @@
+---@meta IInventoryNetworkUtil
+---@class IInventoryNetworkUtil
+---@field get_Api fun(): ICoreAPI
+---@field set_Api fun(value: ICoreAPI): nil
+---@field GetActivateSlotPacket fun(slotId: number, op: ItemStackMoveOperation): table
+---@field GetFlipSlotsPacket fun(sourceInv: IInventory, sourceSlotId: number, targetSlotId: number): table
+---@field HandleClientPacket fun(byPlayer: IPlayer, packetId: number, data: number[]): nil
+---@field DidOpen fun(player: IPlayer): table
+---@field DidClose fun(player: IPlayer): table
+---@field get_PauseInventoryUpdates fun(): boolean
+---@field set_PauseInventoryUpdates fun(value: boolean): nil
+---@field Api ICoreAPI
+---@field PauseInventoryUpdates ICoreAPI
+IInventoryNetworkUtil = {}

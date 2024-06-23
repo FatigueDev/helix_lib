@@ -1,0 +1,12 @@
+---@meta Packet_ChatLine
+---@class Packet_ChatLine: Object
+---@field ctor fun(): Packet_ChatLine
+---@field SetMessage fun(value: string): nil
+---@field SetGroupid fun(value: number): nil
+---@field SetChatType fun(value: number): nil
+---@field SetData fun(value: string): nil
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+Packet_ChatLine = {}

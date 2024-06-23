@@ -1,0 +1,21 @@
+---@meta Packet_ModelTransform
+---@class Packet_ModelTransform: Object
+---@field ctor fun(): Packet_ModelTransform
+---@field SetTranslateX fun(value: number): nil
+---@field SetTranslateY fun(value: number): nil
+---@field SetTranslateZ fun(value: number): nil
+---@field SetRotateX fun(value: number): nil
+---@field SetRotateY fun(value: number): nil
+---@field SetRotateZ fun(value: number): nil
+---@field SetRotate fun(value: number): nil
+---@field SetOriginX fun(value: number): nil
+---@field SetOriginY fun(value: number): nil
+---@field SetOriginZ fun(value: number): nil
+---@field SetScaleX fun(value: number): nil
+---@field SetScaleY fun(value: number): nil
+---@field SetScaleZ fun(value: number): nil
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+Packet_ModelTransform = {}

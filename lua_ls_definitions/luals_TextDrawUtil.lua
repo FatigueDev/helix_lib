@@ -1,0 +1,23 @@
+---@meta TextDrawUtil
+---@class TextDrawUtil: Object
+---@field ctor fun(): TextDrawUtil
+---@field Lineize fun(ctx: Context, text: string, boxwidth: Double, lineHeightMultiplier: Double, linebreak: EnumLinebreakBehavior, keepLinebreakChar: boolean): TextLine[]
+---@field GetQuantityTextLines fun(font: CairoFont, text: string, boxWidth: Double, linebreak: EnumLinebreakBehavior): number
+---@field GetMultilineTextHeight fun(font: CairoFont, text: string, boxWidth: Double, linebreak: EnumLinebreakBehavior): Double
+---@overload fun(font: CairoFont, fulltext: string, boxWidth: Double, linebreak: EnumLinebreakBehavior, keepLinebreakChar: boolean): TextLine[]
+---@field AutobreakAndDrawMultilineText fun(ctx: Context, font: CairoFont, text: string, boxWidth: Double, orientation: EnumTextOrientation): nil
+---@field AutobreakAndDrawMultilineTextAt fun(ctx: Context, font: CairoFont, text: string, posX: Double, posY: Double, boxWidth: Double, orientation: EnumTextOrientation): Double
+---@field DrawMultilineTextAt fun(ctx: Context, font: CairoFont, lines: TextLine[], posX: Double, posY: Double, boxWidth: Double, orientation: EnumTextOrientation): nil
+---@field GetLineHeight fun(font: CairoFont): Double
+---@field GetQuantityTextLines fun(font: CairoFont, text: string, linebreak: EnumLinebreakBehavior, flowPath: TextFlowPath[], lineY: Double): number
+---@overload fun(font: CairoFont, text: string, linebreak: EnumLinebreakBehavior, flowPath: TextFlowPath[], lineY: Double): Double
+---@overload fun(font: CairoFont, fulltext: string, linebreak: EnumLinebreakBehavior, flowPath: TextFlowPath[], startOffsetX: Double, startY: Double, keepLinebreakChar: boolean): TextLine[]
+---@overload fun(ctx: Context, text: string, linebreak: EnumLinebreakBehavior, flowPath: TextFlowPath[], startOffsetX: Double, startY: Double, lineHeightMultiplier: Double, keepLinebreakChar: boolean): TextLine[]
+---@overload fun(ctx: Context, font: CairoFont, text: string, lineX: Double, lineY: Double, flowPath: TextFlowPath[], orientation: EnumTextOrientation, linebreak: EnumLinebreakBehavior): Double
+---@field DrawMultilineText fun(ctx: Context, font: CairoFont, lines: TextLine[], orientation: EnumTextOrientation): nil
+---@field DrawTextLine fun(ctx: Context, font: CairoFont, text: string, offsetX: Double, offsetY: Double, textPathMode: boolean): nil
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+TextDrawUtil = {}

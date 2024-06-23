@@ -1,0 +1,40 @@
+---@meta Mat4d
+---@class Mat4d: Object
+---@field ctor fun(): Mat4d
+---@field Create fun(): Double[]
+---@field ToMat4f fun(output: Single[], input: Double[]): Single[]
+---@field CloneIt fun(a: Double[]): Double[]
+---@field Copy fun(output: Double[], a: Double[]): Double[]
+---@field Identity fun(output: Double[]): Double[]
+---@field Transpose fun(output: Double[], a: Double[]): Double[]
+---@field Invert fun(output: Double[], a: Double[]): Double[]
+---@field Adjoint fun(output: Double[], a: Double[]): Double[]
+---@field Determinant fun(a: Double[]): Double
+---@field Multiply fun(output: Double[], a: Double[], b: Double[]): Double[]
+---@overload fun(output: Double[], a: Single[], b: Double[]): Double[]
+---@field Mul fun(output: Double[], a: Double[], b: Double[]): Double[]
+---@overload fun(output: Double[], a: Single[], b: Double[]): Double[]
+---@field IsTranslationOnly fun(matrix: Double[]): boolean
+---@field Translate fun(output: Double[], input: Double[], x: Double, y: Double, z: Double): Double[]
+---@overload fun(output: Double[], input: Double[], translate: Double[]): Double[]
+---@field Scale fun(output: Double[], a: Double[], v: Double[]): Double[]
+---@overload fun(matrix: Double[], x: Double, y: Double, z: Double): nil
+---@field Rotate fun(output: Double[], a: Double[], rad: Double, axis: Double[]): Double[]
+---@overload fun(output: Double[], a: Double[], rad: Double, x: Double, y: Double, z: Double): Double[]
+---@field RotateX fun(output: Double[], a: Double[], rad: Double): Double[]
+---@field RotateY fun(output: Double[], a: Double[], rad: Double): Double[]
+---@field RotateZ fun(output: Double[], a: Double[], rad: Double): Double[]
+---@field FromRotationTranslation fun(output: Double[], q: Double[], v: Double[]): Double[]
+---@field FromQuat fun(output: Double[], q: Double[]): Double[]
+---@field Frustum fun(output: Double[], left: Double, right: Double, bottom: Double, top: Double, near: Double, far: Double): Double[]
+---@field Perspective fun(output: Double[], fovy: Double, aspect: Double, near: Double, far: Double): Double[]
+---@field Ortho fun(output: Double[], left: Double, right: Double, bottom: Double, top: Double, near: Double, far: Double): Double[]
+---@field LookAt fun(output: Double[], eye: Double[], center: Double[], up: Double[]): Double[]
+---@field MulWithVec4 fun(matrix: Double[], vec4: Double[]): Double[]
+---@overload fun(matrix: Double[], vec4: Double[], outVal: Vec4d): nil
+---@overload fun(matrix: Double[], inVal: Vec4d, outVal: Vec4d): nil
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+Mat4d = {}

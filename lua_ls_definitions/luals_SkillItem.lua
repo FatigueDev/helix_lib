@@ -1,0 +1,13 @@
+---@meta SkillItem
+---@class SkillItem: Object
+---@field ctor fun(): SkillItem
+---@field WithIcon fun(capi: ICoreClientAPI, onDrawIcon: DrawSkillIconDelegate): SkillItem
+---@overload fun(capi: ICoreClientAPI, iconCode: string): SkillItem
+---@field WithLetterIcon fun(capi: ICoreClientAPI, letter: string): SkillItem
+---@field WithIcon fun(capi: ICoreClientAPI, texture: LoadedTexture): SkillItem
+---@field Dispose fun(): nil
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+SkillItem = {}

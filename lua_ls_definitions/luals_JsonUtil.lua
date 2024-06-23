@@ -1,0 +1,18 @@
+---@meta JsonUtil
+---@class JsonUtil: Object
+---@field Populate fun(value: JToken, target: T): nil
+---@field FromBytes fun(data: number[]): T
+---@field FromString fun(data: string): T
+---@field ToBytes fun(obj: T): number[]
+---@field ToString fun(obj: T): string
+---@field ToPrettyString fun(obj: T): string
+---@field PopulateObject fun(toPopulate: table, text: string, domain: string, settings: JsonSerializerSettings): nil
+---@field CreateSerializerForDomain fun(domain: string, settings: JsonSerializerSettings): JsonSerializer
+---@field PopulateObject fun(toPopulate: table, token: JToken, js: JsonSerializer): nil
+---@field ToObject fun(text: string, domain: string, settings: JsonSerializerSettings): T
+---@overload fun(token: JToken, domain: string, settings: JsonSerializerSettings): T
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+JsonUtil = {}

@@ -1,0 +1,144 @@
+---@meta RenderAPIGame
+---@class RenderAPIGame: RenderAPIBase
+---@field ctor fun(capi: ICoreClientAPI, game: ClientMain): RenderAPIGame
+---@field get_ShaderUniforms fun(): DefaultShaderUniforms
+---@field get_Api fun(): ICoreClientAPI
+---@field get_TextureSize fun(): number
+---@field get_PerceptionEffects fun(): PerceptionEffects
+---@field get_CameraOffset fun(): ModelTransform
+---@field get_CameraMatrixOrigin fun(): Double[]
+---@field get_CameraMatrixOriginf fun(): Single[]
+---@field get_AmbientColor fun(): Vec3f
+---@field get_FogColor fun(): Vec4f
+---@field get_FogMin fun(): Single
+---@field get_FogDensity fun(): Single
+---@field get_CameraType fun(): EnumCameraMode
+---@field get_MvMatrix fun(): StackMatrix4
+---@field get_PMatrix fun(): StackMatrix4
+---@field get_PerspectiveViewMat fun(): Double[]
+---@field get_PerspectiveProjectionMat fun(): Double[]
+---@field GlLoadMatrix fun(matrix: Double[]): nil
+---@field GlMatrixModeModelView fun(): nil
+---@field GlPopMatrix fun(): nil
+---@field GlPushMatrix fun(): nil
+---@field GlRotate fun(angle: Single, x: Single, y: Single, z: Single): nil
+---@field GlScale fun(x: Single, y: Single, z: Single): nil
+---@field GlTranslate fun(x: Single, y: Single, z: Single): nil
+---@overload fun(x: Double, y: Double, z: Double): nil
+---@field get_CurrentModelviewMatrix fun(): Single[]
+---@field get_CurrentProjectionMatrix fun(): Single[]
+---@field GetOrLoadTexture fun(name: AssetLocation, intoTexture: LoadedTexture&): nil
+---@overload fun(name: AssetLocation): number
+---@overload fun(name: AssetLocation, bmp: BitmapRef, intoTexture: LoadedTexture&): nil
+---@field RemoveTexture fun(name: AssetLocation): boolean
+---@field Render2DTexture fun(textureid: number, x1: Single, y1: Single, width: Single, height: Single, z: Single): nil
+---@field GetItemStackRenderInfo fun(stack: ItemStack, target: EnumItemRenderTarget, dt: Single): ItemRenderInfo
+---@field GetTextureAtlasPosition fun(itemstack: ItemStack): TextureAtlasPosition
+---@field GetItemStackRenderInfo fun(inSlot: ItemSlot, target: EnumItemRenderTarget, dt: Single): ItemRenderInfo
+---@field get_CurrentRenderStage fun(): EnumRenderStage
+---@field get_CurrentShadowProjectionMatrix fun(): Single[]
+---@field get_DefaultFrustumCuller fun(): FrustumCulling
+---@field PreparedStandardShader fun(posX: number, posY: number, posZ: number, colorMul: Vec4f): IStandardShaderProgram
+---@field RenderTextureIntoTexture fun(fromTexture: LoadedTexture, sourceX: Single, sourceY: Single, sourceWidth: Single, sourceHeight: Single, intoTexture: LoadedTexture, targetX: Single, targetY: Single, alphaTest: Single): nil
+---@field GetLightRGBs fun(x: number, y: number, z: number): Vec4f
+---@field RenderItemStackToAtlas fun(stack: ItemStack, atlas: ITextureAtlasAPI, size: number, onComplete: any`1, color: number, sepiaLevel: Single, scale: Single): boolean
+---@field RenderItemstackToGui fun(itemstack: ItemStack, posX: Double, posY: Double, posZ: Double, size: Single, color: number, shading: boolean, rotate: boolean, showStacksize: boolean): nil
+---@overload fun(inSlot: ItemSlot, posX: Double, posY: Double, posZ: Double, size: Single, color: number, dt: Single, shading: boolean, rotate: boolean, showStackSize: boolean): nil
+---@overload fun(inSlot: ItemSlot, posX: Double, posY: Double, posZ: Double, size: Single, color: number, shading: boolean, rotate: boolean, showStacksize: boolean): nil
+---@field RenderEntityToGui fun(dt: Single, entity: Entity, posX: Double, posY: Double, posZ: Double, yawDelta: Single, size: Single, color: number): nil
+---@field Render2DTexture fun(textureid: number, bounds: ElementBounds, z: Single, color: Vec4f): nil
+---@overload fun(quadModel: MeshRef, textureid: number, x1: Single, y1: Single, width: Single, height: Single, z: Single): nil
+---@field Render2DTexturePremultipliedAlpha fun(textureid: number, bounds: ElementBounds, z: Single, color: Vec4f): nil
+---@overload fun(textureid: number, x1: Single, y1: Single, width: Single, height: Single, z: Single, color: Vec4f): nil
+---@overload fun(textureid: number, posX: Double, posY: Double, width: Double, height: Double, z: Single, color: Vec4f): nil
+---@overload fun(textureid: number, x1: Single, y1: Single, width: Single, height: Single, z: Single, color: Vec4f): nil
+---@field RenderTexture fun(textureid: number, posX: Double, posY: Double, width: Double, height: Double, z: Single, color: Vec4f): nil
+---@field RenderRectangle fun(posX: Single, posY: Single, posZ: Single, width: Single, height: Single, color: number): nil
+---@field RenderLine fun(origin: BlockPos, posX1: Single, posY1: Single, posZ1: Single, posX2: Single, posY2: Single, posZ2: Single, color: number): nil
+---@field Render2DLoadedTexture fun(textTexture: LoadedTexture, posX: Single, posY: Single, z: Single): nil
+---@field AddPointLight fun(pointlight: IPointLight): nil
+---@field RemovePointLight fun(pointlight: IPointLight): nil
+---@field Reset3DProjection fun(): nil
+---@field Set3DProjection fun(zfar: Single, fov: Single): nil
+---@field BitmapCreateFromPng fun(pngdata: number[]): BitmapExternal
+---@field get_DecorativeFontName fun(): string
+---@field get_StandardFontName fun(): string
+---@field get_FrameWidth fun(): number
+---@field get_FrameHeight fun(): number
+---@field set_LineWidth fun(value: Single): nil
+---@field CheckGlError fun(message: string): nil
+---@field GlGetError fun(): string
+---@field BindTexture2d fun(textureid: number): nil
+---@field UploadMesh fun(data: MeshData): MeshRef
+---@field UploadMultiTextureMesh fun(data: MeshData): MultiTextureMeshRef
+---@field DeleteMesh fun(meshref: MeshRef): nil
+---@field RenderMeshInstanced fun(meshRef: MeshRef, quantity: number): nil
+---@field RenderMesh fun(meshRef: MeshRef): nil
+---@field RenderMultiTextureMesh fun(mmr: MultiTextureMeshRef, textureSampleName: string, textureNumber: number): nil
+---@overload fun(mmr: MultiTextureMeshRef): nil
+---@overload fun(meshRef: MeshRef, indicesStarts: number[], indicesSizes: number[], groupCount: number): nil
+---@field GetFont fun(unscaledFontSize: Double, fontName: string, color: Double[], strokeColor: Double[]): CairoFont
+---@field GetUniformLocation fun(shaderProgramNumber: number, name: string): number
+---@field GLDeleteTexture fun(textureId: number): nil
+---@field GlDisableCullFace fun(): nil
+---@field GlGenerateTex2DMipmaps fun(): nil
+---@field GlToggleBlend fun(blend: boolean, blendMode: EnumBlendMode): nil
+---@field UpdateMesh fun(meshRef: MeshRef, updatedata: MeshData): nil
+---@field AllocateEmptyMesh fun(xyzSize: number, normalsSize: number, uvSize: number, rgbaSize: number, flagsSize: number, indicesSize: number, customFloats: CustomMeshDataPartFloat, customShorts: CustomMeshDataPartShort, customBytes: CustomMeshDataPartnumber, customInts: CustomMeshDataPartInt, drawMode: EnumDrawMode, staticDraw: boolean): MeshRef
+---@field GlEnableCullFace fun(): nil
+---@field GLDisableDepthTest fun(): nil
+---@field GLEnableDepthTest fun(): nil
+---@field GetEngineShader fun(program: EnumShaderProgram): IShaderProgram
+---@field GetShader fun(shaderProgramNumber: number): IShaderProgram
+---@field get_StandardShader fun(): IStandardShaderProgram
+---@field get_CurrentActiveShader fun(): IShaderProgram
+---@field get_ScissorStack fun(): Stack`1
+---@field PushScissor fun(bounds: ElementBounds, stacking: boolean): nil
+---@field PopScissor fun(): nil
+---@field GlScissor fun(x: number, y: number, width: number, height: number): nil
+---@field GlScissorFlag fun(enable: boolean): nil
+---@field GlGetMaxTextureSize fun(): number
+---@field LoadCairoTexture fun(surface: ImageSurface, linearMag: boolean): number
+---@field LoadTextureFromBgra fun(bgraPixels: number[], width: number, height: number, linearMag: boolean, clampMode: number): number
+---@field LoadTextureFromRgba fun(rgbaPixels: number[], width: number, height: number, linearMag: boolean, clampMode: number): number
+---@field LoadOrUpdateTextureFromBgra fun(bgraPixels: number[], linearMag: boolean, clampMode: number, intoTexture: LoadedTexture&): nil
+---@field LoadOrUpdateTextureFromRgba fun(rgbaPixels: number[], linearMag: boolean, clampMode: number, intoTexture: LoadedTexture&): nil
+---@field get_FrameBuffers fun(): any[]
+---@field GLDepthMask fun(on: boolean): nil
+---@field GlViewport fun(x: number, y: number, width: number, height: number): nil
+---@field LoadTexture fun(bmp: IBitmap, intoTexture: LoadedTexture&, linearMag: boolean, clampMode: number, generateMipmaps: boolean): nil
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+---@field ShaderUniforms DefaultShaderUniforms
+---@field Api DefaultShaderUniforms
+---@field TextureSize DefaultShaderUniforms
+---@field PerceptionEffects DefaultShaderUniforms
+---@field CameraOffset DefaultShaderUniforms
+---@field CameraMatrixOrigin DefaultShaderUniforms
+---@field CameraMatrixOriginf DefaultShaderUniforms
+---@field AmbientColor DefaultShaderUniforms
+---@field FogColor DefaultShaderUniforms
+---@field FogMin DefaultShaderUniforms
+---@field FogDensity DefaultShaderUniforms
+---@field CameraType DefaultShaderUniforms
+---@field MvMatrix DefaultShaderUniforms
+---@field PMatrix DefaultShaderUniforms
+---@field PerspectiveViewMat DefaultShaderUniforms
+---@field PerspectiveProjectionMat DefaultShaderUniforms
+---@field CurrentModelviewMatrix DefaultShaderUniforms
+---@field CurrentProjectionMatrix DefaultShaderUniforms
+---@field CurrentRenderStage DefaultShaderUniforms
+---@field CurrentShadowProjectionMatrix DefaultShaderUniforms
+---@field DefaultFrustumCuller DefaultShaderUniforms
+---@field DecorativeFontName DefaultShaderUniforms
+---@field StandardFontName DefaultShaderUniforms
+---@field FrameWidth DefaultShaderUniforms
+---@field FrameHeight DefaultShaderUniforms
+---@field LineWidth DefaultShaderUniforms
+---@field StandardShader DefaultShaderUniforms
+---@field CurrentActiveShader DefaultShaderUniforms
+---@field ScissorStack DefaultShaderUniforms
+---@field FrameBuffers DefaultShaderUniforms
+RenderAPIGame = {}

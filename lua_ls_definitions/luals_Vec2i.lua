@@ -1,0 +1,39 @@
+---@meta Vec2i
+---@class Vec2i: Object
+---@field ctor fun(): Vec2i
+---@overload fun(x: number, y: number): Vec2i
+---@overload fun(pos: Vec3d): Vec2i
+---@field get_Zero fun(): Vec2i
+---@field Equals fun(other: Vec2i): boolean
+---@overload fun(obj: table): boolean
+---@field GetHashCode fun(): number
+---@field get_Item fun(index: number): number
+---@field set_Item fun(index: number, value: number): nil
+---@field ManhattenDistance fun(point: Vec2i): number
+---@overload fun(x: number, y: number): number
+---@field Set fun(x: number, y: number): Vec2i
+---@overload fun(vec: Vec2i): Vec2i
+---@field Copy fun(): Vec2i
+---@field ToString fun(): string
+---@field Add fun(dx: number, dy: number): Vec2i
+---@field ToChunkIndex fun(): UInt64
+---@field op_Subtraction fun(left: Vec2i, right: Vec2i): Vec2i
+---@field op_Addition fun(left: Vec2i, right: Vec2i): Vec2i
+---@overload fun(left: Vec2i, right: number): Vec2i
+---@overload fun(left: number, right: Vec2i): Vec2i
+---@overload fun(left: Vec2i, right: number): Vec2i
+---@field op_Multiply fun(left: Vec2i, right: number): Vec2i
+---@overload fun(left: number, right: Vec2i): Vec2i
+---@overload fun(left: Vec2i, right: Double): Vec2i
+---@overload fun(left: Double, right: Vec2i): Vec2i
+---@overload fun(left: Vec2i, right: Vec2i): Double
+---@field op_Division fun(left: Vec2i, right: number): Vec2i
+---@overload fun(left: Vec2i, right: Single): Vec2i
+---@field op_Equality fun(left: Vec2i, right: Vec2i): boolean
+---@field op_Inequality fun(left: Vec2i, right: Vec2i): boolean
+---@field GetType fun(): any
+---@field Zero Vec2i
+---@field Item Vec2i
+---@field X Vec2i
+---@field Y Vec2i
+Vec2i = {}

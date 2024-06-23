@@ -1,0 +1,36 @@
+---@meta JsonObject
+---@class JsonObject: Object
+---@field ctor fun(token: JToken): JsonObject
+---@overload fun(original: Jsontable, unused: boolean): JsonObject
+---@field FromJson fun(jsonCode: string): Jsontable
+---@field get_Item fun(key: string): Jsontable
+---@field get_Exists fun(): boolean
+---@field get_Token fun(): JToken
+---@field set_Token fun(value: JToken): nil
+---@field KeyExists fun(key: string): boolean
+---@field AsObject fun(defaultValue: T): T
+---@overload fun(defaultValue: T, domain: string): T
+---@overload fun(settings: JsonSerializerSettings, defaultValue: T, domain: string): T
+---@field AsArray fun(): Jsontable[]
+---@field AsString fun(defaultValue: string): string
+---@field AsStringArray fun(defaultValue: string[], defaultDomain: string): string[]
+---@field AsFloatArray fun(defaultValue: Single[]): Single[]
+---@field AsArray fun(defaultValue: T[], defaultDomain: string): T[]
+---@field AsBool fun(defaultValue: boolean): boolean
+---@field AsInt fun(defaultValue: number): number
+---@field AsFloat fun(defaultValue: Single): Single
+---@field AsDouble fun(defaultValue: Double): Double
+---@field ToString fun(): string
+---@field IsArray fun(): boolean
+---@field ToAttribute fun(): IAttribute
+---@field FillPlaceHolder fun(key: string, value: string): nil
+---@field ToPrimitiveArray fun(array: JArray): T[]
+---@field Clone fun(): Jsontable
+---@field IsTrue fun(attrName: string): boolean
+---@field GetType fun(): any
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+---@field Item Jsontable
+---@field Exists Jsontable
+---@field Token Jsontable
+JsonObject = {}

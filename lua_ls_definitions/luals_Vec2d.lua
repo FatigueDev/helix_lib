@@ -1,0 +1,31 @@
+---@meta Vec2d
+---@class Vec2d: Object
+---@field ctor fun(): Vec2d
+---@overload fun(x: Double, y: Double): Vec2d
+---@field Set fun(x: Double, z: Double): Vec2d
+---@field Dot fun(a: Vec2d): Double
+---@overload fun(x: Double, y: Double): Double
+---@field Length fun(): Double
+---@field LengthSq fun(): Double
+---@field Normalize fun(): Vec2d
+---@field DistanceTo fun(pos: Vec2d): Double
+---@overload fun(targetX: Double, targetY: Double): Double
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+---@field op_Subtraction fun(left: Vec2d, right: Vec2d): Vec2d
+---@field op_Addition fun(left: Vec2d, right: Vec2d): Vec2d
+---@overload fun(left: Vec2d, right: Vec2i): Vec2d
+---@overload fun(left: Vec2d, right: Single): Vec2d
+---@overload fun(left: Single, right: Vec2d): Vec2d
+---@overload fun(left: Vec2d, right: Single): Vec2d
+---@field op_Multiply fun(left: Vec2d, right: Single): Vec2d
+---@overload fun(left: Single, right: Vec2d): Vec2d
+---@overload fun(left: Vec2d, right: Double): Vec2d
+---@overload fun(left: Double, right: Vec2d): Vec2d
+---@overload fun(left: Vec2d, right: Vec2d): Double
+---@field op_Division fun(left: Vec2d, right: Single): Vec2d
+---@field op_Equality fun(left: Vec2d, right: Vec2d): boolean
+---@field op_Inequality fun(left: Vec2d, right: Vec2d): boolean
+---@field GetType fun(): any
+---@field ToString fun(): string
+Vec2d = {}

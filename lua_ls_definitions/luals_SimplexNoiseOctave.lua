@@ -1,0 +1,13 @@
+---@meta SimplexNoiseOctave
+---@class SimplexNoiseOctave: Object
+---@field ctor fun(): SimplexNoiseOctave
+---@overload fun(seed: Int64): SimplexNoiseOctave
+---@field Evaluate fun(x: Double, y: Double): Double
+---@field EvaluateFairWarpVector fun(originalWarpX: SimplexNoiseOctave, originalWarpZ: SimplexNoiseOctave, x: Double, y: Double, distX: Double&, distY: Double&): nil
+---@field Evaluate fun(x: Double, y: Double, z: Double): Double
+---@overload fun(x: Double, y: Double, z: Double, w: Double): Double
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+SimplexNoiseOctave = {}

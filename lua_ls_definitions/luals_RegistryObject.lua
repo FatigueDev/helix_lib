@@ -1,0 +1,26 @@
+---@meta RegistryObject
+---@class RegistryObject: Object
+---@field ctor fun(): RegistryObject
+---@field CodeWithPath fun(path: string): AssetLocation
+---@field CodeWithoutParts fun(componentsToRemove: number): string
+---@field CodeEndWithoutParts fun(componentsToRemove: number): string
+---@field CodeWithParts fun(components: string[]): AssetLocation
+---@overload fun(component: string): AssetLocation
+---@field CodeWithVariant fun(type: string, value: string): AssetLocation
+---@field CodeWithVariants fun(valuesByType: table<any, any>): AssetLocation
+---@overload fun(types: string[], values: string[]): AssetLocation
+---@field CodeWithPart fun(part: string, atPosition: number): AssetLocation
+---@field LastCodePart fun(posFromRight: number): string
+---@field FirstCodePart fun(posFromLeft: number): string
+---@field WildCardMatch fun(wildcards: AssetLocation[]): boolean
+---@overload fun(wildCard: AssetLocation): boolean
+---@overload fun(wildcards: string[]): boolean
+---@overload fun(wildCard: string): boolean
+---@field FillPlaceHolder fun(input: AssetLocation, searchReplace: Orderedtable<any, any>): AssetLocation
+---@overload fun(input: string, searchReplace: Orderedtable<any, any>): string
+---@overload fun(input: string, search: string, replace: string): string
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+RegistryObject = {}

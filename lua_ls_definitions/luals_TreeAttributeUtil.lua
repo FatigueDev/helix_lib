@@ -1,0 +1,13 @@
+---@meta TreeAttributeUtil
+---@class TreeAttributeUtil: Object
+---@field GetVec3i fun(tree: ITreeAttribute, code: string, defaultValue: Vec3i): Vec3i
+---@field GetBlockPos fun(tree: ITreeAttribute, code: string, defaultValue: BlockPos): BlockPos
+---@field SetVec3i fun(tree: ITreeAttribute, code: string, value: Vec3i): nil
+---@field SetBlockPos fun(tree: ITreeAttribute, code: string, value: BlockPos): nil
+---@field GetVec3is fun(tree: ITreeAttribute, code: string, defaultValue: Vec3i[]): Vec3i[]
+---@field SetVec3is fun(tree: ITreeAttribute, code: string, value: Vec3i[]): nil
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+TreeAttributeUtil = {}

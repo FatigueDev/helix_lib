@@ -1,0 +1,24 @@
+---@meta CreativeTab
+---@class CreativeTab: Object
+---@field ctor fun(code: string, inventory: IInventory): CreativeTab
+---@field get_Inventory fun(): IInventory
+---@field set_Inventory fun(value: IInventory): nil
+---@field get_Code fun(): string
+---@field set_Code fun(value: string): nil
+---@field get_SearchCache fun(): table<any, any>
+---@field set_SearchCache fun(value: table<any, any>): nil
+---@field get_SearchCacheNames fun(): table<any, any>
+---@field set_SearchCacheNames fun(value: table<any, any>): nil
+---@field get_Index fun(): number
+---@field set_Index fun(value: number): nil
+---@field CreateSearchCache fun(world: IWorldAccessor): table<any, any>
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+---@field Inventory IInventory
+---@field Code IInventory
+---@field SearchCache IInventory
+---@field SearchCacheNames IInventory
+---@field Index IInventory
+CreativeTab = {}

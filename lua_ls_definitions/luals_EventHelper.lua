@@ -1,0 +1,11 @@
+---@meta EventHelper
+---@class EventHelper: Object
+---@field InvokeSafeCancellable fun(ev: Delegate, exceptionLogger: ILogger, eventName: string, arg: T): boolean
+---@overload fun(ev: Delegate, exceptionLogger: ILogger, eventName: string, arg0: T0, arg1: T1): boolean
+---@field InvokeSafe fun(ev: Delegate, exceptionLogger: ILogger, eventName: string, arg: T): boolean
+---@overload fun(ev: Delegate, exceptionLogger: ILogger, eventName: string, arg0: T0, arg1: T1): boolean
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+EventHelper = {}

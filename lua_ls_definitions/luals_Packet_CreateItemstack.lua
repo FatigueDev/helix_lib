@@ -1,0 +1,12 @@
+---@meta Packet_CreateItemstack
+---@class Packet_CreateItemstack: Object
+---@field ctor fun(): Packet_CreateItemstack
+---@field SetTargetInventoryId fun(value: string): nil
+---@field SetTargetSlot fun(value: number): nil
+---@field SetTargetLastChanged fun(value: Int64): nil
+---@field SetItemstack fun(value: Packet_ItemStack): nil
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+Packet_CreateItemstack = {}

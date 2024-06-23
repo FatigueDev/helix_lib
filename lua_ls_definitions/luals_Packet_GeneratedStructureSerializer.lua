@@ -1,0 +1,15 @@
+---@meta Packet_GeneratedStructureSerializer
+---@class Packet_GeneratedStructureSerializer: Object
+---@field ctor fun(): Packet_GeneratedStructureSerializer
+---@field DeserializeLengthDelimitedNew fun(stream: CitoMemoryStream): Packet_GeneratedStructure
+---@field DeserializeBuffer fun(buffer: number[], length: number, instance: Packet_GeneratedStructure): Packet_GeneratedStructure
+---@field Deserialize fun(stream: CitoMemoryStream, instance: Packet_GeneratedStructure): Packet_GeneratedStructure
+---@field DeserializeLengthDelimited fun(stream: CitoMemoryStream, instance: Packet_GeneratedStructure): Packet_GeneratedStructure
+---@field Serialize fun(stream: CitoStream, instance: Packet_GeneratedStructure): nil
+---@field SerializeToBytes fun(instance: Packet_GeneratedStructure): number[]
+---@field SerializeLengthDelimited fun(stream: CitoStream, instance: Packet_GeneratedStructure): nil
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+Packet_GeneratedStructureSerializer = {}

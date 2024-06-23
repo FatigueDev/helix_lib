@@ -1,0 +1,28 @@
+---@meta AnimatorBase
+---@class AnimatorBase: Object
+---@field ctor fun(WalkSpeedSupplier: WalkSpeedSupplierDelegate, Animations: Animation[], onAnimationStoppedListener: any`1): AnimatorBase
+---@field get_CalculateMatrices fun(): boolean
+---@field set_CalculateMatrices fun(value: boolean): nil
+---@field get_Matrices4x3 fun(): Single[]
+---@field get_ActiveAnimationCount fun(): number
+---@field get_RunningAnimations fun(): RunningAnimation[]
+---@field GetAnimationState fun(code: string): RunningAnimation
+---@field OnFrame fun(activeAnimationsByAnimCode: table<any, any>, dt: Single): nil
+---@field DumpCurrentState fun(): string
+---@field GetAttachmentPointPose fun(code: string): AttachmentPointAndPose
+---@field GetPosebyName fun(name: string, stringComparison: stringComparison): ElementPose
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+---@field CalculateMatrices boolean
+---@field Matrices4x3 boolean
+---@field ActiveAnimationCount boolean
+---@field RunningAnimations boolean
+---@field anims boolean
+---@field TransformationMatrices4x3 boolean
+---@field TransformationMatricesDefaultPose4x3 boolean
+---@field AttachmentPointByCode boolean
+---@field CurAnims boolean
+---@field identMat4x3 boolean
+AnimatorBase = {}

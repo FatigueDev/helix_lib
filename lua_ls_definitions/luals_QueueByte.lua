@@ -1,0 +1,12 @@
+---@meta QueueByte
+---@class QueueByte: Object
+---@field ctor fun(): QueueByte
+---@field GetCount fun(): number
+---@field Enqueue fun(value: number): nil
+---@field Dequeue fun(): number
+---@field DequeueRange fun(data: number[], length: number): nil
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+QueueByte = {}

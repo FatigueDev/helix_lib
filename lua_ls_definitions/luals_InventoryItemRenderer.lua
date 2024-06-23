@@ -1,0 +1,22 @@
+---@meta InventoryItemRenderer
+---@class InventoryItemRenderer: Object
+---@field ctor fun(game: ClientMain): InventoryItemRenderer
+---@field get_RenderOrder fun(): Double
+---@field get_RenderRange fun(): number
+---@field OnRenderFrame fun(deltaTime: Single, stage: EnumRenderStage): nil
+---@field RenderItemStackToAtlas fun(stack: ItemStack, atlas: ITextureAtlasAPI, size: number, onComplete: any`1, color: number, sepiaLevel: Single, scale: Single): boolean
+---@field RenderEntityToGui fun(dt: Single, entity: Entity, posX: Double, posY: Double, posZ: Double, yawDelta: Single, size: Single, color: number): nil
+---@field RenderItemstackToGui fun(inSlot: ItemSlot, posX: Double, posY: Double, posZ: Double, size: Single, color: number, shading: boolean, origRotate: boolean, showStackSize: boolean): nil
+---@overload fun(inSlot: ItemSlot, posX: Double, posY: Double, posZ: Double, size: Single, color: number, dt: Single, shading: boolean, origRotate: boolean, showStackSize: boolean): nil
+---@field GetItemStackRenderInfo fun(game: ClientMain, inSlot: ItemSlot, target: EnumItemRenderTarget, dt: Single): ItemRenderInfo
+---@field GetTextureAtlasPosition fun(game: ClientMain, itemstack: IItemStack): TextureAtlasPosition
+---@field GetCurrentBlockOrItemTextureId fun(side: number): number
+---@field GetBlockOrItemTextureId fun(facing: BlockFacing, itemstack: IItemStack): number
+---@field Dispose fun(): nil
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+---@field RenderOrder Double
+---@field RenderRange Double
+InventoryItemRenderer = {}

@@ -1,0 +1,28 @@
+---@meta RainMusicTrack
+---@class RainMusicTrack: Object
+---@field ctor fun(): RainMusicTrack
+---@field get_IsActive fun(): boolean
+---@field get_Name fun(): string
+---@field get_Priority fun(): Single
+---@field get_PositionString fun(): string
+---@field get_StartPriority fun(): Single
+---@field FadeOut fun(seconds: Single, onFadedOut: any`1): nil
+---@field Initialize fun(assetManager: IAssetManager, capi: ICoreClientAPI, musicEngine: IMusicEngine): nil
+---@field ShouldPlay fun(props: TrackedPlayerProperties, conds: ClimateCondition, pos: BlockPos): boolean
+---@field BeginPlay fun(props: TrackedPlayerProperties): nil
+---@field ContinuePlay fun(dt: Single, props: TrackedPlayerProperties): boolean
+---@field Stop fun(): nil
+---@field UpdateVolume fun(): nil
+---@field FadeOut fun(seconds: Single, onFadedOut: Action): nil
+---@field FastForward fun(seconds: Single): nil
+---@field BeginSort fun(): nil
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+---@field IsActive boolean
+---@field Name boolean
+---@field Priority boolean
+---@field PositionString boolean
+---@field StartPriority boolean
+RainMusicTrack = {}

@@ -1,0 +1,12 @@
+---@meta IModLoader
+---@class IModLoader
+---@field get_Mods fun(): any[]
+---@field get_Systems fun(): any[]
+---@field GetMod fun(modID: string): Mod
+---@field IsModEnabled fun(modID: string): boolean
+---@field GetModSystem fun(fullName: string): ModSystem
+---@overload fun(withInheritance: boolean): T
+---@field IsModSystemEnabled fun(fullName: string): boolean
+---@field Mods any[]
+---@field Systems any[]
+IModLoader = {}

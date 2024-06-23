@@ -1,0 +1,11 @@
+---@meta IntRef
+---@class IntRef: Object
+---@field ctor fun(): IntRef
+---@field Create fun(value_: number): IntRef
+---@field GetValue fun(): number
+---@field SetValue fun(value_: number): nil
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+IntRef = {}

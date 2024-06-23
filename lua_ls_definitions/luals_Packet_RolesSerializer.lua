@@ -1,0 +1,15 @@
+---@meta Packet_RolesSerializer
+---@class Packet_RolesSerializer: Object
+---@field ctor fun(): Packet_RolesSerializer
+---@field DeserializeLengthDelimitedNew fun(stream: CitoMemoryStream): Packet_Roles
+---@field DeserializeBuffer fun(buffer: number[], length: number, instance: Packet_Roles): Packet_Roles
+---@field Deserialize fun(stream: CitoMemoryStream, instance: Packet_Roles): Packet_Roles
+---@field DeserializeLengthDelimited fun(stream: CitoMemoryStream, instance: Packet_Roles): Packet_Roles
+---@field Serialize fun(stream: CitoStream, instance: Packet_Roles): nil
+---@field SerializeToBytes fun(instance: Packet_Roles): number[]
+---@field SerializeLengthDelimited fun(stream: CitoStream, instance: Packet_Roles): nil
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+Packet_RolesSerializer = {}

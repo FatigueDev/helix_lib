@@ -1,0 +1,15 @@
+---@meta Packet_AmbientSerializer
+---@class Packet_AmbientSerializer: Object
+---@field ctor fun(): Packet_AmbientSerializer
+---@field DeserializeLengthDelimitedNew fun(stream: CitoMemoryStream): Packet_Ambient
+---@field DeserializeBuffer fun(buffer: number[], length: number, instance: Packet_Ambient): Packet_Ambient
+---@field Deserialize fun(stream: CitoMemoryStream, instance: Packet_Ambient): Packet_Ambient
+---@field DeserializeLengthDelimited fun(stream: CitoMemoryStream, instance: Packet_Ambient): Packet_Ambient
+---@field Serialize fun(stream: CitoStream, instance: Packet_Ambient): nil
+---@field SerializeToBytes fun(instance: Packet_Ambient): number[]
+---@field SerializeLengthDelimited fun(stream: CitoStream, instance: Packet_Ambient): nil
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+Packet_AmbientSerializer = {}

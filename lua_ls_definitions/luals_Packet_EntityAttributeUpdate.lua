@@ -1,0 +1,14 @@
+---@meta Packet_EntityAttributeUpdate
+---@class Packet_EntityAttributeUpdate: Object
+---@field ctor fun(): Packet_EntityAttributeUpdate
+---@field SetEntityId fun(value: Int64): nil
+---@field GetAttributes fun(): Packet_PartialAttribute[]
+---@field SetAttributes fun(value: Packet_PartialAttribute[], count: number, length: number): nil
+---@overload fun(value: Packet_PartialAttribute[]): nil
+---@field GetAttributesCount fun(): number
+---@field AttributesAdd fun(value: Packet_PartialAttribute): nil
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+Packet_EntityAttributeUpdate = {}

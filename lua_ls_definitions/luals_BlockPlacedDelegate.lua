@@ -1,0 +1,19 @@
+---@meta BlockPlacedDelegate
+---@class BlockPlacedDelegate: MulticastDelegate
+---@field ctor fun(object: table, method: IntPtr): BlockPlacedDelegate
+---@field Invoke fun(byPlayer: IServerPlayer, oldblockId: number, blockSel: BlockSelection, withItemStack: ItemStack): nil
+---@field BeginInvoke fun(byPlayer: IServerPlayer, oldblockId: number, blockSel: BlockSelection, withItemStack: ItemStack, callback: AsyncCallback, object: table): IAsyncResult
+---@field EndInvoke fun(result: IAsyncResult): nil
+---@field GetObjectData fun(info: SerializationInfo, context: StreamingContext): nil
+---@field Equals fun(obj: table): boolean
+---@field GetInvocationList fun(): Delegate[]
+---@field GetHashCode fun(): number
+---@field get_Target fun(): table
+---@field Clone fun(): table
+---@field DynamicInvoke fun(args: table[]): table
+---@field get_Method fun(): MethodInfo
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Target table
+---@field Method table
+BlockPlacedDelegate = {}

@@ -1,0 +1,19 @@
+---@meta WorldInteraction
+---@class WorldInteraction: Object
+---@field ctor fun(): WorldInteraction
+---@field get_HotKeyCodes fun(): string[]
+---@field set_HotKeyCodes fun(value: string[]): nil
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+---@field HotKeyCodes string[]
+---@field MouseButton string[]
+---@field HotKeyCode string[]
+---@field ActionLangCode string[]
+---@field JsonItemStacks string[]
+---@field Itemstacks string[]
+---@field RequireFreeHand string[]
+---@field GetMatchingStacks string[]
+---@field ShouldApply string[]
+WorldInteraction = {}

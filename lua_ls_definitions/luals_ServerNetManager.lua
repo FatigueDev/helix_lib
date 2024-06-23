@@ -1,0 +1,16 @@
+---@meta ServerNetManager
+---@class ServerNetManager: Object
+---@field ctor fun(): ServerNetManager
+---@field StartServer fun(port: number, ipAddress: string): nil
+---@field add_Connected fun(value: EventHandler`1): nil
+---@field remove_Connected fun(value: EventHandler`1): nil
+---@field add_ReceivedMessage fun(value: EventHandler`1): nil
+---@field remove_ReceivedMessage fun(value: EventHandler`1): nil
+---@field add_Disconnected fun(value: EventHandler`1): nil
+---@field remove_Disconnected fun(value: EventHandler`1): nil
+---@field Send fun(sender: table, data: number[], compressedFlag: boolean): nil
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+ServerNetManager = {}

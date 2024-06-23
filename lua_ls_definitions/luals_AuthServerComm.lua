@@ -1,0 +1,11 @@
+---@meta AuthServerComm
+---@class AuthServerComm: Object
+---@field ctor fun(): AuthServerComm
+---@field ValidatePlayerWithServer fun(mptokenv2: string, playerName: string, playerUID: string, serverLoginToken: string, OnValidationComplete: ValidationCompleteDelegate): nil
+---@field ResolvePlayerName fun(playername: string, OnResolveComplete: Action`2): nil
+---@field ResolvePlayerUid fun(playeruid: string, OnResolveComplete: Action`2): nil
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+AuthServerComm = {}

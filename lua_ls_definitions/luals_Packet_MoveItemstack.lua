@@ -1,0 +1,19 @@
+---@meta Packet_MoveItemstack
+---@class Packet_MoveItemstack: Object
+---@field ctor fun(): Packet_MoveItemstack
+---@field SetSourceInventoryId fun(value: string): nil
+---@field SetTargetInventoryId fun(value: string): nil
+---@field SetSourceSlot fun(value: number): nil
+---@field SetTargetSlot fun(value: number): nil
+---@field SetQuantity fun(value: number): nil
+---@field SetSourceLastChanged fun(value: Int64): nil
+---@field SetTargetLastChanged fun(value: Int64): nil
+---@field SetMouseButton fun(value: number): nil
+---@field SetModifiers fun(value: number): nil
+---@field SetPriority fun(value: number): nil
+---@field SetTabIndex fun(value: number): nil
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+Packet_MoveItemstack = {}

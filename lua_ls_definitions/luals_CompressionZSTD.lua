@@ -1,0 +1,21 @@
+---@meta CompressionZSTD
+---@class CompressionZSTD: Object
+---@field ctor fun(): CompressionZSTD
+---@field get_Buffer fun(): number[]
+---@field Compress fun(data: number[]): number[]
+---@overload fun(data: number[], length: number, reserveOffset: number): number[]
+---@overload fun(ushortdata: UInt16[]): number[]
+---@overload fun(intdata: number[], length: number): number[]
+---@overload fun(uintdata: Unumber[], length: number): number[]
+---@field Decompress fun(fi: number[], dest: number[]): nil
+---@overload fun(fi: number[]): number[]
+---@overload fun(fi: number[], offset: number, length: number): number[]
+---@field DecompressAndSize fun(compressedData: number[], buffer: number[]&): number
+---@overload fun(compressedData: number[], offset: number, length: number, buffer: number[]&): number
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+---@field Buffer number[]
+---@field ZSTDCompressionLevel number[]
+CompressionZSTD = {}

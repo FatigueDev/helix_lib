@@ -1,0 +1,16 @@
+---@meta LongAttribute
+---@class LongAttribute: ScalarAttribute`1
+---@field ctor fun(): LongAttribute
+---@overload fun(value: Int64): LongAttribute
+---@field FromBytes fun(stream: BinaryReader): nil
+---@field ToBytes fun(stream: BinaryWriter): nil
+---@field GetAttributeId fun(): number
+---@field Clone fun(): IAttribute
+---@field Equals fun(worldForResolve: IWorldAccessor, attr: IAttribute): boolean
+---@overload fun(b: table): boolean
+---@field GetValue fun(): table
+---@field ToString fun(): string
+---@field ToJsonToken fun(): string
+---@field GetHashCode fun(): number
+---@field GetType fun(): any
+LongAttribute = {}

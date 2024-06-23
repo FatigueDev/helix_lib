@@ -1,0 +1,23 @@
+---@meta Packet_UnloadServerChunk
+---@class Packet_UnloadServerChunk: Object
+---@field ctor fun(): Packet_UnloadServerChunk
+---@field GetX fun(): number[]
+---@field SetX fun(value: number[], count: number, length: number): nil
+---@overload fun(value: number[]): nil
+---@field GetXCount fun(): number
+---@field XAdd fun(value: number): nil
+---@field GetY fun(): number[]
+---@field SetY fun(value: number[], count: number, length: number): nil
+---@overload fun(value: number[]): nil
+---@field GetYCount fun(): number
+---@field YAdd fun(value: number): nil
+---@field GetZ fun(): number[]
+---@field SetZ fun(value: number[], count: number, length: number): nil
+---@overload fun(value: number[]): nil
+---@field GetZCount fun(): number
+---@field ZAdd fun(value: number): nil
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+Packet_UnloadServerChunk = {}

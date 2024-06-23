@@ -1,0 +1,56 @@
+---@meta IChatCommand
+---@class IChatCommand
+---@field get_FullName fun(): string
+---@field get_Name fun(): string
+---@field get_Description fun(): string
+---@field get_AdditionalInformation fun(): string
+---@field get_Examples fun(): string[]
+---@field get_Incomplete fun(): boolean
+---@field get_Aliases fun(): any[]
+---@field get_RootAliases fun(): any[]
+---@field get_CommandPrefix fun(): string
+---@field get_Item fun(name: string): IChatCommand
+---@field WithPreCondition fun(p: CommandPreconditionDelegate): IChatCommand
+---@field WithName fun(name: string): IChatCommand
+---@field WithAlias fun(name: string[]): IChatCommand
+---@field WithRootAlias fun(name: string): IChatCommand
+---@field WithDescription fun(description: string): IChatCommand
+---@field WithAdditionalInformation fun(detail: string): IChatCommand
+---@field WithExamples fun(examaples: string[]): IChatCommand
+---@field WithArgs fun(args: ICommandArgumentParser[]): IChatCommand
+---@field RequiresPrivilege fun(privilege: string): IChatCommand
+---@field RequiresPlayer fun(): IChatCommand
+---@field BeginSubCommand fun(name: string): IChatCommand
+---@field BeginSubCommands fun(name: string[]): IChatCommand
+---@field EndSubCommand fun(): IChatCommand
+---@field HandleWith fun(handler: OnCommandDelegate): IChatCommand
+---@field Execute fun(callargs: TextCommandCallingArgs, onCommandComplete: any`1): nil
+---@field IsAvailableTo fun(caller: Caller): boolean
+---@field Validate fun(): nil
+---@field IgnoreAdditionalArgs fun(): IChatCommand
+---@field get_Subcommands fun(): any[]
+---@field get_AllSubcommands fun(): table<any, any>
+---@field GetFullSyntaxConsole fun(caller: Caller): string
+---@field GetFullSyntaxHandbook fun(caller: Caller, indent: string, isRootAlias: boolean): string
+---@field get_CallSyntax fun(): string
+---@field get_CallSyntaxUnformatted fun(): string
+---@field AddParameterSyntax fun(sb: stringBuilder, indent: string): nil
+---@field AddSyntaxExplanation fun(sb: stringBuilder, indent: string): nil
+---@field GetFullName fun(alias: string, isRootAlias: boolean): string
+---@field GetCallSyntax fun(alias: string, isRootAlias: boolean): string
+---@field GetCallSyntaxUnformatted fun(alias: string, isRootAlias: boolean): string
+---@field FullName string
+---@field Name string
+---@field Description string
+---@field AdditionalInformation string
+---@field Examples string
+---@field Incomplete string
+---@field Aliases string
+---@field RootAliases string
+---@field CommandPrefix string
+---@field Item string
+---@field Subcommands string
+---@field AllSubcommands string
+---@field CallSyntax string
+---@field CallSyntaxUnformatted string
+IChatCommand = {}

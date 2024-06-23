@@ -1,0 +1,29 @@
+---@meta Lang
+---@class Lang: Object
+---@field get_AvailableLanguages fun(): table<any, any>
+---@field get_CurrentLocale fun(): string
+---@field get_DefaultLocale fun(): string
+---@field set_DefaultLocale fun(value: string): nil
+---@field Load fun(logger: ILogger, assetManager: IAssetManager, language: string): nil
+---@field ChangeLanguage fun(languageCode: string): nil
+---@field LoadLanguage fun(logger: ILogger, assetManager: IAssetManager, languageCode: string, lazyLoad: boolean, lbBehavior: EnumLinebreakBehavior): nil
+---@field PreLoad fun(logger: ILogger, assetsPath: string, defaultLanguage: string): nil
+---@field GetIfExists fun(key: string, args: table[]): string
+---@field GetL fun(langcode: string, key: string, args: table[]): string
+---@field GetMatchingL fun(langcode: string, key: string, args: table[]): string
+---@field Get fun(key: string, args: table[]): string
+---@field GetUnformatted fun(key: string): string
+---@field GetMatching fun(key: string, args: table[]): string
+---@field GetMatchingIfExists fun(key: string, args: table[]): string
+---@field GetAllEntries fun(): Itable<any, any>
+---@field HasTranslation fun(key: string, findWildcarded: boolean, logErrors: boolean): boolean
+---@field InitialiseSearch fun(): nil
+---@field GetNamePlaceHolder fun(code: AssetLocation): string
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+---@field AvailableLanguages table<any, any>
+---@field CurrentLocale table<any, any>
+---@field DefaultLocale table<any, any>
+Lang = {}

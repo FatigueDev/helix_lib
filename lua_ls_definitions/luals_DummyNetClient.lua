@@ -1,0 +1,17 @@
+---@meta DummyNetClient
+---@class DummyNetClient: NetClient
+---@field ctor fun(): DummyNetClient
+---@field get_CurrentlyReceivingBytes fun(): number
+---@field Connect fun(ip: string, port: number, OnConnectionResult: any`1, OnDisconnected: any`1): NetConnection
+---@field ReadMessage fun(): NetIncomingMessage
+---@field Send fun(data: number[]): nil
+---@field Start fun(): nil
+---@field SetNetwork fun(network_: DummyNetwork): nil
+---@field SetPlatform fun(gamePlatform: ClientPlatformAbstract): nil
+---@field Dispose fun(): nil
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+---@field CurrentlyReceivingBytes number
+DummyNetClient = {}

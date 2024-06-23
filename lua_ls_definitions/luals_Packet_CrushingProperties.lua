@@ -1,0 +1,11 @@
+---@meta Packet_CrushingProperties
+---@class Packet_CrushingProperties: Object
+---@field ctor fun(): Packet_CrushingProperties
+---@field SetCrushedStack fun(value: number[]): nil
+---@field SetHardnessTier fun(value: number): nil
+---@field SetQuantity fun(value: Packet_NatFloat): nil
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+Packet_CrushingProperties = {}

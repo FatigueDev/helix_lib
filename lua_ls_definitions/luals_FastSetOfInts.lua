@@ -1,0 +1,15 @@
+---@meta FastSetOfInts
+---@class FastSetOfInts: Object
+---@field ctor fun(): FastSetOfInts
+---@field get_Count fun(): number
+---@field Clear fun(): nil
+---@field Add fun(a: number, b: number, c: number, d: number): boolean
+---@overload fun(value: number): boolean
+---@field RemoveIfMatches fun(a: number, b: number, c: number, d: number): nil
+---@field GetEnumerator fun(): IEnumerator`1
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+---@field Count number
+FastSetOfInts = {}

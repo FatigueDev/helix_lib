@@ -1,0 +1,27 @@
+---@meta IVertexShaderProgramVertexwarp
+---@class IVertexShaderProgramVertexwarp
+---@field set_TimeCounter fun(value: Single): nil
+---@field set_WindWaveCounter fun(value: Single): nil
+---@field set_WindWaveCounterHighFreq fun(value: Single): nil
+---@field set_WaterWaveCounter fun(value: Single): nil
+---@field set_WindSpeed fun(value: Single): nil
+---@field set_Playerpos fun(value: Vec3f): nil
+---@field set_GlobalWarpIntensity fun(value: Single): nil
+---@field set_GlitchWaviness fun(value: Single): nil
+---@field set_WindWaveIntensity fun(value: Single): nil
+---@field set_WaterWaveIntensity fun(value: Single): nil
+---@field set_PerceptionEffectId fun(value: number): nil
+---@field set_PerceptionEffectIntensity fun(value: Single): nil
+---@field TimeCounter Single
+---@field WindWaveCounter Single
+---@field WindWaveCounterHighFreq Single
+---@field WaterWaveCounter Single
+---@field WindSpeed Single
+---@field Playerpos Single
+---@field GlobalWarpIntensity Single
+---@field GlitchWaviness Single
+---@field WindWaveIntensity Single
+---@field WaterWaveIntensity Single
+---@field PerceptionEffectId Single
+---@field PerceptionEffectIntensity Single
+IVertexShaderProgramVertexwarp = {}

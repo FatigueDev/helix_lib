@@ -1,0 +1,15 @@
+---@meta SessionManager
+---@class SessionManager: Object
+---@field ctor fun(): SessionManager
+---@field IsCachedSessionKeyValid fun(): boolean
+---@field ValidateSessionKeyWithServer fun(OnValidationComplete: any`1): nil
+---@field RequestMpToken fun(OnValidationComplete: Action`2, serverlogintoken: string): nil
+---@field GetNewestVersion fun(OnGetComplete: any`1): nil
+---@field GetPlayerSkin fun(playerUid: string, OnGetComplete: any`1): nil
+---@field DoLogin fun(email: string, password: string, loginmailedcode: string, OnLoginComplete: Action`3): nil
+---@field DoLogout fun(): nil
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+SessionManager = {}

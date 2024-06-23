@@ -1,0 +1,31 @@
+---@meta IFragmentShaderProgramFogandlight
+---@class IFragmentShaderProgramFogandlight
+---@field set_FlatFogDensity fun(value: Single): nil
+---@field set_FlatFogStart fun(value: Single): nil
+---@field set_ViewDistance fun(value: Single): nil
+---@field set_ViewDistanceLod0 fun(value: Single): nil
+---@field set_ZNear fun(value: Single): nil
+---@field set_ZFar fun(value: Single): nil
+---@field set_LightPosition fun(value: Vec3f): nil
+---@field set_ShadowIntensity fun(value: Single): nil
+---@field set_ShadowMapFar2D fun(value: number): nil
+---@field set_ShadowMapWidthInv fun(value: Single): nil
+---@field set_ShadowMapHeightInv fun(value: Single): nil
+---@field set_ShadowMapNear2D fun(value: number): nil
+---@field set_WindWaveCounter fun(value: Single): nil
+---@field set_GlitchStrength fun(value: Single): nil
+---@field FlatFogDensity Single
+---@field FlatFogStart Single
+---@field ViewDistance Single
+---@field ViewDistanceLod0 Single
+---@field ZNear Single
+---@field ZFar Single
+---@field LightPosition Single
+---@field ShadowIntensity Single
+---@field ShadowMapFar2D Single
+---@field ShadowMapWidthInv Single
+---@field ShadowMapHeightInv Single
+---@field ShadowMapNear2D Single
+---@field WindWaveCounter Single
+---@field GlitchStrength Single
+IFragmentShaderProgramFogandlight = {}

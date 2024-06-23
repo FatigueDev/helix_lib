@@ -1,0 +1,11 @@
+---@meta ModAssemblyLoader
+---@class ModAssemblyLoader: Object
+---@field ctor fun(modSearchPaths: IReadOnlyany[], mods: IReadOnlyany[]): ModAssemblyLoader
+---@field Dispose fun(): nil
+---@field LoadFrom fun(path: string): Assembly
+---@field LoadAssemblyDefinition fun(path: string): AssemblyDefinition
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+ModAssemblyLoader = {}

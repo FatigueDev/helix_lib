@@ -1,0 +1,43 @@
+---@meta OrderedDictionary`2
+---@class OrderedDictionary`2: Object
+---@field ctor fun(): OrderedDictionary`2
+---@overload fun(capacity: number): OrderedDictionary`2
+---@overload fun(comparer: IEqualityComparer`1): OrderedDictionary`2
+---@overload fun(capacity: number, comparer: IEqualityComparer`1): OrderedDictionary`2
+---@overload fun(initialData: Orderedtable<any, any>): OrderedDictionary`2
+---@overload fun(initialData: table<any, any>): OrderedDictionary`2
+---@field get_InternalDictionary fun(): table<any, any>
+---@field Insert fun(index: number, key: TKey, value: TValue): nil
+---@field InsertBefore fun(Atkey: TKey, key: TKey, value: TValue): nil
+---@field RemoveAt fun(index: number): nil
+---@field GetValueAtIndex fun(index: number): TValue
+---@field GetKeyAtIndex fun(index: number): TKey
+---@field SetAtIndex fun(index: number, value: TValue): nil
+---@field Add fun(key: TKey, value: TValue): number
+---@field Clear fun(): nil
+---@field ContainsKey fun(key: TKey): boolean
+---@field IndexOfKey fun(key: TKey): number
+---@field Remove fun(key: TKey): boolean
+---@field get_Item fun(key: TKey): TValue
+---@field set_Item fun(key: TKey, value: TValue): nil
+---@field get_Count fun(): number
+---@field get_Keys fun(): Iany[]
+---@field get_ValuesOrdered fun(): any[]
+---@field TryGetValue fun(key: TKey, value: TValue&): boolean
+---@overload fun(key: TKey): TValue
+---@field get_Values fun(): Iany[]
+---@field get_IsReadOnly fun(): boolean
+---@field GetEnumerator fun(): IEnumerator`1
+---@field ContainsValue fun(value: TValue): boolean
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+---@field InternalDictionary table<any, any>
+---@field Item table<any, any>
+---@field Count table<any, any>
+---@field Keys table<any, any>
+---@field ValuesOrdered table<any, any>
+---@field Values table<any, any>
+---@field IsReadOnly table<any, any>
+OrderedDictionary`2 = {}

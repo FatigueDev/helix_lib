@@ -1,0 +1,118 @@
+---@meta SimpleParticleProperties
+---@class SimpleParticleProperties: Object
+---@field ctor fun(): SimpleParticleProperties
+---@overload fun(minQuantity: Single, maxQuantity: Single, color: number, minPos: Vec3d, maxPos: Vec3d, minVelocity: Vec3f, maxVelocity: Vec3f, lifeLength: Single, gravityEffect: Single, minSize: Single, maxSize: Single, model: EnumParticleModel): SimpleParticleProperties
+---@field get_rand fun(): Random
+---@field get_ParentVelocity fun(): Vec3f
+---@field set_ParentVelocity fun(value: Vec3f): nil
+---@field get_ParentVelocityWeight fun(): Single
+---@field set_ParentVelocityWeight fun(value: Single): nil
+---@field get_GravityEffect fun(): Single
+---@field set_GravityEffect fun(value: Single): nil
+---@field get_VertexFlags fun(): number
+---@field set_VertexFlags fun(value: number): nil
+---@field get_Async fun(): boolean
+---@field set_Async fun(value: boolean): nil
+---@field get_Bounciness fun(): Single
+---@field set_Bounciness fun(value: Single): nil
+---@field get_ShouldDieInAir fun(): boolean
+---@field set_ShouldDieInAir fun(value: boolean): nil
+---@field get_ShouldDieInLiquid fun(): boolean
+---@field set_ShouldDieInLiquid fun(value: boolean): nil
+---@field get_ShouldSwimOnLiquid fun(): boolean
+---@field set_ShouldSwimOnLiquid fun(value: boolean): nil
+---@field get_WithTerrainCollision fun(): boolean
+---@field set_WithTerrainCollision fun(value: boolean): nil
+---@field get_OpacityEvolve fun(): EvolvingNatFloat
+---@field set_OpacityEvolve fun(value: EvolvingNatFloat): nil
+---@field get_RedEvolve fun(): EvolvingNatFloat
+---@field set_RedEvolve fun(value: EvolvingNatFloat): nil
+---@field get_GreenEvolve fun(): EvolvingNatFloat
+---@field set_GreenEvolve fun(value: EvolvingNatFloat): nil
+---@field get_BlueEvolve fun(): EvolvingNatFloat
+---@field set_BlueEvolve fun(value: EvolvingNatFloat): nil
+---@field get_SizeEvolve fun(): EvolvingNatFloat
+---@field set_SizeEvolve fun(value: EvolvingNatFloat): nil
+---@field get_RandomVelocityChange fun(): boolean
+---@field set_RandomVelocityChange fun(value: boolean): nil
+---@field Init fun(api: ICoreAPI): nil
+---@field get_DieInAir fun(): boolean
+---@field get_DieInLiquid fun(): boolean
+---@field get_SwimOnLiquid fun(): boolean
+---@field get_Quantity fun(): Single
+---@field get_Pos fun(): Vec3d
+---@field GetVelocity fun(pos: Vec3d): Vec3f
+---@field get_Size fun(): Single
+---@field GetRgbaColor fun(capi: ICoreClientAPI): number
+---@field get_ParticleModel fun(): EnumParticleModel
+---@field set_ParticleModel fun(value: EnumParticleModel): nil
+---@field UseLighting fun(): boolean
+---@field get_VelocityEvolve fun(): EvolvingNatFloat[]
+---@field get_TerrainCollision fun(): boolean
+---@field ToBytes fun(writer: BinaryWriter): nil
+---@field FromBytes fun(reader: BinaryReader, resolver: IWorldAccessor): nil
+---@field BeginParticle fun(): nil
+---@field get_SecondaryParticles fun(): IParticlePropertiesProvider[]
+---@field set_SecondaryParticles fun(value: IParticlePropertiesProvider[]): nil
+---@field get_DeathParticles fun(): IParticlePropertiesProvider[]
+---@field set_DeathParticles fun(value: IParticlePropertiesProvider[]): nil
+---@field get_SecondarySpawnInterval fun(): Single
+---@field get_DieOnRainHeightmap fun(): boolean
+---@field set_DieOnRainHeightmap fun(value: boolean): nil
+---@field get_WindAffected fun(): boolean
+---@field set_WindAffected fun(value: boolean): nil
+---@field PrepareForSecondarySpawn fun(particleInstance: ParticleBase): nil
+---@field Clone fun(worldForResovle: IWorldAccessor): SimpleParticleProperties
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+---@field rand Random
+---@field ParentVelocity Random
+---@field ParentVelocityWeight Random
+---@field GravityEffect Random
+---@field VertexFlags Random
+---@field Async Random
+---@field Bounciness Random
+---@field ShouldDieInAir Random
+---@field ShouldDieInLiquid Random
+---@field ShouldSwimOnLiquid Random
+---@field WithTerrainCollision Random
+---@field OpacityEvolve Random
+---@field RedEvolve Random
+---@field GreenEvolve Random
+---@field BlueEvolve Random
+---@field SizeEvolve Random
+---@field RandomVelocityChange Random
+---@field DieInAir Random
+---@field DieInLiquid Random
+---@field SwimOnLiquid Random
+---@field Quantity Random
+---@field Pos Random
+---@field Size Random
+---@field ParticleModel Random
+---@field VelocityEvolve Random
+---@field TerrainCollision Random
+---@field SecondaryParticles Random
+---@field DeathParticles Random
+---@field SecondarySpawnInterval Random
+---@field DieOnRainHeightmap Random
+---@field WindAffected Random
+---@field MinQuantity Random
+---@field AddQuantity Random
+---@field WindAffectednes Random
+---@field MinPos Random
+---@field AddPos Random
+---@field MinVelocity Random
+---@field AddVelocity Random
+---@field LifeLength Random
+---@field addLifeLength Random
+---@field MinSize Random
+---@field MaxSize Random
+---@field Color Random
+---@field SelfPropelled Random
+---@field ColorByBlock Random
+---@field ClimateColorMap Random
+---@field SeasonColorMap Random
+---@field randTL Random
+SimpleParticleProperties = {}

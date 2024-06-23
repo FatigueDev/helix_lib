@@ -1,0 +1,25 @@
+---@meta IServerPlayerData
+---@class IServerPlayerData
+---@field get_PlayerUID fun(): string
+---@field get_RoleCode fun(): string
+---@field get_PermaPrivileges fun(): HashSet`1
+---@field get_DeniedPrivileges fun(): HashSet`1
+---@field get_PlayerGroupMemberships fun(): table<any, any>
+---@field get_AllowInvite fun(): boolean
+---@field get_LastKnownPlayername fun(): string
+---@field get_CustomPlayerData fun(): table<any, any>
+---@field get_ExtraLandClaimAllowance fun(): number
+---@field set_ExtraLandClaimAllowance fun(value: number): nil
+---@field get_ExtraLandClaimAreas fun(): number
+---@field set_ExtraLandClaimAreas fun(value: number): nil
+---@field PlayerUID string
+---@field RoleCode string
+---@field PermaPrivileges string
+---@field DeniedPrivileges string
+---@field PlayerGroupMemberships string
+---@field AllowInvite string
+---@field LastKnownPlayername string
+---@field CustomPlayerData string
+---@field ExtraLandClaimAllowance string
+---@field ExtraLandClaimAreas string
+IServerPlayerData = {}

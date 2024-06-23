@@ -1,0 +1,12 @@
+---@meta FastListEnum`1
+---@class FastListEnum`1: Object
+---@field ctor fun(list: Fastany[]): FastListEnum`1
+---@field get_Current fun(): table
+---@field MoveNext fun(): boolean
+---@field Reset fun(): nil
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+---@field Current table
+FastListEnum`1 = {}

@@ -1,0 +1,19 @@
+---@meta BitmapRef
+---@class BitmapRef: Object
+---@field get_Width fun(): number
+---@field get_Height fun(): number
+---@field get_Pixels fun(): number[]
+---@field Dispose fun(): nil
+---@field GetPixel fun(x: number, y: number): SKColor
+---@field GetPixelRel fun(x: Single, y: Single): SKColor
+---@field GetPixelsTransformed fun(rot: number, mulalpha: number): number[]
+---@field Save fun(filename: string): nil
+---@field MulAlpha fun(alpha: number): nil
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+---@field Width number
+---@field Height number
+---@field Pixels number
+BitmapRef = {}

@@ -1,0 +1,32 @@
+---@meta AssetCategory
+---@class AssetCategory: Object
+---@field ctor fun(code: string, AffectsGameplay: boolean, SideType: EnumAppSide): AssetCategory
+---@field get_Code fun(): string
+---@field get_SideType fun(): EnumAppSide
+---@field get_AffectsGameplay fun(): boolean
+---@field ToString fun(): string
+---@field FromCode fun(code: string): AssetCategory
+---@field GetType fun(): any
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+---@field Code string
+---@field SideType string
+---@field AffectsGameplay string
+---@field categories string
+---@field blocktypes string
+---@field itemtypes string
+---@field lang string
+---@field patches string
+---@field config string
+---@field worldproperties string
+---@field sounds string
+---@field shapes string
+---@field shaders string
+---@field shaderincludes string
+---@field textures string
+---@field music string
+---@field dialog string
+---@field recipes string
+---@field worldgen string
+---@field entities string
+AssetCategory = {}

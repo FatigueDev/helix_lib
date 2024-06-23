@@ -1,0 +1,22 @@
+---@meta RecipeBase`1
+---@class RecipeBase`1: Object
+---@field get_Ingredient fun(): CraftingRecipeIngredient
+---@field set_Ingredient fun(value: CraftingRecipeIngredient): nil
+---@field get_Name fun(): AssetLocation
+---@field set_Name fun(value: AssetLocation): nil
+---@field get_Enabled fun(): boolean
+---@field set_Enabled fun(value: boolean): nil
+---@field Clone fun(): T
+---@field GetNameToCodeMapping fun(world: IWorldAccessor): table<any, any>
+---@field Resolve fun(world: IWorldAccessor, sourceForErrorLogging: string): boolean
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+---@field Ingredient CraftingRecipeIngredient
+---@field Name CraftingRecipeIngredient
+---@field Enabled CraftingRecipeIngredient
+---@field RecipeId CraftingRecipeIngredient
+---@field Ingredients CraftingRecipeIngredient
+---@field Output CraftingRecipeIngredient
+RecipeBase`1 = {}

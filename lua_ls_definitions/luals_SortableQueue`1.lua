@@ -1,0 +1,15 @@
+---@meta SortableQueue`1
+---@class SortableQueue`1: Object
+---@field ctor fun(): SortableQueue`1
+---@field Clear fun(): nil
+---@field Enqueue fun(v: T): nil
+---@field EnqueueOrMerge fun(v: T): nil
+---@field Dequeue fun(): T
+---@field Sort fun(): nil
+---@field RunForEach fun(action: any`1): nil
+---@field DequeueLIFO fun(): T
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+SortableQueue`1 = {}

@@ -1,0 +1,31 @@
+---@meta CompositeTexture
+---@class CompositeTexture: Object
+---@field ctor fun(): CompositeTexture
+---@overload fun(Base: AssetLocation): CompositeTexture
+---@field set_Overlays fun(value: AssetLocation[]): nil
+---@field get_AnyWildCardNoFiles fun(): AssetLocation
+---@field Clone fun(): CompositeTexture
+---@field IsBasic fun(): boolean
+---@field Bake fun(assetManager: IAssetManager): nil
+---@field RuntimeBake fun(capi: ICoreClientAPI, intoAtlas: ITextureAtlasAPI): nil
+---@field ToString fun(): string
+---@field FillPlaceholder fun(search: string, replace: string): nil
+---@field GetType fun(): any
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+---@field Overlays AssetLocation[]
+---@field AnyWildCardNoFiles AssetLocation[]
+---@field Base AssetLocation[]
+---@field BlendedOverlays AssetLocation[]
+---@field Alternates AssetLocation[]
+---@field Tiles AssetLocation[]
+---@field TilesWidth AssetLocation[]
+---@field Baked AssetLocation[]
+---@field Rotation AssetLocation[]
+---@field Alpha AssetLocation[]
+---@field WildCardNoFiles AssetLocation[]
+---@field basicTexturesCache AssetLocation[]
+---@field wildcardsCache AssetLocation[]
+---@field AlphaSeparator AssetLocation[]
+---@field AlphaSeparatorRegexSearch AssetLocation[]
+CompositeTexture = {}

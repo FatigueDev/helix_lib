@@ -1,0 +1,18 @@
+---@meta DummyNetServer
+---@class DummyNetServer: NetServer
+---@field ctor fun(): DummyNetServer
+---@field get_Name fun(): string
+---@field get_LocalEndpoint fun(): string
+---@field Start fun(): nil
+---@field ReadMessage fun(): NetIncomingMessage
+---@field SetNetwork fun(dummyNetwork: DummyNetwork): nil
+---@field SetPlatform fun(gamePlatform: ClientPlatformAbstract): nil
+---@field SetIpAndPort fun(ip: string, port: number): nil
+---@field Dispose fun(): nil
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+---@field Name string
+---@field LocalEndpoint string
+DummyNetServer = {}

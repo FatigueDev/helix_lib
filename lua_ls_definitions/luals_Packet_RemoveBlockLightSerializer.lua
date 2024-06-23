@@ -1,0 +1,15 @@
+---@meta Packet_RemoveBlockLightSerializer
+---@class Packet_RemoveBlockLightSerializer: Object
+---@field ctor fun(): Packet_RemoveBlockLightSerializer
+---@field DeserializeLengthDelimitedNew fun(stream: CitoMemoryStream): Packet_RemoveBlockLight
+---@field DeserializeBuffer fun(buffer: number[], length: number, instance: Packet_RemoveBlockLight): Packet_RemoveBlockLight
+---@field Deserialize fun(stream: CitoMemoryStream, instance: Packet_RemoveBlockLight): Packet_RemoveBlockLight
+---@field DeserializeLengthDelimited fun(stream: CitoMemoryStream, instance: Packet_RemoveBlockLight): Packet_RemoveBlockLight
+---@field Serialize fun(stream: CitoStream, instance: Packet_RemoveBlockLight): nil
+---@field SerializeToBytes fun(instance: Packet_RemoveBlockLight): number[]
+---@field SerializeLengthDelimited fun(stream: CitoStream, instance: Packet_RemoveBlockLight): nil
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+Packet_RemoveBlockLightSerializer = {}

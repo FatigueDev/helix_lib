@@ -1,0 +1,15 @@
+---@meta Packet_ServerSetBlocksSerializer
+---@class Packet_ServerSetBlocksSerializer: Object
+---@field ctor fun(): Packet_ServerSetBlocksSerializer
+---@field DeserializeLengthDelimitedNew fun(stream: CitoMemoryStream): Packet_ServerSetBlocks
+---@field DeserializeBuffer fun(buffer: number[], length: number, instance: Packet_ServerSetBlocks): Packet_ServerSetBlocks
+---@field Deserialize fun(stream: CitoMemoryStream, instance: Packet_ServerSetBlocks): Packet_ServerSetBlocks
+---@field DeserializeLengthDelimited fun(stream: CitoMemoryStream, instance: Packet_ServerSetBlocks): Packet_ServerSetBlocks
+---@field Serialize fun(stream: CitoStream, instance: Packet_ServerSetBlocks): nil
+---@field SerializeToBytes fun(instance: Packet_ServerSetBlocks): number[]
+---@field SerializeLengthDelimited fun(stream: CitoStream, instance: Packet_ServerSetBlocks): nil
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+Packet_ServerSetBlocksSerializer = {}

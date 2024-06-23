@@ -1,0 +1,18 @@
+---@meta ChunkDataLayer
+---@class ChunkDataLayer: Object
+---@field ctor fun(chunkDataPool: ChunkDataPool): ChunkDataLayer
+---@field GetUnsafe_PaletteCheck fun(index3d: number): number
+---@field GetUnsafe fun(index3d: number): number
+---@field Set fun(index3d: number, value: number): nil
+---@field SetUnsafe fun(index3d: number, value: number): nil
+---@field SetZero fun(index3d: number): nil
+---@field SetBulk fun(index3d: number, lenX: number, lenZ: number, value: number): nil
+---@field Clear fun(datas: any[]): nil
+---@field PopulateWithAir fun(): nil
+---@field Compress fun(layer: ChunkDataLayer, arrayStatic: number[]): number[]
+---@field ClearPaletteOutsideMaxValue fun(maxValue: number): nil
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+ChunkDataLayer = {}

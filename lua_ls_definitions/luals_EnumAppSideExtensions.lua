@@ -1,0 +1,11 @@
+---@meta EnumAppSideExtensions
+---@class EnumAppSideExtensions: Object
+---@field IsServer fun(side: EnumAppSide): boolean
+---@field IsClient fun(side: EnumAppSide): boolean
+---@field IsUniversal fun(side: EnumAppSide): boolean
+---@field Is fun(side: EnumAppSide, other: EnumAppSide): boolean
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+EnumAppSideExtensions = {}

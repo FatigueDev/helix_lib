@@ -1,0 +1,22 @@
+---@meta ParticlePoolCubes
+---@class ParticlePoolCubes: ParticlePoolQuads
+---@field ctor fun(capacity: number, game: ClientMain, offthread: boolean): ParticlePoolCubes
+---@field LoadModel fun(): MeshData
+---@field get_Model fun(): MeshRef
+---@field get_QuantityAlive fun(): number
+---@field set_QuantityAlive fun(value: number): nil
+---@field get_BlockAccess fun(): IBlockAccessor
+---@field SpawnParticles fun(particleProperties: IParticlePropertiesProvider): number
+---@field ShouldRender fun(): boolean
+---@field OnNewFrame fun(dt: Single, cameraPos: Vec3d): nil
+---@field OnNewFrameOffThread fun(dt: Single, cameraPos: Vec3d): nil
+---@field Dipose fun(): nil
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+---@field Model MeshRef
+---@field QuantityAlive MeshRef
+---@field BlockAccess MeshRef
+---@field ParticlesPool MeshRef
+ParticlePoolCubes = {}

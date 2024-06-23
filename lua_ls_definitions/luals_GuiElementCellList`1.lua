@@ -1,0 +1,61 @@
+---@meta GuiElementCellList`1
+---@class GuiElementCellList`1: GuiElement
+---@field ctor fun(capi: ICoreClientAPI, bounds: ElementBounds, cellCreator: OnRequireCell`1, cells: any[]): GuiElementCellList`1
+---@field get_InsideClipBounds fun(): ElementBounds
+---@field set_InsideClipBounds fun(value: ElementBounds): nil
+---@field ReloadCells fun(cells: any[]): nil
+---@field BeforeCalcBounds fun(): nil
+---@field CalcTotalHeight fun(): nil
+---@field ComposeElements fun(ctx: Context, surface: ImageSurface): nil
+---@field OnMouseUpOnElement fun(api: ICoreClientAPI, args: MouseEvent): nil
+---@field OnMouseDownOnElement fun(api: ICoreClientAPI, args: MouseEvent): nil
+---@field OnMouseMove fun(api: ICoreClientAPI, args: MouseEvent): nil
+---@field RenderInteractiveElements fun(deltaTime: Single): nil
+---@field Dispose fun(): nil
+---@field get_RenderAsPremultipliedAlpha fun(): boolean
+---@field set_RenderAsPremultipliedAlpha fun(value: boolean): nil
+---@field get_HasFocus fun(): boolean
+---@field get_DrawOrder fun(): Double
+---@field get_Focusable fun(): boolean
+---@field get_Scale fun(): Double
+---@field set_Scale fun(value: Double): nil
+---@field OnFocusGained fun(): nil
+---@field OnFocusLost fun(): nil
+---@field PostRenderInteractiveElements fun(deltaTime: Single): nil
+---@field RenderFocusOverlay fun(deltaTime: Single): nil
+---@field DialogRoundRectangle fun(ctx: Context, bounds: ElementBounds): nil
+---@field ElementRoundRectangle fun(ctx: Context, bounds: ElementBounds, isBackground: boolean, radius: Double): nil
+---@field ShadePath fun(ctx: Context, thickness: Double): nil
+---@field EmbossRoundRectangleDialog fun(ctx: Context, x: Double, y: Double, width: Double, height: Double, inverse: boolean): nil
+---@field EmbossRoundRectangleElement fun(ctx: Context, x: Double, y: Double, width: Double, height: Double, inverse: boolean, depth: number, radius: number): nil
+---@overload fun(ctx: Context, bounds: ElementBounds, inverse: boolean, depth: number, radius: number): nil
+---@field RenderBoundsDebug fun(): nil
+---@field OnMouseDown fun(api: ICoreClientAPI, mouse: MouseEvent): nil
+---@field OnMouseUp fun(api: ICoreClientAPI, args: MouseEvent): nil
+---@field OnMouseEnterSlot fun(api: ICoreClientAPI, slot: ItemSlot): boolean
+---@field OnMouseLeaveSlot fun(api: ICoreClientAPI, slot: ItemSlot): boolean
+---@field OnMouseWheel fun(api: ICoreClientAPI, args: MouseWheelEventArgs): nil
+---@field OnKeyDown fun(api: ICoreClientAPI, args: KeyEvent): nil
+---@field OnKeyUp fun(api: ICoreClientAPI, args: KeyEvent): nil
+---@field OnKeyPress fun(api: ICoreClientAPI, args: KeyEvent): nil
+---@field IsPositionInside fun(posX: number, posY: number): boolean
+---@field get_MouseOverCursor fun(): string
+---@field OutlineColor fun(): number
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+---@field InsideClipBounds ElementBounds
+---@field RenderAsPremultipliedAlpha ElementBounds
+---@field HasFocus ElementBounds
+---@field DrawOrder ElementBounds
+---@field Focusable ElementBounds
+---@field Scale ElementBounds
+---@field MouseOverCursor ElementBounds
+---@field elementCells ElementBounds
+---@field unscaledCellSpacing ElementBounds
+---@field UnscaledCellVerPadding ElementBounds
+---@field UnscaledCellHorPadding ElementBounds
+---@field Bounds ElementBounds
+---@field TabIndex ElementBounds
+GuiElementCellList`1 = {}

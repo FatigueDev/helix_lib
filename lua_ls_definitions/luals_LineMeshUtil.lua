@@ -1,0 +1,13 @@
+---@meta LineMeshUtil
+---@class LineMeshUtil: Object
+---@field ctor fun(): LineMeshUtil
+---@field GetRectangle fun(color: number): MeshData
+---@field GetCube fun(color: number): MeshData
+---@field AddLine2D fun(m: MeshData, x1: Single, y1: Single, x2: Single, y2: Single, color: number): nil
+---@field AddLineLoop fun(m: MeshData, p0: Vec3f, p1: Vec3f, p2: Vec3f, p3: Vec3f, color: number): nil
+---@field AddVertex fun(model: MeshData, x: Single, y: Single, z: Single, color: number): nil
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+LineMeshUtil = {}

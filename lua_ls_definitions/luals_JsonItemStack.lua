@@ -1,0 +1,24 @@
+---@meta JsonItemStack
+---@class JsonItemStack: Object
+---@field ctor fun(): JsonItemStack
+---@field get_Quantity fun(): number
+---@field set_Quantity fun(value: number): nil
+---@field FromString fun(jsonItemstack: string): JsonItemStack
+---@field Resolve fun(resolver: IWorldAccessor, sourceForErrorLogging: string, assetLoc: AssetLocation, printWarningOnError: boolean): boolean
+---@overload fun(resolver: IWorldAccessor, sourceForErrorLogging: string, printWarningOnError: boolean): boolean
+---@field Matches fun(worldForResolve: IWorldAccessor, inputStack: ItemStack): boolean
+---@field Clone fun(): JsonItemStack
+---@field FromBytes fun(reader: BinaryReader, instancer: IClassRegistryAPI): nil
+---@field ToBytes fun(writer: BinaryWriter): nil
+---@field FillPlaceHolder fun(key: string, value: string): nil
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+---@field Quantity number
+---@field Type number
+---@field Code number
+---@field StackSize number
+---@field Attributes number
+---@field ResolvedItemstack number
+JsonItemStack = {}

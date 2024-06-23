@@ -1,0 +1,21 @@
+---@meta Packet_WorldMetaData
+---@class Packet_WorldMetaData: Object
+---@field ctor fun(): Packet_WorldMetaData
+---@field SetSunBrightness fun(value: number): nil
+---@field GetBlockLightlevels fun(): number[]
+---@field SetBlockLightlevels fun(value: number[], count: number, length: number): nil
+---@overload fun(value: number[]): nil
+---@field GetBlockLightlevelsCount fun(): number
+---@field BlockLightlevelsAdd fun(value: number): nil
+---@field GetSunLightlevels fun(): number[]
+---@field SetSunLightlevels fun(value: number[], count: number, length: number): nil
+---@overload fun(value: number[]): nil
+---@field GetSunLightlevelsCount fun(): number
+---@field SunLightlevelsAdd fun(value: number): nil
+---@field SetWorldConfiguration fun(value: number[]): nil
+---@field SetSeaLevel fun(value: number): nil
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+Packet_WorldMetaData = {}

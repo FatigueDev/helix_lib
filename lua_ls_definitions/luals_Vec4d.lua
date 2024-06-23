@@ -1,0 +1,24 @@
+---@meta Vec4d
+---@class Vec4d: Object
+---@field ctor fun(): Vec4d
+---@overload fun(x: Double, y: Double, z: Double, w: Double): Vec4d
+---@field get_Item fun(index: number): Double
+---@field set_Item fun(index: number, value: Double): nil
+---@field get_XYZ fun(): Vec3d
+---@field Set fun(x: Double, y: Double, z: Double, w: Double): nil
+---@field SquareDistanceTo fun(x: Single, y: Single, z: Single): Single
+---@overload fun(x: Double, y: Double, z: Double): Single
+---@overload fun(pos: Vec3d): Single
+---@field HorizontalSquareDistanceTo fun(pos: Vec3d): Single
+---@overload fun(x: Double, z: Double): Single
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+---@field Item Double
+---@field XYZ Double
+---@field X Double
+---@field Y Double
+---@field Z Double
+---@field W Double
+Vec4d = {}

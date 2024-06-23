@@ -1,0 +1,16 @@
+---@meta DoubleAttribute
+---@class DoubleAttribute: ScalarAttribute`1
+---@field ctor fun(): DoubleAttribute
+---@overload fun(value: Double): DoubleAttribute
+---@field FromBytes fun(stream: BinaryReader): nil
+---@field ToBytes fun(stream: BinaryWriter): nil
+---@field GetAttributeId fun(): number
+---@field ToJsonToken fun(): string
+---@field ToString fun(): string
+---@field Clone fun(): IAttribute
+---@field Equals fun(worldForResolve: IWorldAccessor, attr: IAttribute): boolean
+---@overload fun(b: table): boolean
+---@field GetValue fun(): table
+---@field GetHashCode fun(): number
+---@field GetType fun(): any
+DoubleAttribute = {}

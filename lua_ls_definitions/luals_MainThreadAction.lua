@@ -1,0 +1,11 @@
+---@meta MainThreadAction
+---@class MainThreadAction: Object
+---@field ctor fun(game: ClientMain, action: Func`1, label: string): MainThreadAction
+---@field Enqueue fun(): nil
+---@overload fun(otherAction: Action): nil
+---@field Invoke fun(): number
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+MainThreadAction = {}

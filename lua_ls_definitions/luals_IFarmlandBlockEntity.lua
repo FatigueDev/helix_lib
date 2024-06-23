@@ -1,0 +1,21 @@
+---@meta IFarmlandBlockEntity
+---@class IFarmlandBlockEntity
+---@field get_TotalHoursForNextStage fun(): Double
+---@field get_TotalHoursFertilityCheck fun(): Double
+---@field get_Nutrients fun(): Single[]
+---@field get_MoistureLevel fun(): Single
+---@field get_IsVisiblyMoist fun(): boolean
+---@field get_OriginalFertility fun(): number[]
+---@field get_Pos fun(): BlockPos
+---@field get_UpPos fun(): BlockPos
+---@field get_CropAttributes fun(): ITreeAttribute
+---@field TotalHoursForNextStage Double
+---@field TotalHoursFertilityCheck Double
+---@field Nutrients Double
+---@field MoistureLevel Double
+---@field IsVisiblyMoist Double
+---@field OriginalFertility Double
+---@field Pos Double
+---@field UpPos Double
+---@field CropAttributes Double
+IFarmlandBlockEntity = {}

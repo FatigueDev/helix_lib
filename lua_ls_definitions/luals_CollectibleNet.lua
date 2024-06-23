@@ -1,0 +1,42 @@
+---@meta CollectibleNet
+---@class CollectibleNet: Object
+---@field SerializeFloat fun(p: Single): number
+---@field DeserializeFloat fun(p: number): Single
+---@field SerializeDouble fun(p: Double): Int64
+---@field DeserializeDouble fun(p: Int64): Double
+---@field SerializeDoublePrecise fun(p: Double): Int64
+---@field DeserializeDoublePrecise fun(p: Int64): Double
+---@field SerializeFloatPrecise fun(v: Single): number
+---@field DeserializeFloatPrecise fun(v: number): Single
+---@field SerializePlayerPos fun(v: Double): number
+---@field DeserializePlayerPos fun(v: number): Double
+---@field SerializeFloatVeryPrecise fun(v: Single): number
+---@field DeserializeFloatVeryPrecise fun(v: number): Single
+---@field ToPacket fun(sounds: HeldSounds): Packet_HeldSoundSet
+---@overload fun(variant: Orderedtable<any, any>): Packet_VariantPart[]
+---@overload fun(props: FoodNutritionProperties): Packet_NutritionProperties
+---@overload fun(mprops: TransitionableProperties[]): Packet_TransitionableProperties[]
+---@overload fun(val: NatFloat): Packet_NatFloat
+---@field FromPacket fun(val: Packet_NatFloat): NatFloat
+---@overload fun(props: GrindingProperties): Packet_GrindingProperties
+---@overload fun(props: CrushingProperties): Packet_CrushingProperties
+---@overload fun(p: Packet_HeldSoundSet): HeldSounds
+---@overload fun(pn: Packet_GrindingProperties, world: IWorldAccessor): GrindingProperties
+---@overload fun(pn: Packet_CrushingProperties, world: IWorldAccessor): CrushingProperties
+---@overload fun(pn: Packet_NutritionProperties, world: IWorldAccessor): FoodNutritionProperties
+---@overload fun(pns: Packet_TransitionableProperties[], world: IWorldAccessor): TransitionableProperties[]
+---@overload fun(props: CombustibleProperties): Packet_CombustibleProperties
+---@overload fun(pc: Packet_CombustibleProperties, world: IWorldAccessor): CombustibleProperties
+---@field ToTransformPacket fun(transform: ModelTransform): Packet_ModelTransform
+---@field FromTransformPacket fun(p: Packet_ModelTransform): ModelTransform
+---@field FromPacket fun(packet: Packet_CompositeShape): CompositeShape
+---@overload fun(shape: CompositeShape): Packet_CompositeShape
+---@overload fun(packet: Packet_CompositeTexture): CompositeTexture
+---@overload fun(variant: Packet_VariantPart[], count: number): Orderedtable<any, any>
+---@overload fun(ct: CompositeTexture): Packet_CompositeTexture
+---@field ToPackets fun(textures: CompositeTexture[]): Packet_CompositeTexture[]
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+CollectibleNet = {}

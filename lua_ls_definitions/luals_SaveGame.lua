@@ -1,0 +1,17 @@
+---@meta SaveGame
+---@class SaveGame: Object
+---@field ctor fun(): SaveGame
+---@field CreateNew fun(config: ServerConfig): SaveGame
+---@field GetLastPlayed fun(): DateTime
+---@field Init fun(server: ServerMain): nil
+---@field LoadWorldConfig fun(): nil
+---@field GetData fun(name: string): number[]
+---@field StoreData fun(name: string, value: number[]): nil
+---@overload fun(name: string, defaultValue: T): T
+---@overload fun(name: string, data: T): nil
+---@field GetSaveGameForSaving fun(config: ServerConfig): SaveGame
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+SaveGame = {}

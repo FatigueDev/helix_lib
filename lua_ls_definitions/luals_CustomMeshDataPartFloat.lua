@@ -1,0 +1,30 @@
+---@meta CustomMeshDataPartFloat
+---@class CustomMeshDataPartFloat: CustomMeshDataPart`1
+---@field ctor fun(): CustomMeshDataPartFloat
+---@overload fun(arraySize: number): CustomMeshDataPartFloat
+---@field Clone fun(): CustomMeshDataPartFloat
+---@field EmptyClone fun(): CustomMeshDataPartFloat
+---@field get_BufferSize fun(): number
+---@field get_AllocationSize fun(): number
+---@field GrowBuffer fun(growAtLeastBy: number): nil
+---@field Add fun(value: Single): nil
+---@field Add4 fun(value: Single): nil
+---@field Add fun(values: Single[]): nil
+---@field SetAllocationSize fun(size: number): nil
+---@field AutoAllocationSize fun(): nil
+---@field SetFrom fun(meshdatapart: CustomMeshDataPart`1): nil
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+---@field BufferSize number
+---@field AllocationSize number
+---@field Values number
+---@field Count number
+---@field InterleaveSizes number
+---@field InterleaveStride number
+---@field InterleaveOffsets number
+---@field Instanced number
+---@field StaticDraw number
+---@field BaseOffset number
+CustomMeshDataPartFloat = {}

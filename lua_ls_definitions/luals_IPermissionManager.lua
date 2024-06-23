@@ -1,0 +1,16 @@
+---@meta IPermissionManager
+---@class IPermissionManager
+---@field GetRole fun(code: string): IPlayerRole
+---@field SetRole fun(player: IServerPlayer, role: IPlayerRole): nil
+---@overload fun(player: IServerPlayer, roleCode: string): nil
+---@field RegisterPrivilege fun(code: string, shortdescription: string, adminAutoGrant: boolean): nil
+---@field GrantTemporaryPrivilege fun(code: string): nil
+---@field DropTemporaryPrivilege fun(code: string): nil
+---@field GrantPrivilege fun(playerUID: string, code: string, permanent: boolean): boolean
+---@field DenyPrivilege fun(playerUID: string, code: string): boolean
+---@field RemovePrivilegeDenial fun(playerUID: string, code: string): boolean
+---@field RevokePrivilege fun(playerUID: string, code: string, permanent: boolean): boolean
+---@field AddPrivilegeToGroup fun(groupCode: string, privilegeCode: string): boolean
+---@field RemovePrivilegeFromGroup fun(groupCode: string, privilegeCode: string): boolean
+---@field GetPlayerPermissionLevel fun(player: number): number
+IPermissionManager = {}

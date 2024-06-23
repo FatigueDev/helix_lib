@@ -1,0 +1,22 @@
+---@meta AmbientSound
+---@class AmbientSound: Object
+---@field ctor fun(): AmbientSound
+---@field DistanceTo fun(sound: AmbientSound): Double
+---@field get_AdjustedVolume fun(): Single
+---@field Equals fun(other: AmbientSound): boolean
+---@overload fun(x: AmbientSound, y: AmbientSound): boolean
+---@overload fun(obj: table): boolean
+---@field GetHashCode fun(): number
+---@field FadeToNewVolumne fun(): nil
+---@field GetHashCode fun(obj: AmbientSound): number
+---@field RenderWireFrame fun(game: ClientMain, wireframe: DrawWireframeCube): nil
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field AdjustedVolume Single
+---@field Sound Single
+---@field QuantityNearbyBlocks Single
+---@field AssetLoc Single
+---@field BoundingBoxes Single
+---@field SectionPos Single
+---@field Ratio Single
+AmbientSound = {}

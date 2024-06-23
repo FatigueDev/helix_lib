@@ -1,0 +1,31 @@
+---@meta HashAlgorithm
+---@class HashAlgorithm: Object
+---@field Create fun(): HashAlgorithm
+---@overload fun(hashName: string): HashAlgorithm
+---@field get_HashSize fun(): number
+---@field get_Hash fun(): number[]
+---@field ComputeHash fun(buffer: number[]): number[]
+---@field TryComputeHash fun(source: ReadOnlySpan`1, destination: Span`1, bytesWritten: number&): boolean
+---@field ComputeHash fun(buffer: number[], offset: number, count: number): number[]
+---@overload fun(inputStream: Stream): number[]
+---@field ComputeHashAsync fun(inputStream: Stream, cancellationToken: CancellationToken): Task`1
+---@field Dispose fun(): nil
+---@field Clear fun(): nil
+---@field get_InputBlockSize fun(): number
+---@field get_OutputBlockSize fun(): number
+---@field get_CanTransformMultipleBlocks fun(): boolean
+---@field get_CanReuseTransform fun(): boolean
+---@field TransformBlock fun(inputBuffer: number[], inputOffset: number, inputCount: number, outputBuffer: number[], outputOffset: number): number
+---@field TransformFinalBlock fun(inputBuffer: number[], inputOffset: number, inputCount: number): number[]
+---@field Initialize fun(): nil
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+---@field HashSize number
+---@field Hash number
+---@field InputBlockSize number
+---@field OutputBlockSize number
+---@field CanTransformMultipleBlocks number
+---@field CanReuseTransform number
+HashAlgorithm = {}

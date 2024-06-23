@@ -1,0 +1,15 @@
+---@meta Packet_GrindingPropertiesSerializer
+---@class Packet_GrindingPropertiesSerializer: Object
+---@field ctor fun(): Packet_GrindingPropertiesSerializer
+---@field DeserializeLengthDelimitedNew fun(stream: CitoMemoryStream): Packet_GrindingProperties
+---@field DeserializeBuffer fun(buffer: number[], length: number, instance: Packet_GrindingProperties): Packet_GrindingProperties
+---@field Deserialize fun(stream: CitoMemoryStream, instance: Packet_GrindingProperties): Packet_GrindingProperties
+---@field DeserializeLengthDelimited fun(stream: CitoMemoryStream, instance: Packet_GrindingProperties): Packet_GrindingProperties
+---@field Serialize fun(stream: CitoStream, instance: Packet_GrindingProperties): nil
+---@field SerializeToBytes fun(instance: Packet_GrindingProperties): number[]
+---@field SerializeLengthDelimited fun(stream: CitoStream, instance: Packet_GrindingProperties): nil
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+Packet_GrindingPropertiesSerializer = {}

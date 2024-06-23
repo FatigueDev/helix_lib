@@ -1,0 +1,49 @@
+---@meta ModContainer
+---@class ModContainer: Mod
+---@field ctor fun(fsInfo: FileSystemInfo, parentLogger: ILogger, logDebug: boolean): ModContainer
+---@field get_Enabled fun(): boolean
+---@field get_Status fun(): ModStatus
+---@field set_Status fun(value: ModStatus): nil
+---@field get_Error fun(): Nullable`1
+---@field set_Error fun(value: Nullable`1): nil
+---@field get_FolderPath fun(): string
+---@field get_SourceFiles fun(): any[]
+---@field get_AssemblyFiles fun(): any[]
+---@field get_RequiresCompilation fun(): boolean
+---@field get_Assembly fun(): Assembly
+---@field GetSourceType fun(fsInfo: FileSystemInfo): Nullable`1
+---@field SetError fun(error: ModError): nil
+---@field Unpack fun(unpackPath: string): nil
+---@field LoadModInfo fun(compilationContext: ModCompilationContext, loader: ModAssemblyLoader): nil
+---@field LoadAssembly fun(compilationContext: ModCompilationContext, loader: ModAssemblyLoader): nil
+---@field InstantiateModSystems fun(side: EnumAppSide): nil
+---@field get_SourceType fun(): EnumModSourceany
+---@field get_SourcePath fun(): string
+---@field get_FileName fun(): string
+---@field get_Info fun(): ModInfo
+---@field get_WorldConfig fun(): ModWorldConfiguration
+---@field get_Icon fun(): BitmapExternal
+---@field get_Logger fun(): ILogger
+---@field get_Systems fun(): IReadOnlyany[]
+---@field ToString fun(): string
+---@field GetType fun(): any
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+---@field Enabled boolean
+---@field Status boolean
+---@field Error boolean
+---@field FolderPath boolean
+---@field SourceFiles boolean
+---@field AssemblyFiles boolean
+---@field RequiresCompilation boolean
+---@field Assembly boolean
+---@field SourceType boolean
+---@field SourcePath boolean
+---@field FileName boolean
+---@field Info boolean
+---@field WorldConfig boolean
+---@field Icon boolean
+---@field Logger boolean
+---@field Systems boolean
+---@field MissingDependencies boolean
+ModContainer = {}

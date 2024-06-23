@@ -1,0 +1,83 @@
+---@meta Vec3f
+---@class Vec3f: Object
+---@field ctor fun(): Vec3f
+---@overload fun(x: Single, y: Single, z: Single): Vec3f
+---@overload fun(vec: Vec4f): Vec3f
+---@overload fun(values: Single[]): Vec3f
+---@overload fun(vec3i: Vec3i): Vec3f
+---@field get_Zero fun(): Vec3f
+---@field get_Half fun(): Vec3f
+---@field get_One fun(): Vec3f
+---@field get_R fun(): Single
+---@field set_R fun(value: Single): nil
+---@field get_G fun(): Single
+---@field set_G fun(value: Single): nil
+---@field get_B fun(): Single
+---@field set_B fun(value: Single): nil
+---@field get_IsZero fun(): boolean
+---@field get_Item fun(index: number): Single
+---@field set_Item fun(index: number, value: Single): nil
+---@field Length fun(): Single
+---@field Negate fun(): nil
+---@field Dot fun(a: Vec3f): Single
+---@overload fun(a: FastVec3f): Single
+---@overload fun(a: Vec3d): Single
+---@overload fun(pos: Single[]): Double
+---@overload fun(pos: Double[]): Double
+---@field Cross fun(vec: Vec3f): Vec3f
+---@field ToDoubleArray fun(): Double[]
+---@field Cross fun(a: Vec3f, b: Vec3f): nil
+---@overload fun(a: Vec3f, b: Vec4f): nil
+---@field Add fun(x: Single, y: Single, z: Single): Vec3f
+---@overload fun(vec: Vec3f): Vec3f
+---@field Sub fun(vec: Vec3f): Vec3f
+---@overload fun(vec: Vec3i): Vec3f
+---@field Mul fun(multiplier: Single): Vec3f
+---@field Clone fun(): Vec3f
+---@field Normalize fun(): Vec3f
+---@field DistanceSq fun(x: Double, y: Double, z: Double): Double
+---@field DistanceTo fun(vec: Vec3d): Single
+---@overload fun(vec: Vec3f): Single
+---@field AddCopy fun(x: Single, y: Single, z: Single): Vec3f
+---@overload fun(vec: Vec3f): Vec3f
+---@field ReduceBy fun(val: Single): nil
+---@field NormalizedCopy fun(): Vec3f
+---@field ToVec3d fun(): Vec3d
+---@field op_Subtraction fun(left: Vec3f, right: Vec3f): Vec3f
+---@field op_Addition fun(left: Vec3f, right: Vec3f): Vec3f
+---@overload fun(left: Vec3f, right: Single): Vec3f
+---@overload fun(left: Single, right: Vec3f): Vec3f
+---@overload fun(left: Vec3f, right: Single): Vec3f
+---@field op_Multiply fun(left: Vec3f, right: Single): Vec3f
+---@overload fun(left: Single, right: Vec3f): Vec3f
+---@overload fun(left: Vec3f, right: Vec3f): Single
+---@field op_Division fun(left: Vec3f, right: Single): Vec3f
+---@field op_Equality fun(left: Vec3f, right: Vec3f): boolean
+---@field op_Inequality fun(left: Vec3f, right: Vec3f): boolean
+---@field Set fun(x: Single, y: Single, z: Single): Vec3f
+---@overload fun(vec: Vec3d): Vec3f
+---@overload fun(vec: Single[]): Vec3f
+---@overload fun(vec: Vec3f): nil
+---@field ToString fun(): string
+---@field ToBytes fun(writer: BinaryWriter): nil
+---@field CreateFromBytes fun(reader: BinaryReader): Vec3f
+---@field ToVec4f fun(w: Single): Vec4f
+---@field Equals fun(other: Vec3f, epsilon: Double): boolean
+---@overload fun(other: Vec3f): boolean
+---@overload fun(obj: table): boolean
+---@field GetHashCode fun(): number
+---@field get_AsVec3i fun(): Vec3i
+---@field GetType fun(): any
+---@field Zero Vec3f
+---@field Half Vec3f
+---@field One Vec3f
+---@field R Vec3f
+---@field G Vec3f
+---@field B Vec3f
+---@field IsZero Vec3f
+---@field Item Vec3f
+---@field AsVec3i Vec3f
+---@field X Vec3f
+---@field Y Vec3f
+---@field Z Vec3f
+Vec3f = {}

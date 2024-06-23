@@ -1,0 +1,13 @@
+---@meta EntityFloatStats
+---@class EntityFloatStats: Object
+---@field ctor fun(): EntityFloatStats
+---@field GetBlended fun(): Single
+---@field Set fun(code: string, value: Single, persistent: boolean): nil
+---@field Remove fun(code: string): nil
+---@field ToTreeAttributes fun(tree: ITreeAttribute, forClient: boolean): nil
+---@field FromTreeAttributes fun(tree: ITreeAttribute): nil
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+EntityFloatStats = {}

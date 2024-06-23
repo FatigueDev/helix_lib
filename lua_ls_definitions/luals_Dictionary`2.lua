@@ -1,0 +1,43 @@
+---@meta Dictionary`2
+---@class Dictionary`2: Object
+---@field ctor fun(): Dictionary`2
+---@overload fun(capacity: number): Dictionary`2
+---@overload fun(comparer: IEqualityComparer`1): Dictionary`2
+---@overload fun(capacity: number, comparer: IEqualityComparer`1): Dictionary`2
+---@overload fun(dictionary: Itable<any, any>): Dictionary`2
+---@overload fun(dictionary: Itable<any, any>, comparer: IEqualityComparer`1): Dictionary`2
+---@overload fun(collection: any[]): Dictionary`2
+---@overload fun(collection: any[], comparer: IEqualityComparer`1): Dictionary`2
+---@field get_Comparer fun(): IEqualityComparer`1
+---@field get_Count fun(): number
+---@field get_Keys fun(): KeyCollection
+---@field get_Values fun(): ValueCollection
+---@field get_Item fun(key: TKey): any[]
+---@field set_Item fun(key: TKey, value: any[]): nil
+---@field Add fun(key: TKey, value: any[]): nil
+---@field Clear fun(): nil
+---@field ContainsKey fun(key: TKey): boolean
+---@field ContainsValue fun(value: any[]): boolean
+---@field GetEnumerator fun(): Enumerator
+---@field GetObjectData fun(info: SerializationInfo, context: StreamingContext): nil
+---@field OnDeserialization fun(sender: table): nil
+---@field Remove fun(key: TKey): boolean
+---@overload fun(key: TKey, value: any[]&): boolean
+---@field TryGetValue fun(key: TKey, value: any[]&): boolean
+---@field TryAdd fun(key: TKey, value: any[]): boolean
+---@field EnsureCapacity fun(capacity: number): number
+---@field TrimExcess fun(): nil
+---@overload fun(capacity: number): nil
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+---@field Comparer IEqualityComparer`1
+---@field Count IEqualityComparer`1
+---@field Keys IEqualityComparer`1
+---@field Values IEqualityComparer`1
+---@field Item IEqualityComparer`1
+---@field Enumerator IEqualityComparer`1
+---@field KeyCollection IEqualityComparer`1
+---@field ValueCollection IEqualityComparer`1
+Dictionary`2 = {}

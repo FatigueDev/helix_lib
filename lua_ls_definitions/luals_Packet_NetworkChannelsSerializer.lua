@@ -1,0 +1,15 @@
+---@meta Packet_NetworkChannelsSerializer
+---@class Packet_NetworkChannelsSerializer: Object
+---@field ctor fun(): Packet_NetworkChannelsSerializer
+---@field DeserializeLengthDelimitedNew fun(stream: CitoMemoryStream): Packet_NetworkChannels
+---@field DeserializeBuffer fun(buffer: number[], length: number, instance: Packet_NetworkChannels): Packet_NetworkChannels
+---@field Deserialize fun(stream: CitoMemoryStream, instance: Packet_NetworkChannels): Packet_NetworkChannels
+---@field DeserializeLengthDelimited fun(stream: CitoMemoryStream, instance: Packet_NetworkChannels): Packet_NetworkChannels
+---@field Serialize fun(stream: CitoStream, instance: Packet_NetworkChannels): nil
+---@field SerializeToBytes fun(instance: Packet_NetworkChannels): number[]
+---@field SerializeLengthDelimited fun(stream: CitoStream, instance: Packet_NetworkChannels): nil
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+Packet_NetworkChannelsSerializer = {}

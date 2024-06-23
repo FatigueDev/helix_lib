@@ -1,0 +1,114 @@
+---@meta WorldMap
+---@class WorldMap: Object
+---@field get_World fun(): IWorldAccessor
+---@field get_Logger fun(): ILogger
+---@field get_Blocks fun(): Iany[]
+---@field get_BlocksByCode fun(): table<any, any>
+---@field get_MapSizeX fun(): number
+---@field get_MapSizeY fun(): number
+---@field get_MapSizeZ fun(): number
+---@field get_RegionMapSizeX fun(): number
+---@field get_RegionMapSizeY fun(): number
+---@field get_RegionMapSizeZ fun(): number
+---@field get_ChunkSize fun(): number
+---@field get_ChunkSizeMask fun(): number
+---@field get_MapSize fun(): Vec3i
+---@field get_RegionSize fun(): number
+---@field get_All fun(): any[]
+---@field get_DebugClaimPrivileges fun(): boolean
+---@field get_ChunkMapSizeX fun(): number
+---@field get_ChunkMapSizeY fun(): number
+---@field get_ChunkMapSizeZ fun(): number
+---@field GetLightRGBsAsInt fun(posX: number, posY: number, posZ: number): number
+---@field GetLightRGBSVec4f fun(posX: number, posY: number, posZ: number): Vec4f
+---@field GetLightHSVLevels fun(posX: number, posY: number, posZ: number): number[]
+---@field LoadLightHSVLevels fun(posX: number, posY: number, posZ: number): number
+---@field Get fun(pos: BlockPos): LandClaim[]
+---@field TryAccess fun(player: IPlayer, pos: BlockPos, accessFlag: EnumBlockAccessFlags): boolean
+---@field TestAccess fun(player: IPlayer, pos: BlockPos, accessFlag: EnumBlockAccessFlags): EnumWorldAccessResponse
+---@field TestBlockAccess fun(player: IPlayer, blockSel: BlockSelection, accessType: EnumBlockAccessFlags): EnumWorldAccessResponse
+---@overload fun(player: IPlayer, blockSel: BlockSelection, accessType: EnumBlockAccessFlags, claimant: string&): EnumWorldAccessResponse
+---@field GetBlockingLandClaimant fun(forPlayer: IPlayer, pos: BlockPos, accessFlag: EnumBlockAccessFlags): string
+---@field RebuildLandClaimPartitions fun(): nil
+---@field MapRegionIndex2D fun(regionX: number, regionZ: number): Int64
+---@field ChunkIndex3D fun(chunkX: number, chunkY: number, chunkZ: number): Int64
+---@overload fun(chunkX: number, chunkY: number, chunkZ: number, dim: number): Int64
+---@overload fun(pos: EntityPos): Int64
+---@overload fun(cpos: ChunkPos): Int64
+---@field MapChunkIndex2D fun(chunkX: number, chunkZ: number): Int64
+---@field ChunkPosFromChunkIndex3D fun(chunkIndex3d: Int64): ChunkPos
+---@field ChunkPosFromChunkIndex2D fun(index2d: Int64): ChunkPos
+---@field ChunkSizedIndex3D fun(lX: number, lY: number, lZ: number): number
+---@field IsValidPos fun(pos: BlockPos): boolean
+---@overload fun(posX: number, posY: number, posZ: number): boolean
+---@field IsValidChunkPos fun(chunkX: number, chunkY: number, chunkZ: number): boolean
+---@field MarkChunkDirty fun(chunkX: number, chunkY: number, chunkZ: number, priority: boolean, sunRelight: boolean, OnRetesselated: Action, fireDirtyEvent: boolean, edgeOnly: boolean): nil
+---@field TriggerNeighbourBlockUpdate fun(pos: BlockPos): nil
+---@field MarkBlockModified fun(pos: BlockPos, doRelight: boolean): nil
+---@field MarkBlockDirty fun(pos: BlockPos, OnRetesselated: Action): nil
+---@overload fun(pos: BlockPos, skipPlayer: IPlayer): nil
+---@field MarkBlockEntityDirty fun(pos: BlockPos): nil
+---@field IsMovementRestrictedPos fun(posX: Double, posY: Double, posZ: Double): boolean
+---@field GetChunk fun(chunkIndex3D: Int64): IWorldChunk
+---@field GetChunkNonLocking fun(chunkX: number, chunkY: number, chunkZ: number): IWorldChunk
+---@field GetChunk fun(chunkX: number, chunkY: number, chunkZ: number): IWorldChunk
+---@field GetMapRegion fun(regionX: number, regionZ: number): IMapRegion
+---@field GetMapChunk fun(chunkX: number, chunkZ: number): IMapChunk
+---@field GetChunkAtPos fun(posX: number, posY: number, posZ: number): IWorldChunk
+---@field GetChunk fun(pos: BlockPos): WorldChunk
+---@field MarkDecorsDirty fun(pos: BlockPos): nil
+---@field PrintChunkMap fun(markChunkPos: Vec2i): nil
+---@field SendSetBlock fun(blockId: number, posX: number, posY: number, posZ: number): nil
+---@field SendExchangeBlock fun(blockId: number, posX: number, posY: number, posZ: number): nil
+---@field UpdateLighting fun(oldblockid: number, newblockid: number, pos: BlockPos): nil
+---@field RemoveBlockLight fun(oldLightHsV: number[], pos: BlockPos): nil
+---@field UpdateLightingAfterAbsorptionChange fun(oldAbsorption: number, newAbsorption: number, pos: BlockPos): nil
+---@field SendBlockUpdateBulk fun(blockUpdates: any[], doRelight: boolean): nil
+---@field SendBlockUpdateBulkMinimal fun(blockUpdates: table<any, any>): nil
+---@field UpdateLightingBulk fun(blockUpdates: table<any, any>): nil
+---@field SpawnBlockEntity fun(classname: string, position: BlockPos, byItemStack: ItemStack): nil
+---@overload fun(be: BlockEntity): nil
+---@field RemoveBlockEntity fun(position: BlockPos): nil
+---@field GetBlockEntity fun(position: BlockPos): BlockEntity
+---@field GetClimateAt fun(pos: BlockPos, mode: EnumGetClimateMode, totalDays: Double): ClimateCondition
+---@overload fun(pos: BlockPos, baseClimate: ClimateCondition, mode: EnumGetClimateMode, totalDays: Double): ClimateCondition
+---@overload fun(pos: BlockPos, climate: number): ClimateCondition
+---@field GetWindSpeedAt fun(pos: BlockPos): Vec3d
+---@overload fun(pos: Vec3d): Vec3d
+---@field DamageBlock fun(pos: BlockPos, facing: BlockFacing, damage: Single, dualCallByPlayer: IPlayer): nil
+---@field SendDecorUpdateBulk fun(updatedDecorPositions: any[]): nil
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+---@field World IWorldAccessor
+---@field Logger IWorldAccessor
+---@field Blocks IWorldAccessor
+---@field BlocksByCode IWorldAccessor
+---@field MapSizeX IWorldAccessor
+---@field MapSizeY IWorldAccessor
+---@field MapSizeZ IWorldAccessor
+---@field RegionMapSizeX IWorldAccessor
+---@field RegionMapSizeY IWorldAccessor
+---@field RegionMapSizeZ IWorldAccessor
+---@field ChunkSize IWorldAccessor
+---@field ChunkSizeMask IWorldAccessor
+---@field MapSize IWorldAccessor
+---@field RegionSize IWorldAccessor
+---@field All IWorldAccessor
+---@field DebugClaimPrivileges IWorldAccessor
+---@field ChunkMapSizeX IWorldAccessor
+---@field ChunkMapSizeY IWorldAccessor
+---@field ChunkMapSizeZ IWorldAccessor
+---@field index3dMulX IWorldAccessor
+---@field chunkMapSizeY IWorldAccessor
+---@field index3dMulZ IWorldAccessor
+---@field BlockLightLevels IWorldAccessor
+---@field BlockLightLevelsByte IWorldAccessor
+---@field hueLevels IWorldAccessor
+---@field satLevels IWorldAccessor
+---@field SunLightLevels IWorldAccessor
+---@field SunLightLevelsByte IWorldAccessor
+---@field SunBrightness IWorldAccessor
+---@field LandClaimByRegion IWorldAccessor
+WorldMap = {}

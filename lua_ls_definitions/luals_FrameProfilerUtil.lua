@@ -1,0 +1,15 @@
+---@meta FrameProfilerUtil
+---@class FrameProfilerUtil: Object
+---@field ctor fun(onLogoutputHandler: any`1): FrameProfilerUtil
+---@overload fun(outputPrefix: string): FrameProfilerUtil
+---@field Begin fun(beginText: string): nil
+---@field Enter fun(code: string): ProfileEntryRange
+---@field Leave fun(): nil
+---@field Mark fun(code: string): nil
+---@field End fun(): nil
+---@field OffThreadEnd fun(): nil
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+FrameProfilerUtil = {}

@@ -1,0 +1,62 @@
+---@meta VertexFlags
+---@class VertexFlags: Object
+---@field ctor fun(): VertexFlags
+---@overload fun(flags: number): VertexFlags
+---@field get_All fun(): number
+---@field set_All fun(value: number): nil
+---@field PackNormal fun(normal: Vec3d): number
+---@overload fun(x: Double, y: Double, z: Double): number
+---@overload fun(normal: Vec3f): number
+---@overload fun(normal: Vec3i): number
+---@field UnpackNormal fun(vertexFlags: number, intoFloats: Single[]): nil
+---@overload fun(vertexFlags: number, intoDouble: Double[]): nil
+---@field get_GlowLevel fun(): number
+---@field set_GlowLevel fun(value: number): nil
+---@field get_ZOffset fun(): number
+---@field set_ZOffset fun(value: number): nil
+---@field get_Reflective fun(): boolean
+---@field set_Reflective fun(value: boolean): nil
+---@field get_Lod0 fun(): boolean
+---@field set_Lod0 fun(value: boolean): nil
+---@field get_Normal fun(): Int16
+---@field set_Normal fun(value: Int16): nil
+---@field get_WindMode fun(): EnumWindBitMode
+---@field set_WindMode fun(value: EnumWindBitMode): nil
+---@field get_WindData fun(): number
+---@field set_WindData fun(value: number): nil
+---@field Clone fun(): VertexFlags
+---@field ToString fun(): string
+---@field SetWindMode fun(flags: number&, windMode: number): nil
+---@field SetWindData fun(flags: number&, windData: number): nil
+---@field ReplaceWindData fun(flags: number&, windData: number): nil
+---@field GetType fun(): any
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+---@field All number
+---@field GlowLevel number
+---@field ZOffset number
+---@field Reflective number
+---@field Lod0 number
+---@field Normal number
+---@field WindMode number
+---@field WindData number
+---@field GlowLevelBitMask number
+---@field ZOffsetBitPos number
+---@field ZOffsetBitMask number
+---@field ReflectiveBitMask number
+---@field Lod0BitMask number
+---@field NormalBitPos number
+---@field NormalBitMask number
+---@field WindModeBitsMask number
+---@field WindModeBitsPos number
+---@field WindDataBitsMask number
+---@field WindDataBitsPos number
+---@field WindBitsMask number
+---@field LiquidWaterModeBitMask number
+---@field LiquidExposedToSkyBitMask number
+---@field ClearWindBitsMask number
+---@field ClearWindModeBitsMask number
+---@field ClearWindDataBitsMask number
+---@field ClearZOffsetMask number
+---@field ClearNormalBitMask number
+VertexFlags = {}

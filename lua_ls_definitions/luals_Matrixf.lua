@@ -1,0 +1,37 @@
+---@meta Matrixf
+---@class Matrixf: Object
+---@field ctor fun(): Matrixf
+---@overload fun(values: Single[]): Matrixf
+---@field get_ValuesAsDouble fun(): Double[]
+---@field Create fun(): Matrixf
+---@field Identity fun(): Matrixf
+---@field Set fun(values: Single[]): Matrixf
+---@overload fun(values: Double[]): Matrixf
+---@field Translate fun(x: Double, y: Double, z: Double): Matrixf
+---@overload fun(x: Single, y: Single, z: Single): Matrixf
+---@field Scale fun(x: Single, y: Single, z: Single): Matrixf
+---@field RotateDeg fun(degrees: Vec3f): Matrixf
+---@field Rotate fun(radians: Vec3f): Matrixf
+---@overload fun(radX: Single, radY: Single, radZ: Single): Matrixf
+---@field RotateX fun(radX: Single): Matrixf
+---@field RotateY fun(radY: Single): Matrixf
+---@field RotateZ fun(radZ: Single): Matrixf
+---@field RotateXDeg fun(degX: Single): Matrixf
+---@field RotateYDeg fun(degY: Single): Matrixf
+---@field RotateZDeg fun(degZ: Single): Matrixf
+---@field TransformVector fun(vec: Vec4f): Vec4f
+---@overload fun(vec: Vec4d): Vec4d
+---@field Mul fun(matrix: Single[]): Matrixf
+---@overload fun(matrix: Matrixf): Matrixf
+---@field ReverseMul fun(matrix: Single[]): Matrixf
+---@field FollowPlayer fun(): Matrixf
+---@field FollowPlayerXZ fun(): Matrixf
+---@field Invert fun(): Matrixf
+---@field Clone fun(): Matrixf
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+---@field ValuesAsDouble Double[]
+---@field Values Double[]
+Matrixf = {}

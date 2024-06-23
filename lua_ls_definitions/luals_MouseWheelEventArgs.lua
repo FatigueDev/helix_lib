@@ -1,0 +1,15 @@
+---@meta MouseWheelEventArgs
+---@class MouseWheelEventArgs: Object
+---@field ctor fun(): MouseWheelEventArgs
+---@field get_IsHandled fun(): boolean
+---@field SetHandled fun(value: boolean): nil
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+---@field IsHandled boolean
+---@field delta boolean
+---@field deltaPrecise boolean
+---@field value boolean
+---@field valuePrecise boolean
+MouseWheelEventArgs = {}

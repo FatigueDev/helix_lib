@@ -1,0 +1,11 @@
+---@meta AudioMetaData
+---@class AudioMetaData: AudioData
+---@field ctor fun(asset: IAsset): AudioMetaData
+---@field Load fun(): nil
+---@field Load_Async fun(onCompleted: MainThreadAction): number
+---@field Unload fun(): nil
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+AudioMetaData = {}

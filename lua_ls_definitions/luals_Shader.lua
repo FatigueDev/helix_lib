@@ -1,0 +1,24 @@
+---@meta Shader
+---@class Shader: Object
+---@field ctor fun(): Shader
+---@overload fun(shaderType: EnumShaderany, code: string, filename: string): Shader
+---@field get_Type fun(): EnumShaderany
+---@field set_Type fun(value: EnumShaderany): nil
+---@field get_PrefixCode fun(): string
+---@field set_PrefixCode fun(value: string): nil
+---@field get_Code fun(): string
+---@field set_Code fun(value: string): nil
+---@field Compile fun(): boolean
+---@field EnsureVersionSupported fun(): nil
+---@field Clone fun(): Shader
+---@field EnsureVersionSupported fun(versionUsed: string, ownFilename: string): nil
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+---@field Type EnumShaderany
+---@field PrefixCode EnumShaderany
+---@field Code EnumShaderany
+---@field ShaderId EnumShaderany
+---@field shaderType EnumShaderany
+Shader = {}

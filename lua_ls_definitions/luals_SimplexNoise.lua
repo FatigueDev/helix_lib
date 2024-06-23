@@ -1,0 +1,16 @@
+---@meta SimplexNoise
+---@class SimplexNoise: Object
+---@field ctor fun(amplitudes: Double[], frequencies: Double[], seed: Int64): SimplexNoise
+---@field FromDefaultOctaves fun(quantityOctaves: number, baseFrequency: Double, persistence: Double, seed: Int64): SimplexNoise
+---@field Noise fun(x: Double, y: Double): Double
+---@field NoiseFairWarpVector fun(originalWarpX: SimplexNoise, originalWarpY: SimplexNoise, x: Double, y: Double, distX: Double&, distY: Double&): nil
+---@field Noise fun(x: Double, y: Double, thresholds: Double[]): Double
+---@field NoiseWithThreshold fun(x: Double, y: Double, threshold: Double): Double
+---@field Noise fun(x: Double, y: Double, z: Double): Double
+---@field AbsNoise fun(x: Double, y: Double, z: Double): Double
+---@field Clone fun(): SimplexNoise
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+SimplexNoise = {}

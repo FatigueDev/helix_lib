@@ -1,0 +1,31 @@
+---@meta EventManager
+---@class EventManager: Object
+---@field get_Logger fun(): ILogger
+---@field get_CommandPrefix fun(): string
+---@field HasPrivilege fun(playerUid: string, privilegecode: string): boolean
+---@field get_InWorldEllapsedMs fun(): Int64
+---@field add_OnGetClimate fun(value: OnGetClimateDelegate): nil
+---@field remove_OnGetClimate fun(value: OnGetClimateDelegate): nil
+---@field add_OnGetWindSpeed fun(value: OnGetWindSpeedDelegate): nil
+---@field remove_OnGetWindSpeed fun(value: OnGetWindSpeedDelegate): nil
+---@field TriggerOnGetClimate fun(climate: ClimateCondition&, pos: BlockPos, mode: EnumGetClimateMode, totalDays: Double): nil
+---@field TriggerOnGetWindSpeed fun(pos: Vec3d, windSpeed: Vec3d&): nil
+---@field TriggerGameTick fun(ellapsedMilliseconds: Int64, world: IWorldAccessor): nil
+---@field TriggerGameTickDebug fun(ellapsedMilliseconds: Int64, world: IWorldAccessor): nil
+---@field AddGameTickListener fun(handler: any`1, millisecondInterval: number, initialDelayOffsetMs: number): Int64
+---@overload fun(handler: any`1, errorHandler: any`1, millisecondInterval: number, initialDelayOffsetMs: number): Int64
+---@overload fun(handler: Action`3, pos: BlockPos, millisecondInterval: number, initialDelayOffsetMs: number): Int64
+---@field AddDelayedCallback fun(handler: any`1, callAfterEllapsedMS: Int64): Int64
+---@overload fun(handler: Action`3, pos: BlockPos, callAfterEllapsedMS: Int64): Int64
+---@field RemoveDelayedCallback fun(listenerId: Int64): nil
+---@field RemoveGameTickListener fun(listenerId: Int64): nil
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+---@field Logger ILogger
+---@field CommandPrefix ILogger
+---@field InWorldEllapsedMs ILogger
+---@field OnGetClimate ILogger
+---@field OnGetWindSpeed ILogger
+EventManager = {}

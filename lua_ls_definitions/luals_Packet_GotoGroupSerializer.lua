@@ -1,0 +1,15 @@
+---@meta Packet_GotoGroupSerializer
+---@class Packet_GotoGroupSerializer: Object
+---@field ctor fun(): Packet_GotoGroupSerializer
+---@field DeserializeLengthDelimitedNew fun(stream: CitoMemoryStream): Packet_GotoGroup
+---@field DeserializeBuffer fun(buffer: number[], length: number, instance: Packet_GotoGroup): Packet_GotoGroup
+---@field Deserialize fun(stream: CitoMemoryStream, instance: Packet_GotoGroup): Packet_GotoGroup
+---@field DeserializeLengthDelimited fun(stream: CitoMemoryStream, instance: Packet_GotoGroup): Packet_GotoGroup
+---@field Serialize fun(stream: CitoStream, instance: Packet_GotoGroup): nil
+---@field SerializeToBytes fun(instance: Packet_GotoGroup): number[]
+---@field SerializeLengthDelimited fun(stream: CitoStream, instance: Packet_GotoGroup): nil
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+Packet_GotoGroupSerializer = {}

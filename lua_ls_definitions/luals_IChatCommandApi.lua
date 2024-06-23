@@ -1,0 +1,15 @@
+---@meta IChatCommandApi
+---@class IChatCommandApi
+---@field get_Item fun(name: string): IChatCommand
+---@field Create fun(): IChatCommand
+---@overload fun(name: string): IChatCommand
+---@field Get fun(name: string): IChatCommand
+---@field GetOrCreate fun(name: string): IChatCommand
+---@field get_Parsers fun(): CommandArgumentParsers
+---@field Execute fun(name: string, args: TextCommandCallingArgs, onCommandComplete: any`1): nil
+---@field ExecuteUnparsed fun(message: string, args: TextCommandCallingArgs, onCommandComplete: any`1): nil
+---@field GetOrdered fun(command: table<any, any>): table<any, any>
+---@overload fun(chatCommandApi: IChatCommandApi): table<any, any>
+---@field Item IChatCommand
+---@field Parsers IChatCommand
+IChatCommandApi = {}

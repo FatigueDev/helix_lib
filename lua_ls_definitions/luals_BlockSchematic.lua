@@ -1,0 +1,61 @@
+---@meta BlockSchematic
+---@class BlockSchematic: Object
+---@field ctor fun(): BlockSchematic
+---@field get_BlockRemaps fun(): table<any, any>
+---@field set_BlockRemaps fun(value: table<any, any>): nil
+---@field get_ItemRemaps fun(): table<any, any>
+---@field set_ItemRemaps fun(value: table<any, any>): nil
+---@field Init fun(blockAccessor: IBlockAccessor): nil
+---@field InitMetaBlocks fun(blockAccessor: IBlockAccessor): nil
+---@field LoadMetaInformationAndValidate fun(blockAccessor: IBlockAccessor, worldForResolve: IWorldAccessor, fileNameForLogging: string): nil
+---@field AddArea fun(world: IWorldAccessor, start: BlockPos, end: BlockPos): nil
+---@field Pack fun(world: IWorldAccessor, startPos: BlockPos): boolean
+---@field Place fun(blockAccessor: IBlockAccessor, worldForCollectibleResolve: IWorldAccessor, startPos: BlockPos, replaceMetaBlocks: boolean): number
+---@overload fun(blockAccessor: IBlockAccessor, worldForCollectibleResolve: IWorldAccessor, startPos: BlockPos, mode: EnumReplaceMode, replaceMetaBlocks: boolean): number
+---@field PlaceDecors fun(blockAccessor: IBlockAccessor, startPos: BlockPos): nil
+---@overload fun(blockAccessor: IBlockAccessor, startPos: BlockPos, rect: Rectanglei): nil
+---@field TransformWhilePacked fun(worldForResolve: IWorldAccessor, aroundOrigin: EnumOrigin, angle: number, flipAxis: Nullable`1): nil
+---@field PlaceEntitiesAndBlockEntities fun(blockAccessor: IBlockAccessor, worldForCollectibleResolve: IWorldAccessor, startPos: BlockPos, blockCodes: table<any, any>, itemCodes: table<any, any>, replaceBlockEntities: boolean, replaceBlocks: table<any, any>, centerrockblockid: number, layerBlockForBlockEntities: table<any, any>, resolveImports: boolean): nil
+---@field GetJustPositions fun(origin: BlockPos): BlockPos[]
+---@field GetStartPos fun(pos: BlockPos, origin: EnumOrigin): BlockPos
+---@field AdjustStartPos fun(startpos: BlockPos, origin: EnumOrigin): BlockPos
+---@field LoadFromFile fun(infilepath: string, error: string&): BlockSchematic
+---@field LoadFromString fun(jsoncode: string, error: string&): BlockSchematic
+---@field Save fun(outfilepath: string): string
+---@field ToJson fun(): string
+---@field EncodeBlockEntityData fun(be: BlockEntity): string
+---@field StringEncodeTreeAttribute fun(tree: ITreeAttribute): string
+---@field DecodeBlockEntityData fun(data: string): TreeAttribute
+---@field ClonePacked fun(): BlockSchematic
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+---@field BlockRemaps table<any, any>
+---@field ItemRemaps table<any, any>
+---@field GameVersion table<any, any>
+---@field SizeX table<any, any>
+---@field SizeY table<any, any>
+---@field SizeZ table<any, any>
+---@field BlockCodes table<any, any>
+---@field ItemCodes table<any, any>
+---@field Indices table<any, any>
+---@field BlockIds table<any, any>
+---@field DecorIndices table<any, any>
+---@field DecorIds table<any, any>
+---@field BlockEntities table<any, any>
+---@field Entities table<any, any>
+---@field ReplaceMode table<any, any>
+---@field EntranceRotation table<any, any>
+---@field BlocksUnpacked table<any, any>
+---@field FluidsLayerUnpacked table<any, any>
+---@field BlockEntitiesUnpacked table<any, any>
+---@field EntitiesUnpacked table<any, any>
+---@field DecorsUnpacked table<any, any>
+---@field PackedOffset table<any, any>
+---@field OmitLiquids table<any, any>
+---@field PathwaySides table<any, any>
+---@field PathwayStarts table<any, any>
+---@field PathwayOffsets table<any, any>
+---@field UndergroundCheckPositions table<any, any>
+BlockSchematic = {}

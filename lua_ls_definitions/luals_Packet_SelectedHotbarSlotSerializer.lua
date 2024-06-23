@@ -1,0 +1,15 @@
+---@meta Packet_SelectedHotbarSlotSerializer
+---@class Packet_SelectedHotbarSlotSerializer: Object
+---@field ctor fun(): Packet_SelectedHotbarSlotSerializer
+---@field DeserializeLengthDelimitedNew fun(stream: CitoMemoryStream): Packet_SelectedHotbarSlot
+---@field DeserializeBuffer fun(buffer: number[], length: number, instance: Packet_SelectedHotbarSlot): Packet_SelectedHotbarSlot
+---@field Deserialize fun(stream: CitoMemoryStream, instance: Packet_SelectedHotbarSlot): Packet_SelectedHotbarSlot
+---@field DeserializeLengthDelimited fun(stream: CitoMemoryStream, instance: Packet_SelectedHotbarSlot): Packet_SelectedHotbarSlot
+---@field Serialize fun(stream: CitoStream, instance: Packet_SelectedHotbarSlot): nil
+---@field SerializeToBytes fun(instance: Packet_SelectedHotbarSlot): number[]
+---@field SerializeLengthDelimited fun(stream: CitoStream, instance: Packet_SelectedHotbarSlot): nil
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+Packet_SelectedHotbarSlotSerializer = {}

@@ -1,0 +1,12 @@
+---@meta Rectangled
+---@class Rectangled: Object
+---@field ctor fun(): Rectangled
+---@overload fun(width: Double, height: Double): Rectangled
+---@overload fun(X: Double, Y: Double, width: Double, height: Double): Rectangled
+---@field Bottom fun(): Double
+---@field PointInside fun(x: Double, y: Double): boolean
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+Rectangled = {}

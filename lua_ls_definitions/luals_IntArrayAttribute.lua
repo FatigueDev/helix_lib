@@ -1,0 +1,25 @@
+---@meta IntArrayAttribute
+---@class IntArrayAttribute: ArrayAttribute`1
+---@field ctor fun(): IntArrayAttribute
+---@overload fun(value: number[]): IntArrayAttribute
+---@overload fun(value: Unumber[]): IntArrayAttribute
+---@overload fun(value: UInt16[]): IntArrayAttribute
+---@field get_AsUShort fun(): UInt16[]
+---@field get_AsUint fun(): Unumber[]
+---@field ToBytes fun(stream: BinaryWriter): nil
+---@field FromBytes fun(stream: BinaryReader): nil
+---@field GetAttributeId fun(): number
+---@field AddInt fun(val: number[]): nil
+---@field RemoveInt fun(val: number): nil
+---@field Clone fun(): IAttribute
+---@field Equals fun(worldForResolve: IWorldAccessor, attr: IAttribute): boolean
+---@field GetValue fun(): table
+---@field ToJsonToken fun(): string
+---@field ToString fun(): string
+---@field GetHashCode fun(): number
+---@field GetType fun(): any
+---@field Equals fun(obj: table): boolean
+---@field AsUShort UInt16[]
+---@field AsUint UInt16[]
+---@field value UInt16[]
+IntArrayAttribute = {}

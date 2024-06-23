@@ -1,0 +1,15 @@
+---@meta Packet_BlendedOverlayTextureSerializer
+---@class Packet_BlendedOverlayTextureSerializer: Object
+---@field ctor fun(): Packet_BlendedOverlayTextureSerializer
+---@field DeserializeLengthDelimitedNew fun(stream: CitoMemoryStream): Packet_BlendedOverlayTexture
+---@field DeserializeBuffer fun(buffer: number[], length: number, instance: Packet_BlendedOverlayTexture): Packet_BlendedOverlayTexture
+---@field Deserialize fun(stream: CitoMemoryStream, instance: Packet_BlendedOverlayTexture): Packet_BlendedOverlayTexture
+---@field DeserializeLengthDelimited fun(stream: CitoMemoryStream, instance: Packet_BlendedOverlayTexture): Packet_BlendedOverlayTexture
+---@field Serialize fun(stream: CitoStream, instance: Packet_BlendedOverlayTexture): nil
+---@field SerializeToBytes fun(instance: Packet_BlendedOverlayTexture): number[]
+---@field SerializeLengthDelimited fun(stream: CitoStream, instance: Packet_BlendedOverlayTexture): nil
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+Packet_BlendedOverlayTextureSerializer = {}

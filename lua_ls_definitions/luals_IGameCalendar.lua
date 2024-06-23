@@ -1,0 +1,73 @@
+---@meta IGameCalendar
+---@class IGameCalendar
+---@field get_OnGetHemisphere fun(): HemisphereDelegate
+---@field set_OnGetHemisphere fun(value: HemisphereDelegate): nil
+---@field get_OnGetSolarSphericalCoords fun(): SolarSphericalCoordsDelegate
+---@field set_OnGetSolarSphericalCoords fun(value: SolarSphericalCoordsDelegate): nil
+---@field get_OnGetLatitude fun(): GetLatitudeDelegate
+---@field set_OnGetLatitude fun(value: GetLatitudeDelegate): nil
+---@field GetDayLightStrength fun(x: Double, z: Double): Single
+---@overload fun(pos: BlockPos): Single
+---@field PrettyDate fun(): string
+---@field get_SpeedOfTime fun(): Single
+---@field SetTimeSpeedModifier fun(name: string, speed: Single): nil
+---@field RemoveTimeSpeedModifier fun(name: string): nil
+---@field get_ElapsedSeconds fun(): Int64
+---@field get_ElapsedHours fun(): Double
+---@field get_ElapsedDays fun(): Double
+---@field get_CalendarSpeedMul fun(): Single
+---@field set_CalendarSpeedMul fun(value: Single): nil
+---@field get_HoursPerDay fun(): Single
+---@field get_DaysPerYear fun(): number
+---@field get_DaysPerMonth fun(): number
+---@field get_Month fun(): number
+---@field get_MonthName fun(): EnumMonth
+---@field get_FullHourOfDay fun(): number
+---@field get_HourOfDay fun(): Single
+---@field get_TotalHours fun(): Double
+---@field get_TotalDays fun(): Double
+---@field get_DayOfYear fun(): number
+---@field get_DayOfYearf fun(): Single
+---@field get_Year fun(): number
+---@field GetSeason fun(pos: BlockPos): EnumSeason
+---@field GetSeasonRel fun(pos: BlockPos): Single
+---@field GetHemisphere fun(pos: BlockPos): EnumHemisphere
+---@field get_YearRel fun(): Single
+---@field Add fun(hours: Single): nil
+---@field get_MoonPhase fun(): EnumMoonPhase
+---@field get_MoonPhaseExact fun(): Double
+---@field get_MoonPhaseBrightness fun(): Single
+---@field get_MoonSize fun(): Single
+---@field get_SeasonOverride fun(): Nullable`1
+---@field set_SeasonOverride fun(value: Nullable`1): nil
+---@field SetSeasonOverride fun(seasonRel: Nullable`1): nil
+---@field get_Timelapse fun(): Single
+---@field set_Timelapse fun(value: Single): nil
+---@field OnGetHemisphere HemisphereDelegate
+---@field OnGetSolarSphericalCoords HemisphereDelegate
+---@field OnGetLatitude HemisphereDelegate
+---@field SpeedOfTime HemisphereDelegate
+---@field ElapsedSeconds HemisphereDelegate
+---@field ElapsedHours HemisphereDelegate
+---@field ElapsedDays HemisphereDelegate
+---@field CalendarSpeedMul HemisphereDelegate
+---@field HoursPerDay HemisphereDelegate
+---@field DaysPerYear HemisphereDelegate
+---@field DaysPerMonth HemisphereDelegate
+---@field Month HemisphereDelegate
+---@field MonthName HemisphereDelegate
+---@field FullHourOfDay HemisphereDelegate
+---@field HourOfDay HemisphereDelegate
+---@field TotalHours HemisphereDelegate
+---@field TotalDays HemisphereDelegate
+---@field DayOfYear HemisphereDelegate
+---@field DayOfYearf HemisphereDelegate
+---@field Year HemisphereDelegate
+---@field YearRel HemisphereDelegate
+---@field MoonPhase HemisphereDelegate
+---@field MoonPhaseExact HemisphereDelegate
+---@field MoonPhaseBrightness HemisphereDelegate
+---@field MoonSize HemisphereDelegate
+---@field SeasonOverride HemisphereDelegate
+---@field Timelapse HemisphereDelegate
+IGameCalendar = {}

@@ -1,0 +1,22 @@
+---@meta IAssetManager
+---@class IAssetManager
+---@field get_AllAssets fun(): table<any, any>
+---@field Exists fun(location: AssetLocation): boolean
+---@field Add fun(path: AssetLocation, asset: IAsset): nil
+---@field Get fun(path: string): IAsset
+---@overload fun(Location: AssetLocation): IAsset
+---@field TryGet fun(Path: string, loadAsset: boolean): IAsset
+---@overload fun(Location: AssetLocation, loadAsset: boolean): IAsset
+---@field GetMany fun(pathBegins: string, domain: string, loadAsset: boolean): any[]
+---@field GetManyInCategory fun(categoryCode: string, pathBegins: string, domain: string, loadAsset: boolean): any[]
+---@field GetMany fun(logger: ILogger, pathBegins: string, domain: string): table<any, any>
+---@field GetLocations fun(pathBegins: string, domain: string): any[]
+---@field Get fun(location: AssetLocation): T
+---@field Reload fun(baseLocation: AssetLocation): number
+---@overload fun(category: AssetCategory): number
+---@field get_Origins fun(): any[]
+---@field AddPathOrigin fun(domain: string, fullPath: string): nil
+---@field AddModOrigin fun(domain: string, fullPath: string): nil
+---@field AllAssets table<any, any>
+---@field Origins table<any, any>
+IAssetManager = {}

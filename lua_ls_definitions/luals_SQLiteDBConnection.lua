@@ -1,0 +1,21 @@
+---@meta SQLiteDBConnection
+---@class SQLiteDBConnection: Object
+---@field ctor fun(logger: ILogger): SQLiteDBConnection
+---@field get_DBTypeCode fun(): string
+---@field get_IsReadOnly fun(): boolean
+---@field OpenOrCreate fun(filename: string, errorMessage: string&, requireWriteAccess: boolean, corruptionProtection: boolean, doIntegrityCheck: boolean): boolean
+---@field OnOpened fun(): nil
+---@field Close fun(): nil
+---@field Dispose fun(): nil
+---@field Vacuum fun(): nil
+---@field DoIntegrityCheck fun(sqliteConn: SqliteConnection, logResults: boolean): boolean
+---@field HaveWriteAccessFolder fun(folderPath: string): boolean
+---@field HaveWriteAccessFile fun(file: FileInfo): boolean
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+---@field DBTypeCode string
+---@field IsReadOnly string
+---@field transactionLock string
+SQLiteDBConnection = {}

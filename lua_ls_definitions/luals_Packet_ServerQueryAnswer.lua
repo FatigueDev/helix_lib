@@ -1,0 +1,15 @@
+---@meta Packet_ServerQueryAnswer
+---@class Packet_ServerQueryAnswer: Object
+---@field ctor fun(): Packet_ServerQueryAnswer
+---@field SetName fun(value: string): nil
+---@field SetMOTD fun(value: string): nil
+---@field SetPlayerCount fun(value: number): nil
+---@field SetMaxPlayers fun(value: number): nil
+---@field SetGameMode fun(value: string): nil
+---@field SetPassword fun(value: boolean): nil
+---@field SetServerVersion fun(value: string): nil
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+Packet_ServerQueryAnswer = {}

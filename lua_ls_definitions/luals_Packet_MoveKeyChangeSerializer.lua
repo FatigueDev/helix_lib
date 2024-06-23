@@ -1,0 +1,15 @@
+---@meta Packet_MoveKeyChangeSerializer
+---@class Packet_MoveKeyChangeSerializer: Object
+---@field ctor fun(): Packet_MoveKeyChangeSerializer
+---@field DeserializeLengthDelimitedNew fun(stream: CitoMemoryStream): Packet_MoveKeyChange
+---@field DeserializeBuffer fun(buffer: number[], length: number, instance: Packet_MoveKeyChange): Packet_MoveKeyChange
+---@field Deserialize fun(stream: CitoMemoryStream, instance: Packet_MoveKeyChange): Packet_MoveKeyChange
+---@field DeserializeLengthDelimited fun(stream: CitoMemoryStream, instance: Packet_MoveKeyChange): Packet_MoveKeyChange
+---@field Serialize fun(stream: CitoStream, instance: Packet_MoveKeyChange): nil
+---@field SerializeToBytes fun(instance: Packet_MoveKeyChange): number[]
+---@field SerializeLengthDelimited fun(stream: CitoStream, instance: Packet_MoveKeyChange): nil
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+Packet_MoveKeyChangeSerializer = {}

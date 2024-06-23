@@ -1,0 +1,15 @@
+---@meta Packet_ServerLevelProgressSerializer
+---@class Packet_ServerLevelProgressSerializer: Object
+---@field ctor fun(): Packet_ServerLevelProgressSerializer
+---@field DeserializeLengthDelimitedNew fun(stream: CitoMemoryStream): Packet_ServerLevelProgress
+---@field DeserializeBuffer fun(buffer: number[], length: number, instance: Packet_ServerLevelProgress): Packet_ServerLevelProgress
+---@field Deserialize fun(stream: CitoMemoryStream, instance: Packet_ServerLevelProgress): Packet_ServerLevelProgress
+---@field DeserializeLengthDelimited fun(stream: CitoMemoryStream, instance: Packet_ServerLevelProgress): Packet_ServerLevelProgress
+---@field Serialize fun(stream: CitoStream, instance: Packet_ServerLevelProgress): nil
+---@field SerializeToBytes fun(instance: Packet_ServerLevelProgress): number[]
+---@field SerializeLengthDelimited fun(stream: CitoStream, instance: Packet_ServerLevelProgress): nil
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+Packet_ServerLevelProgressSerializer = {}

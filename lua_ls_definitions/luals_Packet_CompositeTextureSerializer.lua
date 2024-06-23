@@ -1,0 +1,15 @@
+---@meta Packet_CompositeTextureSerializer
+---@class Packet_CompositeTextureSerializer: Object
+---@field ctor fun(): Packet_CompositeTextureSerializer
+---@field DeserializeLengthDelimitedNew fun(stream: CitoMemoryStream): Packet_CompositeTexture
+---@field DeserializeBuffer fun(buffer: number[], length: number, instance: Packet_CompositeTexture): Packet_CompositeTexture
+---@field Deserialize fun(stream: CitoMemoryStream, instance: Packet_CompositeTexture): Packet_CompositeTexture
+---@field DeserializeLengthDelimited fun(stream: CitoMemoryStream, instance: Packet_CompositeTexture): Packet_CompositeTexture
+---@field Serialize fun(stream: CitoStream, instance: Packet_CompositeTexture): nil
+---@field SerializeToBytes fun(instance: Packet_CompositeTexture): number[]
+---@field SerializeLengthDelimited fun(stream: CitoStream, instance: Packet_CompositeTexture): nil
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+Packet_CompositeTextureSerializer = {}

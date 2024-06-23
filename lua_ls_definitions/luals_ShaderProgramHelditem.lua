@@ -1,0 +1,108 @@
+---@meta ShaderProgramHelditem
+---@class ShaderProgramHelditem: ShaderProgram
+---@field ctor fun(): ShaderProgramHelditem
+---@field set_ItemTex2D fun(value: number): nil
+---@field set_AlphaTest fun(value: Single): nil
+---@field set_Tex2dOverlay2D fun(value: number): nil
+---@field set_OverlayOpacity fun(value: Single): nil
+---@field set_OverlayTextureSize fun(value: Vec2f): nil
+---@field set_BaseTextureSize fun(value: Vec2f): nil
+---@field set_BaseUvOrigin fun(value: Vec2f): nil
+---@field set_NormalShaded fun(value: number): nil
+---@field set_DamageEffect fun(value: Single): nil
+---@field set_LightPosition fun(value: Vec3f): nil
+---@field set_RgbaAmbientIn fun(value: Vec3f): nil
+---@field set_RgbaLightIn fun(value: Vec4f): nil
+---@field set_RgbaGlowIn fun(value: Vec4f): nil
+---@field set_ExtraGlow fun(value: number): nil
+---@field set_ProjectionMatrix fun(value: Single[]): nil
+---@field set_ModelViewMatrix fun(value: Single[]): nil
+---@field set_ShadowRangeFar fun(value: Single): nil
+---@field set_ToShadowMapSpaceMatrixFar fun(value: Single[]): nil
+---@field set_ShadowRangeNear fun(value: Single): nil
+---@field set_ToShadowMapSpaceMatrixNear fun(value: Single[]): nil
+---@field set_FlatFogDensity fun(value: Single): nil
+---@field set_FlatFogStart fun(value: Single): nil
+---@field set_ViewDistance fun(value: Single): nil
+---@field set_ViewDistanceLod0 fun(value: Single): nil
+---@field set_GlitchStrengthFL fun(value: Single): nil
+---@field set_NightVisionStrength fun(value: Single): nil
+---@field PointLightsArray fun(count: number, values: Single[]): nil
+---@field PointLightColorsArray fun(count: number, values: Single[]): nil
+---@field set_PointLightQuantity fun(value: number): nil
+---@field Compile fun(): boolean
+---@field get_Disposed fun(): boolean
+---@field get_ClampTexturesToEdge fun(): boolean
+---@field set_ClampTexturesToEdge fun(value: boolean): nil
+---@field get_LoadError fun(): boolean
+---@field set_LoadError fun(value: boolean): nil
+---@field SetCustomSampler fun(uniformName: string, isLinear: boolean): nil
+---@field Uniform fun(uniformName: string, value: Single): nil
+---@overload fun(uniformName: string, value: number): nil
+---@overload fun(uniformName: string, value: Vec2f): nil
+---@overload fun(uniformName: string, value: Vec3f): nil
+---@overload fun(uniformName: string, value: Vec3i): nil
+---@field Uniforms2 fun(uniformName: string, count: number, values: Single[]): nil
+---@field Uniforms3 fun(uniformName: string, count: number, values: Single[]): nil
+---@field Uniform fun(uniformName: string, value: Vec4f): nil
+---@field Uniforms4 fun(uniformName: string, count: number, values: Single[]): nil
+---@field UniformMatrix fun(uniformName: string, matrix: Single[]): nil
+---@overload fun(uniformName: string, matrix: Matrix4&): nil
+---@field HasUniform fun(uniformName: string): boolean
+---@field BindTexture2D fun(samplerName: string, textureId: number, textureNumber: number): nil
+---@overload fun(samplerName: string, textureId: number): nil
+---@field BindTextureCube fun(samplerName: string, textureId: number, textureNumber: number): nil
+---@field UniformMatrices4x3 fun(uniformName: string, count: number, matrix: Single[]): nil
+---@field UniformMatrices fun(uniformName: string, count: number, matrix: Single[]): nil
+---@field Use fun(): nil
+---@field Stop fun(): nil
+---@field Dispose fun(): nil
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+---@field ItemTex2D number
+---@field AlphaTest number
+---@field Tex2dOverlay2D number
+---@field OverlayOpacity number
+---@field OverlayTextureSize number
+---@field BaseTextureSize number
+---@field BaseUvOrigin number
+---@field NormalShaded number
+---@field DamageEffect number
+---@field LightPosition number
+---@field RgbaAmbientIn number
+---@field RgbaLightIn number
+---@field RgbaGlowIn number
+---@field ExtraGlow number
+---@field ProjectionMatrix number
+---@field ModelViewMatrix number
+---@field ShadowRangeFar number
+---@field ToShadowMapSpaceMatrixFar number
+---@field ShadowRangeNear number
+---@field ToShadowMapSpaceMatrixNear number
+---@field FlatFogDensity number
+---@field FlatFogStart number
+---@field ViewDistance number
+---@field ViewDistanceLod0 number
+---@field GlitchStrengthFL number
+---@field NightVisionStrength number
+---@field PointLightQuantity number
+---@field Disposed number
+---@field ClampTexturesToEdge number
+---@field LoadError number
+---@field attributes number
+---@field LoadFromFile number
+---@field AssetDomain number
+---@field PassId number
+---@field ProgramId number
+---@field PassName number
+---@field VertexShader number
+---@field GeometryShader number
+---@field FragmentShader number
+---@field uniformLocations number
+---@field textureLocations number
+---@field clampTToEdge number
+---@field includes number
+---@field customSamplers number
+ShaderProgramHelditem = {}

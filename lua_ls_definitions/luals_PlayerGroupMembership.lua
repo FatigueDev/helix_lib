@@ -1,0 +1,8 @@
+---@meta PlayerGroupMembership
+---@class PlayerGroupMembership: Object
+---@field ctor fun(): PlayerGroupMembership
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+PlayerGroupMembership = {}

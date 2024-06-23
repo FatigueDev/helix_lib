@@ -1,0 +1,12 @@
+---@meta ReaderWriterExtensions
+---@class ReaderWriterExtensions: Object
+---@field WriteArray fun(writer: BinaryWriter, values: string[]): nil
+---@field ReadStringArray fun(reader: BinaryReader): string[]
+---@field WriteArray fun(writer: BinaryWriter, values: number[]): nil
+---@field ReadIntArray fun(reader: BinaryReader): number[]
+---@field Clear fun(ms: MemoryStream): nil
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+ReaderWriterExtensions = {}

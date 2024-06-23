@@ -1,0 +1,51 @@
+---@meta ServerPlayerInventoryManager
+---@class ServerPlayerInventoryManager: PlayerInventoryManager
+---@field ctor fun(AllInventories: Orderedtable<any, any>, player: IPlayer, server: ServerMain): ServerPlayerInventoryManager
+---@field get_CurrentHoveredSlot fun(): ItemSlot
+---@field set_CurrentHoveredSlot fun(value: ItemSlot): nil
+---@field BroadcastHotbarSlot fun(): nil
+---@field DropItem fun(slot: ItemSlot, fullStack: boolean): boolean
+---@field NotifySlot fun(toPlayer: IPlayer, slot: ItemSlot): nil
+---@field get_InventoriesOrdered fun(): any[]
+---@field get_ActiveTool fun(): Nullable`1
+---@field get_ActiveHotbarSlotNumber fun(): number
+---@field set_ActiveHotbarSlotNumber fun(value: number): nil
+---@field get_ActiveHotbarSlot fun(): ItemSlot
+---@field get_MouseItemSlot fun(): ItemSlot
+---@field get_OpenedInventories fun(): any[]
+---@field IsVisibleHandSlot fun(invid: string, slotNumber: number): boolean
+---@field GetInventoryName fun(inventoryClassName: string): string
+---@field GetOwnInventory fun(inventoryClassName: string): IInventory
+---@field GetInventory fun(inventoryClassName: string): IInventory
+---@field GetHotbarItemstack fun(slotId: number): ItemStack
+---@field GetHotbarInventory fun(): IInventory
+---@field GetInventory fun(invID: string, invFound: InventoryBase&): boolean
+---@field GetBestSuitedSlot fun(sourceSlot: ItemSlot, op: ItemStackMoveOperation, skipSlots: any[]): ItemSlot
+---@overload fun(sourceSlot: ItemSlot, onlyPlayerInventory: boolean, op: ItemStackMoveOperation, skipSlots: any[]): ItemSlot
+---@field TryGiveItemstack fun(itemstack: ItemStack, slotNotifyEffect: boolean): boolean
+---@field TryTransferAway fun(sourceSlot: ItemSlot, op: ItemStackMoveOperation&, onlyPlayerInventory: boolean, slotNotifyEffect: boolean): table[]
+---@overload fun(sourceSlot: ItemSlot, op: ItemStackMoveOperation&, onlyPlayerInventory: boolean, shiftClickDebugText: stringBuilder, slotNotifyEffect: boolean): table[]
+---@field DiscardAll fun(): nil
+---@field OnDeath fun(): nil
+---@field OpenInventory fun(inventory: IInventory): table
+---@field CloseInventory fun(inventory: IInventory): table
+---@field HasInventory fun(inventory: IInventory): boolean
+---@field DropMouseSlotItems fun(fullStack: boolean): boolean
+---@field DropHotbarSlotItems fun(fullStack: boolean): boolean
+---@field DropAllInventoryItems fun(inventory: IInventory): nil
+---@field TryTransferTo fun(sourceSlot: ItemSlot, targetSlot: ItemSlot, op: ItemStackMoveOperation&): table
+---@field Find fun(matcher: fun(outResult: any): any): boolean
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+---@field CurrentHoveredSlot ItemSlot
+---@field InventoriesOrdered ItemSlot
+---@field ActiveTool ItemSlot
+---@field ActiveHotbarSlotNumber ItemSlot
+---@field ActiveHotbarSlot ItemSlot
+---@field MouseItemSlot ItemSlot
+---@field OpenedInventories ItemSlot
+---@field player ItemSlot
+---@field Inventories ItemSlot
+ServerPlayerInventoryManager = {}

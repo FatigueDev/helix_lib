@@ -1,0 +1,20 @@
+---@meta TextCommandCallingArgs
+---@class TextCommandCallingArgs: Object
+---@field ctor fun(): TextCommandCallingArgs
+---@field get_ArgCount fun(): number
+---@field get_Item fun(index: number): table
+---@field get_LastArg fun(): table
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+---@field ArgCount number
+---@field Item number
+---@field LastArg number
+---@field LanguageCode number
+---@field Command number
+---@field SubCmdCode number
+---@field Caller number
+---@field RawArgs number
+---@field Parsers number
+TextCommandCallingArgs = {}

@@ -1,0 +1,16 @@
+---@meta IClientPlayer
+---@class IClientPlayer
+---@field get_CameraPitch fun(): Single
+---@field set_CameraPitch fun(value: Single): nil
+---@field get_CameraRoll fun(): Single
+---@field set_CameraRoll fun(value: Single): nil
+---@field get_CameraYaw fun(): Single
+---@field set_CameraYaw fun(value: Single): nil
+---@field get_CameraMode fun(): EnumCameraMode
+---@field ShowChatNotification fun(message: string): nil
+---@field TriggerFpAnimation fun(anim: EnumHandInteract): nil
+---@field CameraPitch Single
+---@field CameraRoll Single
+---@field CameraYaw Single
+---@field CameraMode Single
+IClientPlayer = {}

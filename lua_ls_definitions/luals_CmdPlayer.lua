@@ -1,0 +1,32 @@
+---@meta CmdPlayer
+---@class CmdPlayer: ServerSystem
+---@field ctor fun(server: ServerMain): CmdPlayer
+---@field ChangeRole fun(caller: Caller, targetPlayer: PlayerUidName, newRoleCode: string): TextCommandResult
+---@field Each fun(args: TextCommandCallingArgs, onPlayer: PlayerEachDelegate): TextCommandResult
+---@field GetUpdateInterval fun(): number
+---@field OnServerTick fun(dt: Single): nil
+---@field OnSeparateThreadTick fun(): nil
+---@field OnSeperateThreadTick fun(dt: Single): nil
+---@field OnRestart fun(): nil
+---@field OnBeginInitialization fun(): nil
+---@field OnBeginConfiguration fun(): nil
+---@field OnLoadAssets fun(): nil
+---@field OnFinalizeAssets fun(): nil
+---@field OnBeginModsAndConfigReady fun(): nil
+---@field OnBeginGameReady fun(savegame: SaveGame): nil
+---@field OnBeginWorldReady fun(): nil
+---@field OnSeperateThreadShutDown fun(): nil
+---@field OnBeginRunGame fun(): nil
+---@field OnBeginShutdown fun(): nil
+---@field OnPlayerJoin fun(player: ServerPlayer): nil
+---@field OnPlayerSwitchGameMode fun(player: ServerPlayer): nil
+---@field OnPlayerDisconnect fun(player: ServerPlayer): nil
+---@field OnServerPause fun(): nil
+---@field OnServerResume fun(): nil
+---@field OnPlayerJoinPost fun(player: ServerPlayer): nil
+---@field Dispose fun(): nil
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+CmdPlayer = {}

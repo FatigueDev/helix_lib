@@ -1,0 +1,13 @@
+---@meta Packet_EntitySpawn
+---@class Packet_EntitySpawn: Object
+---@field ctor fun(): Packet_EntitySpawn
+---@field GetEntity fun(): Packet_Entity[]
+---@field SetEntity fun(value: Packet_Entity[], count: number, length: number): nil
+---@overload fun(value: Packet_Entity[]): nil
+---@field GetEntityCount fun(): number
+---@field EntityAdd fun(value: Packet_Entity): nil
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+Packet_EntitySpawn = {}

@@ -1,0 +1,11 @@
+---@meta ColorPresets
+---@class ColorPresets: Object
+---@field ctor fun(game: ClientMain, api: ClientCoreAPI): ColorPresets
+---@field GetColor fun(key: string): number
+---@field OnUpdateSetting fun(): nil
+---@field Initialize fun(configfile: IAsset): nil
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+ColorPresets = {}

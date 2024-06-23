@@ -1,0 +1,185 @@
+---@meta ClientPlatformAbstract
+---@class ClientPlatformAbstract: Object
+---@field get_DoPostProcessingEffects fun(): boolean
+---@field set_DoPostProcessingEffects fun(value: boolean): nil
+---@field get_ScreenSize fun(): Size2i
+---@field get_WindowSize fun(): Size2i
+---@field get_MinimalGuiShader fun(): ShaderProgramMinimalGui
+---@field get_IsFocused fun(): boolean
+---@field get_DebugDrawCalls fun(): boolean
+---@field set_DebugDrawCalls fun(value: boolean): nil
+---@field ToggleOffscreenBuffer fun(enable: boolean): nil
+---@field RegisterOnFocusChange fun(handler: OnFocusChanged): nil
+---@field get_GlDebugMode fun(): boolean
+---@field set_GlDebugMode fun(value: boolean): nil
+---@field get_GlErrorChecking fun(): boolean
+---@field set_GlErrorChecking fun(value: boolean): nil
+---@field CheckGlError fun(errmsg: string): nil
+---@field CheckGlErrorAlways fun(errmsg: string): nil
+---@field GlGetError fun(): string
+---@field get_AssetManager fun(): AssetManager
+---@field get_Logger fun(): ILogger
+---@field get_XPlatInterface fun(): IXPlatformInterface
+---@field GetGraphicCardInfos fun(): string
+---@field get_CpuCoreCount fun(): number
+---@field GetFrameworkInfos fun(): string
+---@field IsExitAvailable fun(): boolean
+---@field SetWindowClosedHandler fun(handler: Action): nil
+---@field SetFrameHandler fun(handler: NewFrameHandler): nil
+---@field SetFileDropHandler fun(handler: any`1): nil
+---@field RegisterKeyboardEvent fun(handler: KeyEventHandler): nil
+---@field RegisterMouseEvent fun(handler: MouseEventHandler): nil
+---@field CreateBitmapFromPng fun(asset: IAsset): BitmapRef
+---@field CreateBitmapFromPixels fun(pixels: number[], width: number, height: number): BitmapRef
+---@field CreateBitmapFromPng fun(data: number[]): BitmapRef
+---@overload fun(data: number[], dataLength: number): BitmapRef
+---@field CreateBitmap fun(width: number, height: number): BitmapRef
+---@field SetBitmapPixelsArgb fun(bmp: BitmapRef, pixels: number[]): nil
+---@field get_WindowBorder fun(): EnumWindowBorder
+---@field set_WindowBorder fun(value: EnumWindowBorder): nil
+---@field get_EllapsedMs fun(): Int64
+---@field CreateMonitor fun(): Monitortable
+---@field EnterMonitor fun(monitorObject: Monitortable): nil
+---@field ExitMonitor fun(monitorObject: Monitortable): nil
+---@field SaveScreenshot fun(path: string, filename: string, withAlpha: boolean, flip: boolean, metaDataStr: string): string
+---@field GrabScreenshot fun(withAlpha: boolean, scale: boolean): BitmapRef
+---@overload fun(width: number, height: number, scaleScreenshot: boolean, flip: boolean, withAlpha: boolean): BitmapRef
+---@field CreateAviWriter fun(framerate: Single, codec: string): IAviWriter
+---@field GetAvailableCodecs fun(): AvailableCodec[]
+---@field SetVSync fun(enabled: boolean): nil
+---@field SetDirectMouseMode fun(enabled: boolean): nil
+---@field GetGameVersion fun(): string
+---@field WindowExit fun(reason: string): nil
+---@field add_WindowResized fun(value: WindowResizedDelegate): nil
+---@field remove_WindowResized fun(value: WindowResizedDelegate): nil
+---@field TriggerWindowResized fun(width: number, height: number): nil
+---@field SetTitle fun(applicationname: string): nil
+---@field AddOnCrash fun(handler: OnCrashHandler): nil
+---@field ClearOnCrash fun(): nil
+---@field GetWindowState fun(): WindowState
+---@field SetWindowState fun(value: WindowState): nil
+---@field SetWindowAttribute fun(attribute: WindowAttribute, value: boolean): nil
+---@field ThreadSpinWait fun(iterations: number): nil
+---@field get_MouseGrabbed fun(): boolean
+---@field set_MouseGrabbed fun(value: boolean): nil
+---@field LoadAssets fun(): nil
+---@field GenSampler fun(linear: boolean): number
+---@field LoadMouseCursor fun(cursorCode: string, hotx: number, hoty: number, bmp: BitmapRef): boolean
+---@field UseMouseCursor fun(cursorCode: string, forceUpdate: boolean): nil
+---@field get_CurrentMouseCursor fun(): string
+---@field CreateMouseEvent fun(button: EnumMouseButton): MouseEvent
+---@field RestoreWindowCursor fun(): nil
+---@field SetWindowSize fun(width: number, height: number): nil
+---@field CreateAudioData fun(asset: IAsset): AudioData
+---@field CreateAudio fun(sound: SoundParams, data: AudioData): ILoadedSound
+---@field IsAudioDataLoaded fun(data: AudioData): boolean
+---@field UpdateAudioListener fun(posX: Single, posY: Single, posZ: Single, orientX: Single, orientY: Single, orientZ: Single): nil
+---@field AddAudioSettingsWatchers fun(): nil
+---@field IsTcpAvailable fun(): boolean
+---@field GetTcpConnection fun(ip: string, port: number, OnConnectResult: any`1, OnDisconnected: any`1): INetworkConnection
+---@field GetGLShaderVersionString fun(): string
+---@field GLWireframes fun(toggle: boolean): nil
+---@field GlViewport fun(x: number, y: number, width: number, height: number): nil
+---@field GlScissor fun(x: number, y: number, width: number, height: number): nil
+---@field GlScissorFlag fun(enable: boolean): nil
+---@field get_GlScissorFlagEnabled fun(): boolean
+---@field GlDisableDepthTest fun(): nil
+---@field GlClearColorRgbaf fun(r: Single, g: Single, b: Single, a: Single): nil
+---@field GlEnableDepthTest fun(): nil
+---@field GlDisableCullFace fun(): nil
+---@field GlEnableCullFace fun(): nil
+---@field GlGenerateTex2DMipmaps fun(): nil
+---@field GLLineWidth fun(width: Single): nil
+---@field SmoothLines fun(on: boolean): nil
+---@field GlDepthMask fun(flag: boolean): nil
+---@field GlDepthFunc fun(depthFunc: EnumDepthFunction): nil
+---@field GlCullFaceBack fun(): nil
+---@field GlToggleBlend fun(on: boolean, blendMode: EnumBlendMode): nil
+---@field get_AvailableAudioDevices fun(): Iany[]
+---@field get_CurrentAudioDevice fun(): string
+---@field set_CurrentAudioDevice fun(value: string): nil
+---@field UpdateMesh fun(meshRef: MeshRef, updatedata: MeshData): nil
+---@field UploadMesh fun(data: MeshData): MeshRef
+---@field AllocateEmptyMesh fun(xyzSize: number, normalsSize: number, uvSize: number, rgbaSize: number, flagsSize: number, indicesSize: number, customFloats: CustomMeshDataPartFloat, customShorts: CustomMeshDataPartShort, customBytes: CustomMeshDataPartnumber, customInts: CustomMeshDataPartInt, drawMode: EnumDrawMode, staticDraw: boolean): MeshRef
+---@field RenderMesh fun(vao: MeshRef): nil
+---@overload fun(meshRef: MeshRef, indicesStarts: number[], indicesSizes: number[], groupCount: number): nil
+---@field DeleteMesh fun(vao: MeshRef): nil
+---@field RenderMeshInstanced fun(meshRef: MeshRef, quantity: number): nil
+---@field GLDeleteTexture fun(id: number): nil
+---@field GlGetMaxTextureSize fun(): number
+---@field BindTexture2d fun(texture: number): nil
+---@field BindTextureCubeMap fun(texture: number): nil
+---@field UnBindTextureCubeMap fun(): nil
+---@field LoadOrUpdateTextureFromBgra fun(rgbaPixels: number[], linearMag: boolean, clampMode: number, intoTexture: LoadedTexture&): nil
+---@field LoadOrUpdateTextureFromRgba fun(rgbaPixels: number[], linearMag: boolean, clampMode: number, intoTexture: LoadedTexture&): nil
+---@field LoadOrUpdateTextureFromBgra_DeferMipMap fun(rgbaPixels: number[], linearMag: boolean, clampMode: number, intoTexture: LoadedTexture&): nil
+---@field LoadIntoTexture fun(srcBmp: IBitmap, targetTexture: number, destX: number, destY: number, generateMipmaps: boolean): nil
+---@field BuildMipMaps fun(textureId: number): nil
+---@field LoadTexture fun(skBitmap: SKBitmap, linearMag: boolean, clampMode: number, generateMipmaps: boolean): number
+---@overload fun(bmp: IBitmap, linearMag: boolean, clampMode: number, generateMipmaps: boolean): number
+---@field Load3DTextureCube fun(bmps: BitmapRef[]): number
+---@field LoadCairoTexture fun(surface: ImageSurface, linearMag: boolean): number
+---@field LoadOrUpdateCairoTexture fun(surface: ImageSurface, linearMag: boolean, intoTexture: LoadedTexture&): nil
+---@field get_ShaderUniforms fun(): DefaultShaderUniforms
+---@field set_ShaderUniforms fun(value: DefaultShaderUniforms): nil
+---@field GetUniformLocation fun(program: ShaderProgram, name: string): number
+---@field CompileShader fun(shader: Shader): boolean
+---@field CreateShaderProgram fun(shaderprogram: ShaderProgram): boolean
+---@field ClearFrameBuffer fun(framebuffer: EnumFrameBuffer): nil
+---@overload fun(framebuffer: FrameBufferRef, clearColor: Single[], clearDepthBuffer: boolean, clearColorBuffers: boolean): nil
+---@field LoadFrameBuffer fun(framebuffer: EnumFrameBuffer): nil
+---@field UnloadFrameBuffer fun(framebuffer: EnumFrameBuffer): nil
+---@field RebuildFrameBuffers fun(): nil
+---@field CreateFramebuffer fun(framebuffer: FramebufferAttrs): FrameBufferRef
+---@field DisposeFrameBuffer fun(frameBuffer: FrameBufferRef, disposeTextures: boolean): nil
+---@field ClearFrameBuffer fun(frameBuffer: FrameBufferRef, clearDepth: boolean): nil
+---@overload fun(frameBuffer: FrameBufferRef): nil
+---@overload fun(frameBuffer: FrameBufferRef, textureId: number): nil
+---@overload fun(frameBuffer: FrameBufferRef): nil
+---@field MergeTransparentRenderPass fun(): nil
+---@field RenderPostprocessingEffects fun(projectMatrix: Single[]): nil
+---@field RenderFinalComposition fun(): nil
+---@field BlitPrimaryToDefault fun(): nil
+---@field get_FrameBuffers fun(): any[]
+---@field StartSinglePlayerServer fun(serverargs: StartServerArgs): nil
+---@field ExitSinglePlayerServer fun(): nil
+---@field IsLoadedSinglePlayerServer fun(): boolean
+---@field get_IsServerRunning fun(): boolean
+---@field set_IsServerRunning fun(value: boolean): nil
+---@field SetGamePausedState fun(paused: boolean): nil
+---@field ResetGamePauseAndUptimeState fun(): nil
+---@field get_IsGamePaused fun(): boolean
+---@field get_IsShuttingDown fun(): boolean
+---@field set_IsShuttingDown fun(value: boolean): nil
+---@field GetSinglePlayerServerNetwork fun(): DummyNetwork
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+---@field DoPostProcessingEffects boolean
+---@field ScreenSize boolean
+---@field WindowSize boolean
+---@field MinimalGuiShader boolean
+---@field IsFocused boolean
+---@field DebugDrawCalls boolean
+---@field GlDebugMode boolean
+---@field GlErrorChecking boolean
+---@field AssetManager boolean
+---@field Logger boolean
+---@field XPlatInterface boolean
+---@field CpuCoreCount boolean
+---@field WindowBorder boolean
+---@field EllapsedMs boolean
+---@field MouseGrabbed boolean
+---@field CurrentMouseCursor boolean
+---@field GlScissorFlagEnabled boolean
+---@field AvailableAudioDevices boolean
+---@field CurrentAudioDevice boolean
+---@field ShaderUniforms boolean
+---@field FrameBuffers boolean
+---@field IsServerRunning boolean
+---@field IsGamePaused boolean
+---@field IsShuttingDown boolean
+---@field WindowResized boolean
+---@field OnFocusChanged boolean
+ClientPlatformAbstract = {}

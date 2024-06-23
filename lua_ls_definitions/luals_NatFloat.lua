@@ -1,0 +1,38 @@
+---@meta NatFloat
+---@class NatFloat: Object
+---@field ctor fun(averagevalue: Single, variance: Single, distribution: EnumDistribution): NatFloat
+---@field get_Zero fun(): NatFloat
+---@field get_One fun(): NatFloat
+---@field createInvexp fun(averagevalue: Single, variance: Single): NatFloat
+---@field createStrongInvexp fun(averagevalue: Single, variance: Single): NatFloat
+---@field createStrongerInvexp fun(averagevalue: Single, variance: Single): NatFloat
+---@field createUniform fun(averagevalue: Single, variance: Single): NatFloat
+---@field createGauss fun(averagevalue: Single, variance: Single): NatFloat
+---@field createNarrowGauss fun(averagevalue: Single, variance: Single): NatFloat
+---@field createInvGauss fun(averagevalue: Single, variance: Single): NatFloat
+---@field createTri fun(averagevalue: Single, variance: Single): NatFloat
+---@field createDirac fun(averagevalue: Single, variance: Single): NatFloat
+---@field create fun(distribution: EnumDistribution, averagevalue: Single, variance: Single): NatFloat
+---@field copyWithOffset fun(value: Single): NatFloat
+---@field addOffset fun(value: Single): NatFloat
+---@field setOffset fun(offset: Single): NatFloat
+---@field nextFloat fun(): Single
+---@overload fun(multiplier: Single): Single
+---@overload fun(multiplier: Single, rand: Random): Single
+---@overload fun(multiplier: Single, rand: LCGRandom): Single
+---@field ClampToRange fun(value: Single): Single
+---@field createFromBytes fun(reader: BinaryReader): NatFloat
+---@field Clone fun(): NatFloat
+---@field ToBytes fun(writer: BinaryWriter): nil
+---@field FromBytes fun(reader: BinaryReader): nil
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+---@field Zero NatFloat
+---@field One NatFloat
+---@field offset NatFloat
+---@field avg NatFloat
+---@field var NatFloat
+---@field dist NatFloat
+NatFloat = {}

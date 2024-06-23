@@ -1,0 +1,12 @@
+---@meta HttpMessageInvoker
+---@class HttpMessageInvoker: Object
+---@field ctor fun(handler: HttpMessageHandler): HttpMessageInvoker
+---@overload fun(handler: HttpMessageHandler, disposeHandler: boolean): HttpMessageInvoker
+---@field Send fun(request: HttpRequestMessage, cancellationToken: CancellationToken): HttpResponseMessage
+---@field SendAsync fun(request: HttpRequestMessage, cancellationToken: CancellationToken): Task`1
+---@field Dispose fun(): nil
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+HttpMessageInvoker = {}

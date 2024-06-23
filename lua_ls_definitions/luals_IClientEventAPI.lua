@@ -1,0 +1,68 @@
+---@meta IClientEventAPI
+---@class IClientEventAPI
+---@field add_ChatMessage fun(value: ChatLineDelegate): nil
+---@field remove_ChatMessage fun(value: ChatLineDelegate): nil
+---@field add_OnSendChatMessage fun(value: ClientChatLineDelegate): nil
+---@field remove_OnSendChatMessage fun(value: ClientChatLineDelegate): nil
+---@field add_PlayerJoin fun(value: PlayerEventDelegate): nil
+---@field remove_PlayerJoin fun(value: PlayerEventDelegate): nil
+---@field add_PlayerLeave fun(value: PlayerEventDelegate): nil
+---@field remove_PlayerLeave fun(value: PlayerEventDelegate): nil
+---@field add_PlayerDeath fun(value: PlayerEventDelegate): nil
+---@field remove_PlayerDeath fun(value: PlayerEventDelegate): nil
+---@field add_IsPlayerReady fun(value: IsPlayerReadyDelegate): nil
+---@field remove_IsPlayerReady fun(value: IsPlayerReadyDelegate): nil
+---@field add_PlayerEntitySpawn fun(value: PlayerEventDelegate): nil
+---@field remove_PlayerEntitySpawn fun(value: PlayerEventDelegate): nil
+---@field add_PlayerEntityDespawn fun(value: PlayerEventDelegate): nil
+---@field remove_PlayerEntityDespawn fun(value: PlayerEventDelegate): nil
+---@field add_PauseResume fun(value: OnGamePauseResume): nil
+---@field remove_PauseResume fun(value: OnGamePauseResume): nil
+---@field add_LeaveWorld fun(value: Action): nil
+---@field remove_LeaveWorld fun(value: Action): nil
+---@field add_LeftWorld fun(value: Action): nil
+---@field remove_LeftWorld fun(value: Action): nil
+---@field add_BlockChanged fun(value: BlockChangedDelegate): nil
+---@field remove_BlockChanged fun(value: BlockChangedDelegate): nil
+---@field add_TestBlockAccess fun(value: TestBlockAccessDelegate): nil
+---@field remove_TestBlockAccess fun(value: TestBlockAccessDelegate): nil
+---@field add_BeforeActiveSlotChanged fun(value: fun(outResult: any): any): nil
+---@field remove_BeforeActiveSlotChanged fun(value: fun(outResult: any): any): nil
+---@field add_AfterActiveSlotChanged fun(value: any`1): nil
+---@field remove_AfterActiveSlotChanged fun(value: any`1): nil
+---@field add_InGameError fun(value: IngameErrorDelegate): nil
+---@field remove_InGameError fun(value: IngameErrorDelegate): nil
+---@field add_InGameDiscovery fun(value: IngameDiscoveryDelegate): nil
+---@field remove_InGameDiscovery fun(value: IngameDiscoveryDelegate): nil
+---@field add_ColorsPresetChanged fun(value: Action): nil
+---@field remove_ColorsPresetChanged fun(value: Action): nil
+---@field RegisterRenderer fun(renderer: IRenderer, renderStage: EnumRenderStage, profilingName: string): nil
+---@field UnregisterRenderer fun(renderer: IRenderer, renderStage: EnumRenderStage): nil
+---@field RegisterItemstackRenderer fun(forObj: Collectibletable, rendererDelegate: ItemRenderDelegate, target: EnumItemRenderTarget): nil
+---@field UnregisterItemstackRenderer fun(forObj: Collectibletable, target: EnumItemRenderTarget): nil
+---@field RegisterAsyncParticleSpawner fun(handler: ContinousParticleSpawnTaskDelegate): nil
+---@field add_BlockTexturesLoaded fun(value: Action): nil
+---@field remove_BlockTexturesLoaded fun(value: Action): nil
+---@field add_ReloadShader fun(value: ActionBoolReturn): nil
+---@field remove_ReloadShader fun(value: ActionBoolReturn): nil
+---@field add_ReloadTextures fun(value: Action): nil
+---@field remove_ReloadTextures fun(value: Action): nil
+---@field add_LevelFinalize fun(value: Action): nil
+---@field remove_LevelFinalize fun(value: Action): nil
+---@field add_ReloadShapes fun(value: Action): nil
+---@field remove_ReloadShapes fun(value: Action): nil
+---@field add_HotkeysChanged fun(value: Action): nil
+---@field remove_HotkeysChanged fun(value: Action): nil
+---@field add_MouseDown fun(value: MouseEventDelegate): nil
+---@field remove_MouseDown fun(value: MouseEventDelegate): nil
+---@field add_MouseUp fun(value: MouseEventDelegate): nil
+---@field remove_MouseUp fun(value: MouseEventDelegate): nil
+---@field add_MouseMove fun(value: MouseEventDelegate): nil
+---@field remove_MouseMove fun(value: MouseEventDelegate): nil
+---@field add_KeyDown fun(value: KeyEventDelegate): nil
+---@field remove_KeyDown fun(value: KeyEventDelegate): nil
+---@field add_KeyUp fun(value: KeyEventDelegate): nil
+---@field remove_KeyUp fun(value: KeyEventDelegate): nil
+---@field add_FileDrop fun(value: FileDropDelegate): nil
+---@field remove_FileDrop fun(value: FileDropDelegate): nil
+IClientEventAPI = {}

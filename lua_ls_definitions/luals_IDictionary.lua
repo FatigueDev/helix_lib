@@ -1,0 +1,19 @@
+---@meta IDictionary
+---@class IDictionary
+---@field get_Item fun(key: table): table
+---@field set_Item fun(key: table, value: table): nil
+---@field get_Keys fun(): ICollection
+---@field get_Values fun(): ICollection
+---@field Contains fun(key: table): boolean
+---@field Add fun(key: table, value: table): nil
+---@field Clear fun(): nil
+---@field get_IsReadOnly fun(): boolean
+---@field get_IsFixedSize fun(): boolean
+---@field GetEnumerator fun(): IDictionaryEnumerator
+---@field Remove fun(key: table): nil
+---@field Item table
+---@field Keys table
+---@field Values table
+---@field IsReadOnly table
+---@field IsFixedSize table
+IDictionary = {}

@@ -1,0 +1,34 @@
+---@meta AnimationManager
+---@class AnimationManager: Object
+---@field ctor fun(): AnimationManager
+---@field get_AnimationsDirty fun(): boolean
+---@field set_AnimationsDirty fun(value: boolean): nil
+---@field get_Animator fun(): IAnimator
+---@field set_Animator fun(value: IAnimator): nil
+---@field get_HeadController fun(): EntityHeadController
+---@field set_HeadController fun(value: EntityHeadController): nil
+---@field Init fun(api: ICoreAPI, entity: Entity): nil
+---@field IsAnimationActive fun(anims: string[]): boolean
+---@field GetAnimationState fun(anim: string): RunningAnimation
+---@field ResetAnimation fun(animCode: string): nil
+---@field StartAnimation fun(animdata: AnimationMetaData): boolean
+---@overload fun(configCode: string): boolean
+---@field StopAnimation fun(code: string): nil
+---@field OnReceivedServerAnimations fun(activeAnimations: number[], activeAnimationsCount: number, activeAnimationSpeeds: Single[]): nil
+---@field ToAttributes fun(tree: ITreeAttribute, forClient: boolean): nil
+---@field FromAttributes fun(tree: ITreeAttribute, version: string): nil
+---@field OnServerTick fun(dt: Single): nil
+---@field OnClientFrame fun(dt: Single): nil
+---@field RegisterFrameCallback fun(trigger: AnimFrameCallback): nil
+---@field Dispose fun(): nil
+---@field OnAnimationStopped fun(code: string): nil
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+---@field AnimationsDirty boolean
+---@field Animator boolean
+---@field HeadController boolean
+---@field ActiveAnimationsByAnimCode boolean
+---@field Triggers boolean
+AnimationManager = {}

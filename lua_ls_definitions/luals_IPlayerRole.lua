@@ -1,0 +1,39 @@
+---@meta IPlayerRole
+---@class IPlayerRole
+---@field get_AutoGrant fun(): boolean
+---@field set_AutoGrant fun(value: boolean): nil
+---@field get_LandClaimAllowance fun(): number
+---@field set_LandClaimAllowance fun(value: number): nil
+---@field get_LandClaimMinSize fun(): Vec3i
+---@field set_LandClaimMinSize fun(value: Vec3i): nil
+---@field get_LandClaimMaxAreas fun(): number
+---@field set_LandClaimMaxAreas fun(value: number): nil
+---@field get_Code fun(): string
+---@field get_Name fun(): string
+---@field get_Description fun(): string
+---@field get_PrivilegeLevel fun(): number
+---@field get_DefaultSpawn fun(): PlayerSpawnPos
+---@field get_ForcedSpawn fun(): PlayerSpawnPos
+---@field get_Privileges fun(): any[]
+---@field get_RuntimePrivileges fun(): HashSet`1
+---@field get_DefaultGameMode fun(): EnumGameMode
+---@field get_Color fun(): Color
+---@field IsSuperior fun(role: IPlayerRole): boolean
+---@field EqualLevel fun(role: IPlayerRole): boolean
+---@field GrantPrivilege fun(privileges: string[]): nil
+---@field RevokePrivilege fun(privilege: string): nil
+---@field AutoGrant boolean
+---@field LandClaimAllowance boolean
+---@field LandClaimMinSize boolean
+---@field LandClaimMaxAreas boolean
+---@field Code boolean
+---@field Name boolean
+---@field Description boolean
+---@field PrivilegeLevel boolean
+---@field DefaultSpawn boolean
+---@field ForcedSpawn boolean
+---@field Privileges boolean
+---@field RuntimePrivileges boolean
+---@field DefaultGameMode boolean
+---@field Color boolean
+IPlayerRole = {}

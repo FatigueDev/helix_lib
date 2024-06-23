@@ -1,0 +1,43 @@
+---@meta SQLiteDbConnectionv1
+---@class SQLiteDbConnectionv1: Object
+---@field ctor fun(logger: ILogger): SQLiteDbConnectionv1
+---@field OpenOrCreate fun(filename: string, errorMessage: string&, requireWriteAccess: boolean, corruptionProtection: boolean, doIntegrityCheck: boolean): boolean
+---@field Close fun(): nil
+---@field Dispose fun(): nil
+---@field CreateBackup fun(backupFilename: string): nil
+---@field QuantityChunks fun(): number
+---@field GetChunks fun(chunkpositions: any[]): any[]
+---@field GetAllChunks fun(): any[]
+---@field GetAllMapChunks fun(): any[]
+---@field GetAllMapRegions fun(): any[]
+---@field GetMapChunk fun(position: UInt64): number[]
+---@field GetMapRegion fun(position: UInt64): number[]
+---@field GetChunk fun(position: UInt64): number[]
+---@field DeleteMapChunks fun(coords: any[]): nil
+---@field DeleteMapRegions fun(coords: any[]): nil
+---@field DeleteChunks fun(coords: any[]): nil
+---@field DeleteChunk fun(position: UInt64): nil
+---@field SetChunks fun(chunks: any[]): nil
+---@field SetMapChunks fun(mapchunks: any[]): nil
+---@field SetMapRegions fun(mapregions: any[]): nil
+---@field GetGameData fun(): number[]
+---@field StoreGameData fun(data: number[]): nil
+---@field QuickCorrectSaveGameVersionTest fun(): boolean
+---@field get_IsReadOnly fun(): boolean
+---@field FromMapPos fun(v: UInt64): Vec3i
+---@field ToMapPos fun(x: number, y: number, z: number): UInt64
+---@field GetPlayerData fun(playeruid: string): number[]
+---@field SetPlayerData fun(playeruid: string, data: number[]): nil
+---@field UpgradeToWriteAccess fun(): nil
+---@field IntegrityCheck fun(): boolean
+---@field ChunkExists fun(position: UInt64): boolean
+---@field MapChunkExists fun(position: UInt64): boolean
+---@field MapRegionExists fun(position: UInt64): boolean
+---@field Vacuum fun(): nil
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+---@field IsReadOnly boolean
+---@field logger boolean
+SQLiteDbConnectionv1 = {}

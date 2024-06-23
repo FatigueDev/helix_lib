@@ -1,0 +1,18 @@
+---@meta Packet_CombustibleProperties
+---@class Packet_CombustibleProperties: Object
+---@field ctor fun(): Packet_CombustibleProperties
+---@field SetBurnTemperature fun(value: number): nil
+---@field SetBurnDuration fun(value: number): nil
+---@field SetHeatResistance fun(value: number): nil
+---@field SetMeltingPoint fun(value: number): nil
+---@field SetMeltingDuration fun(value: number): nil
+---@field SetSmeltedStack fun(value: number[]): nil
+---@field SetSmeltedRatio fun(value: number): nil
+---@field SetRequiresContainer fun(value: number): nil
+---@field SetMeltingType fun(value: number): nil
+---@field SetMaxTemperature fun(value: number): nil
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+Packet_CombustibleProperties = {}

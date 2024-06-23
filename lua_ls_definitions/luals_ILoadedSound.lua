@@ -1,0 +1,37 @@
+---@meta ILoadedSound
+---@class ILoadedSound
+---@field get_SoundLengthSeconds fun(): Single
+---@field get_PlaybackPosition fun(): Single
+---@field set_PlaybackPosition fun(value: Single): nil
+---@field get_IsDisposed fun(): boolean
+---@field get_IsPlaying fun(): boolean
+---@field get_IsFadingIn fun(): boolean
+---@field get_IsFadingOut fun(): boolean
+---@field get_HasStopped fun(): boolean
+---@field get_Channels fun(): number
+---@field get_Params fun(): SoundParams
+---@field Start fun(): nil
+---@field Stop fun(): nil
+---@field Pause fun(): nil
+---@field Toggle fun(on: boolean): nil
+---@field SetPitch fun(val: Single): nil
+---@field SetPitchOffset fun(val: Single): nil
+---@field SetVolume fun(val: Single): nil
+---@overload fun(): nil
+---@field SetPosition fun(position: Vec3f): nil
+---@overload fun(x: Single, y: Single, z: Single): nil
+---@field SetLooping fun(on: boolean): nil
+---@field FadeTo fun(newVolume: Double, duration: Single, onFaded: any`1): nil
+---@field FadeOut fun(seconds: Single, onFadedOut: any`1): nil
+---@field FadeIn fun(seconds: Single, onFadedIn: any`1): nil
+---@field FadeOutAndStop fun(seconds: Single): nil
+---@field SoundLengthSeconds Single
+---@field PlaybackPosition Single
+---@field IsDisposed Single
+---@field IsPlaying Single
+---@field IsFadingIn Single
+---@field IsFadingOut Single
+---@field HasStopped Single
+---@field Channels Single
+---@field Params Single
+ILoadedSound = {}

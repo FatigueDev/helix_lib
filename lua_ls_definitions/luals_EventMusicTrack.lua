@@ -1,0 +1,50 @@
+---@meta EventMusicTrack
+---@class EventMusicTrack: SurfaceMusicTrack
+---@field ctor fun(): EventMusicTrack
+---@field Initialize fun(assetManager: IAssetManager, capi: ICoreClientAPI, musicEngine: IMusicEngine): nil
+---@field ShouldPlay fun(props: TrackedPlayerProperties, conds: ClimateCondition, pos: BlockPos): boolean
+---@field get_Priority fun(): Single
+---@field set_Priority fun(value: Single): nil
+---@field get_StartPriorityRnd fun(): NatFloat
+---@field set_StartPriorityRnd fun(value: NatFloat): nil
+---@field get_StartPriority fun(): Single
+---@field set_StartPriority fun(value: Single): nil
+---@field get_IsActive fun(): boolean
+---@field get_Name fun(): string
+---@field get_MusicFrequency fun(): number
+---@field BeginSort fun(): nil
+---@field BeginPlay fun(props: TrackedPlayerProperties): nil
+---@field ContinuePlay fun(dt: Single, props: TrackedPlayerProperties): boolean
+---@field FadeOut fun(seconds: Single, onFadedOut: Action): nil
+---@field SetCooldown fun(multiplier: Single): nil
+---@field UpdateVolume fun(): nil
+---@field FastForward fun(seconds: Single): nil
+---@field get_PositionString fun(): string
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+---@field Priority Single
+---@field StartPriorityRnd Single
+---@field StartPriority Single
+---@field IsActive Single
+---@field Name Single
+---@field MusicFrequency Single
+---@field PositionString Single
+---@field SchematicCode Single
+---@field Location Single
+---@field OnPlayList Single
+---@field OnPlayLists Single
+---@field MinSunlight Single
+---@field MinHour Single
+---@field MaxHour Single
+---@field Chance Single
+---@field MaxTemperature Single
+---@field MinRainFall Single
+---@field MinSeason Single
+---@field MaxSeason Single
+---@field MinLatitude Single
+---@field MaxLatitude Single
+---@field DistanceToSpawnPoint Single
+---@field Sound Single
+EventMusicTrack = {}

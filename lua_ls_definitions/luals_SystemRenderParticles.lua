@@ -1,0 +1,42 @@
+---@meta SystemRenderParticles
+---@class SystemRenderParticles: ClientSystem
+---@field ctor fun(game: ClientMain): SystemRenderParticles
+---@field get_Name fun(): string
+---@field get_BlockAccess fun(): IBlockAccessor
+---@field set_BlockAccess fun(value: IBlockAccessor): nil
+---@field OnRenderFrame3D fun(deltaTime: Single): nil
+---@field OnRenderFrame3DOIT fun(deltaTime: Single): nil
+---@field SeperateThreadTickIntervalMs fun(): number
+---@field OnSeperateThreadGameTick fun(dt: Single): nil
+---@field Spawn fun(particleProperties: IParticlePropertiesProvider): number
+---@field ParticlesAlive fun(model: EnumParticleModel): number
+---@field GetSystemType fun(): EnumClientSystemany
+---@field Dispose fun(game: ClientMain): nil
+---@field OnNewFrameReadOnlyMainThread fun(deltaTime: Single): nil
+---@field OnKeyDown fun(args: KeyEvent): nil
+---@field OnKeyPress fun(args: KeyEvent): nil
+---@field OnMouseUp fun(args: MouseEvent): nil
+---@field OnKeyUp fun(args: KeyEvent): nil
+---@field OnMouseDown fun(args: MouseEvent): nil
+---@field OnMouseMove fun(args: MouseEvent): nil
+---@field OnMouseWheel fun(args: MouseWheelEventArgs): nil
+---@field OnTouchStart fun(e: TouchEventArgs): nil
+---@field OnTouchMove fun(e: TouchEventArgs): nil
+---@field OnTouchEnd fun(e: TouchEventArgs): nil
+---@field OnUseEntity fun(e: OnUseEntityArgs): nil
+---@field OnHitEntity fun(e: OnUseEntityArgs): nil
+---@field OnOwnPlayerDataReceived fun(): nil
+---@field OnMouseEnterSlot fun(slot: ItemSlot): boolean
+---@field OnMouseLeaveSlot fun(itemSlot: ItemSlot): boolean
+---@field OnMouseClickSlot fun(itemSlot: ItemSlot): boolean
+---@field OnBlockTexturesLoaded fun(): nil
+---@field OnServerIdentificationReceived fun(): nil
+---@field CaptureAllInputs fun(): boolean
+---@field CaptureRawMouse fun(): boolean
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+---@field Name string
+---@field BlockAccess string
+SystemRenderParticles = {}

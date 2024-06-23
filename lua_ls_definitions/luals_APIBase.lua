@@ -1,0 +1,31 @@
+---@meta APIBase
+---@class APIBase: Object
+---@field ctor fun(gamemain: GameMain): APIBase
+---@field get_ObjectCache fun(): table<any, any>
+---@field get_ClassRegistryNative fun(): ClassRegistry
+---@field RegisterRecipeRegistry fun(recipeRegistryCode: string): T
+---@field RegisterEntity fun(classsName: string, entity: any): nil
+---@field RegisterEntityBehaviorClass fun(className: string, entityBehavior: any): nil
+---@field RegisterBlockClass fun(blockClassName: string, type: any): nil
+---@field RegisterCropBehavior fun(className: string, type: any): nil
+---@field RegisterBlockEntityClass fun(className: string, blockentity: any): nil
+---@field RegisterItemClass fun(className: string, itemType: any): nil
+---@field RegisterBlockBehaviorClass fun(className: string, blockBehaviorType: any): nil
+---@field RegisterCollectibleBehaviorClass fun(className: string, blockBehaviorType: any): nil
+---@field RegisterBlockEntityBehaviorClass fun(className: string, blockEntityBehaviorType: any): nil
+---@field RegisterMountable fun(className: string, mountableInstancer: GetMountableDelegate): nil
+---@field get_DataBasePath fun(): string
+---@field GetOrCreateDataPath fun(foldername: string): string
+---@field LoadModConfig fun(filename: string): T
+---@field StoreModConfig fun(jsonSerializeableData: T, filename: string): nil
+---@field RegisterColorMap fun(map: ColorMap): nil
+---@field StoreModConfig fun(jobj: Jsontable, filename: string): nil
+---@overload fun(filename: string): Jsontable
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+---@field ObjectCache table<any, any>
+---@field ClassRegistryNative table<any, any>
+---@field DataBasePath table<any, any>
+APIBase = {}

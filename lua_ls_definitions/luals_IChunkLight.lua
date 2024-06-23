@@ -1,0 +1,13 @@
+---@meta IChunkLight
+---@class IChunkLight
+---@field GetSunlight fun(index3d: number): number
+---@field SetSunlight fun(index3d: number, sunlevel: number): nil
+---@field SetSunlight_Buffered fun(index3d: number, sunlevel: number): nil
+---@field GetBlocklight fun(index3d: number): number
+---@field SetBlocklight fun(index3d: number, lightlevel: number): nil
+---@field SetBlocklight_Buffered fun(index3d: number, lightlevel: number): nil
+---@field ClearWithSunlight fun(sunLight: UInt16): nil
+---@field FloodWithSunlight fun(sunLight: UInt16): nil
+---@field ClearLight fun(): nil
+---@field ClearAllSunlight fun(): nil
+IChunkLight = {}

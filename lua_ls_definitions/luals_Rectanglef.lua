@@ -1,0 +1,11 @@
+---@meta Rectanglef
+---@class Rectanglef: Object
+---@field ctor fun(): Rectanglef
+---@overload fun(x: Single, y: Single, width: Single, height: Single): Rectanglef
+---@field Bottom fun(): Single
+---@field Create fun(x: Single, y: Single, width: Single, height: Single): Rectanglef
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+Rectanglef = {}

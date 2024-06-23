@@ -1,0 +1,15 @@
+---@meta HotkeyCapturer
+---@class HotkeyCapturer: Object
+---@field ctor fun(): HotkeyCapturer
+---@field BeginCapture fun(): boolean
+---@field IsCapturing fun(): boolean
+---@field EndCapture fun(wasCancelled: boolean): nil
+---@field OnKeyDown fun(eventArgs: KeyEvent): boolean
+---@field OnKeyUp fun(eventArgs: KeyEvent, OnCaptureEnded: Action): boolean
+---@field OnMouseDown fun(eventArgs: MouseEvent): boolean
+---@field OnMouseUp fun(eventArgs: MouseEvent, OnCaptureEnded: Action): boolean
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+HotkeyCapturer = {}

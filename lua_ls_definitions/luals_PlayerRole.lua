@@ -1,0 +1,56 @@
+---@meta PlayerRole
+---@class PlayerRole: Object
+---@field ctor fun(): PlayerRole
+---@field get_Code fun(): string
+---@field set_Code fun(value: string): nil
+---@field get_PrivilegeLevel fun(): number
+---@field set_PrivilegeLevel fun(value: number): nil
+---@field get_Name fun(): string
+---@field set_Name fun(value: string): nil
+---@field get_Description fun(): string
+---@field set_Description fun(value: string): nil
+---@field get_DefaultSpawn fun(): PlayerSpawnPos
+---@field set_DefaultSpawn fun(value: PlayerSpawnPos): nil
+---@field get_ForcedSpawn fun(): PlayerSpawnPos
+---@field set_ForcedSpawn fun(value: PlayerSpawnPos): nil
+---@field get_Privileges fun(): any[]
+---@field set_Privileges fun(value: any[]): nil
+---@field get_RuntimePrivileges fun(): HashSet`1
+---@field set_RuntimePrivileges fun(value: HashSet`1): nil
+---@field get_DefaultGameMode fun(): EnumGameMode
+---@field set_DefaultGameMode fun(value: EnumGameMode): nil
+---@field get_Color fun(): Color
+---@field set_Color fun(value: Color): nil
+---@field get_LandClaimAllowance fun(): number
+---@field set_LandClaimAllowance fun(value: number): nil
+---@field get_LandClaimMinSize fun(): Vec3i
+---@field set_LandClaimMinSize fun(value: Vec3i): nil
+---@field get_LandClaimMaxAreas fun(): number
+---@field set_LandClaimMaxAreas fun(value: number): nil
+---@field get_AutoGrant fun(): boolean
+---@field set_AutoGrant fun(value: boolean): nil
+---@field ToString fun(): string
+---@field CompareTo fun(other: IPlayerRole): number
+---@field IsSuperior fun(clientGroup: IPlayerRole): boolean
+---@field EqualLevel fun(clientGroup: IPlayerRole): boolean
+---@field GrantPrivilege fun(privileges: string[]): nil
+---@field RevokePrivilege fun(privilege: string): nil
+---@field PrivilegesString fun(privileges: any[]): string
+---@field GetType fun(): any
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+---@field Code string
+---@field PrivilegeLevel string
+---@field Name string
+---@field Description string
+---@field DefaultSpawn string
+---@field ForcedSpawn string
+---@field Privileges string
+---@field RuntimePrivileges string
+---@field DefaultGameMode string
+---@field Color string
+---@field LandClaimAllowance string
+---@field LandClaimMinSize string
+---@field LandClaimMaxAreas string
+---@field AutoGrant string
+PlayerRole = {}

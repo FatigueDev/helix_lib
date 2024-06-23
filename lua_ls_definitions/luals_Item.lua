@@ -1,0 +1,178 @@
+---@meta Item
+---@class Item: CollectibleObject
+---@field ctor fun(): Item
+---@overload fun(itemId: number): Item
+---@field get_Id fun(): number
+---@field get_ItemClass fun(): EnumItemClass
+---@field get_FirstTexture fun(): CompositeTexture
+---@field GetRandomColor fun(capi: ICoreClientAPI, stack: ItemStack): number
+---@field Clone fun(): Item
+---@field get_IsMissing fun(): boolean
+---@field set_IsMissing fun(value: boolean): nil
+---@field GetHashCode fun(): number
+---@field get_MiningTier fun(): number
+---@field set_MiningTier fun(value: number): nil
+---@field OnLoadedNative fun(api: ICoreAPI): nil
+---@field OnLoaded fun(api: ICoreAPI): nil
+---@field OnUnloaded fun(api: ICoreAPI): nil
+---@field GetLightHsv fun(blockAccessor: IBlockAccessor, pos: BlockPos, stack: ItemStack): number[]
+---@field GetNutritionProperties fun(world: IWorldAccessor, itemstack: ItemStack, forEntity: Entity): FoodNutritionProperties
+---@field GetTransitionableProperties fun(world: IWorldAccessor, itemstack: ItemStack, forEntity: Entity): TransitionableProperties[]
+---@field RequiresTransitionableTicking fun(world: IWorldAccessor, itemstack: ItemStack): boolean
+---@field GetStorageFlags fun(itemstack: ItemStack): EnumItemStorageFlags
+---@field GetItemDamageColor fun(itemstack: ItemStack): number
+---@field ShouldDisplayItemDamage fun(itemstack: ItemStack): boolean
+---@field OnBeforeRender fun(capi: ICoreClientAPI, itemstack: ItemStack, target: EnumItemRenderTarget, renderinfo: ItemRenderInfo&): nil
+---@field GetDurability fun(itemstack: IItemStack): number
+---@field GetMaxDurability fun(itemstack: ItemStack): number
+---@field GetRemainingDurability fun(itemstack: ItemStack): number
+---@field GetAttackPower fun(withItemStack: IItemStack): Single
+---@field GetAttackRange fun(withItemStack: IItemStack): Single
+---@field OnBlockBreaking fun(player: IPlayer, blockSel: BlockSelection, itemslot: ItemSlot, remainingResistance: Single, dt: Single, counter: number): Single
+---@field OnModifiedInInventorySlot fun(world: IWorldAccessor, slot: ItemSlot, extractedStack: ItemStack): nil
+---@field OnBlockBrokenWith fun(world: IWorldAccessor, byEntity: Entity, itemslot: ItemSlot, blockSel: BlockSelection, dropQuantityMultiplier: Single): boolean
+---@field GetMiningSpeed fun(itemstack: IItemStack, blockSel: BlockSelection, block: Block, forPlayer: IPlayer): Single
+---@field GeldHeldFpHitAnimation fun(slot: ItemSlot, byEntity: Entity): ModelTransformKeyFrame[]
+---@field GetHeldTpHitAnimation fun(slot: ItemSlot, byEntity: Entity): string
+---@field GetHeldReadyAnimation fun(activeHotbarSlot: ItemSlot, forEntity: Entity, hand: EnumHand): string
+---@field GetHeldTpIdleAnimation fun(activeHotbarSlot: ItemSlot, forEntity: Entity, hand: EnumHand): string
+---@field GetHeldTpUseAnimation fun(activeHotbarSlot: ItemSlot, forEntity: Entity): string
+---@field OnAttackingWith fun(world: IWorldAccessor, byEntity: Entity, attackedEntity: Entity, itemslot: ItemSlot): nil
+---@field MatchesForCrafting fun(inputStack: ItemStack, gridRecipe: GridRecipe, ingredient: CraftingRecipeIngredient): boolean
+---@field OnConsumedByCrafting fun(allInputSlots: ItemSlot[], stackInSlot: ItemSlot, gridRecipe: GridRecipe, fromIngredient: CraftingRecipeIngredient, byPlayer: IPlayer, quantity: number): nil
+---@field OnCreatedByCrafting fun(allInputslots: ItemSlot[], outputSlot: ItemSlot, byRecipe: GridRecipe): nil
+---@field ConsumeCraftingIngredients fun(slots: ItemSlot[], outputSlot: ItemSlot, matchingRecipe: GridRecipe): boolean
+---@field DamageItem fun(world: IWorldAccessor, byEntity: Entity, itemslot: ItemSlot, amount: number): nil
+---@field RefillSlotIfEmpty fun(slot: ItemSlot, byEntity: EntityAgent, matcher: ActionConsumable`1): nil
+---@field GetToolModes fun(slot: ItemSlot, forPlayer: IClientPlayer, blockSel: BlockSelection): SkillItem[]
+---@field GetToolMode fun(slot: ItemSlot, byPlayer: IPlayer, blockSelection: BlockSelection): number
+---@field SetToolMode fun(slot: ItemSlot, byPlayer: IPlayer, blockSelection: BlockSelection, toolMode: number): nil
+---@field OnHeldRenderOpaque fun(inSlot: ItemSlot, byPlayer: IClientPlayer): nil
+---@field OnHeldRenderOit fun(inSlot: ItemSlot, byPlayer: IClientPlayer): nil
+---@field OnHeldRenderOrtho fun(inSlot: ItemSlot, byPlayer: IClientPlayer): nil
+---@field OnHeldIdle fun(slot: ItemSlot, byEntity: EntityAgent): nil
+---@field OnHeldActionAnimStart fun(slot: ItemSlot, byEntity: EntityAgent, type: EnumHandInteract): nil
+---@field OnGroundIdle fun(entityItem: EntityItem): nil
+---@field InGuiIdle fun(world: IWorldAccessor, stack: ItemStack): nil
+---@field OnCollected fun(stack: ItemStack, entity: Entity): nil
+---@field OnHeldUseStart fun(slot: ItemSlot, byEntity: EntityAgent, blockSel: BlockSelection, entitySel: EntitySelection, useType: EnumHandInteract, firstEvent: boolean, handling: EnumHandHandling&): nil
+---@field OnHeldUseCancel fun(secondsPassed: Single, slot: ItemSlot, byEntity: EntityAgent, blockSel: BlockSelection, entitySel: EntitySelection, cancelReason: EnumItemUseCancelReason): EnumHandInteract
+---@field OnHeldUseStep fun(secondsPassed: Single, slot: ItemSlot, byEntity: EntityAgent, blockSel: BlockSelection, entitySel: EntitySelection): EnumHandInteract
+---@field OnHeldUseStop fun(secondsPassed: Single, slot: ItemSlot, byEntity: EntityAgent, blockSel: BlockSelection, entitySel: EntitySelection, useType: EnumHandInteract): nil
+---@field OnHeldAttackStart fun(slot: ItemSlot, byEntity: EntityAgent, blockSel: BlockSelection, entitySel: EntitySelection, handling: EnumHandHandling&): nil
+---@field OnHeldAttackCancel fun(secondsPassed: Single, slot: ItemSlot, byEntity: EntityAgent, blockSelection: BlockSelection, entitySel: EntitySelection, cancelReason: EnumItemUseCancelReason): boolean
+---@field OnHeldAttackStep fun(secondsPassed: Single, slot: ItemSlot, byEntity: EntityAgent, blockSelection: BlockSelection, entitySel: EntitySelection): boolean
+---@field OnHeldAttackStop fun(secondsPassed: Single, slot: ItemSlot, byEntity: EntityAgent, blockSelection: BlockSelection, entitySel: EntitySelection): nil
+---@field OnHeldInteractStart fun(slot: ItemSlot, byEntity: EntityAgent, blockSel: BlockSelection, entitySel: EntitySelection, firstEvent: boolean, handling: EnumHandHandling&): nil
+---@field OnHeldInteractStep fun(secondsUsed: Single, slot: ItemSlot, byEntity: EntityAgent, blockSel: BlockSelection, entitySel: EntitySelection): boolean
+---@field OnHeldInteractStop fun(secondsUsed: Single, slot: ItemSlot, byEntity: EntityAgent, blockSel: BlockSelection, entitySel: EntitySelection): nil
+---@field OnHeldInteractCancel fun(secondsUsed: Single, slot: ItemSlot, byEntity: EntityAgent, blockSel: BlockSelection, entitySel: EntitySelection, cancelReason: EnumItemUseCancelReason): boolean
+---@field OnHeldDropped fun(world: IWorldAccessor, byPlayer: IPlayer, slot: ItemSlot, quantity: number, handling: EnumHandling&): nil
+---@field GetHeldItemName fun(itemStack: ItemStack): string
+---@field GetHeldItemInfo fun(inSlot: ItemSlot, dsc: stringBuilder, world: IWorldAccessor, withDebugInfo: boolean): nil
+---@field GetItemDescText fun(): string
+---@field GetHeldInteractionHelp fun(inSlot: ItemSlot): WorldInteraction[]
+---@field AppendPerishableInfoText fun(inSlot: ItemSlot, dsc: stringBuilder, world: IWorldAccessor): Single
+---@field OnHandbookRecipeRender fun(capi: ICoreClientAPI, recipe: GridRecipe, slot: ItemSlot, x: Double, y: Double, z: Double, size: Double): nil
+---@field GetHandBookStacks fun(capi: ICoreClientAPI): any[]
+---@field CanBePlacedInto fun(stack: ItemStack, slot: ItemSlot): boolean
+---@field GetMergableQuantity fun(sinkStack: ItemStack, sourceStack: ItemStack, priority: EnumMergePriority): number
+---@field TryMergeStacks fun(op: ItemStackMergeOperation): nil
+---@field GetMeltingDuration fun(world: IWorldAccessor, cookingSlotsProvider: ISlotProvider, inputSlot: ItemSlot): Single
+---@field GetMeltingPoint fun(world: IWorldAccessor, cookingSlotsProvider: ISlotProvider, inputSlot: ItemSlot): Single
+---@field CanSmelt fun(world: IWorldAccessor, cookingSlotsProvider: ISlotProvider, inputStack: ItemStack, outputStack: ItemStack): boolean
+---@field DoSmelt fun(world: IWorldAccessor, cookingSlotsProvider: ISlotProvider, inputSlot: ItemSlot, outputSlot: ItemSlot): nil
+---@field CanSpoil fun(itemstack: ItemStack): boolean
+---@field UpdateAndGetTransitionState fun(world: IWorldAccessor, inslot: ItemSlot, type: EnumTransitionany): TransitionState
+---@field SetTransitionState fun(stack: ItemStack, type: EnumTransitionany, transitionedHours: Single): nil
+---@field GetTransitionRateMul fun(world: IWorldAccessor, inSlot: ItemSlot, transType: EnumTransitionany): Single
+---@field UpdateAndGetTransitionStates fun(world: IWorldAccessor, inslot: ItemSlot): TransitionState[]
+---@field OnTransitionNow fun(slot: ItemSlot, props: TransitionableProperties): ItemStack
+---@field IsReasonablyFresh fun(world: IWorldAccessor, itemstack: ItemStack): boolean
+---@field HasTemperature fun(itemstack: IItemStack): boolean
+---@field GetTemperature fun(world: IWorldAccessor, itemstack: ItemStack): Single
+---@field SetTemperature fun(world: IWorldAccessor, itemstack: ItemStack, temperature: Single, delayCooldown: boolean): nil
+---@field Equals fun(thisStack: ItemStack, otherStack: ItemStack, ignoreAttributeSubTrees: string[]): boolean
+---@field Satisfies fun(thisStack: ItemStack, otherStack: ItemStack): boolean
+---@field OnStoreCollectibleMappings fun(world: IWorldAccessor, inSlot: ItemSlot, blockIdMapping: table<any, any>, itemIdMapping: table<any, any>): nil
+---@field OnLoadCollectibleMappings fun(worldForResolve: IWorldAccessor, inSlot: ItemSlot, oldBlockIdMapping: table<any, any>, oldItemIdMapping: table<any, any>): nil
+---@overload fun(worldForResolve: IWorldAccessor, inSlot: ItemSlot, oldBlockIdMapping: table<any, any>, oldItemIdMapping: table<any, any>, resolveImports: boolean): nil
+---@field IsLiquid fun(): boolean
+---@field GetCollectibleBehavior fun(type: any, withInheritance: boolean): CollectibleBehavior
+---@overload fun(withInheritance: boolean): T
+---@field HasBehavior fun(withInheritance: boolean): boolean
+---@overload fun(type: any, withInheritance: boolean): boolean
+---@overload fun(type: string, classRegistry: IClassRegistryAPI): boolean
+---@field GetBehavior fun(type: any): CollectibleBehavior
+---@overload fun(): T
+---@field OnSmeltAttempt fun(inventorySmelting: InventoryBase): boolean
+---@field CodeWithPath fun(path: string): AssetLocation
+---@field CodeWithoutParts fun(componentsToRemove: number): string
+---@field CodeEndWithoutParts fun(componentsToRemove: number): string
+---@field CodeWithParts fun(components: string[]): AssetLocation
+---@overload fun(component: string): AssetLocation
+---@field CodeWithVariant fun(type: string, value: string): AssetLocation
+---@field CodeWithVariants fun(valuesByType: table<any, any>): AssetLocation
+---@overload fun(types: string[], values: string[]): AssetLocation
+---@field CodeWithPart fun(part: string, atPosition: number): AssetLocation
+---@field LastCodePart fun(posFromRight: number): string
+---@field FirstCodePart fun(posFromLeft: number): string
+---@field WildCardMatch fun(wildcards: AssetLocation[]): boolean
+---@overload fun(wildCard: AssetLocation): boolean
+---@overload fun(wildcards: string[]): boolean
+---@overload fun(wildCard: string): boolean
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field Id number
+---@field ItemClass number
+---@field FirstTexture number
+---@field IsMissing number
+---@field MiningTier number
+---@field ItemId number
+---@field Shape number
+---@field Textures number
+---@field MatterState number
+---@field MaxStackSize number
+---@field Durability number
+---@field Dimensions number
+---@field LiquidSelectable number
+---@field AttackPower number
+---@field HeldPriorityInteract number
+---@field AttackRange number
+---@field DamagedBy number
+---@field MiningSpeed number
+---@field ToolTier number
+---@field HeldSounds number
+---@field CreativeInventoryTabs number
+---@field CreativeInventoryStacks number
+---@field RenderAlphaTest number
+---@field GuiTransform number
+---@field FpHandTransform number
+---@field TpHandTransform number
+---@field TpOffHandTransform number
+---@field GroundTransform number
+---@field Attributes number
+---@field CombustibleProps number
+---@field NutritionProps number
+---@field TransitionableProps number
+---@field GrindingProps number
+---@field CrushingProps number
+---@field ParticleProperties number
+---@field TopMiddlePos number
+---@field Tool number
+---@field StorageFlags number
+---@field MaterialDensity number
+---@field HeldTpHitAnimation number
+---@field HeldRightTpIdleAnimation number
+---@field HeldLeftTpIdleAnimation number
+---@field HeldLeftReadyAnimation number
+---@field HeldRightReadyAnimation number
+---@field HeldTpUseAnimation number
+---@field CollectibleBehaviors number
+---@field LightHsv number
+---@field Code number
+---@field VariantStrict number
+---@field Variant number
+---@field Class number
+Item = {}

@@ -1,0 +1,27 @@
+---@meta IBlockAccessorRevertable
+---@class IBlockAccessorRevertable
+---@field add_OnStoreHistoryState fun(value: any`1): nil
+---@field remove_OnStoreHistoryState fun(value: any`1): nil
+---@field add_OnRestoreHistoryState fun(value: Action`2): nil
+---@field remove_OnRestoreHistoryState fun(value: Action`2): nil
+---@field get_Relight fun(): boolean
+---@field set_Relight fun(value: boolean): nil
+---@field get_CurrentHistoryState fun(): number
+---@field ChangeHistoryState fun(quantity: number): nil
+---@field get_QuantityHistoryStates fun(): number
+---@field set_QuantityHistoryStates fun(value: number): nil
+---@field get_AvailableHistoryStates fun(): number
+---@field SetHistoryStateBlock fun(posX: number, posY: number, posZ: number, oldBlockId: number, newBlockId: number): nil
+---@field CommitBlockEntityData fun(): nil
+---@field BeginMultiEdit fun(): nil
+---@field EndMultiEdit fun(): nil
+---@field StoreHistoryState fun(state: HistoryState): nil
+---@field StoreEntitySpawnToHistory fun(entity: Entity): nil
+---@field StoreEntityMoveToHistory fun(start: BlockPos, end: BlockPos, offset: Vec3i): nil
+---@field Relight boolean
+---@field CurrentHistoryState boolean
+---@field QuantityHistoryStates boolean
+---@field AvailableHistoryStates boolean
+---@field OnStoreHistoryState boolean
+---@field OnRestoreHistoryState boolean
+IBlockAccessorRevertable = {}

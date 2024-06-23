@@ -1,0 +1,35 @@
+---@meta ArrayConvert
+---@class ArrayConvert: Object
+---@field UshortToByte fun(shorts: UInt16[]): number[]
+---@overload fun(shorts: UInt16[], output: number[]): nil
+---@field IntToByte fun(ints: number[]): number[]
+---@overload fun(ints: number[], output: number[]): nil
+---@field ByteToInt fun(data: number[]): number[]
+---@overload fun(data: number[], output: number[]): nil
+---@overload fun(data: number[], output: number[], length: number): nil
+---@overload fun(data: number[], offset: number, output: number[], length: number): nil
+---@field ByteToIntArrays fun(data: number[], output: number[][], count: number, newArray: Func`1): nil
+---@field ByteToUint fun(data: number[], output: Unumber[], length: number): nil
+---@field Copy fun(data: any[], index: Int64, length: Int64): T[]
+---@field ToVec3fs fun(bytes: number[]): Vec3f[]
+---@field ToVec2fs fun(bytes: number[]): Vec2f[]
+---@field ToVec4Ss fun(bytes: number[]): Vec4s[]
+---@field ToVec4uss fun(bytes: number[]): Vec4us[]
+---@field ToInts fun(shorts: UInt16[]): number[]
+---@field ToVec4ss fun(shorts1: any[]): Vec4s[]
+---@field ToVec4uss fun(shorts1: any[]): Vec4us[]
+---@overload fun(floats1: any[]): Vec3f[]
+---@overload fun(floats1: any[]): Vec2f[]
+---@overload fun(bytes: any[]): number[]
+---@field BytesToULongs fun(bytes: any[]): UInt64[]
+---@field FourShortsToULong fun(shorts1: any[]): UInt64[]
+---@field FourShortsToLong fun(shorts1: any[]): Int64[]
+---@field ToFloats fun(bytes: any[]): Single[]
+---@field ToUShorts fun(bytes: any[]): UInt16[]
+---@field ToShorts fun(bytes: any[]): Int16[]
+---@field GetRoundedUpSize fun(value: number): number
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+ArrayConvert = {}

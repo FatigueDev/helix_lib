@@ -1,0 +1,12 @@
+---@meta ICollection`1
+---@class ICollection`1
+---@field get_Count fun(): number
+---@field get_IsReadOnly fun(): boolean
+---@field Add fun(item: KeyValuePair`2): nil
+---@field Clear fun(): nil
+---@field Contains fun(item: KeyValuePair`2): boolean
+---@field CopyTo fun(array: KeyValuePair`2[], arrayIndex: number): nil
+---@field Remove fun(item: KeyValuePair`2): boolean
+---@field Count number
+---@field IsReadOnly number
+ICollection`1 = {}

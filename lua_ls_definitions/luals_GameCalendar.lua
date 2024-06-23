@@ -1,0 +1,113 @@
+---@meta GameCalendar
+---@class GameCalendar: Object
+---@field get_TimeSpeedModifiers fun(): table<any, any>
+---@field set_TimeSpeedModifiers fun(value: table<any, any>): nil
+---@field get_SpeedOfTime fun(): Single
+---@field get_CalendarSpeedMul fun(): Single
+---@field set_CalendarSpeedMul fun(value: Single): nil
+---@field get_Timelapse fun(): Single
+---@field set_Timelapse fun(value: Single): nil
+---@field get_DaysPerMonth fun(): number
+---@field set_DaysPerMonth fun(value: number): nil
+---@field get_DaysPerYear fun(): number
+---@field get_DayOfMonth fun(): number
+---@field get_MonthsPerYear fun(): number
+---@field get_FullHourOfDay fun(): number
+---@field get_HourOfDay fun(): Single
+---@field get_ElapsedSeconds fun(): Int64
+---@field get_ElapsedHours fun(): Double
+---@field get_ElapsedDays fun(): Double
+---@field get_TotalSeconds fun(): Int64
+---@field get_TotalHours fun(): Double
+---@field get_TotalDays fun(): Double
+---@field get_DayOfYear fun(): number
+---@field get_DayOfYearf fun(): Single
+---@field get_Year fun(): number
+---@field get_Month fun(): number
+---@field get_Monthf fun(): Single
+---@field get_MonthName fun(): EnumMonth
+---@field get_YearRel fun(): Single
+---@field get_MoonPhase fun(): EnumMoonPhase
+---@field get_MoonPhaseExact fun(): Double
+---@field get_Dusk fun(): boolean
+---@field get_MoonPhaseBrightness fun(): Single
+---@field get_MoonSize fun(): Single
+---@field get_SunsetMod fun(): Single
+---@field get_IsRunning fun(): boolean
+---@field get_OnGetSolarSphericalCoords fun(): SolarSphericalCoordsDelegate
+---@field set_OnGetSolarSphericalCoords fun(value: SolarSphericalCoordsDelegate): nil
+---@field get_OnGetHemisphere fun(): HemisphereDelegate
+---@field set_OnGetHemisphere fun(value: HemisphereDelegate): nil
+---@field get_OnGetLatitude fun(): GetLatitudeDelegate
+---@field set_OnGetLatitude fun(value: GetLatitudeDelegate): nil
+---@field get_SeasonOverride fun(): Nullable`1
+---@field set_SeasonOverride fun(value: Nullable`1): nil
+---@field RealSecondsToGameSeconds fun(seconds: Single): Single
+---@field SetSeasonOverride fun(seasonRel: Nullable`1): nil
+---@field SetTimeSpeedModifier fun(name: string, speed: Single): nil
+---@field RemoveTimeSpeedModifier fun(name: string): nil
+---@field SetTotalSeconds fun(totalSecondsNow: Int64, totalSecondsStart: Int64): nil
+---@field Start fun(): nil
+---@field Stop fun(): nil
+---@field Tick fun(): nil
+---@field Update fun(): nil
+---@field SetDayTime fun(wantHourOfDay: Single): nil
+---@field SetMonth fun(month: Single): nil
+---@field Add fun(hours: Single): nil
+---@field GetDayLightStrength fun(x: Double, z: Double): Single
+---@overload fun(pos: BlockPos): Single
+---@field GetSeason fun(pos: BlockPos): EnumSeason
+---@field GetSeasonRel fun(pos: BlockPos): Single
+---@field GetHemisphere fun(pos: BlockPos): EnumHemisphere
+---@field getSunlightPixelRel fun(relx: Single, rely: Single): Color
+---@field ToPacket fun(): Packet_Server
+---@field PrettyDate fun(): string
+---@field UpdateFromPacket fun(packet: Packet_Server): nil
+---@field BitmapCreateFromPng fun(asset: IAsset): BitmapRef
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+---@field TimeSpeedModifiers table<any, any>
+---@field SpeedOfTime table<any, any>
+---@field CalendarSpeedMul table<any, any>
+---@field Timelapse table<any, any>
+---@field DaysPerMonth table<any, any>
+---@field DaysPerYear table<any, any>
+---@field DayOfMonth table<any, any>
+---@field MonthsPerYear table<any, any>
+---@field FullHourOfDay table<any, any>
+---@field HourOfDay table<any, any>
+---@field ElapsedSeconds table<any, any>
+---@field ElapsedHours table<any, any>
+---@field ElapsedDays table<any, any>
+---@field TotalSeconds table<any, any>
+---@field TotalHours table<any, any>
+---@field TotalDays table<any, any>
+---@field DayOfYear table<any, any>
+---@field DayOfYearf table<any, any>
+---@field Year table<any, any>
+---@field Month table<any, any>
+---@field Monthf table<any, any>
+---@field MonthName table<any, any>
+---@field YearRel table<any, any>
+---@field MoonPhase table<any, any>
+---@field MoonPhaseExact table<any, any>
+---@field Dusk table<any, any>
+---@field MoonPhaseBrightness table<any, any>
+---@field MoonSize table<any, any>
+---@field SunsetMod table<any, any>
+---@field IsRunning table<any, any>
+---@field OnGetSolarSphericalCoords table<any, any>
+---@field OnGetHemisphere table<any, any>
+---@field OnGetLatitude table<any, any>
+---@field SeasonOverride table<any, any>
+---@field HoursPerDay table<any, any>
+---@field MoonOrbitDays table<any, any>
+---@field DayLengthInRealLifeSeconds table<any, any>
+---@field LastIngameSecond table<any, any>
+---@field sunLightTextureSize table<any, any>
+---@field sunLightTexture table<any, any>
+---@field MoonBrightnesByPhase table<any, any>
+---@field MoonSizeByPhase table<any, any>
+GameCalendar = {}

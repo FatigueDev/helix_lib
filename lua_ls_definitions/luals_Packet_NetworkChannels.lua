@@ -1,0 +1,18 @@
+---@meta Packet_NetworkChannels
+---@class Packet_NetworkChannels: Object
+---@field ctor fun(): Packet_NetworkChannels
+---@field GetChannelIds fun(): number[]
+---@field SetChannelIds fun(value: number[], count: number, length: number): nil
+---@overload fun(value: number[]): nil
+---@field GetChannelIdsCount fun(): number
+---@field ChannelIdsAdd fun(value: number): nil
+---@field GetChannelNames fun(): string[]
+---@field SetChannelNames fun(value: string[], count: number, length: number): nil
+---@overload fun(value: string[]): nil
+---@field GetChannelNamesCount fun(): number
+---@field ChannelNamesAdd fun(value: string): nil
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+Packet_NetworkChannels = {}

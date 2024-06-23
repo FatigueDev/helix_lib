@@ -1,0 +1,29 @@
+---@meta BlockList
+---@class BlockList: Object
+---@field ctor fun(game: GameMain, initialSize: number): BlockList
+---@overload fun(game: GameMain, fromBlocks: Block[]): BlockList
+---@field get_BlocksFast fun(): Block[]
+---@field get_Item fun(index: number): Block
+---@field set_Item fun(index: number, value: Block): nil
+---@field get_Count fun(): number
+---@field get_IsReadOnly fun(): boolean
+---@field PreAlloc fun(count: number): nil
+---@field Add fun(block: Block): nil
+---@field Clear fun(): nil
+---@field Contains fun(item: Block): boolean
+---@field CopyTo fun(array: Block[], arrayIndex: number): nil
+---@field GetEnumerator fun(): IEnumerator`1
+---@field IndexOf fun(item: Block): number
+---@field Insert fun(index: number, item: Block): nil
+---@field Remove fun(item: Block): boolean
+---@field RemoveAt fun(index: number): nil
+---@field getNoBlock fun(id: number, Api: ICoreAPI): Block
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+---@field BlocksFast Block[]
+---@field Item Block[]
+---@field Count Block[]
+---@field IsReadOnly Block[]
+BlockList = {}

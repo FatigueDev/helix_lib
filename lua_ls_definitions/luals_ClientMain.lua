@@ -1,0 +1,256 @@
+---@meta ClientMain
+---@class ClientMain: GameMain
+---@field ctor fun(screenRunningGame: GuiScreenRunningGame, platform: ClientPlatformAbstract): ClientMain
+---@field get_World fun(): IWorldAccessor
+---@field get_Seed fun(): number
+---@field get_SavegameIdentifier fun(): string
+---@field get_InWorldEllapsedMs fun(): Int64
+---@field get_LiquidSelectable fun(): boolean
+---@field get_AmbientParticles fun(): boolean
+---@field set_AmbientParticles fun(value: boolean): nil
+---@field get_Player fun(): IClientPlayer
+---@field get_EntityPlayer fun(): EntityPlayer
+---@field get_DefaultSpawnPosition fun(): EntityPos
+---@field get_LoadedChunkIndices fun(): Int64[]
+---@field get_LoadedMapChunkIndices fun(): Int64[]
+---@field GetAllChunks fun(): table<any, any>
+---@field sendRuntimeSettings fun(): nil
+---@field Start fun(): nil
+---@field MainGameLoop fun(deltaTime: Single): nil
+---@field ExecuteMainThreadTasks fun(deltaTime: Single): nil
+---@field TriggerRenderStage fun(stage: EnumRenderStage, dt: Single): nil
+---@field Render2DBitmapFile fun(filename: AssetLocation, x: Single, y: Single, w: Single, h: Single): nil
+---@field Render2DLoadedTexture fun(texture: LoadedTexture, posX: Single, posY: Single, z: Single, color: Vec4f): nil
+---@field RenderTextureIntoTexture fun(fromTexture: LoadedTexture, intoTexture: LoadedTexture, x1: Single, y1: Single): nil
+---@overload fun(fromTexture: LoadedTexture, sourceX: Single, sourceY: Single, sourceWidth: Single, sourceHeight: Single, intoTexture: LoadedTexture, targetX: Single, targetY: Single, alphaTest: Single): nil
+---@field RenderTextureIntoFrameBuffer fun(atlasTextureId: number, fromTexture: LoadedTexture, sourceX: Single, sourceY: Single, sourceWidth: Single, sourceHeight: Single, fb: FrameBufferRef, targetX: Single, targetY: Single, alphaTest: Single): nil
+---@field Render2DTexture fun(textureid: number, x1: Single, y1: Single, width: Single, height: Single, z: Single, color: Vec4f): nil
+---@overload fun(quadModel: MeshRef, textureid: number, x1: Single, y1: Single, width: Single, height: Single, z: Single, color: Vec4f): nil
+---@overload fun(textureid: number, transform: ModelTransform, color: Vec4f): nil
+---@field Render2DTextureFlipped fun(textureid: number, x1: Single, y1: Single, width: Single, height: Single, z: Single, color: Vec4f): nil
+---@field Set3DProjection fun(zfar: Single, fov: Single): nil
+---@field GlMatrixModeModelView fun(): nil
+---@field GlMatrixModeProjection fun(): nil
+---@field get_CurrentProjectionMatrix fun(): Single[]
+---@field get_CurrentModelViewMatrix fun(): Single[]
+---@field get_CurrentModelViewMatrixd fun(): Double[]
+---@field GlLoadMatrix fun(m: Double[]): nil
+---@field GlPopMatrix fun(): nil
+---@field GlScale fun(x: Double, y: Double, z: Double): nil
+---@field GlRotate fun(angle: Single, x: Double, y: Double, z: Double): nil
+---@field GlTranslate fun(x: Double, y: Double, z: Double): nil
+---@field GlPushMatrix fun(): nil
+---@field GlLoadIdentity fun(): nil
+---@field GlOrtho fun(left: Double, right: Double, bottom: Double, top: Double, zNear: Double, zFar: Double): nil
+---@field OrthoMode fun(width: number, height: number, inverseY: boolean): nil
+---@field PerspectiveMode fun(): nil
+---@field Serialize fun(packet: Packet_Client): number[]
+---@field SendPacket fun(packet: number[]): nil
+---@field SendPacketClient fun(packetClient: Packet_Client): nil
+---@field SendHandInteraction fun(mouseButton: number, blockSel: BlockSelection, entitySel: EntitySelection, useType: EnumHandInteract, state: EnumHandInteractNw, firstEvent: boolean, cancelReason: EnumItemUseCancelReason): nil
+---@field get_MouseGrabbed fun(): boolean
+---@field set_MouseGrabbed fun(value: boolean): nil
+---@field UpdateMouseButtonState fun(button: EnumMouseButton, down: boolean): boolean
+---@field OnMouseMove fun(args: MouseEvent): nil
+---@field GetAsset fun(fullPath: string): IAsset
+---@overload fun(location: AssetLocation): IAsset
+---@field GetItem fun(itemId: number): Item
+---@field GetBlock fun(blockId: number): Block
+---@field GetEntityType fun(entityCode: AssetLocation): EntityProperties
+---@field WhiteTexture fun(): number
+---@field PauseGame fun(paused: boolean): nil
+---@field FindCmd fun(search: string): nil
+---@field get_Width fun(): number
+---@field get_Height fun(): number
+---@field EnqueueMainThreadTask fun(action: Action, code: string): nil
+---@field EnqueueGameLaunchTask fun(action: Action, code: string): nil
+---@field Dispose fun(): nil
+---@field ApplyColorMapOnRgba fun(climateColorMap: string, seasonColorMap: string, color: number, posX: number, posY: number, posZ: number, flipRb: boolean): number
+---@overload fun(climateMap: ColorMap, seasonMap: ColorMap, color: number, posX: number, posY: number, posZ: number, flipRb: boolean): number
+---@overload fun(climateColorMap: string, seasonColorMap: string, color: number, rain: number, temp: number, flipRb: boolean): number
+---@field TryAttackEntity fun(selection: EntitySelection): nil
+---@field CloneBlockDamage fun(sourcePos: BlockPos, targetPos: BlockPos): nil
+---@field IncurBlockDamage fun(blockSelection: BlockSelection, withTool: Nullable`1, damage: Single): nil
+---@field SetCameraShake fun(strength: Single): nil
+---@field AddCameraShake fun(strength: Single): nil
+---@field ReduceCameraShake fun(amount: Single): nil
+---@field get_BlockAccessor fun(): IBlockAccessor
+---@field get_BulkBlockAccessor fun(): IBulkBlockAccessor
+---@field get_Rand fun(): Random
+---@field get_ElapsedMilliseconds fun(): Int64
+---@field get_EntityTypes fun(): any[]
+---@field get_EntityTypeCodes fun(): any[]
+---@field get_DefaultEntityTrackingRange fun(): number
+---@field get_Logger fun(): ILogger
+---@field get_AssetManager fun(): IAssetManager
+---@field get_Side fun(): EnumAppSide
+---@field get_AllOnlinePlayers fun(): IPlayer[]
+---@field get_AllPlayers fun(): IPlayer[]
+---@field get_SeaLevel fun(): number
+---@field get_EntityDebugMode fun(): boolean
+---@field set_EntityDebugMode fun(value: boolean): nil
+---@field get_CollisionTester fun(): CollisionTester
+---@field get_Dimensions fun(): table<any, any>
+---@field GetOrCreateDimension fun(dimId: number, pos: Vec3d): IMiniDimension
+---@field TryGetMiniDimension fun(origin: Vec3i, dimension: IMiniDimension&): boolean
+---@field SetBlocksPreviewDimension fun(dimId: number): nil
+---@field get_Api fun(): ICoreAPI
+---@field get_Claims fun(): ILandClaimAPI
+---@field SpawnItemEntity fun(itemstack: ItemStack, position: Vec3d, velocity: Vec3d): Entity
+---@field SpawnEntity fun(entity: Entity): nil
+---@field GetPlayersAround fun(position: Vec3d, horRange: Single, vertRange: Single, matches: ActionConsumable`1): IPlayer[]
+---@field GetNearestEntity fun(position: Vec3d, horRange: Single, vertRange: Single, matches: ActionConsumable`1): Entity
+---@field GetEntityById fun(entityId: Int64): Entity
+---@field IsValidPos fun(pos: BlockPos): boolean
+---@field get_MapSize fun(): Vec3i
+---@field get_Config fun(): ITreeAttribute
+---@field TrySetWorldConfig fun(configBytes: number[]): nil
+---@field GetBlockIntersectionBoxes fun(pos: BlockPos): Cuboidf[]
+---@field get_blockAccessor fun(): IBlockAccessor
+---@field GetBlock fun(pos: BlockPos): Block
+---@field RegisterGameTickListener fun(OnGameTick: any`1, millisecondInterval: number, initialDelayOffsetMs: number): Int64
+---@overload fun(OnGameTick: any`1, errorHandler: any`1, millisecondInterval: number, initialDelayOffsetMs: number): Int64
+---@field RegisterCallback fun(OnTimePassed: any`1, millisecondDelay: number): Int64
+---@overload fun(OnTimePassed: any`1, millisecondDelay: number, permittedWhilePaused: boolean): Int64
+---@overload fun(OnGameTick: Action`3, pos: BlockPos, millisecondInterval: number, initialDelayOffsetMs: number): Int64
+---@overload fun(OnTimePassed: Action`3, pos: BlockPos, millisecondDelay: number): Int64
+---@field RegisterCallbackUnique fun(OnTimePassed: Action`3, pos: BlockPos, millisecondDelay: number): Int64
+---@field UnregisterCallback fun(listenerId: Int64): nil
+---@field UnregisterGameTickListener fun(listenerId: Int64): nil
+---@field TriggerNeighbourBlocksUpdate fun(pos: BlockPos): nil
+---@field SpawnParticles fun(quantity: Single, color: number, minPos: Vec3d, maxPos: Vec3d, minVelocity: Vec3f, maxVelocity: Vec3f, lifeLength: Single, gravityEffect: Single, scale: Single, model: EnumParticleModel, dualCallByPlayer: IPlayer): nil
+---@overload fun(particlePropertiesProvider: IParticlePropertiesProvider, dualCallByPlayer: IPlayer): nil
+---@field SpawnCubeParticles fun(pos: Vec3d, itemstack: ItemStack, radius: Single, quantity: number, scale: Single, dualCallByPlayer: IPlayer, velocity: Vec3f): nil
+---@overload fun(blockpos: BlockPos, pos: Vec3d, radius: Single, quantity: number, scale: Single, dualCallByPlayer: IPlayer, velocity: Vec3f): nil
+---@field PlayerHasPrivilege fun(clientid: number, privilege: string): boolean
+---@field ShowChatMessage fun(message: string): nil
+---@field SendMessageToClient fun(message: string): nil
+---@field SendArbitraryPacket fun(data: number[]): nil
+---@field SendBlockEntityPacket fun(x: number, y: number, z: number, packetId: number, data: number[]): nil
+---@field SendEntityPacket fun(entityId: Int64, packetId: number, data: number[]): nil
+---@field NearestPlayer fun(x: Double, y: Double, z: Double): IPlayer
+---@field PlayerByUid fun(playerUid: string): IPlayer
+---@field GetColorMapData fun(block: Block, posX: number, posY: number, posZ: number): ColorMapData
+---@field ResolveSoundPath fun(location: AssetLocation): AssetLocation
+---@field PlaySound fun(location: AssetLocation, randomizePitch: boolean, volume: Single): nil
+---@field PlaySoundAt fun(location: AssetLocation, atPlayer: IPlayer, ignorePlayerUid: IPlayer, randomizePitch: boolean, range: Single, volume: Single): nil
+---@overload fun(location: AssetLocation, atEntity: Entity, dualCallByPlayer: IPlayer, pitch: Single, range: Single, volume: Single): nil
+---@overload fun(location: AssetLocation, posx: Double, posy: Double, posz: Double, dualCallByPlayer: IPlayer, pitch: Single, range: Single, volume: Single): nil
+---@overload fun(location: AssetLocation, posx: Double, posy: Double, posz: Double, dualCallByPlayer: IPlayer, soundType: EnumSoundany, pitch: Single, range: Single, volume: Single): nil
+---@overload fun(location: AssetLocation, atEntity: Entity, ignorePlayerUid: IPlayer, randomizePitch: boolean, range: Single, volume: Single): nil
+---@overload fun(location: AssetLocation, x: Double, y: Double, z: Double, ignorePlayerUid: IPlayer, randomizePitch: boolean, range: Single, volume: Single): nil
+---@field PlaySoundAtAndGetDuration fun(location: AssetLocation, x: Double, y: Double, z: Double, ignorePlayerUid: IPlayer, randomizePitch: boolean, range: Single, volume: Single): number
+---@field PlaySoundFor fun(location: AssetLocation, atPlayer: IPlayer, pitch: Single, range: Single, volume: Single): nil
+---@overload fun(location: AssetLocation, forPlayer: IPlayer, randomizePitch: boolean, range: Single, volume: Single): nil
+---@overload fun(location: AssetLocation, x: Double, y: Double, z: Double, volume: Single, randomizePitch: boolean, range: Single): number
+---@field LoadSound fun(sound: SoundParams): ILoadedSound
+---@field get_Calendar fun(): IClientGameCalendar
+---@field RegisterDialog fun(dialogs: GuiDialog[]): nil
+---@field UnregisterDialog fun(dialog: GuiDialog): nil
+---@field get_DialogsOpened fun(): number
+---@field HighlightBlocks fun(player: IPlayer, slotId: number, blocks: any[], colors: any[], mode: EnumHighlightBlocksMode, shape: EnumHighlightShape, scale: Single): nil
+---@overload fun(player: IPlayer, slotId: number, blocks: any[], mode: EnumHighlightBlocksMode, shape: EnumHighlightShape): nil
+---@field RemoveEntityRenderer fun(forEntity: Entity): nil
+---@field get_WaterBlock fun(): Block
+---@field set_WaterBlock fun(value: Block): nil
+---@field RandomPitch fun(): Single
+---@field GetRecipeRegistry fun(code: string): RecipeRegistryBase
+---@field RegisterRecipeRegistry fun(recipeRegistryCode: string): T
+---@field get_InteresectionTester fun(): AABBIntersectionTest
+---@field RayTraceForSelection fun(supplier: IWorldIntersectionSupplier, fromPos: Vec3d, toPos: Vec3d, blockSelection: BlockSelection&, entitySelection: EntitySelection&, bfilter: BlockFilter, efilter: EntityFilter): nil
+---@overload fun(fromPos: Vec3d, toPos: Vec3d, blockSelection: BlockSelection&, entitySelection: EntitySelection&, bfilter: BlockFilter, efilter: EntityFilter): nil
+---@overload fun(fromPos: Vec3d, pitch: Single, yaw: Single, range: Single, blockSelection: BlockSelection&, entitySelection: EntitySelection&, bfilter: BlockFilter, efilter: EntityFilter): nil
+---@overload fun(ray: Ray, blockSelection: BlockSelection&, entitySelection: EntitySelection&, bfilter: BlockFilter, efilter: EntityFilter): nil
+---@overload fun(supplier: IWorldIntersectionSupplier, ray: Ray, blockSelection: BlockSelection&, entitySelection: EntitySelection&, bfilter: BlockFilter, efilter: EntityFilter): nil
+---@overload fun(player: IPlayer, blockSelection: BlockSelection&, entitySelection: EntitySelection&, bfilter: BlockFilter, efilter: EntityFilter): nil
+---@field GetPickingRay fun(pos: Vec3d, pitch: Single, yaw: Single, pickingRange: Single): Ray
+---@overload fun(fromPos: Vec3d, toPos: Vec3d): Ray
+---@field GetIntersectingEntities fun(basePos: BlockPos, collisionBoxes: Cuboidf[], matches: ActionConsumable`1): Entity[]
+---@field GetEntitiesAround fun(position: Vec3d, horRange: Single, vertRange: Single, matches: ActionConsumable`1): Entity[]
+---@field GetEntitiesInsideCuboid fun(startPos: BlockPos, endPos: BlockPos, matches: ActionConsumable`1): Entity[]
+---@field GetItem fun(itemCode: AssetLocation): Item
+---@overload fun(blockCode: AssetLocation): Block
+---@field SearchBlocks fun(wildcard: AssetLocation): Block[]
+---@field SearchItems fun(wildcard: AssetLocation): Item[]
+---@field GetCachingBlockAccessor fun(synchronize: boolean, relight: boolean): ICachingBlockAccessor
+---@field GetLockFreeBlockAccessor fun(): IBlockAccessor
+---@field GetBlockAccessor fun(synchronize: boolean, relight: boolean, strict: boolean, debug: boolean): IBlockAccessor
+---@field GetBlockAccessorBulkUpdate fun(synchronize: boolean, relight: boolean, debug: boolean): IBulkBlockAccessor
+---@field GetBlockAccessorBulkMinimalUpdate fun(synchronize: boolean, debug: boolean): IBulkBlockAccessor
+---@field GetBlockAccessorRevertable fun(synchronize: boolean, relight: boolean, debug: boolean): IBlockAccessorRevertable
+---@field GetBlockAccessorPrefetch fun(synchronize: boolean, relight: boolean): IBlockAccessorPrefetch
+---@field GetBlockAccessorMapChunkLoading fun(synchronize: boolean, debug: boolean): IBulkBlockAccessor
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+---@field World IWorldAccessor
+---@field Seed IWorldAccessor
+---@field SavegameIdentifier IWorldAccessor
+---@field InWorldEllapsedMs IWorldAccessor
+---@field LiquidSelectable IWorldAccessor
+---@field AmbientParticles IWorldAccessor
+---@field Player IWorldAccessor
+---@field EntityPlayer IWorldAccessor
+---@field DefaultSpawnPosition IWorldAccessor
+---@field LoadedChunkIndices IWorldAccessor
+---@field LoadedMapChunkIndices IWorldAccessor
+---@field CurrentProjectionMatrix IWorldAccessor
+---@field CurrentModelViewMatrix IWorldAccessor
+---@field CurrentModelViewMatrixd IWorldAccessor
+---@field MouseGrabbed IWorldAccessor
+---@field Width IWorldAccessor
+---@field Height IWorldAccessor
+---@field BlockAccessor IWorldAccessor
+---@field BulkBlockAccessor IWorldAccessor
+---@field Rand IWorldAccessor
+---@field ElapsedMilliseconds IWorldAccessor
+---@field EntityTypes IWorldAccessor
+---@field EntityTypeCodes IWorldAccessor
+---@field DefaultEntityTrackingRange IWorldAccessor
+---@field Logger IWorldAccessor
+---@field AssetManager IWorldAccessor
+---@field Side IWorldAccessor
+---@field AllOnlinePlayers IWorldAccessor
+---@field AllPlayers IWorldAccessor
+---@field SeaLevel IWorldAccessor
+---@field EntityDebugMode IWorldAccessor
+---@field CollisionTester IWorldAccessor
+---@field Dimensions IWorldAccessor
+---@field Api IWorldAccessor
+---@field Claims IWorldAccessor
+---@field MapSize IWorldAccessor
+---@field Config IWorldAccessor
+---@field blockAccessor IWorldAccessor
+---@field Calendar IWorldAccessor
+---@field DialogsOpened IWorldAccessor
+---@field WaterBlock IWorldAccessor
+---@field InteresectionTester IWorldAccessor
+---@field InWorldStopwatch IWorldAccessor
+---@field MusicEngine IWorldAccessor
+---@field PerspectiveProjectionMat IWorldAccessor
+---@field PerspectiveViewMat IWorldAccessor
+---@field DeltaTimeLimiter IWorldAccessor
+---@field chunkPositionsForRegenTrav IWorldAccessor
+---@field chunkPositionsLock IWorldAccessor
+---@field compactedClientChunks IWorldAccessor
+---@field compactSyncLock IWorldAccessor
+---@field ChunkWireframe IWorldAccessor
+---@field BlockEntityWireframe IWorldAccessor
+---@field RegionWireframe IWorldAccessor
+---@field ServerChunkWireframe IWorldAccessor
+---@field EntityWireFrame IWorldAccessor
+---@field AmbientSoundsWireFrame IWorldAccessor
+---@field VertexWireFrame IWorldAccessor
+---@field InsideWireframe IWorldAccessor
+---@field entityBehaviors IWorldAccessor
+---@field EntityLoadQueueLock IWorldAccessor
+---@field EntityLoadQueue IWorldAccessor
+---@field currentGroupid IWorldAccessor
+---@field ChatHistoryByPlayerGroup IWorldAccessor
+---@field playerProperties IWorldAccessor
+---@field ClassRegistry IWorldAccessor
+---@field millisecondsToTriggerNewFrame IWorldAccessor
+---@field DisconnectedIconAfterSeconds IWorldAccessor
+---@field ItemsByCode IWorldAccessor
+ClientMain = {}

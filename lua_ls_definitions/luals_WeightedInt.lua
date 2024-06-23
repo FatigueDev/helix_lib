@@ -1,0 +1,13 @@
+---@meta WeightedInt
+---@class WeightedInt: WeightedValue`1
+---@field ctor fun(): WeightedInt
+---@overload fun(value: number, weight: Single): WeightedInt
+---@field New fun(value: number, weight: Single): WeightedInt
+---@field ToBytes fun(writer: BinaryWriter): nil
+---@field FromBytes fun(reader: BinaryReader): nil
+---@field Set fun(value: number, weight: Single): nil
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+WeightedInt = {}

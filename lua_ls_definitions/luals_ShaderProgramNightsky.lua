@@ -1,0 +1,120 @@
+---@meta ShaderProgramNightsky
+---@class ShaderProgramNightsky: ShaderProgram
+---@field ctor fun(): ShaderProgramNightsky
+---@field set_RgbaFog fun(value: Vec4f): nil
+---@field set_CtexCube fun(value: number): nil
+---@field set_DitherSeed fun(value: number): nil
+---@field set_HorizontalResolution fun(value: number): nil
+---@field set_DayLight fun(value: Single): nil
+---@field set_HorizonFog fun(value: Single): nil
+---@field set_PlayerToSealevelOffset fun(value: Single): nil
+---@field set_FogDensityIn fun(value: Single): nil
+---@field set_FogMinIn fun(value: Single): nil
+---@field set_FlatFogDensity fun(value: Single): nil
+---@field set_FlatFogStart fun(value: Single): nil
+---@field set_ViewDistance fun(value: Single): nil
+---@field set_ViewDistanceLod0 fun(value: Single): nil
+---@field set_ZNear fun(value: Single): nil
+---@field set_ZFar fun(value: Single): nil
+---@field set_LightPosition fun(value: Vec3f): nil
+---@field set_ShadowIntensity fun(value: Single): nil
+---@field set_ShadowMapFar2D fun(value: number): nil
+---@field set_ShadowMapWidthInv fun(value: Single): nil
+---@field set_ShadowMapHeightInv fun(value: Single): nil
+---@field set_ShadowMapNear2D fun(value: number): nil
+---@field set_WindWaveCounter fun(value: Single): nil
+---@field set_GlitchStrength fun(value: Single): nil
+---@field set_ProjectionMatrix fun(value: Single[]): nil
+---@field set_ModelMatrix fun(value: Single[]): nil
+---@field set_ViewMatrix fun(value: Single[]): nil
+---@field set_ShadowRangeFar fun(value: Single): nil
+---@field set_ToShadowMapSpaceMatrixFar fun(value: Single[]): nil
+---@field set_ShadowRangeNear fun(value: Single): nil
+---@field set_ToShadowMapSpaceMatrixNear fun(value: Single[]): nil
+---@field set_GlitchStrengthFL fun(value: Single): nil
+---@field set_NightVisionStrength fun(value: Single): nil
+---@field PointLightsArray fun(count: number, values: Single[]): nil
+---@field PointLightColorsArray fun(count: number, values: Single[]): nil
+---@field set_PointLightQuantity fun(value: number): nil
+---@field Compile fun(): boolean
+---@field get_Disposed fun(): boolean
+---@field get_ClampTexturesToEdge fun(): boolean
+---@field set_ClampTexturesToEdge fun(value: boolean): nil
+---@field get_LoadError fun(): boolean
+---@field set_LoadError fun(value: boolean): nil
+---@field SetCustomSampler fun(uniformName: string, isLinear: boolean): nil
+---@field Uniform fun(uniformName: string, value: Single): nil
+---@overload fun(uniformName: string, value: number): nil
+---@overload fun(uniformName: string, value: Vec2f): nil
+---@overload fun(uniformName: string, value: Vec3f): nil
+---@overload fun(uniformName: string, value: Vec3i): nil
+---@field Uniforms2 fun(uniformName: string, count: number, values: Single[]): nil
+---@field Uniforms3 fun(uniformName: string, count: number, values: Single[]): nil
+---@field Uniform fun(uniformName: string, value: Vec4f): nil
+---@field Uniforms4 fun(uniformName: string, count: number, values: Single[]): nil
+---@field UniformMatrix fun(uniformName: string, matrix: Single[]): nil
+---@overload fun(uniformName: string, matrix: Matrix4&): nil
+---@field HasUniform fun(uniformName: string): boolean
+---@field BindTexture2D fun(samplerName: string, textureId: number, textureNumber: number): nil
+---@overload fun(samplerName: string, textureId: number): nil
+---@field BindTextureCube fun(samplerName: string, textureId: number, textureNumber: number): nil
+---@field UniformMatrices4x3 fun(uniformName: string, count: number, matrix: Single[]): nil
+---@field UniformMatrices fun(uniformName: string, count: number, matrix: Single[]): nil
+---@field Use fun(): nil
+---@field Stop fun(): nil
+---@field Dispose fun(): nil
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+---@field RgbaFog Vec4f
+---@field CtexCube Vec4f
+---@field DitherSeed Vec4f
+---@field HorizontalResolution Vec4f
+---@field DayLight Vec4f
+---@field HorizonFog Vec4f
+---@field PlayerToSealevelOffset Vec4f
+---@field FogDensityIn Vec4f
+---@field FogMinIn Vec4f
+---@field FlatFogDensity Vec4f
+---@field FlatFogStart Vec4f
+---@field ViewDistance Vec4f
+---@field ViewDistanceLod0 Vec4f
+---@field ZNear Vec4f
+---@field ZFar Vec4f
+---@field LightPosition Vec4f
+---@field ShadowIntensity Vec4f
+---@field ShadowMapFar2D Vec4f
+---@field ShadowMapWidthInv Vec4f
+---@field ShadowMapHeightInv Vec4f
+---@field ShadowMapNear2D Vec4f
+---@field WindWaveCounter Vec4f
+---@field GlitchStrength Vec4f
+---@field ProjectionMatrix Vec4f
+---@field ModelMatrix Vec4f
+---@field ViewMatrix Vec4f
+---@field ShadowRangeFar Vec4f
+---@field ToShadowMapSpaceMatrixFar Vec4f
+---@field ShadowRangeNear Vec4f
+---@field ToShadowMapSpaceMatrixNear Vec4f
+---@field GlitchStrengthFL Vec4f
+---@field NightVisionStrength Vec4f
+---@field PointLightQuantity Vec4f
+---@field Disposed Vec4f
+---@field ClampTexturesToEdge Vec4f
+---@field LoadError Vec4f
+---@field attributes Vec4f
+---@field LoadFromFile Vec4f
+---@field AssetDomain Vec4f
+---@field PassId Vec4f
+---@field ProgramId Vec4f
+---@field PassName Vec4f
+---@field VertexShader Vec4f
+---@field GeometryShader Vec4f
+---@field FragmentShader Vec4f
+---@field uniformLocations Vec4f
+---@field textureLocations Vec4f
+---@field clampTToEdge Vec4f
+---@field includes Vec4f
+---@field customSamplers Vec4f
+ShaderProgramNightsky = {}

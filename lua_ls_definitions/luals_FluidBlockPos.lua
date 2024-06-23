@@ -1,0 +1,76 @@
+---@meta FluidBlockPos
+---@class FluidBlockPos: BlockPos
+---@field ctor fun(): FluidBlockPos
+---@overload fun(x: number, y: number, z: number, dim: number): FluidBlockPos
+---@field Copy fun(): BlockPos
+---@field get_InternalY fun(): number
+---@field set_InternalY fun(value: number): nil
+---@field get_Item fun(i: number): number
+---@field set_Item fun(i: number, value: number): nil
+---@field Up fun(dy: number): BlockPos
+---@field Down fun(dy: number): BlockPos
+---@field Set fun(origin: Vec3d): BlockPos
+---@overload fun(pos: Vec3i): BlockPos
+---@overload fun(pos: FastVec3i): BlockPos
+---@overload fun(x: number, y: number, z: number): BlockPos
+---@overload fun(x: Single, y: Single, z: Single): BlockPos
+---@overload fun(blockPos: BlockPos): BlockPos
+---@field SetDimension fun(dim: number): BlockPos
+---@field SetAndEquals fun(x: number, y: number, z: number): boolean
+---@field ToBytes fun(writer: BinaryWriter): nil
+---@field ToLocalPosition fun(api: ICoreAPI): Vec3i
+---@field West fun(): BlockPos
+---@field North fun(): BlockPos
+---@field East fun(): BlockPos
+---@field South fun(): BlockPos
+---@field FacingFrom fun(other: BlockPos): BlockFacing
+---@field WestCopy fun(length: number): BlockPos
+---@field SouthCopy fun(length: number): BlockPos
+---@field EastCopy fun(length: number): BlockPos
+---@field NorthCopy fun(length: number): BlockPos
+---@field DownCopy fun(length: number): BlockPos
+---@field UpCopy fun(length: number): BlockPos
+---@field Add fun(dx: Single, dy: Single, dz: Single): BlockPos
+---@overload fun(dx: number, dy: number, dz: number): BlockPos
+---@overload fun(vector: Vec3i): BlockPos
+---@overload fun(vector: FastVec3i): BlockPos
+---@overload fun(pos: BlockPos): BlockPos
+---@overload fun(facing: BlockFacing, length: number): BlockPos
+---@field Offset fun(facing: BlockFacing): BlockPos
+---@field AddCopy fun(dx: Single, dy: Single, dz: Single): BlockPos
+---@overload fun(dx: number, dy: number, dz: number): BlockPos
+---@overload fun(xyz: number): BlockPos
+---@overload fun(vector: Vec3i): BlockPos
+---@overload fun(facing: BlockFacing): BlockPos
+---@overload fun(facing: BlockFacing, length: number): BlockPos
+---@field Sub fun(pos: BlockPos): BlockPos
+---@overload fun(x: number, y: number, z: number): BlockPos
+---@field SubCopy fun(pos: BlockPos): BlockPos
+---@field DivCopy fun(factor: number): BlockPos
+---@field DistanceTo fun(pos: BlockPos): Single
+---@overload fun(x: Double, y: Double, z: Double): Single
+---@field DistanceSqTo fun(x: Double, y: Double, z: Double): Single
+---@field DistanceSqToNearerEdge fun(x: Double, y: Double, z: Double): Double
+---@field HorDistanceSqTo fun(x: Double, z: Double): Single
+---@field HorizontalManhattenDistance fun(pos: BlockPos): number
+---@field ManhattenDistance fun(pos: BlockPos): number
+---@overload fun(x: number, y: number, z: number): number
+---@field InRangeHorizontally fun(x: number, z: number, range: number): boolean
+---@field ToVec3d fun(): Vec3d
+---@field ToVec3i fun(): Vec3i
+---@field ToVec3f fun(): Vec3f
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+---@field Equals fun(other: BlockPos): boolean
+---@overload fun(x: number, y: number, z: number): boolean
+---@field get_AsVec3i fun(): Vec3i
+---@field GetType fun(): any
+---@field InternalY number
+---@field Item number
+---@field AsVec3i number
+---@field X number
+---@field Z number
+---@field Y number
+---@field dimension number
+FluidBlockPos = {}

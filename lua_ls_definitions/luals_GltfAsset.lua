@@ -1,0 +1,14 @@
+---@meta GltfAsset
+---@class GltfAsset: Object
+---@field ctor fun(): GltfAsset
+---@field get_Generator fun(): string
+---@field set_Generator fun(value: string): nil
+---@field get_Version fun(): string
+---@field set_Version fun(value: string): nil
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+---@field Generator string
+---@field Version string
+GltfAsset = {}

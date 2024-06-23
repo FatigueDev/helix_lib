@@ -1,0 +1,12 @@
+---@meta TerrainMesherHelper
+---@class TerrainMesherHelper: Object
+---@field ctor fun(): TerrainMesherHelper
+---@field AddMeshData fun(sourceMesh: MeshData, transformationMatrix: Single[], lodLevel: number): nil
+---@overload fun(sourceMesh: MeshData, lodLevel: number): nil
+---@overload fun(sourceMesh: MeshData, colorMapData: ColorMapData, lodlevel: number): nil
+---@field GetMeshPoolForPass fun(textureId: number, forRenderPass: EnumChunkRenderPass, lodLevel: number): MeshData
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+TerrainMesherHelper = {}

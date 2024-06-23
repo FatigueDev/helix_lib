@@ -1,0 +1,31 @@
+---@meta CustomMeshDataPartShort
+---@class CustomMeshDataPartShort: CustomMeshDataPart`1
+---@field ctor fun(): CustomMeshDataPartShort
+---@overload fun(size: number): CustomMeshDataPartShort
+---@field Clone fun(): CustomMeshDataPartShort
+---@field EmptyClone fun(): CustomMeshDataPartShort
+---@field get_BufferSize fun(): number
+---@field get_AllocationSize fun(): number
+---@field GrowBuffer fun(growAtLeastBy: number): nil
+---@field Add fun(value: Int16): nil
+---@field Add4 fun(value: Int16): nil
+---@field Add fun(values: Int16[]): nil
+---@field SetAllocationSize fun(size: number): nil
+---@field AutoAllocationSize fun(): nil
+---@field SetFrom fun(meshdatapart: CustomMeshDataPart`1): nil
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+---@field BufferSize number
+---@field AllocationSize number
+---@field Conversion number
+---@field Values number
+---@field Count number
+---@field InterleaveSizes number
+---@field InterleaveStride number
+---@field InterleaveOffsets number
+---@field Instanced number
+---@field StaticDraw number
+---@field BaseOffset number
+CustomMeshDataPartShort = {}

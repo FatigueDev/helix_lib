@@ -1,0 +1,23 @@
+---@meta Mod
+---@class Mod: Object
+---@field get_SourceType fun(): EnumModSourceany
+---@field get_SourcePath fun(): string
+---@field get_FileName fun(): string
+---@field get_Info fun(): ModInfo
+---@field get_WorldConfig fun(): ModWorldConfiguration
+---@field get_Icon fun(): BitmapExternal
+---@field get_Logger fun(): ILogger
+---@field get_Systems fun(): IReadOnlyany[]
+---@field ToString fun(): string
+---@field GetType fun(): any
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+---@field SourceType EnumModSourceany
+---@field SourcePath EnumModSourceany
+---@field FileName EnumModSourceany
+---@field Info EnumModSourceany
+---@field WorldConfig EnumModSourceany
+---@field Icon EnumModSourceany
+---@field Logger EnumModSourceany
+---@field Systems EnumModSourceany
+Mod = {}

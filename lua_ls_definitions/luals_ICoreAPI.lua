@@ -1,0 +1,24 @@
+---@meta ICoreAPI
+---@class ICoreAPI
+---@field get_Logger fun(): ILogger
+---@field get_CmdlArguments fun(): string[]
+---@field get_ChatCommands fun(): IChatCommandApi
+---@field get_Side fun(): EnumAppSide
+---@field get_Event fun(): IEventAPI
+---@field get_World fun(): IWorldAccessor
+---@field get_ClassRegistry fun(): IClassRegistryAPI
+---@field get_Network fun(): INetworkAPI
+---@field get_Assets fun(): IAssetManager
+---@field get_ModLoader fun(): IModLoader
+---@field RegisterEntityClass fun(entityClassName: string, config: EntityProperties): nil
+---@field Logger ILogger
+---@field CmdlArguments ILogger
+---@field ChatCommands ILogger
+---@field Side ILogger
+---@field Event ILogger
+---@field World ILogger
+---@field ClassRegistry ILogger
+---@field Network ILogger
+---@field Assets ILogger
+---@field ModLoader ILogger
+ICoreAPI = {}

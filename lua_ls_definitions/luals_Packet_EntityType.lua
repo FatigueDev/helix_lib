@@ -1,0 +1,71 @@
+---@meta Packet_EntityType
+---@class Packet_EntityType: Object
+---@field ctor fun(): Packet_EntityType
+---@field SetCode fun(value: string): nil
+---@field SetClass fun(value: string): nil
+---@field SetRenderer fun(value: string): nil
+---@field SetHabitat fun(value: number): nil
+---@field SetDrops fun(value: number[]): nil
+---@field SetShape fun(value: Packet_CompositeShape): nil
+---@field GetBehaviors fun(): Packet_Behavior[]
+---@field SetBehaviors fun(value: Packet_Behavior[], count: number, length: number): nil
+---@overload fun(value: Packet_Behavior[]): nil
+---@field GetBehaviorsCount fun(): number
+---@field BehaviorsAdd fun(value: Packet_Behavior): nil
+---@field SetCollisionBoxLength fun(value: number): nil
+---@field SetCollisionBoxHeight fun(value: number): nil
+---@field SetDeadCollisionBoxLength fun(value: number): nil
+---@field SetDeadCollisionBoxHeight fun(value: number): nil
+---@field SetSelectionBoxLength fun(value: number): nil
+---@field SetSelectionBoxHeight fun(value: number): nil
+---@field SetDeadSelectionBoxLength fun(value: number): nil
+---@field SetDeadSelectionBoxHeight fun(value: number): nil
+---@field SetAttributes fun(value: string): nil
+---@field GetSoundKeys fun(): string[]
+---@field SetSoundKeys fun(value: string[], count: number, length: number): nil
+---@overload fun(value: string[]): nil
+---@field GetSoundKeysCount fun(): number
+---@field SoundKeysAdd fun(value: string): nil
+---@field GetSoundNames fun(): string[]
+---@field SetSoundNames fun(value: string[], count: number, length: number): nil
+---@overload fun(value: string[]): nil
+---@field GetSoundNamesCount fun(): number
+---@field SoundNamesAdd fun(value: string): nil
+---@field SetIdleSoundChance fun(value: number): nil
+---@field SetIdleSoundRange fun(value: number): nil
+---@field GetTextureCodes fun(): string[]
+---@field SetTextureCodes fun(value: string[], count: number, length: number): nil
+---@overload fun(value: string[]): nil
+---@field GetTextureCodesCount fun(): number
+---@field TextureCodesAdd fun(value: string): nil
+---@field GetCompositeTextures fun(): Packet_CompositeTexture[]
+---@field SetCompositeTextures fun(value: Packet_CompositeTexture[], count: number, length: number): nil
+---@overload fun(value: Packet_CompositeTexture[]): nil
+---@field GetCompositeTexturesCount fun(): number
+---@field CompositeTexturesAdd fun(value: Packet_CompositeTexture): nil
+---@field SetSize fun(value: number): nil
+---@field SetEyeHeight fun(value: number): nil
+---@field SetSwimmingEyeHeight fun(value: number): nil
+---@field SetWeight fun(value: number): nil
+---@field SetCanClimb fun(value: number): nil
+---@field SetAnimationMetaData fun(value: number[]): nil
+---@field SetKnockbackResistance fun(value: number): nil
+---@field SetGlowLevel fun(value: number): nil
+---@field SetCanClimbAnywhere fun(value: number): nil
+---@field SetClimbTouchDistance fun(value: number): nil
+---@field SetRotateModelOnClimb fun(value: number): nil
+---@field SetFallDamage fun(value: number): nil
+---@field SetFallDamageMultiplier fun(value: number): nil
+---@field GetVariant fun(): Packet_VariantPart[]
+---@field SetVariant fun(value: Packet_VariantPart[], count: number, length: number): nil
+---@overload fun(value: Packet_VariantPart[]): nil
+---@field GetVariantCount fun(): number
+---@field VariantAdd fun(value: Packet_VariantPart): nil
+---@field SetSizeGrowthFactor fun(value: number): nil
+---@field SetPitchStep fun(value: number): nil
+---@field SetColor fun(value: string): nil
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+Packet_EntityType = {}

@@ -1,0 +1,19 @@
+---@meta Mat23
+---@class Mat23: Object
+---@field ctor fun(): Mat23
+---@field Create fun(): Single[]
+---@field CloneIt fun(a: Single[]): Single[]
+---@field Copy fun(output: Single[], a: Single[]): Single[]
+---@field Identity_ fun(output: Single[]): Single[]
+---@field Invert fun(output: Single[], a: Single[]): Single[]
+---@field Determinant fun(a: Single[]): Single
+---@field Multiply fun(output: Single[], a: Single[], b: Single[]): Single[]
+---@field Mul fun(output: Single[], a: Single[], b: Single[]): Single[]
+---@field Rotate fun(output: Single[], a: Single[], rad: Single): Single[]
+---@field Scale fun(output: Single[], a: Single[], v: Single[]): Single[]
+---@field Translate fun(output: Single[], a: Single[], v: Single[]): Single[]
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+Mat23 = {}

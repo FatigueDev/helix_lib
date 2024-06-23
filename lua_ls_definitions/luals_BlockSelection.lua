@@ -1,0 +1,21 @@
+---@meta BlockSelection
+---@class BlockSelection: Object
+---@field ctor fun(): BlockSelection
+---@overload fun(pos: BlockPos, face: BlockFacing, block: Block): BlockSelection
+---@field get_FullPosition fun(): Vec3d
+---@field Clone fun(): BlockSelection
+---@field ToDecorIndex fun(): number
+---@field GetDecorIndex fun(face: BlockFacing, vx: number, vy: number, vz: number): number
+---@overload fun(face: BlockFacing): number
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+---@field FullPosition Vec3d
+---@field Position Vec3d
+---@field Face Vec3d
+---@field HitPosition Vec3d
+---@field SelectionBoxIndex Vec3d
+---@field DidOffset Vec3d
+---@field Block Vec3d
+BlockSelection = {}

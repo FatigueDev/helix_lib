@@ -1,0 +1,12 @@
+---@meta Packet_Entity
+---@class Packet_Entity: Object
+---@field ctor fun(): Packet_Entity
+---@field SetEntityType fun(value: string): nil
+---@field SetEntityId fun(value: Int64): nil
+---@field SetSimulationRange fun(value: number): nil
+---@field SetData fun(value: number[]): nil
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+Packet_Entity = {}

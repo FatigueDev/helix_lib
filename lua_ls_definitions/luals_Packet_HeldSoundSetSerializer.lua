@@ -1,0 +1,15 @@
+---@meta Packet_HeldSoundSetSerializer
+---@class Packet_HeldSoundSetSerializer: Object
+---@field ctor fun(): Packet_HeldSoundSetSerializer
+---@field DeserializeLengthDelimitedNew fun(stream: CitoMemoryStream): Packet_HeldSoundSet
+---@field DeserializeBuffer fun(buffer: number[], length: number, instance: Packet_HeldSoundSet): Packet_HeldSoundSet
+---@field Deserialize fun(stream: CitoMemoryStream, instance: Packet_HeldSoundSet): Packet_HeldSoundSet
+---@field DeserializeLengthDelimited fun(stream: CitoMemoryStream, instance: Packet_HeldSoundSet): Packet_HeldSoundSet
+---@field Serialize fun(stream: CitoStream, instance: Packet_HeldSoundSet): nil
+---@field SerializeToBytes fun(instance: Packet_HeldSoundSet): number[]
+---@field SerializeLengthDelimited fun(stream: CitoStream, instance: Packet_HeldSoundSet): nil
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+Packet_HeldSoundSetSerializer = {}

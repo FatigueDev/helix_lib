@@ -1,0 +1,52 @@
+---@meta ServerMapChunk
+---@class ServerMapChunk: Object
+---@field ctor fun(): ServerMapChunk
+---@field get_CurrentIncompletePass fun(): EnumWorldGenPass
+---@field set_CurrentIncompletePass fun(value: EnumWorldGenPass): nil
+---@field get_CaveHeightDistort fun(): number[]
+---@field set_CaveHeightDistort fun(value: number[]): nil
+---@field get_SedimentaryThicknessMap fun(): UInt16[]
+---@field set_SedimentaryThicknessMap fun(value: UInt16[]): nil
+---@field get_SnowAccum fun(): Concurrenttable<any, any>
+---@field set_SnowAccum fun(value: Concurrenttable<any, any>): nil
+---@field get_SelfLoaded fun(): boolean
+---@field set_SelfLoaded fun(value: boolean): nil
+---@field CreateNew fun(mapRegion: ServerMapRegion): ServerMapChunk
+---@field FromBytes fun(serializedChunk: number[]): ServerMapChunk
+---@field ToBytes fun(): number[]
+---@field SetData fun(key: string, data: number[]): nil
+---@field GetData fun(key: string): number[]
+---@field SetModdata fun(key: string, data: number[]): nil
+---@field GetModdata fun(key: string): number[]
+---@overload fun(key: string, data: T): nil
+---@overload fun(key: string, defaultValue: T): T
+---@field RemoveModdata fun(key: string): nil
+---@field MarkFresh fun(): nil
+---@field DoAge fun(): nil
+---@field IsOld fun(): boolean
+---@field ToPacket fun(chunkX: number, chunkZ: number): Packet_Server
+---@field MarkDirty fun(): nil
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+---@field CurrentIncompletePass EnumWorldGenPass
+---@field CaveHeightDistort EnumWorldGenPass
+---@field SedimentaryThicknessMap EnumWorldGenPass
+---@field SnowAccum EnumWorldGenPass
+---@field SelfLoaded EnumWorldGenPass
+---@field Moddata EnumWorldGenPass
+---@field RainHeightMap EnumWorldGenPass
+---@field TopRockIdMapOld EnumWorldGenPass
+---@field TopRockIdMap EnumWorldGenPass
+---@field WorldGenTerrainHeightMap EnumWorldGenPass
+---@field ScheduledBlockUpdates EnumWorldGenPass
+---@field NewBlockEntities EnumWorldGenPass
+---@field YMax EnumWorldGenPass
+---@field WorldGenVersion EnumWorldGenPass
+---@field QuantityNeighboursLoaded EnumWorldGenPass
+---@field MapRegion EnumWorldGenPass
+---@field DirtyForSaving EnumWorldGenPass
+---@field NeighboursLoaded EnumWorldGenPass
+---@field UnloadGeneration EnumWorldGenPass
+ServerMapChunk = {}

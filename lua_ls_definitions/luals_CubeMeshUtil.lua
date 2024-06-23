@@ -1,0 +1,18 @@
+---@meta CubeMeshUtil
+---@class CubeMeshUtil: Object
+---@field ctor fun(): CubeMeshUtil
+---@field GetCube fun(): MeshData
+---@field GetShadedCubeRGBA fun(baseColor: number, blockSideShadings: Single[], smoothShadedSides: boolean): number[]
+---@overload fun(colorSides: number[], smoothShadedSides: boolean): number[]
+---@field GetCubeOnlyScaleXyz fun(scaleH: Single, scaleV: Single, translate: Vec3f): MeshData
+---@field GetCube fun(scaleH: Single, scaleV: Single, translate: Vec3f): MeshData
+---@overload fun(scaleX: Single, scaleY: Single, scaleZ: Single, translate: Vec3f): MeshData
+---@field ScaleCubeMesh fun(modelData: MeshData, scaleX: Single, scaleY: Single, scaleZ: Single, translate: Vec3f): MeshData
+---@field GetCubeFace fun(face: BlockFacing): MeshData
+---@overload fun(face: BlockFacing, scaleH: Single, scaleV: Single, translate: Vec3f): MeshData
+---@field SetXyzFacesAndPacketNormals fun(mesh: MeshData): nil
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+CubeMeshUtil = {}

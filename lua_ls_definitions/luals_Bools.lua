@@ -1,0 +1,11 @@
+---@meta Bools
+---@class Bools: Object
+---@field ctor fun(a: boolean, b: boolean): Bools
+---@field get_Item fun(i: number): boolean
+---@field set_Item fun(i: number, value: boolean): nil
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+---@field Item boolean
+Bools = {}

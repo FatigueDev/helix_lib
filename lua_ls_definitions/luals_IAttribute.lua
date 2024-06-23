@@ -1,0 +1,11 @@
+---@meta IAttribute
+---@class IAttribute
+---@field ToBytes fun(stream: BinaryWriter): nil
+---@field FromBytes fun(stream: BinaryReader): nil
+---@field GetAttributeId fun(): number
+---@field GetType fun(): any
+---@field GetValue fun(): table
+---@field ToJsonToken fun(): string
+---@field Equals fun(worldForResolve: IWorldAccessor, attr: IAttribute): boolean
+---@field Clone fun(): IAttribute
+IAttribute = {}

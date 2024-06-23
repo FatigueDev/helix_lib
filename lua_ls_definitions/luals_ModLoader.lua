@@ -1,0 +1,36 @@
+---@meta ModLoader
+---@class ModLoader: Object
+---@field ctor fun(logger: ILogger, side: EnumAppSide, modSearchPaths: any[], traceLog: boolean): ModLoader
+---@overload fun(api: ICoreAPI, modSearchPaths: any[], traceLog: boolean): ModLoader
+---@field get_TextureSize fun(): number
+---@field set_TextureSize fun(value: number): nil
+---@field get_ModSearchPaths fun(): IReadOnlyany[]
+---@field get_UnpackPath fun(): string
+---@field get_Mods fun(): any[]
+---@field get_Systems fun(): any[]
+---@field GetMod fun(modID: string): Mod
+---@field IsModEnabled fun(modID: string): boolean
+---@field GetModSystem fun(fullName: string): ModSystem
+---@overload fun(withInheritance: boolean): T
+---@field IsModSystemEnabled fun(fullName: string): boolean
+---@field GetContentArchives fun(): Orderedtable<any, any>
+---@field GetThemeArchives fun(): Orderedtable<any, any>
+---@field LoadModInfos fun(): any[]
+---@field LoadModInfosAndVerify fun(disabledModsByIdAndVersion: any[]): any[]
+---@field DisableAndVerify fun(mods: any[], disabledModsByIdAndVersion: any[]): any[]
+---@field LoadMods fun(disabledModsByIdAndVersion: any[]): nil
+---@overload fun(mods: any[], disabledModsByIdAndVersion: any[]): nil
+---@field RunModPhase fun(phase: ModRunPhase): nil
+---@overload fun(enabledSystems: any[]&, phase: ModRunPhase): nil
+---@field Dispose fun(): nil
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+---@field TextureSize number
+---@field ModSearchPaths number
+---@field UnpackPath number
+---@field Mods number
+---@field Systems number
+---@field MissingDependencies number
+ModLoader = {}

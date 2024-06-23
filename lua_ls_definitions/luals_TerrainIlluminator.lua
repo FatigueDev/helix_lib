@@ -1,0 +1,15 @@
+---@meta TerrainIlluminator
+---@class TerrainIlluminator: Object
+---@field ctor fun(game: ClientMain): TerrainIlluminator
+---@field get_Logger fun(): ILogger
+---@field OnBlockTexturesLoaded fun(): nil
+---@field SunRelightChunk fun(chunk: ClientChunk, chunkX: number, chunkY: number, chunkZ: number): nil
+---@field GetChunk fun(chunkX: number, chunkY: number, chunkZ: number): IWorldChunk
+---@field GetUnpackedChunkFast fun(chunkX: number, chunkY: number, chunkZ: number, notRecentlyAccessed: boolean): IWorldChunk
+---@field ChunkIndex3D fun(chunkX: number, chunkY: number, chunkZ: number): Int64
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+---@field Logger ILogger
+TerrainIlluminator = {}

@@ -1,0 +1,11 @@
+---@meta Packet_NatFloat
+---@class Packet_NatFloat: Object
+---@field ctor fun(): Packet_NatFloat
+---@field SetAvg fun(value: number): nil
+---@field SetVar fun(value: number): nil
+---@field SetDist fun(value: number): nil
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+Packet_NatFloat = {}

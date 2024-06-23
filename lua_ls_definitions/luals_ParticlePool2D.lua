@@ -1,0 +1,20 @@
+---@meta ParticlePool2D
+---@class ParticlePool2D: Object
+---@field ctor fun(capi: ICoreClientAPI, poolSize: number): ParticlePool2D
+---@field get_RenderTransparent fun(): boolean
+---@field get_Model fun(): MeshRef
+---@field get_QuantityAlive fun(): number
+---@field LoadModel fun(): MeshData
+---@field Spawn fun(particleProperties: IParticlePropertiesProvider): number
+---@field ShouldRender fun(): boolean
+---@field OnNewFrame fun(dt: Single): nil
+---@field Dispose fun(): nil
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+---@field RenderTransparent boolean
+---@field Model boolean
+---@field QuantityAlive boolean
+---@field ParticlesPool boolean
+ParticlePool2D = {}

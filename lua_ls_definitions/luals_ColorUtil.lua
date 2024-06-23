@@ -1,0 +1,57 @@
+---@meta ColorUtil
+---@class ColorUtil: Object
+---@field ctor fun(): ColorUtil
+---@field ReverseColorBytes fun(color: number[]): number[]
+---@overload fun(color: number): number
+---@field ToBGRABytes fun(color: number): number[]
+---@field ToRGBABytes fun(color: number): number[]
+---@field ToRGBAFloats fun(color: number): Single[]
+---@field ToRGBVec3f fun(color: number, outVal: Vec3f&): Vec3f
+---@field ToRGBAVec4f fun(color: number, outVal: Vec4f&): Vec4f
+---@field ColorFromRgba fun(channels: number[]): number
+---@overload fun(colorRel: Vec4f): number
+---@overload fun(r: number, g: number, b: number, a: number): number
+---@field FromRGBADoubles fun(rgba: Double[]): number
+---@field ToRGBADoubles fun(color: number): Double[]
+---@field ColorFromRgba fun(col: Double[]): number
+---@field ColorMultiply fun(color1: number[], color2: number[]): number[]
+---@field ColorMultiplyEach fun(color: number, color2: number): number
+---@field ColorMultiply3 fun(color: number, multiplier: Single): number
+---@field ColorMultiply3Clamped fun(color: number, multiplier: Single): number
+---@field ColorMultiply4 fun(color: number, redMul: Single, greenMul: Single, blueMul: Single, alphaMul: Single): number
+---@overload fun(color: number, multiplier: Single): number
+---@field ColorAverage fun(colors: number[], weights: Single[]): number
+---@field ColorOverlay fun(rgb1: number, rgb2: number, c2weight: Single): number
+---@field ColorOver fun(rgb1: number, rgb2: number): number
+---@field ColorCombineHSV fun(h1: number, s1: number, v1: number, h2: number, s2: number, v2: number): number[]
+---@field ColorSubstractHSV fun(h1: number, s1: number, v1: number, h2: number, s2: number, v2: number): number[]
+---@field ToRgba fun(a: number, r: number, g: number, b: number): number
+---@field ColorA fun(color: number): number
+---@field ColorR fun(color: number): number
+---@field ColorG fun(color: number): number
+---@field ColorB fun(color: number): number
+---@field ColorToString fun(color: number): string
+---@field Hex2Int fun(hex: string): number
+---@field Int2Hex fun(color: number): string
+---@field Int2HexBGR fun(color: number): string
+---@field Int2HexRgba fun(color: number): string
+---@field Doubles2Hex fun(color: Double[]): string
+---@field Hex2Doubles fun(hex: string): Double[]
+---@overload fun(hex: string, opacityRel: Double): Double[]
+---@field Rgb2Hsv fun(r: Single, g: Single, b: Single): number
+---@field Rgb2HSv fun(rgb: number): number
+---@field RgbToHsvInts fun(r: number, g: number, b: number): number[]
+---@field Hsv2Rgb fun(hsv: number): number
+---@field HsvToRgb fun(h: number, s: number, v: number): number
+---@field GrayscaleColor fun(brightness: number): number
+---@field HsvToRgba fun(h: number, s: number, v: number): number
+---@overload fun(h: number, s: number, v: number, a: number): number
+---@field Hsv2RgbInts fun(h: number, s: number, v: number): number[]
+---@field HSVa2RGBaBytes fun(hsva: number[]): number[]
+---@field getIncandescenceColor fun(temperature: number): number[]
+---@field GetIncandescenceColorAsColor4f fun(temperature: number): Single[]
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+ColorUtil = {}

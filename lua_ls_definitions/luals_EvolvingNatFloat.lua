@@ -1,0 +1,22 @@
+---@meta EvolvingNatFloat
+---@class EvolvingNatFloat: Object
+---@field ctor fun(): EvolvingNatFloat
+---@overload fun(transform: EnumTransformFunction, factor: Single): EvolvingNatFloat
+---@field get_Factor fun(): Single
+---@field get_MaxValue fun(): Nullable`1
+---@field get_Transform fun(): EnumTransformFunction
+---@field createIdentical fun(factor: Single): EvolvingNatFloat
+---@field create fun(function: EnumTransformFunction, factor: Single): EvolvingNatFloat
+---@field nextFloat fun(firstvalue: Single, sequence: Single): Single
+---@field Clone fun(): EvolvingNatFloat
+---@field FromBytes fun(reader: BinaryReader): nil
+---@field ToBytes fun(writer: BinaryWriter): nil
+---@field CreateFromBytes fun(reader: BinaryReader): EvolvingNatFloat
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+---@field Factor Single
+---@field MaxValue Single
+---@field Transform Single
+EvolvingNatFloat = {}

@@ -1,0 +1,43 @@
+---@meta GuiManager
+---@class GuiManager: ClientSystem
+---@field ctor fun(game: ClientMain): GuiManager
+---@field get_Name fun(): string
+---@field get_World fun(): IWorldAccessor
+---@field OnServerIdentificationReceived fun(): nil
+---@field RegisterDefaultDialogs fun(): nil
+---@field GetSystemType fun(): EnumClientSystemany
+---@field OnBlockTexturesLoaded fun(): nil
+---@field OnOwnPlayerDataReceived fun(): nil
+---@field OnBeforeRenderFrame3D fun(deltaTime: Single): nil
+---@field OnRenderFrameGUI fun(deltaTime: Single): nil
+---@field OnFinalizeFrame fun(dt: Single): nil
+---@field OnKeyDown fun(args: KeyEvent): nil
+---@field OnKeyUp fun(args: KeyEvent): nil
+---@field OnKeyPress fun(args: KeyEvent): nil
+---@field OnMouseDown fun(args: MouseEvent): nil
+---@field OnMouseUp fun(args: MouseEvent): nil
+---@field OnMouseMove fun(args: MouseEvent): nil
+---@field OnMouseEnterSlot fun(slot: ItemSlot): boolean
+---@field OnMouseLeaveSlot fun(itemSlot: ItemSlot): boolean
+---@field OnMouseWheel fun(args: MouseWheelEventArgs): nil
+---@field CaptureAllInputs fun(): boolean
+---@field CaptureRawMouse fun(): boolean
+---@field SendPacketClient fun(packetClient: Packet_Client): nil
+---@field Dispose fun(game: ClientMain): nil
+---@field OnNewFrameReadOnlyMainThread fun(deltaTime: Single): nil
+---@field OnTouchStart fun(e: TouchEventArgs): nil
+---@field OnTouchMove fun(e: TouchEventArgs): nil
+---@field OnTouchEnd fun(e: TouchEventArgs): nil
+---@field OnUseEntity fun(e: OnUseEntityArgs): nil
+---@field OnHitEntity fun(e: OnUseEntityArgs): nil
+---@field SeperateThreadTickIntervalMs fun(): number
+---@field OnSeperateThreadGameTick fun(dt: Single): nil
+---@field OnMouseClickSlot fun(itemSlot: ItemSlot): boolean
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+---@field Name string
+---@field World string
+---@field DEBUG_PRINT_INTERACTIONS string
+GuiManager = {}

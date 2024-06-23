@@ -1,0 +1,14 @@
+---@meta WildcardUtil
+---@class WildcardUtil: Object
+---@field WildCardReplace fun(code: AssetLocation, search: AssetLocation, replace: AssetLocation): AssetLocation
+---@field Match fun(needle: string, haystack: string): boolean
+---@overload fun(needles: string[], haystack: string): boolean
+---@overload fun(needle: AssetLocation, haystack: AssetLocation): boolean
+---@overload fun(wildCard: AssetLocation, inCode: AssetLocation, allowedVariants: string[]): boolean
+---@field MatchesVariants fun(wildCard: AssetLocation, inCode: AssetLocation, allowedVariants: string[]): boolean
+---@field GetWildcardValue fun(wildCard: AssetLocation, inCode: AssetLocation): string
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+WildcardUtil = {}

@@ -1,0 +1,64 @@
+---@meta EntityTextureAtlasManager
+---@class EntityTextureAtlasManager: TextureAtlasManager
+---@field ctor fun(game: ClientMain): EntityTextureAtlasManager
+---@field ResolveTextureCodes fun(typeClient: EntityClientProperties, shape: Shape): nil
+---@field get_Count fun(): number
+---@field get_UnknownTexturePosition fun(): TextureAtlasPosition
+---@field get_Item fun(textureLoc: AssetLocationAndSource): number
+---@field get_Size fun(): Size2i
+---@field set_Size fun(value: Size2i): nil
+---@field get_Item fun(textureLocation: AssetLocation): TextureAtlasPosition
+---@field get_SubPixelPaddingX fun(): Single
+---@field get_SubPixelPaddingY fun(): Single
+---@field get_Positions fun(): TextureAtlasPosition[]
+---@field CreateNewAtlas fun(itemclass: string): nil
+---@field AddTextureLocation fun(loc: AssetLocationAndSource): boolean
+---@field SetTextureLocation fun(loc: AssetLocationAndSource): nil
+---@field GetOrAddTextureLocation fun(loc: AssetLocationAndSource): number
+---@field ContainsKey fun(loc: AssetLocation): boolean
+---@field GenFramebuffer fun(): nil
+---@field RenderTextureIntoAtlas fun(atlasTextureId: number, fromTexture: LoadedTexture, sourceX: Single, sourceY: Single, sourceWidth: Single, sourceHeight: Single, targetX: Single, targetY: Single, alphaTest: Single): nil
+---@field GetOrInsertTexture fun(path: AssetLocation, textureSubId: number&, texPos: TextureAtlasPosition&, onCreate: CreateTextureDelegate, alphaTest: Single): boolean
+---@field InsertTextureCached fun(path: AssetLocation, bmp: IBitmap, textureSubId: number&, texPos: TextureAtlasPosition&, alphaTest: Single): boolean
+---@field InsertTexture fun(bmp: IBitmap, textureSubId: number&, texPos: TextureAtlasPosition&, alphaTest: Single): boolean
+---@field RegenMipMaps fun(atlasNumber: number): nil
+---@field InsertTexture fun(bmp: BitmapRef, loc: AssetLocationAndSource, textureSubIdOut: number&): boolean
+---@field AllocateTextureSpace fun(width: number, height: number, textureSubId: number&, texPos: TextureAtlasPosition&): boolean
+---@field FreeTextureSpace fun(textureSubId: number): nil
+---@field PopulateTextureAtlassesFromTextures fun(): nil
+---@field ComposeTextureAtlasses_StageA fun(): nil
+---@field ComposeTextureAtlasses_StageB fun(): nil
+---@field ComposeTextureAtlasses_StageC fun(): nil
+---@field ReloadTextures fun(): TextureAtlasManager
+---@field PauseRegenMipmaps fun(): TextureAtlasManager
+---@field ResumeRegenMipmaps fun(): TextureAtlasManager
+---@field LoadCompositeBitmap fun(path: AssetLocation): IBitmap
+---@field LoadShapeTextureCodes fun(shape: Shape): nil
+---@field ResolveTextureDict fun(texturesDict: FastSmalltable<any, any>): nil
+---@field Dispose fun(): nil
+---@field GetRandomColor fun(textureSubId: number): number
+---@overload fun(textureSubId: number, rndIndex: number): number
+---@overload fun(texPos: TextureAtlasPosition, rndIndex: number): number
+---@field GetRandomColors fun(texPos: TextureAtlasPosition): number[]
+---@field GetAverageColor fun(textureSubId: number): number
+---@field InsertTexture fun(bytes: number[], textureSubId: number&, texPos: TextureAtlasPosition&, alphaTest: Single): boolean
+---@overload fun(path: AssetLocation, bytes: number[], textureSubId: number&, texPos: TextureAtlasPosition&, alphaTest: Single): boolean
+---@overload fun(ct: CompositeTexture, textureSubId: number&, texPos: TextureAtlasPosition&, alphaTest: Single): boolean
+---@field CollectAndBakeTexturesFromShape fun(compositeShape: Shape, targetDict: Itable<any, any>, baseLoc: AssetLocation): nil
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+---@field Count number
+---@field UnknownTexturePosition number
+---@field Item number
+---@field Size number
+---@field Item number
+---@field SubPixelPaddingX number
+---@field SubPixelPaddingY number
+---@field Positions number
+---@field Atlasses number
+---@field AtlasTextures number
+---@field TextureAtlasPositionsByTextureSubId number
+---@field UnknownTexturePos number
+EntityTextureAtlasManager = {}

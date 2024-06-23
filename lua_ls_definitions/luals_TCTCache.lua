@@ -1,0 +1,11 @@
+---@meta TCTCache
+---@class TCTCache: Object
+---@field ctor fun(tct: ChunkTesselator): TCTCache
+---@field GetCurrentBlockEntityOnSide fun(side: BlockFacing): BlockEntity
+---@overload fun(neibOffset: Vec3iAndFacingFlags): BlockEntity
+---@field UpdateChunkMinMax fun(x: Single, y: Single, z: Single): nil
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+TCTCache = {}

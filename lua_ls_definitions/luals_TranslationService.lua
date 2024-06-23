@@ -1,0 +1,26 @@
+---@meta TranslationService
+---@class TranslationService: Object
+---@field ctor fun(languageCode: string, logger: ILogger, assetManager: IAssetManager, lbBehavior: EnumLinebreakBehavior): TranslationService
+---@field get_LineBreakBehavior fun(): EnumLinebreakBehavior
+---@field set_LineBreakBehavior fun(value: EnumLinebreakBehavior): nil
+---@field get_LanguageCode fun(): string
+---@field Load fun(lazyLoad: boolean): nil
+---@field PreLoad fun(assetsPath: string, lazyLoad: boolean): nil
+---@field Invalidate fun(): nil
+---@field GetIfExists fun(key: string, args: table[]): string
+---@field Get fun(key: string, args: table[]): string
+---@field GetAllEntries fun(): Itable<any, any>
+---@field GetUnformatted fun(key: string): string
+---@field GetMatching fun(key: string, args: table[]): string
+---@field HasTranslation fun(key: string, findWildcarded: boolean): boolean
+---@overload fun(key: string, findWildcarded: boolean, logErrors: boolean): boolean
+---@field UseAssetManager fun(assetManager: IAssetManager): nil
+---@field GetMatchingIfExists fun(key: string, args: table[]): string
+---@field InitialiseSearch fun(): nil
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+---@field LineBreakBehavior EnumLinebreakBehavior
+---@field LanguageCode EnumLinebreakBehavior
+TranslationService = {}

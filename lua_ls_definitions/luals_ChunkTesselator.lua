@@ -1,0 +1,20 @@
+---@meta ChunkTesselator
+---@class ChunkTesselator: Object
+---@field ctor fun(game: ClientMain): ChunkTesselator
+---@field LightlevelsReceived fun(): nil
+---@field BlockTexturesLoaded fun(): nil
+---@field Start fun(): nil
+---@field ReloadTextures fun(): nil
+---@field BeginProcessChunk fun(chunkX: number, chunkY: number, chunkZ: number, chunk: ClientChunk, skipChunkCenter: boolean): boolean
+---@field NowProcessChunk fun(chunkX: number, chunkY: number, chunkZ: number, tessChunk: TesselatedChunk, skipChunkCenter: boolean): number
+---@field CalculateVisibleFaces fun(skipChunkCenter: boolean, baseX: number, baseY: number, baseZ: number): boolean
+---@field CalculateVisibleFaces_Fluids fun(skipChunkCenter: boolean, baseX: number, baseY: number, baseZ: number): boolean
+---@field BuildBlockPolygons fun(chunkX: number, chunkY: number, chunkZ: number): nil
+---@field BuildBlockPolygons_EdgeOnly fun(chunkX: number, chunkY: number, chunkZ: number): nil
+---@field GetMeshPoolForPass fun(textureid: number, renderPass: EnumChunkRenderPass, lodLevel: number): MeshData
+---@field GetPoolForPass fun(renderPass: EnumChunkRenderPass, lodLevel: number): MeshData[]
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+ChunkTesselator = {}

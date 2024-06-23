@@ -1,0 +1,186 @@
+---@meta EntityItem
+---@class EntityItem: Entity
+---@field ctor fun(): EntityItem
+---@field get_Itemstack fun(): ItemStack
+---@field set_Itemstack fun(value: ItemStack): nil
+---@field get_ByPlayerUid fun(): string
+---@field set_ByPlayerUid fun(value: string): nil
+---@field get_MaterialDensity fun(): Single
+---@field get_IsInteractable fun(): boolean
+---@field get_LightHsv fun(): number[]
+---@field Initialize fun(properties: EntityProperties, api: ICoreAPI, chunkindex3d: Int64): nil
+---@field OnGameTick fun(dt: Single): nil
+---@field OnEntityDespawn fun(despawn: EntityDespawnData): nil
+---@field OnReceivedServerAnimations fun(activeAnimations: number[], activeAnimationsCount: number, activeAnimationSpeeds: Single[]): nil
+---@field UpdateDebugAttributes fun(): nil
+---@field StartAnimation fun(code: string): nil
+---@field StopAnimation fun(code: string): nil
+---@field Die fun(reason: EnumDespawnReason, damageSourceForDeath: DamageSource): nil
+---@field FromItemstack fun(itemstack: ItemStack, position: Vec3d, velocity: Vec3d, world: IWorldAccessor): EntityItem
+---@field CanCollect fun(byEntity: Entity): boolean
+---@field OnCollected fun(byEntity: Entity): ItemStack
+---@field OnCollideWithLiquid fun(): nil
+---@field ShouldReceiveDamage fun(damageSource: DamageSource, damage: Single): boolean
+---@field ReceiveDamage fun(damageSource: DamageSource, damage: Single): boolean
+---@field FromBytes fun(reader: BinaryReader, forClient: boolean): nil
+---@field get_SwimmingOffsetY fun(): Double
+---@field add_OnInitialized fun(value: Action): nil
+---@field remove_OnInitialized fun(value: Action): nil
+---@field get_IsCreature fun(): boolean
+---@field get_AnimManager fun(): IAnimationManager
+---@field set_AnimManager fun(value: IAnimationManager): nil
+---@field get_IsOnFire fun(): boolean
+---@field set_IsOnFire fun(value: boolean): nil
+---@field get_Properties fun(): EntityProperties
+---@field get_SidedProperties fun(): EntitySidedProperties
+---@field get_Collided fun(): boolean
+---@field get_SidedPos fun(): EntityPos
+---@field get_LocalEyePos fun(): Vec3d
+---@field set_LocalEyePos fun(value: Vec3d): nil
+---@field get_ApplyGravity fun(): boolean
+---@field set_LightHsv fun(value: number[]): nil
+---@field get_ShouldDespawn fun(): boolean
+---@field get_StoreWithChunk fun(): boolean
+---@field get_AlwaysActive fun(): boolean
+---@field get_Alive fun(): boolean
+---@field set_Alive fun(value: boolean): nil
+---@field get_IdleSoundChanceModifier fun(): Single
+---@field set_IdleSoundChanceModifier fun(value: Single): nil
+---@field get_RenderColor fun(): number
+---@field get_LadderFixDelta fun(): Double
+---@field OnHurt fun(dmgSource: DamageSource, damage: Single): nil
+---@field AfterInitialized fun(onFirstSpawn: boolean): nil
+---@field TryGiveItemStack fun(itemstack: ItemStack): boolean
+---@field GetDrops fun(world: IWorldAccessor, pos: BlockPos, byPlayer: IPlayer): ItemStack[]
+---@field TeleportToDouble fun(x: Double, y: Double, z: Double, onTeleported: Action): nil
+---@field TeleportTo fun(x: number, y: number, z: number): nil
+---@overload fun(position: Vec3d): nil
+---@overload fun(position: BlockPos): nil
+---@overload fun(position: EntityPos, onTeleported: Action): nil
+---@field OnAsyncParticleTick fun(dt: Single, manager: IAsyncParticleManager): nil
+---@field Ignite fun(): nil
+---@field OnTesselation fun(entityShape: Shape&, shapePathForLogging: string): nil
+---@field OnFallToGround fun(motionY: Double): nil
+---@field OnCollided fun(): nil
+---@field OnEntityLoaded fun(): nil
+---@field OnEntitySpawn fun(): nil
+---@field OnExitedLiquid fun(): nil
+---@field OnInteract fun(byEntity: EntityAgent, itemslot: ItemSlot, hitPosition: Vec3d, mode: EnumInteractMode): nil
+---@field GetInteractionHelp fun(world: IClientWorldAccessor, es: EntitySelection, player: IClientPlayer): WorldInteraction[]
+---@field OnReceivedServerPos fun(isTeleport: boolean): nil
+---@field OnReceivedClientPacket fun(player: IServerPlayer, packetid: number, data: number[]): nil
+---@field OnReceivedServerPacket fun(packetid: number, data: number[]): nil
+---@field OnStateChanged fun(beforeState: EnumEntityState): nil
+---@field SetCollisionBox fun(length: Single, height: Single): nil
+---@field SetSelectionBox fun(length: Single, height: Single): nil
+---@field AddBehavior fun(behavior: EntityBehavior): nil
+---@field RemoveBehavior fun(behavior: EntityBehavior): nil
+---@field HasBehavior fun(behaviorName: string): boolean
+---@overload fun(): boolean
+---@field GetBehavior fun(name: string): EntityBehavior
+---@overload fun(): T
+---@field IsActivityRunning fun(key: string): boolean
+---@field RemainingActivityTime fun(key: string): number
+---@field SetActivityRunning fun(key: string, milliseconds: number): nil
+---@field FromBytes fun(reader: BinaryReader, isSync: boolean, serversideRemaps: table<any, any>): nil
+---@field ToBytes fun(writer: BinaryWriter, forClient: boolean): nil
+---@field Revive fun(): nil
+---@field PlayEntitySound fun(type: string, dualCallByPlayer: IPlayer, randomizePitch: boolean, range: Single): nil
+---@field Notify fun(key: string, data: table): nil
+---@field WillExport fun(startPos: BlockPos): nil
+---@field DidImportOrExport fun(startPos: BlockPos): nil
+---@field OnStoreCollectibleMappings fun(blockIdMapping: table<any, any>, itemIdMapping: table<any, any>): nil
+---@field OnLoadCollectibleMappings fun(worldForNewMappings: IWorldAccessor, oldBlockIdMapping: table<any, any>, oldItemIdMapping: table<any, any>, schematicSeed: number): nil
+---@overload fun(worldForNewMappings: IWorldAccessor, oldBlockIdMapping: table<any, any>, oldItemIdMapping: table<any, any>, schematicSeed: number, resolveImports: boolean): nil
+---@field GetName fun(): string
+---@field GetInfoText fun(): string
+---@field CodeWithPath fun(path: string): AssetLocation
+---@field CodeWithoutParts fun(componentsToRemove: number): string
+---@field CodeEndWithoutParts fun(componentsToRemove: number): string
+---@field CodeWithParts fun(components: string[]): AssetLocation
+---@overload fun(component: string): AssetLocation
+---@field CodeWithVariant fun(type: string, value: string): AssetLocation
+---@field CodeWithVariants fun(valuesByType: table<any, any>): AssetLocation
+---@overload fun(types: string[], values: string[]): AssetLocation
+---@field CodeWithPart fun(part: string, atPosition: number): AssetLocation
+---@field LastCodePart fun(posFromRight: number): string
+---@field FirstCodePart fun(posFromLeft: number): string
+---@field WildCardMatch fun(wildcards: AssetLocation[]): boolean
+---@overload fun(wildCard: AssetLocation): boolean
+---@overload fun(wildcards: string[]): boolean
+---@overload fun(wildCard: string): boolean
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+---@field Itemstack ItemStack
+---@field ByPlayerUid ItemStack
+---@field MaterialDensity ItemStack
+---@field IsInteractable ItemStack
+---@field LightHsv ItemStack
+---@field SwimmingOffsetY ItemStack
+---@field IsCreature ItemStack
+---@field AnimManager ItemStack
+---@field IsOnFire ItemStack
+---@field Properties ItemStack
+---@field SidedProperties ItemStack
+---@field Collided ItemStack
+---@field SidedPos ItemStack
+---@field LocalEyePos ItemStack
+---@field ApplyGravity ItemStack
+---@field ShouldDespawn ItemStack
+---@field StoreWithChunk ItemStack
+---@field AlwaysActive ItemStack
+---@field Alive ItemStack
+---@field IdleSoundChanceModifier ItemStack
+---@field RenderColor ItemStack
+---@field LadderFixDelta ItemStack
+---@field OnInitialized ItemStack
+---@field Slot ItemStack
+---@field itemSpawnedMilliseconds ItemStack
+---@field World ItemStack
+---@field Api ItemStack
+---@field PhysicsUpdateWatcher ItemStack
+---@field ActivityTimers ItemStack
+---@field Pos ItemStack
+---@field ServerPos ItemStack
+---@field PreviousServerPos ItemStack
+---@field PositionBeforeFalling ItemStack
+---@field InChunkIndex3d ItemStack
+---@field CollisionBox ItemStack
+---@field OriginCollisionBox ItemStack
+---@field SelectionBox ItemStack
+---@field OriginSelectionBox ItemStack
+---@field Teleporting ItemStack
+---@field IsTeleport ItemStack
+---@field EntityId ItemStack
+---@field SimulationRange ItemStack
+---@field ClimbingOnFace ItemStack
+---@field ClimbingIntoFace ItemStack
+---@field ClimbingOnCollBox ItemStack
+---@field OnGround ItemStack
+---@field FeetInLiquid ItemStack
+---@field InLava ItemStack
+---@field InLavaBeginTotalMs ItemStack
+---@field OnFireBeginTotalMs ItemStack
+---@field Swimming ItemStack
+---@field CollidedVertically ItemStack
+---@field CollidedHorizontally ItemStack
+---@field State ItemStack
+---@field DespawnReason ItemStack
+---@field WatchedAttributes ItemStack
+---@field DebugAttributes ItemStack
+---@field Attributes ItemStack
+---@field IsRendered ItemStack
+---@field IsShadowRendered ItemStack
+---@field Stats ItemStack
+---@field touchDistanceSq ItemStack
+---@field ownPosRepulse ItemStack
+---@field hasRepulseBehavior ItemStack
+---@field packet ItemStack
+---@field minRangeToClient ItemStack
+---@field Code ItemStack
+---@field VariantStrict ItemStack
+---@field Variant ItemStack
+---@field Class ItemStack
+EntityItem = {}

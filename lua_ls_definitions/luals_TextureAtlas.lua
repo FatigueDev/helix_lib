@@ -1,0 +1,23 @@
+---@meta TextureAtlas
+---@class TextureAtlas: Object
+---@field ctor fun(width: number, height: number, subPixelPaddingx: Single, subPixelPaddingy: Single): TextureAtlas
+---@field InsertTexture fun(textureSubId: number, capi: ICoreClientAPI, asset: IAsset): boolean
+---@overload fun(textureSubId: number, bmp: IBitmap, copyPixels: boolean): boolean
+---@overload fun(textureSubId: number, width: number, height: number, pixels: number[]): boolean
+---@field UpdateTexture fun(tpos: TextureAtlasPosition, pixels: number[]): nil
+---@field AllocateTextureSpace fun(textureSubId: number, width: number, height: number): TextureAtlasPosition
+---@field FreeTextureSpace fun(textureSubId: number): boolean
+---@field AtlasWidth fun(): number
+---@field AtlasHeight fun(): number
+---@field Export fun(filename: string, game: ClientMain, atlasTextureId: number): nil
+---@field GetPixel fun(x: Single, y: Single): number
+---@field Upload fun(game: ClientMain): LoadedTexture
+---@field PopulateAtlasPositions fun(positions: TextureAtlasPosition[], atlasNumber: number): nil
+---@field DrawToTexture fun(platform: ClientPlatformAbstract, texAtlas: LoadedTexture): nil
+---@field DisposePixels fun(): nil
+---@field ReinitPixels fun(): nil
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+TextureAtlas = {}

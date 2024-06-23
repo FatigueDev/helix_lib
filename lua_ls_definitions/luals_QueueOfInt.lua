@@ -1,0 +1,15 @@
+---@meta QueueOfInt
+---@class QueueOfInt: Object
+---@field ctor fun(): QueueOfInt
+---@field Clear fun(): nil
+---@field Enqueue fun(a: number, b: number, c: number, d: number): nil
+---@overload fun(v: number): nil
+---@field EnqueueIfLarger fun(a: number, b: number, c: number, d: number): nil
+---@overload fun(v: number): nil
+---@field Dequeue fun(): number
+---@field DequeueLIFO fun(): number
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+QueueOfInt = {}

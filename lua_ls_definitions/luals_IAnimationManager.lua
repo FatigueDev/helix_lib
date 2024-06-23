@@ -1,0 +1,28 @@
+---@meta IAnimationManager
+---@class IAnimationManager
+---@field get_Animator fun(): IAnimator
+---@field set_Animator fun(value: IAnimator): nil
+---@field get_HeadController fun(): EntityHeadController
+---@field set_HeadController fun(value: EntityHeadController): nil
+---@field Init fun(api: ICoreAPI, entity: Entity): nil
+---@field get_AnimationsDirty fun(): boolean
+---@field set_AnimationsDirty fun(value: boolean): nil
+---@field IsAnimationActive fun(anims: string[]): boolean
+---@field GetAnimationState fun(anim: string): RunningAnimation
+---@field StartAnimation fun(animdata: AnimationMetaData): boolean
+---@overload fun(configCode: string): boolean
+---@field StopAnimation fun(code: string): nil
+---@field FromAttributes fun(tree: ITreeAttribute, version: string): nil
+---@field ToAttributes fun(tree: ITreeAttribute, forClient: boolean): nil
+---@field get_ActiveAnimationsByAnimCode fun(): table<any, any>
+---@field OnReceivedServerAnimations fun(activeAnimations: number[], activeAnimationsCount: number, activeAnimationSpeeds: Single[]): nil
+---@field OnAnimationStopped fun(code: string): nil
+---@field OnServerTick fun(dt: Single): nil
+---@field OnClientFrame fun(dt: Single): nil
+---@field ResetAnimation fun(beginholdAnim: string): nil
+---@field RegisterFrameCallback fun(trigger: AnimFrameCallback): nil
+---@field Animator IAnimator
+---@field HeadController IAnimator
+---@field AnimationsDirty IAnimator
+---@field ActiveAnimationsByAnimCode IAnimator
+IAnimationManager = {}

@@ -1,0 +1,13 @@
+---@meta Packet_ModId
+---@class Packet_ModId: Object
+---@field ctor fun(): Packet_ModId
+---@field SetModid fun(value: string): nil
+---@field SetName fun(value: string): nil
+---@field SetVersion fun(value: string): nil
+---@field SetNetworkversion fun(value: string): nil
+---@field SetRequiredOnClient fun(value: boolean): nil
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+Packet_ModId = {}

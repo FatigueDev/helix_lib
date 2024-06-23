@@ -1,0 +1,17 @@
+---@meta Packet_ClientIdentification
+---@class Packet_ClientIdentification: Object
+---@field ctor fun(): Packet_ClientIdentification
+---@field SetMdProtocolVersion fun(value: string): nil
+---@field SetPlayername fun(value: string): nil
+---@field SetMpToken fun(value: string): nil
+---@field SetServerPassword fun(value: string): nil
+---@field SetPlayerUID fun(value: string): nil
+---@field SetViewDistance fun(value: number): nil
+---@field SetRenderMetaBlocks fun(value: number): nil
+---@field SetNetworkVersion fun(value: string): nil
+---@field SetShortGameVersion fun(value: string): nil
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+Packet_ClientIdentification = {}

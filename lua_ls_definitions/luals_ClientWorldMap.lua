@@ -1,0 +1,162 @@
+---@meta ClientWorldMap
+---@class ClientWorldMap: WorldMap
+---@field ctor fun(game: ClientMain): ClientWorldMap
+---@field get_MapSize fun(): Vec3i
+---@field OnLightLevelsReceived fun(): nil
+---@field OnBlocksAndLightLevelsReceived fun(): nil
+---@field BlockTexturesLoaded fun(): nil
+---@field LoadColorMaps fun(): number
+---@field PopulateColorMaps fun(): nil
+---@field get_Logger fun(): ILogger
+---@field get_ChunkSize fun(): number
+---@field get_ChunkSizeMask fun(): number
+---@field get_MapRegionSizeInChunks fun(): number
+---@field get_MapSizeX fun(): number
+---@field get_MapSizeY fun(): number
+---@field get_MapSizeZ fun(): number
+---@field get_RegionMapSizeX fun(): number
+---@field get_RegionMapSizeY fun(): number
+---@field get_RegionMapSizeZ fun(): number
+---@field get_Blocks fun(): Iany[]
+---@field get_BlocksByCode fun(): table<any, any>
+---@field get_World fun(): IWorldAccessor
+---@field get_RegionSize fun(): number
+---@field get_All fun(): any[]
+---@field get_DebugClaimPrivileges fun(): boolean
+---@field MapRegionIndex2DFromClientChunkCoord fun(chunkX: number, chunkZ: number): Int64
+---@field LoadOrCreateLerpedClimateMap fun(chunkX: number, chunkZ: number): number[]
+---@field getColorMapData fun(block: Block, posX: number, posY: number, posZ: number): ColorMapData
+---@field ApplyColorMapOnRgba fun(climateColorMap: string, seasonColorMap: string, color: number, posX: number, posY: number, posZ: number, flipRb: boolean): number
+---@overload fun(climateMap: ColorMap, seasonMap: ColorMap, color: number, posX: number, posY: number, posZ: number, flipRb: boolean): number
+---@overload fun(climateColorMap: string, seasonColorMap: string, color: number, rain: number, temp: number, flipRb: boolean, seasonYPixelRel: Single, seasonXOffset: Single): number
+---@overload fun(climateMap: ColorMap, seasonMap: ColorMap, color: number, rain: number, temp: number, flipRb: boolean, seasonYPixelRel: Single, seasonXOffset: Single, heightAboveSealevel: number): number
+---@field GetClimate fun(posX: number, posZ: number): number
+---@field GetClimateFast fun(map: number[], inRegionX: number, inRegionZ: number): number
+---@field DescaleTemperature fun(temperature: Single): number
+---@field GetRainFall fun(rainfall: number, y: number): number
+---@field GetAdjustedTemperature fun(temp: number, distToSealevel: number): number
+---@field GetChunk fun(index3d: Int64): IWorldChunk
+---@overload fun(pos: BlockPos): WorldChunk
+---@overload fun(chunkX: number, chunkY: number, chunkZ: number): IWorldChunk
+---@field GetOrCreateDimension fun(subDimensionId: number, pos: Vec3d): IMiniDimension
+---@overload fun(cx: number, cy: number, cz: number): IMiniDimension
+---@field SetChunkDirty fun(index3d: Int64, priority: boolean, relight: boolean, edgeOnly: boolean): nil
+---@field MarkChunkDirty fun(cx: number, cy: number, cz: number, priority: boolean, sunRelight: boolean, OnRetesselated: Action, fireEvent: boolean, edgeOnly: boolean): nil
+---@field SetChunksAroundDirty fun(cx: number, cy: number, cz: number): nil
+---@field IsValidChunkPosFast fun(chunkX: number, chunkY: number, chunkZ: number): boolean
+---@field IsChunkRendered fun(cx: number, cy: number, cz: number): boolean
+---@field UncheckedGetBlockId fun(x: number, y: number, z: number): number
+---@field GetChunkNonLocking fun(chunkX: number, chunkY: number, chunkZ: number): IWorldChunk
+---@field OnMapSizeReceived fun(mapSize: Vec3i, regionMapSize: Vec3i): nil
+---@field GetChunkAtPos fun(posX: number, posY: number, posZ: number): IWorldChunk
+---@field SpawnBlockEntity fun(classname: string, position: BlockPos, byItemStack: ItemStack): nil
+---@overload fun(be: BlockEntity): nil
+---@field RemoveBlockEntity fun(position: BlockPos): nil
+---@field GetBlockEntity fun(position: BlockPos): BlockEntity
+---@field SendSetBlock fun(blockId: number, posX: number, posY: number, posZ: number): nil
+---@field SendExchangeBlock fun(blockId: number, posX: number, posY: number, posZ: number): nil
+---@field UpdateLighting fun(oldblockid: number, newblockid: number, pos: BlockPos): nil
+---@field RemoveBlockLight fun(oldLightHsV: number[], pos: BlockPos): nil
+---@field UpdateLightingAfterAbsorptionChange fun(oldAbsorption: number, newAbsorption: number, pos: BlockPos): nil
+---@field UpdateLightingBulk fun(blockUpdates: table<any, any>): nil
+---@field SendBlockUpdateBulk fun(blockUpdates: any[], doRelight: boolean): nil
+---@field SendBlockUpdateBulkMinimal fun(blockUpdates: table<any, any>): nil
+---@field MarkBlockDirty fun(pos: BlockPos, skipPlayer: IPlayer): nil
+---@field MarkBlockModified fun(pos: BlockPos, doRelight: boolean): nil
+---@field MarkBlockDirty fun(pos: BlockPos, OnRetesselated: Action): nil
+---@field MarkBlockEntityDirty fun(pos: BlockPos): nil
+---@field TriggerNeighbourBlockUpdate fun(pos: BlockPos): nil
+---@field GetMapRegion fun(regionX: number, regionZ: number): IMapRegion
+---@field GetMapChunk fun(chunkX: number, chunkZ: number): IMapChunk
+---@field UnloadMapRegion fun(regionX: number, regionZ: number): nil
+---@field GetClimateAt fun(pos: BlockPos, mode: EnumGetClimateMode, totalDays: Double): ClimateCondition
+---@overload fun(pos: BlockPos, baseClimate: ClimateCondition, mode: EnumGetClimateMode, totalDays: Double): ClimateCondition
+---@overload fun(pos: BlockPos, climate: number): ClimateCondition
+---@field GetWindSpeedAt fun(pos: BlockPos): Vec3d
+---@overload fun(pos: Vec3d): Vec3d
+---@field GetScaledAdjustedTemperatureFloat fun(temp: number, distToSealevel: number): Single
+---@field GetFertility fun(rain: number, scaledTemp: Single, posYRel: Single): number
+---@field DamageBlock fun(pos: BlockPos, facing: BlockFacing, damage: Single, dualCallByPlayer: IPlayer): nil
+---@field MarkDecorsDirty fun(pos: BlockPos): nil
+---@field Add fun(claim: LandClaim): nil
+---@field Remove fun(claim: LandClaim): boolean
+---@field SendDecorUpdateBulk fun(updatedDecorPositions: any[]): nil
+---@field get_ChunkMapSizeX fun(): number
+---@field get_ChunkMapSizeY fun(): number
+---@field get_ChunkMapSizeZ fun(): number
+---@field GetLightRGBsAsInt fun(posX: number, posY: number, posZ: number): number
+---@field GetLightRGBSVec4f fun(posX: number, posY: number, posZ: number): Vec4f
+---@field GetLightHSVLevels fun(posX: number, posY: number, posZ: number): number[]
+---@field LoadLightHSVLevels fun(posX: number, posY: number, posZ: number): number
+---@field Get fun(pos: BlockPos): LandClaim[]
+---@field TryAccess fun(player: IPlayer, pos: BlockPos, accessFlag: EnumBlockAccessFlags): boolean
+---@field TestAccess fun(player: IPlayer, pos: BlockPos, accessFlag: EnumBlockAccessFlags): EnumWorldAccessResponse
+---@field TestBlockAccess fun(player: IPlayer, blockSel: BlockSelection, accessType: EnumBlockAccessFlags): EnumWorldAccessResponse
+---@overload fun(player: IPlayer, blockSel: BlockSelection, accessType: EnumBlockAccessFlags, claimant: string&): EnumWorldAccessResponse
+---@field GetBlockingLandClaimant fun(forPlayer: IPlayer, pos: BlockPos, accessFlag: EnumBlockAccessFlags): string
+---@field RebuildLandClaimPartitions fun(): nil
+---@field MapRegionIndex2D fun(regionX: number, regionZ: number): Int64
+---@field ChunkIndex3D fun(chunkX: number, chunkY: number, chunkZ: number): Int64
+---@overload fun(chunkX: number, chunkY: number, chunkZ: number, dim: number): Int64
+---@overload fun(pos: EntityPos): Int64
+---@overload fun(cpos: ChunkPos): Int64
+---@field MapChunkIndex2D fun(chunkX: number, chunkZ: number): Int64
+---@field ChunkPosFromChunkIndex3D fun(chunkIndex3d: Int64): ChunkPos
+---@field ChunkPosFromChunkIndex2D fun(index2d: Int64): ChunkPos
+---@field ChunkSizedIndex3D fun(lX: number, lY: number, lZ: number): number
+---@field IsValidPos fun(pos: BlockPos): boolean
+---@overload fun(posX: number, posY: number, posZ: number): boolean
+---@field IsValidChunkPos fun(chunkX: number, chunkY: number, chunkZ: number): boolean
+---@field IsMovementRestrictedPos fun(posX: Double, posY: Double, posZ: Double): boolean
+---@field PrintChunkMap fun(markChunkPos: Vec2i): nil
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+---@field MapSize Vec3i
+---@field Logger Vec3i
+---@field ChunkSize Vec3i
+---@field ChunkSizeMask Vec3i
+---@field MapRegionSizeInChunks Vec3i
+---@field MapSizeX Vec3i
+---@field MapSizeY Vec3i
+---@field MapSizeZ Vec3i
+---@field RegionMapSizeX Vec3i
+---@field RegionMapSizeY Vec3i
+---@field RegionMapSizeZ Vec3i
+---@field Blocks Vec3i
+---@field BlocksByCode Vec3i
+---@field World Vec3i
+---@field RegionSize Vec3i
+---@field All Vec3i
+---@field DebugClaimPrivileges Vec3i
+---@field ChunkMapSizeX Vec3i
+---@field ChunkMapSizeY Vec3i
+---@field ChunkMapSizeZ Vec3i
+---@field ClientChunkSize Vec3i
+---@field ServerChunkSize Vec3i
+---@field MapChunkSize Vec3i
+---@field regionSize Vec3i
+---@field MaxViewDistance Vec3i
+---@field LandClaims Vec3i
+---@field RolesByCode Vec3i
+---@field RelaxedBlockAccess Vec3i
+---@field CachingBlockAccess Vec3i
+---@field BulkBlockAccess Vec3i
+---@field NoRelightBulkBlockAccess Vec3i
+---@field BulkMinimalBlockAccess Vec3i
+---@field LightingTasksLock Vec3i
+---@field LightingTasks Vec3i
+---@field seaLevel Vec3i
+---@field index3dMulX Vec3i
+---@field chunkMapSizeY Vec3i
+---@field index3dMulZ Vec3i
+---@field BlockLightLevels Vec3i
+---@field BlockLightLevelsByte Vec3i
+---@field hueLevels Vec3i
+---@field satLevels Vec3i
+---@field SunLightLevels Vec3i
+---@field SunLightLevelsByte Vec3i
+---@field SunBrightness Vec3i
+---@field LandClaimByRegion Vec3i
+ClientWorldMap = {}

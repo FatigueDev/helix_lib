@@ -1,0 +1,19 @@
+---@meta GetProfileInfoDelegate
+---@class GetProfileInfoDelegate: MulticastDelegate
+---@field ctor fun(object: table, method: IntPtr): GetProfileInfoDelegate
+---@field Invoke fun(session: IntPtr, profile: IntPtr, profileInfo: OptimusProfile&): number
+---@field BeginInvoke fun(session: IntPtr, profile: IntPtr, profileInfo: OptimusProfile&, callback: AsyncCallback, object: table): IAsyncResult
+---@field EndInvoke fun(profileInfo: OptimusProfile&, result: IAsyncResult): number
+---@field GetObjectData fun(info: SerializationInfo, context: StreamingContext): nil
+---@field Equals fun(obj: table): boolean
+---@field GetInvocationList fun(): Delegate[]
+---@field GetHashCode fun(): number
+---@field get_Target fun(): table
+---@field Clone fun(): table
+---@field DynamicInvoke fun(args: table[]): table
+---@field get_Method fun(): MethodInfo
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Target table
+---@field Method table
+GetProfileInfoDelegate = {}

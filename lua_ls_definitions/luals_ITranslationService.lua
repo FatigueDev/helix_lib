@@ -1,0 +1,20 @@
+---@meta ITranslationService
+---@class ITranslationService
+---@field get_LineBreakBehavior fun(): EnumLinebreakBehavior
+---@field get_LanguageCode fun(): string
+---@field Load fun(lazyload: boolean): nil
+---@field PreLoad fun(assetsPath: string, lazyLoad: boolean): nil
+---@field GetIfExists fun(key: string, args: table[]): string
+---@field Get fun(key: string, args: table[]): string
+---@field GetAllEntries fun(): Itable<any, any>
+---@field GetUnformatted fun(key: string): string
+---@field GetMatching fun(key: string, args: table[]): string
+---@field GetMatchingIfExists fun(key: string, args: table[]): string
+---@field HasTranslation fun(key: string, findWildcarded: boolean): boolean
+---@overload fun(key: string, findWildcarded: boolean, logErrors: boolean): boolean
+---@field UseAssetManager fun(assetManager: IAssetManager): nil
+---@field InitialiseSearch fun(): nil
+---@field Invalidate fun(): nil
+---@field LineBreakBehavior EnumLinebreakBehavior
+---@field LanguageCode EnumLinebreakBehavior
+ITranslationService = {}

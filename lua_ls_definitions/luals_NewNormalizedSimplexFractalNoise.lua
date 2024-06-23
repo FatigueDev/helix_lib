@@ -1,0 +1,13 @@
+---@meta NewNormalizedSimplexFractalNoise
+---@class NewNormalizedSimplexFractalNoise: Object
+---@field ctor fun(inputAmplitudes: Double[], frequencies: Double[], seed: Int64): NewNormalizedSimplexFractalNoise
+---@field FromDefaultOctaves fun(quantityOctaves: number, baseFrequency: Double, persistence: Double, seed: Int64): NewNormalizedSimplexFractalNoise
+---@field Noise fun(x: Double, y: Double, z: Double, amplitudes: Double[], thresholds: Double[]): Double
+---@field NoiseValueCurve fun(value: Double): Double
+---@field NoiseValueCurveInverse fun(value: Double): Double
+---@field ForColumn fun(relativeYFrequency: Double, amplitudes: Double[], thresholds: Double[], noiseX: Double, noiseZ: Double): ColumnNoise
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+NewNormalizedSimplexFractalNoise = {}

@@ -1,0 +1,18 @@
+---@meta Packet_PlayerGroup
+---@class Packet_PlayerGroup: Object
+---@field ctor fun(): Packet_PlayerGroup
+---@field SetUid fun(value: number): nil
+---@field SetOwneruid fun(value: string): nil
+---@field SetName fun(value: string): nil
+---@field GetChathistory fun(): Packet_ChatLine[]
+---@field SetChathistory fun(value: Packet_ChatLine[], count: number, length: number): nil
+---@overload fun(value: Packet_ChatLine[]): nil
+---@field GetChathistoryCount fun(): number
+---@field ChathistoryAdd fun(value: Packet_ChatLine): nil
+---@field SetCreatedbyprivatemessage fun(value: number): nil
+---@field SetMembership fun(value: number): nil
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+Packet_PlayerGroup = {}

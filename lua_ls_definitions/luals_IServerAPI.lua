@@ -1,0 +1,43 @@
+---@meta IServerAPI
+---@class IServerAPI
+---@field get_ServerIp fun(): string
+---@field get_Players fun(): IServerPlayer[]
+---@field get_Config fun(): IServerConfig
+---@field MarkConfigDirty fun(): nil
+---@field get_CurrentRunPhase fun(): EnumServerRunPhase
+---@field get_IsDedicated fun(): boolean
+---@field get_IsShuttingDown fun(): boolean
+---@field ShutDown fun(): nil
+---@field AddServerThread fun(threadname: string, system: IAsyncServerSystem): nil
+---@field PauseThread fun(threadname: string, waitTimeoutMs: number): boolean
+---@field ResumeThread fun(threadname: string): nil
+---@field get_TotalReceivedBytes fun(): Int64
+---@field get_TotalSentBytes fun(): Int64
+---@field get_ServerUptimeSeconds fun(): number
+---@field get_ServerUptimeMilliseconds fun(): Int64
+---@field get_TotalWorldPlayTime fun(): number
+---@field get_Logger fun(): ILogger
+---@field LogChat fun(message: string, args: table[]): nil
+---@field LogBuild fun(message: string, args: table[]): nil
+---@field LogVerboseDebug fun(message: string, args: table[]): nil
+---@field LogDebug fun(message: string, args: table[]): nil
+---@field LogNotification fun(message: string, args: table[]): nil
+---@field LogWarning fun(message: string, args: table[]): nil
+---@field LogError fun(message: string, args: table[]): nil
+---@field LogFatal fun(message: string, args: table[]): nil
+---@field LogEvent fun(message: string, args: table[]): nil
+---@field LoadMiniDimension fun(blocks: IMiniDimension): number
+---@field SetMiniDimension fun(miniDimension: IMiniDimension, index: number): number
+---@field ServerIp string
+---@field Players string
+---@field Config string
+---@field CurrentRunPhase string
+---@field IsDedicated string
+---@field IsShuttingDown string
+---@field TotalReceivedBytes string
+---@field TotalSentBytes string
+---@field ServerUptimeSeconds string
+---@field ServerUptimeMilliseconds string
+---@field TotalWorldPlayTime string
+---@field Logger string
+IServerAPI = {}

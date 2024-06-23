@@ -1,0 +1,20 @@
+---@meta Mat22
+---@class Mat22: Object
+---@field ctor fun(): Mat22
+---@field Create fun(): Single[]
+---@field CloneIt fun(a: Single[]): Single[]
+---@field Copy fun(output: Single[], a: Single[]): Single[]
+---@field Identity_ fun(output: Single[]): Single[]
+---@field Transpose fun(output: Single[], a: Single[]): Single[]
+---@field Invert fun(output: Single[], a: Single[]): Single[]
+---@field Adjoint fun(output: Single[], a: Single[]): Single[]
+---@field Determinant fun(a: Single[]): Single
+---@field Multiply fun(output: Single[], a: Single[], b: Single[]): Single[]
+---@field Mul fun(output: Single[], a: Single[], b: Single[]): Single[]
+---@field Rotate fun(output: Single[], a: Single[], rad: Single): Single[]
+---@field Scale fun(output: Single[], a: Single[], v: Single[]): Single[]
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+Mat22 = {}

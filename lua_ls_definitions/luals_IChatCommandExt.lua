@@ -1,0 +1,11 @@
+---@meta IChatCommandExt
+---@class IChatCommandExt: Object
+---@field WithDesc fun(cmd: IChatCommand, description: string): IChatCommand
+---@field BeginSub fun(cmd: IChatCommand, name: string): IChatCommand
+---@field BeginSubs fun(cmd: IChatCommand, name: string[]): IChatCommand
+---@field EndSub fun(cmd: IChatCommand): IChatCommand
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+IChatCommandExt = {}

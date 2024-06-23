@@ -1,0 +1,29 @@
+---@meta ServerPlayerData
+---@class ServerPlayerData: Object
+---@field ctor fun(): ServerPlayerData
+---@field get_PlayerGroupMemberships fun(): table<any, any>
+---@field ToString fun(): string
+---@field CompareTo fun(other: ServerPlayerData): number
+---@field SetRole fun(newGroup: PlayerRole): nil
+---@field GrantPrivilege fun(privilege: string): nil
+---@field DenyPrivilege fun(privilege: string): nil
+---@field RevokePrivilege fun(privilege: string): nil
+---@field JoinGroup fun(group: PlayerGroup, level: EnumPlayerGroupMemberShip): PlayerGroupMembership
+---@field GetAllPrivilegeCodes fun(serverConfig: ServerConfig): HashSet`1
+---@field LeaveGroup fun(group: PlayerGroup): nil
+---@overload fun(groupid: number): nil
+---@field HasPrivilege fun(privilege: string, rolesByCode: table<any, any>): boolean
+---@field GetPlayerRole fun(server: ServerMain): PlayerRole
+---@field GetType fun(): any
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+---@field PlayerGroupMemberships table<any, any>
+---@field PlayerUID table<any, any>
+---@field RoleCode table<any, any>
+---@field PlayerGroupMemberShips table<any, any>
+---@field AllowInvite table<any, any>
+---@field LastKnownPlayername table<any, any>
+---@field CustomPlayerData table<any, any>
+---@field ExtraLandClaimAllowance table<any, any>
+---@field ExtraLandClaimAreas table<any, any>
+ServerPlayerData = {}

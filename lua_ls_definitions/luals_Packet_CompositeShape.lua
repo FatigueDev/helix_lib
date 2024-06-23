@@ -1,0 +1,36 @@
+---@meta Packet_CompositeShape
+---@class Packet_CompositeShape: Object
+---@field ctor fun(): Packet_CompositeShape
+---@field SetBase fun(value: string): nil
+---@field SetRotatex fun(value: number): nil
+---@field SetRotatey fun(value: number): nil
+---@field SetRotatez fun(value: number): nil
+---@field GetAlternates fun(): Packet_CompositeShape[]
+---@field SetAlternates fun(value: Packet_CompositeShape[], count: number, length: number): nil
+---@overload fun(value: Packet_CompositeShape[]): nil
+---@field GetAlternatesCount fun(): number
+---@field AlternatesAdd fun(value: Packet_CompositeShape): nil
+---@field GetOverlays fun(): Packet_CompositeShape[]
+---@field SetOverlays fun(value: Packet_CompositeShape[], count: number, length: number): nil
+---@overload fun(value: Packet_CompositeShape[]): nil
+---@field GetOverlaysCount fun(): number
+---@field OverlaysAdd fun(value: Packet_CompositeShape): nil
+---@field SetVoxelizeShape fun(value: number): nil
+---@field GetSelectiveElements fun(): string[]
+---@field SetSelectiveElements fun(value: string[], count: number, length: number): nil
+---@overload fun(value: string[]): nil
+---@field GetSelectiveElementsCount fun(): number
+---@field SelectiveElementsAdd fun(value: string): nil
+---@field SetQuantityElements fun(value: number): nil
+---@field SetQuantityElementsSet fun(value: number): nil
+---@field SetFormat fun(value: number): nil
+---@field SetOffsetx fun(value: number): nil
+---@field SetOffsety fun(value: number): nil
+---@field SetOffsetz fun(value: number): nil
+---@field SetInsertBakedTextures fun(value: boolean): nil
+---@field SetScaleAdjust fun(value: number): nil
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+Packet_CompositeShape = {}

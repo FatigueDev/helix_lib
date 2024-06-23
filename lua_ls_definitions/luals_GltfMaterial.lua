@@ -1,0 +1,23 @@
+---@meta GltfMaterial
+---@class GltfMaterial: Object
+---@field ctor fun(): GltfMaterial
+---@field get_DoubleSided fun(): boolean
+---@field set_DoubleSided fun(value: boolean): nil
+---@field get_EmissiveFactor fun(): Single[]
+---@field set_EmissiveFactor fun(value: Single[]): nil
+---@field get_Name fun(): string
+---@field set_Name fun(value: string): nil
+---@field get_NormalTexture fun(): GltfMatTexture
+---@field set_NormalTexture fun(value: GltfMatTexture): nil
+---@field get_PbrMetallicRoughness fun(): GltfPbrMetallicRoughness
+---@field set_PbrMetallicRoughness fun(value: GltfPbrMetallicRoughness): nil
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+---@field DoubleSided boolean
+---@field EmissiveFactor boolean
+---@field Name boolean
+---@field NormalTexture boolean
+---@field PbrMetallicRoughness boolean
+GltfMaterial = {}

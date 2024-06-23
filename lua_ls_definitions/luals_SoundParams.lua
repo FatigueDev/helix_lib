@@ -1,0 +1,21 @@
+---@meta SoundParams
+---@class SoundParams: Object
+---@field ctor fun(): SoundParams
+---@overload fun(location: AssetLocation): SoundParams
+---@field get_Volume fun(): Single
+---@field set_Volume fun(value: Single): nil
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+---@field Volume Single
+---@field Location Single
+---@field Position Single
+---@field RelativePosition Single
+---@field ShouldLoop Single
+---@field DisposeOnFinish Single
+---@field Pitch Single
+---@field ReferenceDistance Single
+---@field Range Single
+---@field SoundType Single
+SoundParams = {}

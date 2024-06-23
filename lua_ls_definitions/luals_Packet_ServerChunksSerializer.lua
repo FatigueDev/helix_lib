@@ -1,0 +1,15 @@
+---@meta Packet_ServerChunksSerializer
+---@class Packet_ServerChunksSerializer: Object
+---@field ctor fun(): Packet_ServerChunksSerializer
+---@field DeserializeLengthDelimitedNew fun(stream: CitoMemoryStream): Packet_ServerChunks
+---@field DeserializeBuffer fun(buffer: number[], length: number, instance: Packet_ServerChunks): Packet_ServerChunks
+---@field Deserialize fun(stream: CitoMemoryStream, instance: Packet_ServerChunks): Packet_ServerChunks
+---@field DeserializeLengthDelimited fun(stream: CitoMemoryStream, instance: Packet_ServerChunks): Packet_ServerChunks
+---@field Serialize fun(stream: CitoStream, instance: Packet_ServerChunks): nil
+---@field SerializeToBytes fun(instance: Packet_ServerChunks): number[]
+---@field SerializeLengthDelimited fun(stream: CitoStream, instance: Packet_ServerChunks): nil
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+Packet_ServerChunksSerializer = {}

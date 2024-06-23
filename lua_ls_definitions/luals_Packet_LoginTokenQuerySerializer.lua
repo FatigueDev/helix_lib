@@ -1,0 +1,15 @@
+---@meta Packet_LoginTokenQuerySerializer
+---@class Packet_LoginTokenQuerySerializer: Object
+---@field ctor fun(): Packet_LoginTokenQuerySerializer
+---@field DeserializeLengthDelimitedNew fun(stream: CitoMemoryStream): Packet_LoginTokenQuery
+---@field DeserializeBuffer fun(buffer: number[], length: number, instance: Packet_LoginTokenQuery): Packet_LoginTokenQuery
+---@field Deserialize fun(stream: CitoMemoryStream, instance: Packet_LoginTokenQuery): Packet_LoginTokenQuery
+---@field DeserializeLengthDelimited fun(stream: CitoMemoryStream, instance: Packet_LoginTokenQuery): Packet_LoginTokenQuery
+---@field Serialize fun(stream: CitoStream, instance: Packet_LoginTokenQuery): nil
+---@field SerializeToBytes fun(instance: Packet_LoginTokenQuery): number[]
+---@field SerializeLengthDelimited fun(stream: CitoStream, instance: Packet_LoginTokenQuery): nil
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+Packet_LoginTokenQuerySerializer = {}

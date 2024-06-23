@@ -1,0 +1,94 @@
+---@meta Cuboidf
+---@class Cuboidf: Object
+---@field ctor fun(): Cuboidf
+---@overload fun(x1: Double, x2: Double, y1: Double, y2: Double, z1: Double, z2: Double): Cuboidf
+---@overload fun(start: Vec3f, end: Vec3f): Cuboidf
+---@overload fun(x1: Single, y1: Single, z1: Single, x2: Single, y2: Single, z2: Single): Cuboidf
+---@field get_XSize fun(): Single
+---@field get_YSize fun(): Single
+---@field get_ZSize fun(): Single
+---@field get_Width fun(): Single
+---@field get_Height fun(): Single
+---@field get_Length fun(): Single
+---@field get_MinX fun(): Single
+---@field get_MinY fun(): Single
+---@field get_MinZ fun(): Single
+---@field get_MaxX fun(): Single
+---@field get_MaxY fun(): Single
+---@field get_MaxZ fun(): Single
+---@field get_MidX fun(): Single
+---@field get_MidY fun(): Single
+---@field get_MidZ fun(): Single
+---@field get_Item fun(index: number): Single
+---@field set_Item fun(index: number, value: Single): nil
+---@field get_Empty fun(): boolean
+---@field get_Start fun(): Vec3f
+---@field get_End fun(): Vec3f
+---@field get_Startd fun(): Vec3d
+---@field get_Endd fun(): Vec3d
+---@field Set fun(x1: Single, y1: Single, z1: Single, x2: Single, y2: Single, z2: Single): Cuboidf
+---@overload fun(min: IVec3, max: IVec3): Cuboidf
+---@overload fun(collisionBox: Cuboidf): nil
+---@field Translate fun(posX: Single, posY: Single, posZ: Single): Cuboidf
+---@overload fun(vec: IVec3): Cuboidf
+---@field Sub fun(posX: Single, posY: Single, posZ: Single): Cuboidf
+---@overload fun(vec: IVec3): Cuboidf
+---@field Contains fun(x: Double, y: Double, z: Double): boolean
+---@field ContainsOrTouches fun(x: Single, y: Single, z: Single): boolean
+---@overload fun(vec: IVec3): boolean
+---@field OmniNotDownGrowBy fun(size: Single): Cuboidf
+---@field OmniGrowBy fun(size: Single): Cuboidf
+---@field ShrinkBy fun(size: Single): Cuboidf
+---@field GrowToInclude fun(x: number, y: number, z: number): Cuboidf
+---@field ClampTo fun(min: Vec3f, max: Vec3f): Cuboidf
+---@field GrowToInclude fun(vec: IVec3): Cuboidf
+---@field ShortestDistanceFrom fun(x: Single, y: Single, z: Single): Double
+---@overload fun(vec: IVec3): Double
+---@field pushOutX fun(from: Cuboidf, x: Single, direction: EnumPushDirection&): Double
+---@field pushOutY fun(from: Cuboidf, y: Single, direction: EnumPushDirection&): Double
+---@field pushOutZ fun(from: Cuboidf, z: Single, direction: EnumPushDirection&): Double
+---@field RotatedCopy fun(degX: Single, degY: Single, degZ: Single, origin: Vec3d): Cuboidf
+---@overload fun(vec: IVec3, origin: Vec3d): Cuboidf
+---@field OffsetCopy fun(x: Single, y: Single, z: Single): Cuboidf
+---@overload fun(vec: IVec3): Cuboidf
+---@field OffsetCopyDouble fun(x: Double, y: Double, z: Double): Cuboidd
+---@overload fun(vec: IVec3): Cuboidd
+---@field Expand fun(face: BlockFacing, d: Single): nil
+---@field Clone fun(): Cuboidf
+---@field ToDouble fun(): Cuboidd
+---@field Default fun(): Cuboidf
+---@field RoundToFracsOfOne10thousand fun(): nil
+---@field Equals fun(other: Cuboidf): boolean
+---@field ConvertToCuboidi fun(): Cuboidi
+---@field ToString fun(): string
+---@field GetType fun(): any
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+---@field XSize Single
+---@field YSize Single
+---@field ZSize Single
+---@field Width Single
+---@field Height Single
+---@field Length Single
+---@field MinX Single
+---@field MinY Single
+---@field MinZ Single
+---@field MaxX Single
+---@field MaxY Single
+---@field MaxZ Single
+---@field MidX Single
+---@field MidY Single
+---@field MidZ Single
+---@field Item Single
+---@field Empty Single
+---@field Start Single
+---@field End Single
+---@field Startd Single
+---@field Endd Single
+---@field X1 Single
+---@field Y1 Single
+---@field Z1 Single
+---@field X2 Single
+---@field Y2 Single
+---@field Z2 Single
+Cuboidf = {}

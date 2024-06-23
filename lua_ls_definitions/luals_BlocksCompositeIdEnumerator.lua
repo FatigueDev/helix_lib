@@ -1,0 +1,14 @@
+---@meta BlocksCompositeIdEnumerator
+---@class BlocksCompositeIdEnumerator: Object
+---@field ctor fun(inst: ChunkData): BlocksCompositeIdEnumerator
+---@field get_Current fun(): number
+---@field Dispose fun(): nil
+---@field MoveNext fun(): boolean
+---@field Reset fun(): nil
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+---@field Current number
+---@field inst number
+BlocksCompositeIdEnumerator = {}

@@ -1,0 +1,40 @@
+---@meta VAO
+---@class VAO: MeshRef
+---@field ctor fun(): VAO
+---@field get_Initialized fun(): boolean
+---@field Dispose fun(): nil
+---@field get_MultidrawByTextureId fun(): boolean
+---@field get_Disposed fun(): boolean
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+---@field Initialized boolean
+---@field MultidrawByTextureId boolean
+---@field Disposed boolean
+---@field VaoId boolean
+---@field IndicesCount boolean
+---@field drawMode boolean
+---@field vaoSlotNumber boolean
+---@field vboIdIndex boolean
+---@field xyzVboId boolean
+---@field normalsVboId boolean
+---@field uvVboId boolean
+---@field rgbaVboId boolean
+---@field flagsVboId boolean
+---@field customDataFloatVboId boolean
+---@field customDataIntVboId boolean
+---@field customDataShortVboId boolean
+---@field customDataByteVboId boolean
+---@field Persistent boolean
+---@field xyzPtr boolean
+---@field normalsPtr boolean
+---@field uvPtr boolean
+---@field rgbaPtr boolean
+---@field flagsPtr boolean
+---@field customDataFloatPtr boolean
+---@field customDataIntPtr boolean
+---@field customDataShortPtr boolean
+---@field customDataBytePtr boolean
+---@field indicesPtr boolean
+VAO = {}

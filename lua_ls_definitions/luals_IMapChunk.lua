@@ -1,0 +1,33 @@
+---@meta IMapChunk
+---@class IMapChunk
+---@field get_SnowAccum fun(): Concurrenttable<any, any>
+---@field get_MapRegion fun(): IMapRegion
+---@field get_CurrentPass fun(): EnumWorldGenPass
+---@field set_CurrentPass fun(value: EnumWorldGenPass): nil
+---@field SetData fun(key: string, data: number[]): nil
+---@field GetData fun(key: string): number[]
+---@field SetModdata fun(key: string, data: number[]): nil
+---@field RemoveModdata fun(key: string): nil
+---@field GetModdata fun(key: string): number[]
+---@overload fun(key: string, data: T): nil
+---@overload fun(key: string, defaultValue: T): T
+---@field get_CaveHeightDistort fun(): number[]
+---@field set_CaveHeightDistort fun(value: number[]): nil
+---@field get_RainHeightMap fun(): UInt16[]
+---@field get_WorldGenTerrainHeightMap fun(): UInt16[]
+---@field get_TopRockIdMap fun(): number[]
+---@field get_SedimentaryThicknessMap fun(): UInt16[]
+---@field get_YMax fun(): UInt16
+---@field set_YMax fun(value: UInt16): nil
+---@field MarkFresh fun(): nil
+---@field MarkDirty fun(): nil
+---@field SnowAccum Concurrenttable<any, any>
+---@field MapRegion Concurrenttable<any, any>
+---@field CurrentPass Concurrenttable<any, any>
+---@field CaveHeightDistort Concurrenttable<any, any>
+---@field RainHeightMap Concurrenttable<any, any>
+---@field WorldGenTerrainHeightMap Concurrenttable<any, any>
+---@field TopRockIdMap Concurrenttable<any, any>
+---@field SedimentaryThicknessMap Concurrenttable<any, any>
+---@field YMax Concurrenttable<any, any>
+IMapChunk = {}

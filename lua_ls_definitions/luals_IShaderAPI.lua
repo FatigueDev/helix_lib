@@ -1,0 +1,11 @@
+---@meta IShaderAPI
+---@class IShaderAPI
+---@field NewShaderProgram fun(): IShaderProgram
+---@field NewShader fun(shaderType: EnumShaderany): IShader
+---@field RegisterFileShaderProgram fun(name: string, program: IShaderProgram): number
+---@field RegisterMemoryShaderProgram fun(name: string, program: IShaderProgram): number
+---@field GetProgram fun(renderPass: number): IShaderProgram
+---@field GetProgramByName fun(name: string): IShaderProgram
+---@field ReloadShaders fun(): boolean
+---@field IsGLSLVersionSupported fun(minVersion: string): boolean
+IShaderAPI = {}

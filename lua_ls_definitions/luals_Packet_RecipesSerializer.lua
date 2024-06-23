@@ -1,0 +1,15 @@
+---@meta Packet_RecipesSerializer
+---@class Packet_RecipesSerializer: Object
+---@field ctor fun(): Packet_RecipesSerializer
+---@field DeserializeLengthDelimitedNew fun(stream: CitoMemoryStream): Packet_Recipes
+---@field DeserializeBuffer fun(buffer: number[], length: number, instance: Packet_Recipes): Packet_Recipes
+---@field Deserialize fun(stream: CitoMemoryStream, instance: Packet_Recipes): Packet_Recipes
+---@field DeserializeLengthDelimited fun(stream: CitoMemoryStream, instance: Packet_Recipes): Packet_Recipes
+---@field Serialize fun(stream: CitoStream, instance: Packet_Recipes): nil
+---@field SerializeToBytes fun(instance: Packet_Recipes): number[]
+---@field SerializeLengthDelimited fun(stream: CitoStream, instance: Packet_Recipes): nil
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+Packet_RecipesSerializer = {}

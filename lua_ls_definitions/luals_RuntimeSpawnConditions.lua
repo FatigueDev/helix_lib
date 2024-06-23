@@ -1,0 +1,41 @@
+---@meta RuntimeSpawnConditions
+---@class RuntimeSpawnConditions: BaseSpawnConditions
+---@field ctor fun(): RuntimeSpawnConditions
+---@field Clone fun(): RuntimeSpawnConditions
+---@field get_GroupSize fun(): NatFloat
+---@field set_GroupSize fun(value: NatFloat): nil
+---@field CanSpawnInside fun(testBlock: Block): boolean
+---@field Initialise fun(server: IServerWorldAccessor, entityName: string, searchCache: table<any, any>): nil
+---@field SetFrom fun(conds: ClimateSpawnCondition): nil
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+---@field GroupSize NatFloat
+---@field Chance NatFloat
+---@field MaxQuantity NatFloat
+---@field MaxQuantityByGroup NatFloat
+---@field SpawnCapPlayerScaling NatFloat
+---@field MinDistanceToPlayer NatFloat
+---@field Group NatFloat
+---@field MinLightLevel NatFloat
+---@field MaxLightLevel NatFloat
+---@field LightLevelType NatFloat
+---@field HerdSize NatFloat
+---@field Companions NatFloat
+---@field InsideBlockCodes NatFloat
+---@field RequireSolidGround NatFloat
+---@field TryOnlySurface NatFloat
+---@field ClimateValueMode NatFloat
+---@field MinTemp NatFloat
+---@field MaxTemp NatFloat
+---@field MinRain NatFloat
+---@field MaxRain NatFloat
+---@field MinForest NatFloat
+---@field MaxForest NatFloat
+---@field MinShrubs NatFloat
+---@field MaxShrubs NatFloat
+---@field MinY NatFloat
+---@field MaxY NatFloat
+---@field MinForestOrShrubs NatFloat
+RuntimeSpawnConditions = {}

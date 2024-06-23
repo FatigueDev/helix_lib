@@ -1,0 +1,29 @@
+---@meta AnimatableRenderer
+---@class AnimatableRenderer: Object
+---@field ctor fun(capi: ICoreClientAPI, pos: Vec3d, rotationDeg: Vec3f, animator: AnimatorBase, activeAnimationsByAnimCode: table<any, any>, meshref: MeshRef, textureId: number, renderStage: EnumRenderStage): AnimatableRenderer
+---@overload fun(capi: ICoreClientAPI, pos: Vec3d, rotationDeg: Vec3f, animator: AnimatorBase, activeAnimationsByAnimCode: table<any, any>, meshref: MultiTextureMeshRef, renderStage: EnumRenderStage): AnimatableRenderer
+---@field get_RenderOrder fun(): Double
+---@field get_RenderRange fun(): number
+---@field OnRenderFrame fun(dt: Single, stage: EnumRenderStage): nil
+---@field Dispose fun(): nil
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+---@field RenderOrder Double
+---@field RenderRange Double
+---@field mtmeshref Double
+---@field meshref Double
+---@field textureId Double
+---@field ModelMat Double
+---@field ShouldRender Double
+---@field StabilityAffected Double
+---@field LightAffected Double
+---@field FogAffectedness Double
+---@field rotationDeg Double
+---@field ScaleX Double
+---@field ScaleY Double
+---@field ScaleZ Double
+---@field renderColor Double
+---@field backfaceCulling Double
+AnimatableRenderer = {}

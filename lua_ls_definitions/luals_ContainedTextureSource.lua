@@ -1,0 +1,13 @@
+---@meta ContainedTextureSource
+---@class ContainedTextureSource: Object
+---@field ctor fun(capi: ICoreClientAPI, targetAtlas: ITextureAtlasAPI, textures: table<any, any>, sourceForErrorLogging: string): ContainedTextureSource
+---@field get_AtlasSize fun(): Size2i
+---@field get_Item fun(textureCode: string): TextureAtlasPosition
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+---@field AtlasSize Size2i
+---@field Item Size2i
+---@field Textures Size2i
+ContainedTextureSource = {}

@@ -1,0 +1,18 @@
+---@meta Packet_PlayerMode
+---@class Packet_PlayerMode: Object
+---@field ctor fun(): Packet_PlayerMode
+---@field SetPlayerUID fun(value: string): nil
+---@field SetGameMode fun(value: number): nil
+---@field SetMoveSpeed fun(value: number): nil
+---@field SetFreeMove fun(value: number): nil
+---@field SetNoClip fun(value: number): nil
+---@field SetViewDistance fun(value: number): nil
+---@field SetPickingRange fun(value: number): nil
+---@field SetFreeMovePlaneLock fun(value: number): nil
+---@field SetImmersiveFpMode fun(value: number): nil
+---@field SetRenderMetaBlocks fun(value: number): nil
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+Packet_PlayerMode = {}

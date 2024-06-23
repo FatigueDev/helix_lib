@@ -1,0 +1,14 @@
+---@meta PerceptionEffect
+---@class PerceptionEffect: Object
+---@field ctor fun(capi: ICoreClientAPI): PerceptionEffect
+---@field OnBeforeGameRender fun(dt: Single): nil
+---@field OnOwnPlayerDataReceived fun(eplr: EntityPlayer): nil
+---@field ApplyToFpHand fun(modelMat: Matrixf): nil
+---@field ApplyToTpPlayer fun(entityPlr: EntityPlayer, modelMatrix: Single[], playerIntensity: Nullable`1): nil
+---@field NowDisabled fun(): nil
+---@field NowActive fun(intensity: Single): nil
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+PerceptionEffect = {}

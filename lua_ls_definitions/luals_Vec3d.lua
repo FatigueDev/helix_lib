@@ -1,0 +1,103 @@
+---@meta Vec3d
+---@class Vec3d: Object
+---@field ctor fun(): Vec3d
+---@overload fun(x: Double, y: Double, z: Double): Vec3d
+---@overload fun(vec: Vec4d): Vec3d
+---@overload fun(vec: EntityPos): Vec3d
+---@field get_AsBlockPos fun(): BlockPos
+---@field get_XInt fun(): number
+---@field get_YInt fun(): number
+---@field get_ZInt fun(): number
+---@field get_Zero fun(): Vec3d
+---@field get_Item fun(index: number): Double
+---@field set_Item fun(index: number, value: Double): nil
+---@field Dot fun(a: Vec3d): Double
+---@field Cross fun(vec: Vec3d): Vec3d
+---@overload fun(a: Vec3d, b: Vec3d): nil
+---@overload fun(a: Vec3d, b: Vec4d): nil
+---@field Negate fun(): nil
+---@field Cross fun(a: Vec4d, b: Vec4d): nil
+---@field Add fun(a: Vec3d): Vec3d
+---@overload fun(a: BlockPos): Vec3d
+---@overload fun(a: Vec3f): Vec3d
+---@field AddCopy fun(a: Vec3f): Vec3d
+---@overload fun(a: Vec3d): Vec3d
+---@overload fun(x: Single, y: Single, z: Single): Vec3d
+---@overload fun(x: Double, y: Double, z: Double): Vec3d
+---@overload fun(facing: BlockFacing): Vec3d
+---@overload fun(pos: BlockPos): Vec3d
+---@field Mul fun(val: Double): Vec3d
+---@overload fun(x: Double, y: Double, z: Double): Vec3d
+---@overload fun(x: Double, y: Double, z: Double): Vec3d
+---@field Sub fun(x: Double, y: Double, z: Double): Vec3d
+---@field SubCopy fun(x: Double, y: Double, z: Double): Vec3d
+---@overload fun(sub: Vec3d): Vec3d
+---@field ToFloatArray fun(): Single[]
+---@field ToDoubleArray fun(): Double[]
+---@field Length fun(): Double
+---@field LengthSq fun(): Double
+---@field Normalize fun(): Vec3d
+---@field Clone fun(): Vec3d
+---@field Sub fun(vec: Vec3d): Vec3d
+---@overload fun(value: Double): Vec3d
+---@overload fun(a: Vec3d, b: Vec3d): Vec3d
+---@overload fun(a: Vec3d, b: Vec3d): Vec3d
+---@overload fun(pos: BlockPos): Vec3d
+---@field Scale fun(f: Double): Vec3d
+---@field Offset fun(b: Vec3d): Vec3d
+---@overload fun(x: Double, y: Double, z: Double): Vec3d
+---@field OffsetCopy fun(x: Single, y: Single, z: Single): Vec3d
+---@overload fun(x: Double, y: Double, z: Double): Vec3d
+---@field Set fun(pos: Vec3i): Vec3d
+---@overload fun(pos: Vec3f): Vec3d
+---@overload fun(x: Double, y: Double, z: Double): Vec3d
+---@overload fun(pos: Vec3d): Vec3d
+---@overload fun(pos: BlockPos): Vec3d
+---@overload fun(pos: EntityPos): Vec3d
+---@field SquareDistanceTo fun(x: Single, y: Single, z: Single): Single
+---@overload fun(x: Double, y: Double, z: Double): Single
+---@overload fun(pos: Vec3d): Single
+---@overload fun(pos: EntityPos): Single
+---@field DistanceTo fun(pos: Vec3d): Single
+---@overload fun(x: Double, y: Double, z: Double): Single
+---@field HorizontalSquareDistanceTo fun(pos: Vec3d): Single
+---@overload fun(x: Double, z: Double): Single
+---@field op_Subtraction fun(left: Vec3d, right: Vec3d): Vec3d
+---@field op_Addition fun(left: Vec3d, right: Vec3d): Vec3d
+---@overload fun(left: Vec3d, right: Vec3i): Vec3d
+---@overload fun(left: Vec3d, right: Single): Vec3d
+---@overload fun(left: Single, right: Vec3d): Vec3d
+---@overload fun(left: Vec3d, right: Single): Vec3d
+---@field op_Multiply fun(left: Vec3d, right: Single): Vec3d
+---@overload fun(left: Single, right: Vec3d): Vec3d
+---@overload fun(left: Vec3d, right: Double): Vec3d
+---@overload fun(left: Double, right: Vec3d): Vec3d
+---@overload fun(left: Vec3d, right: Vec3d): Double
+---@field op_Division fun(left: Vec3d, right: Single): Vec3d
+---@field op_Equality fun(left: Vec3d, right: Vec3d): boolean
+---@field op_Inequality fun(left: Vec3d, right: Vec3d): boolean
+---@field ToVec3f fun(): Vec3f
+---@field ToString fun(): string
+---@field ToBytes fun(writer: BinaryWriter): nil
+---@field CreateFromBytes fun(reader: BinaryReader): Vec3d
+---@field AheadCopy fun(offset: Double, Pitch: Single, Yaw: Single): Vec3d
+---@overload fun(offset: Double, Pitch: Double, Yaw: Double): Vec3d
+---@field Ahead fun(offset: Double, Pitch: Single, Yaw: Single): Vec3d
+---@overload fun(offset: Double, Pitch: Double, Yaw: Double): Vec3d
+---@field Equals fun(other: Vec3d, epsilon: Double): boolean
+---@overload fun(other: Vec3d): boolean
+---@overload fun(obj: table): boolean
+---@field GetHashCode fun(): number
+---@field get_AsVec3i fun(): Vec3i
+---@field GetType fun(): any
+---@field AsBlockPos BlockPos
+---@field XInt BlockPos
+---@field YInt BlockPos
+---@field ZInt BlockPos
+---@field Zero BlockPos
+---@field Item BlockPos
+---@field AsVec3i BlockPos
+---@field X BlockPos
+---@field Y BlockPos
+---@field Z BlockPos
+Vec3d = {}

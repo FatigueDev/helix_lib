@@ -1,0 +1,15 @@
+---@meta ReadOnlyListConverter
+---@class ReadOnlyListConverter: JsonConverter
+---@field ctor fun(): ReadOnlyListConverter
+---@field CanConvert fun(objectType: any): boolean
+---@field ReadJson fun(reader: JsonReader, objectType: any, existingValue: table, serializer: JsonSerializer): table
+---@field WriteJson fun(writer: JsonWriter, value: table, serializer: JsonSerializer): nil
+---@field get_CanRead fun(): boolean
+---@field get_CanWrite fun(): boolean
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+---@field CanRead boolean
+---@field CanWrite boolean
+ReadOnlyListConverter = {}

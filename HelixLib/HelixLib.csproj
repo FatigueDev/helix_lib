@@ -1,0 +1,54 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="VintagestoryAPI">
+      <HintPath>$(VINTAGE_STORY)/VintagestoryAPI.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="VintagestoryLib">
+      <HintPath>$(VINTAGE_STORY)/VintagestoryLib.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="0Harmony">
+      <HintPath>$(VINTAGE_STORY)/Lib/0Harmony.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Moonsharp.Interpreter">
+      <HintPath>/lib/MoonSharp.Interpreter.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Moonsharp.VsCodeDebugger">
+      <HintPath>/lib/Moonsharp.VsCodeDebugger.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+  </ItemGroup>
+
+  <!-- <ItemGroup Condition=" '$(TargetFramework)' == 'net481' ">
+    
+  </ItemGroup> -->
+
+  <ItemGroup>
+    <Content Include="../modinfo.json">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <CompiledModFolder Include="./bin/**/*.*"/>
+    <LuaScripts Include="./scripts/**/*.lua"/>
+    <LibraryFolder Include="./lib/**/*.dll"/>
+  </ItemGroup>
+
+  <Target Name="CopyBuildToModDirectory" AfterTargets="AfterBuild">
+    <Copy SourceFiles="@(CompiledModFolder)" DestinationFolder="$(HELIX_MOD_FOLDER)" />
+    <Copy SourceFiles="@(LibraryFolder)" DestinationFolder="$(HELIX_MOD_FOLDER)" />
+    <Copy SourceFiles="@(LuaScripts)" DestinationFolder="$(HELIX_MOD_FOLDER)/scripts/%(RecursiveDir)" />
+  </Target>
+
+</Project>

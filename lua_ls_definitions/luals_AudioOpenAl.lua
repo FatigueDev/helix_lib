@@ -1,0 +1,22 @@
+---@meta AudioOpenAl
+---@class AudioOpenAl: Object
+---@field ctor fun(logger: ILogger): AudioOpenAl
+---@field get_Devices fun(): Iany[]
+---@field get_CurrentDevice fun(): string
+---@field Dispose fun(): nil
+---@field CheckALError fun(str: string): nil
+---@field LoadWave fun(stream: Stream, channels: number&, bits: number&, rate: number&): number[]
+---@field GetSoundFormat fun(channels: number, bits: number): ALFormat
+---@field GetSampleFromArray fun(asset: IAsset): AudioMetaData
+---@field UpdateListener fun(position: Vector3, orientation: Vector3): nil
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+---@field Devices Iany[]
+---@field CurrentDevice Iany[]
+---@field d_GameExit Iany[]
+---@field UseHrtf Iany[]
+---@field AL_REMIX_UNMATCHED_SOFT Iany[]
+---@field AL_DIRECT_CHANNELS_SOFT Iany[]
+AudioOpenAl = {}

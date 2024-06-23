@@ -1,0 +1,14 @@
+---@meta DrunkPerceptionEffect
+---@class DrunkPerceptionEffect: PerceptionEffect
+---@field ctor fun(capi: ICoreClientAPI): DrunkPerceptionEffect
+---@field OnBeforeGameRender fun(dt: Single): nil
+---@field ApplyToFpHand fun(modelMat: Matrixf): nil
+---@field ApplyToTpPlayer fun(entityPlr: EntityPlayer, modelMatrix: Single[], playerIntensity: Nullable`1): nil
+---@field NowActive fun(intensity: Single): nil
+---@field OnOwnPlayerDataReceived fun(eplr: EntityPlayer): nil
+---@field NowDisabled fun(): nil
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+DrunkPerceptionEffect = {}

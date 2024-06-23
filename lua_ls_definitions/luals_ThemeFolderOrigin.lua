@@ -1,0 +1,15 @@
+---@meta ThemeFolderOrigin
+---@class ThemeFolderOrigin: FolderOrigin
+---@field ctor fun(fullPath: string): ThemeFolderOrigin
+---@field IsAllowedToAffectGameplay fun(): boolean
+---@field get_OriginPath fun(): string
+---@field LoadAsset fun(asset: IAsset): nil
+---@field TryLoadAsset fun(asset: IAsset): boolean
+---@field GetAssets fun(Category: AssetCategory, shouldLoad: boolean): any[]
+---@overload fun(baseLocation: AssetLocation, shouldLoad: boolean): any[]
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+---@field OriginPath string
+ThemeFolderOrigin = {}

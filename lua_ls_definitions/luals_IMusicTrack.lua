@@ -1,0 +1,21 @@
+---@meta IMusicTrack
+---@class IMusicTrack
+---@field get_Name fun(): string
+---@field get_IsActive fun(): boolean
+---@field get_Priority fun(): Single
+---@field get_StartPriority fun(): Single
+---@field BeginSort fun(): nil
+---@field Initialize fun(assetManager: IAssetManager, capi: ICoreClientAPI, musicEngine: IMusicEngine): nil
+---@field ShouldPlay fun(props: TrackedPlayerProperties, conds: ClimateCondition, pos: BlockPos): boolean
+---@field BeginPlay fun(props: TrackedPlayerProperties): nil
+---@field ContinuePlay fun(dt: Single, props: TrackedPlayerProperties): boolean
+---@field UpdateVolume fun(): nil
+---@field FadeOut fun(seconds: Single, onFadedOut: Action): nil
+---@field FastForward fun(seconds: Single): nil
+---@field get_PositionString fun(): string
+---@field Name string
+---@field IsActive string
+---@field Priority string
+---@field StartPriority string
+---@field PositionString string
+IMusicTrack = {}

@@ -1,0 +1,17 @@
+---@meta IFragmentShaderProgramSkycolor
+---@class IFragmentShaderProgramSkycolor
+---@field set_PlayerToSealevelOffset fun(value: Single): nil
+---@field set_DitherSeed fun(value: number): nil
+---@field set_HorizontalResolution fun(value: number): nil
+---@field set_FogWaveCounter fun(value: Single): nil
+---@field set_Glow2D fun(value: number): nil
+---@field set_Sky2D fun(value: number): nil
+---@field set_SunsetMod fun(value: Single): nil
+---@field PlayerToSealevelOffset Single
+---@field DitherSeed Single
+---@field HorizontalResolution Single
+---@field FogWaveCounter Single
+---@field Glow2D Single
+---@field Sky2D Single
+---@field SunsetMod Single
+IFragmentShaderProgramSkycolor = {}

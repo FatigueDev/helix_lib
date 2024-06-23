@@ -1,0 +1,36 @@
+---@meta Packet_Client
+---@class Packet_Client: Object
+---@field ctor fun(): Packet_Client
+---@field SetLoginTokenQuery fun(value: Packet_LoginTokenQuery): nil
+---@field SetId fun(value: number): nil
+---@field SetIdentification fun(value: Packet_ClientIdentification): nil
+---@field SetBlockPlaceOrBreak fun(value: Packet_ClientBlockPlaceOrBreak): nil
+---@field SetChatline fun(value: Packet_ChatLine): nil
+---@field SetRequestJoin fun(value: Packet_ClientRequestJoin): nil
+---@field SetPingReply fun(value: Packet_ClientPingReply): nil
+---@field SetSpecialKey_ fun(value: Packet_ClientSpecialKey): nil
+---@field SetSelectedHotbarSlot fun(value: Packet_SelectedHotbarSlot): nil
+---@field SetLeave fun(value: Packet_ClientLeave): nil
+---@field SetQuery fun(value: Packet_ClientServerQuery): nil
+---@field SetMoveItemstack fun(value: Packet_MoveItemstack): nil
+---@field SetFlipitemstacks fun(value: Packet_FlipItemstacks): nil
+---@field SetEntityInteraction fun(value: Packet_EntityInteraction): nil
+---@field SetPlayerPosition fun(value: Packet_PlayerPosition): nil
+---@field SetActivateInventorySlot fun(value: Packet_ActivateInventorySlot): nil
+---@field SetCreateItemstack fun(value: Packet_CreateItemstack): nil
+---@field SetRequestModeChange fun(value: Packet_PlayerMode): nil
+---@field SetMoveKeyChange fun(value: Packet_MoveKeyChange): nil
+---@field SetBlockEntityPacket fun(value: Packet_BlockEntityPacket): nil
+---@field SetEntityPacket fun(value: Packet_EntityPacket): nil
+---@field SetCustomPacket fun(value: Packet_CustomPacket): nil
+---@field SetHandInteraction fun(value: Packet_ClientHandInteraction): nil
+---@field SetToolMode fun(value: Packet_ToolMode): nil
+---@field SetBlockDamage fun(value: Packet_BlockDamage): nil
+---@field SetClientPlaying fun(value: Packet_ClientPlaying): nil
+---@field SetInvOpenedClosed fun(value: Packet_InvOpenClose): nil
+---@field SetRuntimeSetting fun(value: Packet_RuntimeSetting): nil
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+Packet_Client = {}

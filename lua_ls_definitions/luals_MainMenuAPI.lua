@@ -1,0 +1,133 @@
+---@meta MainMenuAPI
+---@class MainMenuAPI: Object
+---@field ctor fun(screenManager: ScreenManager): MainMenuAPI
+---@field get_Render fun(): IRenderAPI
+---@field get_Input fun(): IInputAPI
+---@field get_Gui fun(): IGuiAPI
+---@field get_IsShuttingDown fun(): boolean
+---@field get_ElapsedMilliseconds fun(): Int64
+---@field get_Assets fun(): IAssetManager
+---@field get_Logger fun(): ILogger
+---@field get_Settings fun(): ISettings
+---@field get_TagConverters fun(): table<any, any>
+---@field get_ColorPreset fun(): IColorPresets
+---@field get_IsGamePaused fun(): boolean
+---@field get_HideGuis fun(): boolean
+---@field get_Ambient fun(): IAmbientManager
+---@field get_Event fun(): IClientEventAPI
+---@field get_TesselatorManager fun(): ITesselatorManager
+---@field get_Tesselator fun(): ITesselatorAPI
+---@field get_TesselatorThreadSafe fun(): ITesselatorAPI
+---@field get_BlockTextureAtlas fun(): IBlockTextureAtlasAPI
+---@field get_ItemTextureAtlas fun(): IItemTextureAtlasAPI
+---@field get_EntityTextureAtlas fun(): ITextureAtlasAPI
+---@field get_Shader fun(): IShaderAPI
+---@field get_Network fun(): IClientNetworkAPI
+---@field get_World fun(): IClientWorldAccessor
+---@field get_MouseWorldInteractAnyway fun(): boolean
+---@field set_MouseWorldInteractAnyway fun(value: boolean): nil
+---@field get_HotKeys fun(): Orderedtable<any, any>
+---@field get_CmdlArguments fun(): string[]
+---@field get_Side fun(): EnumAppSide
+---@field get_ClassRegistry fun(): IClassRegistryAPI
+---@field get_ModLoader fun(): IModLoader
+---@field get_ObjectCache fun(): table<any, any>
+---@field get_DataBasePath fun(): string
+---@field get_OpenedGuis fun(): any[]
+---@field set_OpenedGuis fun(value: any[]): nil
+---@field get_InWorldEllapsedMilliseconds fun(): Int64
+---@field get_Forms fun(): IXPlatformInterface
+---@field get_CurrentMusicTrack fun(): IMusicTrack
+---@field get_LinkProtocols fun(): table<any, any>
+---@field set_LinkProtocols fun(value: table<any, any>): nil
+---@field get_MacroManager fun(): IMacroManager
+---@field get_IsSinglePlayer fun(): boolean
+---@field get_PlayerReadyFired fun(): boolean
+---@field get_ChatCommands fun(): IChatCommandApi
+---@field get_OpenedToLan fun(): boolean
+---@field ApplyColorMapOnRgba fun(tintIndex: number, color: number, posX: number, posY: number, posZ: number, fipRb: boolean): number
+---@field GetOrCreateDataPath fun(foldername: string): string
+---@field GetRandomBlockPixel fun(blockId: UInt16, textureSubId: number): number
+---@field GetBlockPixelAt fun(blockId: UInt16, textureSubId: number, px: Single, py: Single): number
+---@field GetRandomItemPixel fun(itemId: number, textureSubId: number): number
+---@field RegisterBlockBehaviorClass fun(className: string, blockBehaviorType: any): nil
+---@field RegisterBlockEntityBehaviorClass fun(className: string, blockBehaviorType: any): nil
+---@field RegisterBlockClass fun(className: string, blockType: any): nil
+---@field RegisterBlockEntityClass fun(className: string, blockentityType: any): nil
+---@field RegisterCommand fun(chatcommand: ClientChatCommand): boolean
+---@overload fun(command: string, descriptionMsg: string, syntaxMsg: string, handler: ClientChatCommandDelegate): boolean
+---@field RegisterCropBehavior fun(className: string, type: any): nil
+---@field RegisterEntity fun(className: string, entity: any): nil
+---@field RegisterEntityBehaviorClass fun(className: string, entityBehavior: any): nil
+---@field RegisterEntityClass fun(entityClassName: string, config: EntityProperties): nil
+---@field RegisterEntityRendererClass fun(className: string, rendererType: any): nil
+---@field RegisterHotKey fun(hotkeyCode: string, name: string, key: Keys, type: Hotkeyany, altPressed: boolean, ctrlPressed: boolean, shiftPressed: boolean): nil
+---@field RegisterItemClass fun(className: string, itemType: any): nil
+---@field RegisterMountable fun(className: string, mountableInstancer: GetMountableDelegate): nil
+---@field TriggerChatMessage fun(message: string): nil
+---@field SendChatMessage fun(message: string, groupId: number, data: string): nil
+---@overload fun(message: string, data: string): nil
+---@field SetHotKeyHandler fun(hotkeyCode: string, handler: ActionConsumable`1): nil
+---@field ShowChatMessage fun(message: string): nil
+---@field SendPacketClient fun(packetClient: table): nil
+---@field ApplyColorMapOnRgba fun(tintIndex: number, color: number, rain: number, temp: number, flipRb: boolean): number
+---@field TriggerIngameError fun(sender: table, errorCode: string, text: string): nil
+---@field ShowChatNotification fun(message: string): nil
+---@field StartTrack fun(soundLocation: AssetLocation, priority: Single, soundType: EnumSoundany, onLoaded: any`1): MusicTrack
+---@field RegisterLinkProtocol fun(protocolname: string, onLinkClicked: any`1): nil
+---@field StoreModConfig fun(jsonSerializeableData: T, filename: string): nil
+---@field LoadModConfig fun(filename: string): T
+---@field RegisterColorMap fun(map: ColorMap): nil
+---@field TriggerIngameDiscovery fun(sender: table, errorCode: string, text: string): nil
+---@field RegisterCollectibleBehaviorClass fun(className: string, blockBehaviorType: any): nil
+---@field RegisterRecipeRegistry fun(recipeRegistryCode: string): T
+---@field ResolveBlockColorMaps fun(): nil
+---@field PauseGame fun(paused: boolean): nil
+---@field StoreModConfig fun(jobj: Jsontable, filename: string): nil
+---@overload fun(filename: string): Jsontable
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+---@field Render IRenderAPI
+---@field Input IRenderAPI
+---@field Gui IRenderAPI
+---@field IsShuttingDown IRenderAPI
+---@field ElapsedMilliseconds IRenderAPI
+---@field Assets IRenderAPI
+---@field Logger IRenderAPI
+---@field Settings IRenderAPI
+---@field TagConverters IRenderAPI
+---@field ColorPreset IRenderAPI
+---@field IsGamePaused IRenderAPI
+---@field HideGuis IRenderAPI
+---@field Ambient IRenderAPI
+---@field Event IRenderAPI
+---@field TesselatorManager IRenderAPI
+---@field Tesselator IRenderAPI
+---@field TesselatorThreadSafe IRenderAPI
+---@field BlockTextureAtlas IRenderAPI
+---@field ItemTextureAtlas IRenderAPI
+---@field EntityTextureAtlas IRenderAPI
+---@field Shader IRenderAPI
+---@field Network IRenderAPI
+---@field World IRenderAPI
+---@field MouseWorldInteractAnyway IRenderAPI
+---@field HotKeys IRenderAPI
+---@field CmdlArguments IRenderAPI
+---@field Side IRenderAPI
+---@field ClassRegistry IRenderAPI
+---@field ModLoader IRenderAPI
+---@field ObjectCache IRenderAPI
+---@field DataBasePath IRenderAPI
+---@field OpenedGuis IRenderAPI
+---@field InWorldEllapsedMilliseconds IRenderAPI
+---@field Forms IRenderAPI
+---@field CurrentMusicTrack IRenderAPI
+---@field LinkProtocols IRenderAPI
+---@field MacroManager IRenderAPI
+---@field IsSinglePlayer IRenderAPI
+---@field PlayerReadyFired IRenderAPI
+---@field ChatCommands IRenderAPI
+---@field OpenedToLan IRenderAPI
+MainMenuAPI = {}

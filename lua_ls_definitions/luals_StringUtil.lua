@@ -1,0 +1,29 @@
+---@meta StringUtil
+---@class StringUtil: Object
+---@field GetNonRandomizedHashCode fun(str: string): number
+---@field IndexOfOrdinal fun(a: string, b: string): number
+---@field StartsWithOrdinal fun(a: string, b: string): boolean
+---@field EndsWithOrdinal fun(a: string, b: string): boolean
+---@field CompareOrdinal fun(a: string, b: string): number
+---@field UcFirst fun(text: string): string
+---@field ToBool fun(text: string, defaultValue: boolean): boolean
+---@field RemoveFileEnding fun(text: string): string
+---@field ToInt fun(text: string, defaultValue: number): number
+---@field ToLong fun(text: string, defaultValue: Int64): Int64
+---@field ToFloat fun(text: string, defaultValue: Single): Single
+---@field ToDouble fun(text: string, defaultValue: Double): Double
+---@field ToDoubleOrNull fun(text: string, defaultValue: Nullable`1): Nullable`1
+---@field ToFloatOrNull fun(text: string, defaultValue: Nullable`1): Nullable`1
+---@field CountChars fun(text: string, c: Char): number
+---@field ContainsFast fun(value: string, reference: string): boolean
+---@overload fun(value: string, reference: Char): boolean
+---@field StartsWithFast fun(value: string, reference: string): boolean
+---@overload fun(value: string, reference: string, offset: number): boolean
+---@field EqualsFast fun(value: string, reference: string): boolean
+---@field FastStartsWith fun(value: string, reference: string, len: number): boolean
+---@field RemoveDiacritics fun(stIn: string): string
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+StringUtil = {}

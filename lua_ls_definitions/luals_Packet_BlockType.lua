@@ -1,0 +1,178 @@
+---@meta Packet_BlockType
+---@class Packet_BlockType: Object
+---@field ctor fun(): Packet_BlockType
+---@field GetTextureCodes fun(): string[]
+---@field SetTextureCodes fun(value: string[], count: number, length: number): nil
+---@overload fun(value: string[]): nil
+---@field GetTextureCodesCount fun(): number
+---@field TextureCodesAdd fun(value: string): nil
+---@field GetCompositeTextures fun(): Packet_CompositeTexture[]
+---@field SetCompositeTextures fun(value: Packet_CompositeTexture[], count: number, length: number): nil
+---@overload fun(value: Packet_CompositeTexture[]): nil
+---@field GetCompositeTexturesCount fun(): number
+---@field CompositeTexturesAdd fun(value: Packet_CompositeTexture): nil
+---@field GetInventoryTextureCodes fun(): string[]
+---@field SetInventoryTextureCodes fun(value: string[], count: number, length: number): nil
+---@overload fun(value: string[]): nil
+---@field GetInventoryTextureCodesCount fun(): number
+---@field InventoryTextureCodesAdd fun(value: string): nil
+---@field GetInventoryCompositeTextures fun(): Packet_CompositeTexture[]
+---@field SetInventoryCompositeTextures fun(value: Packet_CompositeTexture[], count: number, length: number): nil
+---@overload fun(value: Packet_CompositeTexture[]): nil
+---@field GetInventoryCompositeTexturesCount fun(): number
+---@field InventoryCompositeTexturesAdd fun(value: Packet_CompositeTexture): nil
+---@field SetBlockId fun(value: number): nil
+---@field SetCode fun(value: string): nil
+---@field SetEntityClass fun(value: string): nil
+---@field GetBehaviors fun(): Packet_Behavior[]
+---@field SetBehaviors fun(value: Packet_Behavior[], count: number, length: number): nil
+---@overload fun(value: Packet_Behavior[]): nil
+---@field GetBehaviorsCount fun(): number
+---@field BehaviorsAdd fun(value: Packet_Behavior): nil
+---@field SetEntityBehaviors fun(value: string): nil
+---@field SetRenderPass fun(value: number): nil
+---@field SetDrawType fun(value: number): nil
+---@field SetMatterState fun(value: number): nil
+---@field SetWalkSpeedFloat fun(value: number): nil
+---@field SetIsSlipperyWalk fun(value: boolean): nil
+---@field SetSounds fun(value: Packet_BlockSoundSet): nil
+---@field SetHeldSounds fun(value: Packet_HeldSoundSet): nil
+---@field GetLightHsv fun(): number[]
+---@field SetLightHsv fun(value: number[], count: number, length: number): nil
+---@overload fun(value: number[]): nil
+---@field GetLightHsvCount fun(): number
+---@field LightHsvAdd fun(value: number): nil
+---@field SetVertexFlags fun(value: number): nil
+---@field SetClimbable fun(value: number): nil
+---@field GetCreativeInventoryTabs fun(): string[]
+---@field SetCreativeInventoryTabs fun(value: string[], count: number, length: number): nil
+---@overload fun(value: string[]): nil
+---@field GetCreativeInventoryTabsCount fun(): number
+---@field CreativeInventoryTabsAdd fun(value: string): nil
+---@field SetCreativeInventoryStacks fun(value: number[]): nil
+---@field GetSideOpaqueFlags fun(): number[]
+---@field SetSideOpaqueFlags fun(value: number[], count: number, length: number): nil
+---@overload fun(value: number[]): nil
+---@field GetSideOpaqueFlagsCount fun(): number
+---@field SideOpaqueFlagsAdd fun(value: number): nil
+---@field SetFaceCullMode fun(value: number): nil
+---@field GetSideSolidFlags fun(): number[]
+---@field SetSideSolidFlags fun(value: number[], count: number, length: number): nil
+---@overload fun(value: number[]): nil
+---@field GetSideSolidFlagsCount fun(): number
+---@field SideSolidFlagsAdd fun(value: number): nil
+---@field SetSeasonColorMap fun(value: string): nil
+---@field SetClimateColorMap fun(value: string): nil
+---@field SetCullFaces fun(value: number): nil
+---@field SetReplacable fun(value: number): nil
+---@field SetLightAbsorption fun(value: number): nil
+---@field SetHardnessLevel fun(value: number): nil
+---@field SetResistance fun(value: number): nil
+---@field SetBlockMaterial fun(value: number): nil
+---@field SetModdata fun(value: number[]): nil
+---@field SetShape fun(value: Packet_CompositeShape): nil
+---@field SetShapeInventory fun(value: Packet_CompositeShape): nil
+---@field SetAmbientocclusion fun(value: number): nil
+---@field GetCollisionBoxes fun(): Packet_Cube[]
+---@field SetCollisionBoxes fun(value: Packet_Cube[], count: number, length: number): nil
+---@overload fun(value: Packet_Cube[]): nil
+---@field GetCollisionBoxesCount fun(): number
+---@field CollisionBoxesAdd fun(value: Packet_Cube): nil
+---@field GetSelectionBoxes fun(): Packet_Cube[]
+---@field SetSelectionBoxes fun(value: Packet_Cube[], count: number, length: number): nil
+---@overload fun(value: Packet_Cube[]): nil
+---@field GetSelectionBoxesCount fun(): number
+---@field SelectionBoxesAdd fun(value: Packet_Cube): nil
+---@field GetParticleCollisionBoxes fun(): Packet_Cube[]
+---@field SetParticleCollisionBoxes fun(value: Packet_Cube[], count: number, length: number): nil
+---@overload fun(value: Packet_Cube[]): nil
+---@field GetParticleCollisionBoxesCount fun(): number
+---@field ParticleCollisionBoxesAdd fun(value: Packet_Cube): nil
+---@field SetBlockclass fun(value: string): nil
+---@field SetGuiTransform fun(value: Packet_ModelTransform): nil
+---@field SetFpHandTransform fun(value: Packet_ModelTransform): nil
+---@field SetTpHandTransform fun(value: Packet_ModelTransform): nil
+---@field SetTpOffHandTransform fun(value: Packet_ModelTransform): nil
+---@field SetGroundTransform fun(value: Packet_ModelTransform): nil
+---@field SetFertility fun(value: number): nil
+---@field SetParticleProperties fun(value: number[]): nil
+---@field SetParticlePropertiesQuantity fun(value: number): nil
+---@field SetRandomDrawOffset fun(value: number): nil
+---@field SetRandomizeAxes fun(value: number): nil
+---@field SetRandomizeRotations fun(value: number): nil
+---@field GetDrops fun(): Packet_BlockDrop[]
+---@field SetDrops fun(value: Packet_BlockDrop[], count: number, length: number): nil
+---@overload fun(value: Packet_BlockDrop[]): nil
+---@field GetDropsCount fun(): number
+---@field DropsAdd fun(value: Packet_BlockDrop): nil
+---@field SetLiquidLevel fun(value: number): nil
+---@field SetAttributes fun(value: string): nil
+---@field SetCombustibleProps fun(value: Packet_CombustibleProperties): nil
+---@field GetSideAo fun(): number[]
+---@field SetSideAo fun(value: number[], count: number, length: number): nil
+---@overload fun(value: number[]): nil
+---@field GetSideAoCount fun(): number
+---@field SideAoAdd fun(value: number): nil
+---@field SetNeighbourSideAo fun(value: number): nil
+---@field SetGrindingProps fun(value: Packet_GrindingProperties): nil
+---@field SetNutritionProps fun(value: Packet_NutritionProperties): nil
+---@field GetTransitionableProps fun(): Packet_TransitionableProperties[]
+---@field SetTransitionableProps fun(value: Packet_TransitionableProperties[], count: number, length: number): nil
+---@overload fun(value: Packet_TransitionableProperties[]): nil
+---@field GetTransitionablePropsCount fun(): number
+---@field TransitionablePropsAdd fun(value: Packet_TransitionableProperties): nil
+---@field SetMaxStackSize fun(value: number): nil
+---@field SetCropProps fun(value: number[]): nil
+---@field GetCropPropBehaviors fun(): string[]
+---@field SetCropPropBehaviors fun(value: string[], count: number, length: number): nil
+---@overload fun(value: string[]): nil
+---@field GetCropPropBehaviorsCount fun(): number
+---@field CropPropBehaviorsAdd fun(value: string): nil
+---@field SetMaterialDensity fun(value: number): nil
+---@field SetAttackPower fun(value: number): nil
+---@field SetAttackRange fun(value: number): nil
+---@field SetLiquidSelectable fun(value: number): nil
+---@field SetMiningTier fun(value: number): nil
+---@field SetRequiredMiningTier fun(value: number): nil
+---@field GetMiningmaterial fun(): number[]
+---@field SetMiningmaterial fun(value: number[], count: number, length: number): nil
+---@overload fun(value: number[]): nil
+---@field GetMiningmaterialCount fun(): number
+---@field MiningmaterialAdd fun(value: number): nil
+---@field GetMiningmaterialspeed fun(): number[]
+---@field SetMiningmaterialspeed fun(value: number[], count: number, length: number): nil
+---@overload fun(value: number[]): nil
+---@field GetMiningmaterialspeedCount fun(): number
+---@field MiningmaterialspeedAdd fun(value: number): nil
+---@field SetDragMultiplierFloat fun(value: number): nil
+---@field SetStorageFlags fun(value: number): nil
+---@field SetRenderAlphaTest fun(value: number): nil
+---@field SetHeldTpHitAnimation fun(value: string): nil
+---@field SetHeldRightTpIdleAnimation fun(value: string): nil
+---@field SetHeldLeftTpIdleAnimation fun(value: string): nil
+---@field SetHeldTpUseAnimation fun(value: string): nil
+---@field SetRainPermeable fun(value: number): nil
+---@field SetLiquidCode fun(value: string): nil
+---@field GetVariant fun(): Packet_VariantPart[]
+---@field SetVariant fun(value: Packet_VariantPart[], count: number, length: number): nil
+---@overload fun(value: Packet_VariantPart[]): nil
+---@field GetVariantCount fun(): number
+---@field VariantAdd fun(value: Packet_VariantPart): nil
+---@field SetLod0shape fun(value: Packet_CompositeShape): nil
+---@field SetFrostable fun(value: number): nil
+---@field SetCrushingProps fun(value: Packet_CrushingProperties): nil
+---@field SetRandomSizeAdjust fun(value: number): nil
+---@field SetLod2shape fun(value: Packet_CompositeShape): nil
+---@field SetDoNotRenderAtLod2 fun(value: number): nil
+---@field SetWidth fun(value: number): nil
+---@field SetHeight fun(value: number): nil
+---@field SetLength fun(value: number): nil
+---@field SetIsMissing fun(value: number): nil
+---@field SetDurability fun(value: number): nil
+---@field SetHeldLeftReadyAnimation fun(value: string): nil
+---@field SetHeldRightReadyAnimation fun(value: string): nil
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+Packet_BlockType = {}

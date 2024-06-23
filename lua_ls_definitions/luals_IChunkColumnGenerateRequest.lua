@@ -1,0 +1,15 @@
+---@meta IChunkColumnGenerateRequest
+---@class IChunkColumnGenerateRequest
+---@field get_Chunks fun(): IServerChunk[]
+---@field get_ChunkX fun(): number
+---@field get_ChunkZ fun(): number
+---@field get_ChunkGenParams fun(): ITreeAttribute
+---@field get_NeighbourTerrainHeight fun(): UInt16[][]
+---@field get_RequiresChunkBorderSmoothing fun(): boolean
+---@field Chunks IServerChunk[]
+---@field ChunkX IServerChunk[]
+---@field ChunkZ IServerChunk[]
+---@field ChunkGenParams IServerChunk[]
+---@field NeighbourTerrainHeight IServerChunk[]
+---@field RequiresChunkBorderSmoothing IServerChunk[]
+IChunkColumnGenerateRequest = {}

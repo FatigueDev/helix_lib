@@ -1,0 +1,15 @@
+---@meta Packet_ModIdSerializer
+---@class Packet_ModIdSerializer: Object
+---@field ctor fun(): Packet_ModIdSerializer
+---@field DeserializeLengthDelimitedNew fun(stream: CitoMemoryStream): Packet_ModId
+---@field DeserializeBuffer fun(buffer: number[], length: number, instance: Packet_ModId): Packet_ModId
+---@field Deserialize fun(stream: CitoMemoryStream, instance: Packet_ModId): Packet_ModId
+---@field DeserializeLengthDelimited fun(stream: CitoMemoryStream, instance: Packet_ModId): Packet_ModId
+---@field Serialize fun(stream: CitoStream, instance: Packet_ModId): nil
+---@field SerializeToBytes fun(instance: Packet_ModId): number[]
+---@field SerializeLengthDelimited fun(stream: CitoStream, instance: Packet_ModId): nil
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+Packet_ModIdSerializer = {}

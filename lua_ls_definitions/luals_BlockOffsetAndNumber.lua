@@ -1,0 +1,17 @@
+---@meta BlockOffsetAndNumber
+---@class BlockOffsetAndNumber: Vec4i
+---@field ctor fun(): BlockOffsetAndNumber
+---@overload fun(x: number, y: number, z: number, w: number): BlockOffsetAndNumber
+---@field get_BlockNumber fun(): number
+---@field Equals fun(other: Vec4i): boolean
+---@field GetHashCode fun(): number
+---@field HorDistanceSqTo fun(x: Double, z: Double): Single
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field BlockNumber number
+---@field X number
+---@field Y number
+---@field Z number
+---@field W number
+BlockOffsetAndNumber = {}

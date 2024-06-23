@@ -1,0 +1,12 @@
+---@meta IBitmap
+---@class IBitmap
+---@field GetPixel fun(x: number, y: number): SKColor
+---@field GetPixelRel fun(x: Single, y: Single): SKColor
+---@field get_Width fun(): number
+---@field get_Height fun(): number
+---@field get_Pixels fun(): number[]
+---@field GetPixelsTransformed fun(rot: number, alpha: number): number[]
+---@field Width number
+---@field Height number
+---@field Pixels number
+IBitmap = {}

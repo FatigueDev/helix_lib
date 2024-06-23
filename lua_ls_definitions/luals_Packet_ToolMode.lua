@@ -1,0 +1,12 @@
+---@meta Packet_ToolMode
+---@class Packet_ToolMode: Object
+---@field ctor fun(): Packet_ToolMode
+---@field SetMode fun(value: number): nil
+---@field SetX fun(value: number): nil
+---@field SetY fun(value: number): nil
+---@field SetZ fun(value: number): nil
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+Packet_ToolMode = {}

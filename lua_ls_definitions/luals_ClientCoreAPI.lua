@@ -1,0 +1,120 @@
+---@meta ClientCoreAPI
+---@class ClientCoreAPI: APIBase
+---@field ctor fun(game: ClientMain): ClientCoreAPI
+---@field get_ClassRegistryNative fun(): ClassRegistry
+---@field get_TagConverters fun(): table<any, any>
+---@field get_CmdlArguments fun(): string[]
+---@field get_Side fun(): EnumAppSide
+---@field get_ChatCommands fun(): IChatCommandApi
+---@field get_ClassRegistry fun(): IClassRegistryAPI
+---@field get_Assets fun(): IAssetManager
+---@field get_Forms fun(): IXPlatformInterface
+---@field get_ModLoader fun(): IModLoader
+---@field get_Logger fun(): ILogger
+---@field get_IsShuttingDown fun(): boolean
+---@field get_IsGamePaused fun(): boolean
+---@field get_ElapsedMilliseconds fun(): Int64
+---@field get_InWorldEllapsedMilliseconds fun(): Int64
+---@field get_HideGuis fun(): boolean
+---@field get_Event fun(): IClientEventAPI
+---@field get_Ambient fun(): IAmbientManager
+---@field get_Render fun(): IRenderAPI
+---@field get_Shader fun(): IShaderAPI
+---@field get_Gui fun(): IGuiAPI
+---@field get_Input fun(): IInputAPI
+---@field get_ColorPreset fun(): IColorPresets
+---@field get_MacroManager fun(): IMacroManager
+---@field get_TesselatorManager fun(): ITesselatorManager
+---@field get_Tesselator fun(): ITesselatorAPI
+---@field get_BlockTextureAtlas fun(): IBlockTextureAtlasAPI
+---@field get_ItemTextureAtlas fun(): IItemTextureAtlasAPI
+---@field get_EntityTextureAtlas fun(): ITextureAtlasAPI
+---@field get_Network fun(): IClientNetworkAPI
+---@field get_World fun(): IClientWorldAccessor
+---@field RegisterEntityClass fun(entityClassName: string, config: EntityProperties): nil
+---@field RegisterLinkProtocol fun(protocolname: string, onLinkClicked: any`1): nil
+---@field get_OpenedGuis fun(): any[]
+---@field get_Settings fun(): ISettings
+---@field get_CurrentMusicTrack fun(): IMusicTrack
+---@field get_LinkProtocols fun(): table<any, any>
+---@field get_IsSinglePlayer fun(): boolean
+---@field get_OpenedToLan fun(): boolean
+---@field get_PlayerReadyFired fun(): boolean
+---@field SendPacketClient fun(packet: table): nil
+---@field RegisterCommand fun(chatcommand: ClientChatCommand): boolean
+---@overload fun(command: string, descriptionMsg: string, syntaxMsg: string, handler: ClientChatCommandDelegate): boolean
+---@field TriggerIngameError fun(sender: table, errorCode: string, text: string): nil
+---@field TriggerIngameDiscovery fun(sender: table, errorCode: string, text: string): nil
+---@field RegisterEntityRendererClass fun(className: string, rendererType: any): nil
+---@field ShowChatMessage fun(message: string): nil
+---@field TriggerChatMessage fun(message: string): nil
+---@field SendChatMessage fun(message: string, groupId: number, data: string): nil
+---@overload fun(message: string, data: string): nil
+---@field ShowChatNotification fun(message: string): nil
+---@field StartTrack fun(soundLocation: AssetLocation, priority: Single, soundType: EnumSoundany, onLoaded: any`1): MusicTrack
+---@field RegisterColorMap fun(map: ColorMap): nil
+---@field PauseGame fun(paused: boolean): nil
+---@field get_ObjectCache fun(): table<any, any>
+---@field RegisterRecipeRegistry fun(recipeRegistryCode: string): T
+---@field RegisterEntity fun(classsName: string, entity: any): nil
+---@field RegisterEntityBehaviorClass fun(className: string, entityBehavior: any): nil
+---@field RegisterBlockClass fun(blockClassName: string, type: any): nil
+---@field RegisterCropBehavior fun(className: string, type: any): nil
+---@field RegisterBlockEntityClass fun(className: string, blockentity: any): nil
+---@field RegisterItemClass fun(className: string, itemType: any): nil
+---@field RegisterBlockBehaviorClass fun(className: string, blockBehaviorType: any): nil
+---@field RegisterCollectibleBehaviorClass fun(className: string, blockBehaviorType: any): nil
+---@field RegisterBlockEntityBehaviorClass fun(className: string, blockEntityBehaviorType: any): nil
+---@field RegisterMountable fun(className: string, mountableInstancer: GetMountableDelegate): nil
+---@field get_DataBasePath fun(): string
+---@field GetOrCreateDataPath fun(foldername: string): string
+---@field LoadModConfig fun(filename: string): T
+---@field StoreModConfig fun(jsonSerializeableData: T, filename: string): nil
+---@overload fun(jobj: Jsontable, filename: string): nil
+---@overload fun(filename: string): Jsontable
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+---@field ClassRegistryNative ClassRegistry
+---@field TagConverters ClassRegistry
+---@field CmdlArguments ClassRegistry
+---@field Side ClassRegistry
+---@field ChatCommands ClassRegistry
+---@field ClassRegistry ClassRegistry
+---@field Assets ClassRegistry
+---@field Forms ClassRegistry
+---@field ModLoader ClassRegistry
+---@field Logger ClassRegistry
+---@field IsShuttingDown ClassRegistry
+---@field IsGamePaused ClassRegistry
+---@field ElapsedMilliseconds ClassRegistry
+---@field InWorldEllapsedMilliseconds ClassRegistry
+---@field HideGuis ClassRegistry
+---@field Event ClassRegistry
+---@field Ambient ClassRegistry
+---@field Render ClassRegistry
+---@field Shader ClassRegistry
+---@field Gui ClassRegistry
+---@field Input ClassRegistry
+---@field ColorPreset ClassRegistry
+---@field MacroManager ClassRegistry
+---@field TesselatorManager ClassRegistry
+---@field Tesselator ClassRegistry
+---@field BlockTextureAtlas ClassRegistry
+---@field ItemTextureAtlas ClassRegistry
+---@field EntityTextureAtlas ClassRegistry
+---@field Network ClassRegistry
+---@field World ClassRegistry
+---@field OpenedGuis ClassRegistry
+---@field Settings ClassRegistry
+---@field CurrentMusicTrack ClassRegistry
+---@field LinkProtocols ClassRegistry
+---@field IsSinglePlayer ClassRegistry
+---@field OpenedToLan ClassRegistry
+---@field PlayerReadyFired ClassRegistry
+---@field ObjectCache ClassRegistry
+---@field DataBasePath ClassRegistry
+---@field linkProtocols ClassRegistry
+---@field disposed ClassRegistry
+ClientCoreAPI = {}

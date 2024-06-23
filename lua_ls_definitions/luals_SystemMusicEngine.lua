@@ -1,0 +1,47 @@
+---@meta SystemMusicEngine
+---@class SystemMusicEngine: ClientSystem
+---@field ctor fun(game: ClientMain, token: CancellationToken): SystemMusicEngine
+---@field get_Name fun(): string
+---@field get_CurrentActive fun(): boolean
+---@field get_CurrentTrack fun(): IMusicTrack
+---@field get_LastPlayedTrack fun(): IMusicTrack
+---@field get_MillisecondsSinceLastTrack fun(): Int64
+---@field OnBlockTexturesLoaded fun(): nil
+---@field StartTrack fun(soundLocation: AssetLocation, priority: Single, soundType: EnumSoundany, onLoaded: any`1): MusicTrack
+---@field LoadTrack fun(location: AssetLocation, onLoaded: any`1, volume: Single, pitch: Single): nil
+---@field GetSystemType fun(): EnumClientSystemany
+---@field StopTrack fun(musicTrack: IMusicTrack): nil
+---@field OnNewFrameReadOnlyMainThread fun(deltaTime: Single): nil
+---@field OnKeyDown fun(args: KeyEvent): nil
+---@field OnKeyPress fun(args: KeyEvent): nil
+---@field OnMouseUp fun(args: MouseEvent): nil
+---@field OnKeyUp fun(args: KeyEvent): nil
+---@field OnMouseDown fun(args: MouseEvent): nil
+---@field OnMouseMove fun(args: MouseEvent): nil
+---@field OnMouseWheel fun(args: MouseWheelEventArgs): nil
+---@field OnTouchStart fun(e: TouchEventArgs): nil
+---@field OnTouchMove fun(e: TouchEventArgs): nil
+---@field OnTouchEnd fun(e: TouchEventArgs): nil
+---@field OnUseEntity fun(e: OnUseEntityArgs): nil
+---@field OnHitEntity fun(e: OnUseEntityArgs): nil
+---@field OnOwnPlayerDataReceived fun(): nil
+---@field OnMouseEnterSlot fun(slot: ItemSlot): boolean
+---@field OnMouseLeaveSlot fun(itemSlot: ItemSlot): boolean
+---@field SeperateThreadTickIntervalMs fun(): number
+---@field OnSeperateThreadGameTick fun(dt: Single): nil
+---@field OnMouseClickSlot fun(itemSlot: ItemSlot): boolean
+---@field OnServerIdentificationReceived fun(): nil
+---@field Dispose fun(game: ClientMain): nil
+---@field CaptureAllInputs fun(): boolean
+---@field CaptureRawMouse fun(): boolean
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+---@field Name string
+---@field CurrentActive string
+---@field CurrentTrack string
+---@field LastPlayedTrack string
+---@field MillisecondsSinceLastTrack string
+---@field TracksToLoad string
+SystemMusicEngine = {}

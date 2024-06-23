@@ -1,0 +1,60 @@
+---@meta AssetLocationAndSource
+---@class AssetLocationAndSource: AssetLocation
+---@field ctor fun(location: string): AssetLocationAndSource
+---@overload fun(loc: AssetLocation): AssetLocationAndSource
+---@overload fun(loc: AssetLocation, message: string, sourceLoc: AssetLocation, alternateNo: number): AssetLocationAndSource
+---@overload fun(domain: string, path: string, message: string, sourceDomain: string, sourcePath: string, alternateNo: number): AssetLocationAndSource
+---@overload fun(loc: AssetLocation, source: SourcestringComponents): AssetLocationAndSource
+---@overload fun(domain: string, path: string, source: SourcestringComponents): AssetLocationAndSource
+---@overload fun(loc: AssetLocation, oldStyleSource: string): AssetLocationAndSource
+---@overload fun(domain: string, path: string, oldStyleSource: string): AssetLocationAndSource
+---@field get_Domain fun(): string
+---@field set_Domain fun(value: string): nil
+---@field get_Path fun(): string
+---@field set_Path fun(value: string): nil
+---@field get_IsWildCard fun(): boolean
+---@field get_EndsWithWildCard fun(): boolean
+---@field get_Valid fun(): boolean
+---@field IsChild fun(Location: AssetLocation): boolean
+---@field BeginsWith fun(domain: string, partialPath: string): boolean
+---@field PathStartsWith fun(partialPath: string): boolean
+---@field ToShortString fun(): string
+---@field ShortDomain fun(): string
+---@field FirstPathPart fun(posFromLeft: number): string
+---@field FirstCodePart fun(): string
+---@field SecondCodePart fun(): string
+---@field CodePartsAfterSecond fun(): string
+---@field get_Category fun(): AssetCategory
+---@field WithPathPrefix fun(prefix: string): AssetLocation
+---@field WithPathPrefixOnce fun(prefix: string): AssetLocation
+---@field WithLocationPrefixOnce fun(prefix: AssetLocation): AssetLocation
+---@field WithPathAppendix fun(appendix: string): AssetLocation
+---@field WithoutPathAppendix fun(appendix: string): AssetLocation
+---@field WithPathAppendixOnce fun(appendix: string): AssetLocation
+---@field HasDomain fun(): boolean
+---@field GetName fun(): string
+---@field RemoveEnding fun(): nil
+---@field PathOmittingPrefixAndSuffix fun(prefix: string, suffix: string): string
+---@field EndVariant fun(): string
+---@field Clone fun(): AssetLocation
+---@field CloneWithoutPrefixAndEnding fun(prefixLength: number): AssetLocation
+---@field CopyWithPath fun(path: string): AssetLocation
+---@field CopyWithPathPrefixAndAppendix fun(prefix: string, appendix: string): AssetLocation
+---@field CopyWithPathPrefixAndAppendixOnce fun(prefix: string, appendix: string): AssetLocation
+---@field WithPath fun(path: string): AssetLocation
+---@field GetHashCode fun(): number
+---@field Equals fun(other: AssetLocation): boolean
+---@overload fun(obj: table): boolean
+---@field ToString fun(): string
+---@field CompareTo fun(other: AssetLocation): number
+---@field GetType fun(): any
+---@field Domain string
+---@field Path string
+---@field IsWildCard string
+---@field EndsWithWildCard string
+---@field Valid string
+---@field Category string
+---@field AddToAllAtlasses string
+---@field Source string
+---@field loadedAlready string
+AssetLocationAndSource = {}

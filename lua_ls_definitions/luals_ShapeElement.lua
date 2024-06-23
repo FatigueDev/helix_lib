@@ -1,0 +1,16 @@
+---@meta ShapeElement
+---@class ShapeElement: Object
+---@field ctor fun(): ShapeElement
+---@field GetParentPath fun(): any[]
+---@field CacheInverseTransformMatrix fun(): nil
+---@field GetInverseModelMatrix fun(): Single[]
+---@field GetLocalTransformMatrix fun(animVersion: number, output: Single[], tf: ElementPose): Single[]
+---@field Clone fun(): ShapeElement
+---@field SetJointIdRecursive fun(jointId: number): nil
+---@field CacheInverseTransformMatrixRecursive fun(): nil
+---@field WalkRecursive fun(onElem: any`1): nil
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+ShapeElement = {}

@@ -1,0 +1,14 @@
+---@meta GltfBuffer
+---@class GltfBuffer: Object
+---@field ctor fun(): GltfBuffer
+---@field get_ByteLength fun(): Int64
+---@field set_ByteLength fun(value: Int64): nil
+---@field get_Uri fun(): string
+---@field set_Uri fun(value: string): nil
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+---@field ByteLength Int64
+---@field Uri Int64
+GltfBuffer = {}

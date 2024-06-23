@@ -1,0 +1,14 @@
+---@meta Packet_RemoveBlockLight
+---@class Packet_RemoveBlockLight: Object
+---@field ctor fun(): Packet_RemoveBlockLight
+---@field SetPosX fun(value: number): nil
+---@field SetPosY fun(value: number): nil
+---@field SetPosZ fun(value: number): nil
+---@field SetLightH fun(value: number): nil
+---@field SetLightS fun(value: number): nil
+---@field SetLightV fun(value: number): nil
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+Packet_RemoveBlockLight = {}

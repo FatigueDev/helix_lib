@@ -1,0 +1,18 @@
+---@meta LineRectangled
+---@class LineRectangled: Rectangled
+---@field ctor fun(X: Double, Y: Double, width: Double, height: Double): LineRectangled
+---@overload fun(): LineRectangled
+---@field get_AscentOrHeight fun(): Double
+---@field Bottom fun(): Double
+---@field PointInside fun(x: Double, y: Double): boolean
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+---@field AscentOrHeight Double
+---@field Ascent Double
+---@field X Double
+---@field Y Double
+---@field Width Double
+---@field Height Double
+LineRectangled = {}

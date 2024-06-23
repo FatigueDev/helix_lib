@@ -1,0 +1,15 @@
+---@meta Packet_IngameErrorSerializer
+---@class Packet_IngameErrorSerializer: Object
+---@field ctor fun(): Packet_IngameErrorSerializer
+---@field DeserializeLengthDelimitedNew fun(stream: CitoMemoryStream): Packet_IngameError
+---@field DeserializeBuffer fun(buffer: number[], length: number, instance: Packet_IngameError): Packet_IngameError
+---@field Deserialize fun(stream: CitoMemoryStream, instance: Packet_IngameError): Packet_IngameError
+---@field DeserializeLengthDelimited fun(stream: CitoMemoryStream, instance: Packet_IngameError): Packet_IngameError
+---@field Serialize fun(stream: CitoStream, instance: Packet_IngameError): nil
+---@field SerializeToBytes fun(instance: Packet_IngameError): number[]
+---@field SerializeLengthDelimited fun(stream: CitoStream, instance: Packet_IngameError): nil
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+Packet_IngameErrorSerializer = {}

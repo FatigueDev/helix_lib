@@ -1,0 +1,13 @@
+---@meta SerializerUtil
+---@class SerializerUtil: Object
+---@field Serialize fun(data: T): number[]
+---@field Deserialize fun(data: number[]): T
+---@field DeserializeInto fun(instance: T, data: number[]): T
+---@field Deserialize fun(data: number[], defaultValue: T): T
+---@field ToBytes fun(toWrite: numberWriteDelegatae): number[]
+---@field FromBytes fun(data: number[], toRead: numberReadDelegatae): nil
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+SerializerUtil = {}

@@ -1,0 +1,13 @@
+---@meta Packet_ServerChunks
+---@class Packet_ServerChunks: Object
+---@field ctor fun(): Packet_ServerChunks
+---@field GetChunks fun(): Packet_ServerChunk[]
+---@field SetChunks fun(value: Packet_ServerChunk[], count: number, length: number): nil
+---@overload fun(value: Packet_ServerChunk[]): nil
+---@field GetChunksCount fun(): number
+---@field ChunksAdd fun(value: Packet_ServerChunk): nil
+---@field GetType fun(): any
+---@field ToString fun(): string
+---@field Equals fun(obj: table): boolean
+---@field GetHashCode fun(): number
+Packet_ServerChunks = {}
