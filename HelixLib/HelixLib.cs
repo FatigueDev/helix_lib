@@ -3,23 +3,62 @@ using Vintagestory.API.Server;
 using Vintagestory.API.Client;
 using MoonSharp.Interpreter;
 using MoonSharp.VsCodeDebugger;
+using HelixLib.Types;
 
 namespace HelixLib
 {
     public class HelixLib : ModSystem
     {
-        public string scriptSideDirectory = string.Empty;
-
-        private MoonSharpVsCodeDebugServer debugServer = new();
-        private Script scriptClientside = new();
-        private Script scriptServerside = new();
-        private Script scriptUniversal = new();
+        // private MoonSharpVsCodeDebugServer debugger;
 
         public override void StartPre(ICoreAPI api)
         {
-            AssemblyRegistration.RegisterAllAssemblies(api);
+            
+            // if(api.Side == EnumAppSide.Client)
+            // {
+            //     debugger = new MoonSharpVsCodeDebugServer(41912).Start();
+            // }
+            // else if(api.Side == EnumAppSide.Server)
+            // {
+            //     debugger = new MoonSharpVsCodeDebugServer(41913).Start();
+            // }
+            // else
+            // {
+            //     debugger = new MoonSharpVsCodeDebugServer(41914).Start();
+            // }
 
-            // SetupUniversal(api);
+            AssemblyRegistration.Register(api, false);
+
+            var sandbox = CoreModules.Preset_SoftSandbox | CoreModules.LoadMethods;
+
+            var baseModPath = Mod.SourcePath + "/mods";
+
+            ModLoader modLoader = new ModLoader(sandbox);
+
+            foreach(var modDirectory in Directory.GetDirectories(baseModPath))
+            {
+                modLoader.LoadMod(modDirectory, sandbox, api);
+            }
+
+            foreach(var helixMod in modLoader.helixMods)
+            {
+                if(api.Side == EnumAppSide.Universal)
+                {
+                    // debugger.AttachToScript(helixMod.script, helixMod.mod.name);
+                }
+
+                if(api.Side == EnumAppSide.Server)
+                {
+                    // debugger.AttachToScript(helixMod.script, helixMod.mod.name);
+                }
+
+                if(api.Side == EnumAppSide.Client)
+                {
+                    // debugger.AttachToScript(helixMod.script, helixMod.mod.name);
+
+                    EventHandler.SetupClientsideEvents(api as ICoreClientAPI, helixMod);
+                }
+            }
 
             base.StartPre(api);
         }
@@ -29,79 +68,23 @@ namespace HelixLib
             base.Start(api);
         }
 
-        public void RegisterCallbackLoop(ICoreClientAPI api)
-        {
-            // This is a good example of what Helix can do.
-            // We set up a callback that'll tick every 1.5 seconds,
-            // and every 1.5 seconds it'll read and run the file.
-            // Start the game and change the file, go crazy.
-            api.Logger.Event($"HELIX: Trying to run print event at {scriptSideDirectory}print_event.lua");
-            api.Logger.Event($"HELIX: Value of client script global API is- {scriptClientside.Globals["ICoreClientAPI"]}");
-            scriptClientside.DoFile(scriptSideDirectory + "print_event.lua");
-            api.Event.RegisterCallback((dt) => RegisterCallbackLoop(api), 1500);
-        }
-
         public override double ExecuteOrder()
         {
-            return 1.1;
+            return -1;
         }
 
         public override void StartClientSide(ICoreClientAPI api)
         {
-            SetupClientside(api);
-
-            api.Event.RegisterCallback((dt) => RegisterCallbackLoop(api), 0);
-
             base.StartClientSide(api);
         }
 
         public override void StartServerSide(ICoreServerAPI api)
         {
-            SetupServerside(api);
-            
             base.StartServerSide(api);
-        }
-
-        public void SetupClientside(ICoreClientAPI api)
-        {
-            SetScriptPath(EnumAppSide.Client);
-            scriptClientside.Globals["ICoreClientAPI"] = api;
-        }
-
-        public void SetupServerside(ICoreServerAPI api)
-        {
-            SetScriptPath(EnumAppSide.Server);
-            scriptServerside.Globals["ICoreServerAPI"] = api;
-        }
-
-        public void SetupUniversal(ICoreAPI api)
-        {
-            SetScriptPath(EnumAppSide.Universal);
-            scriptUniversal.Globals["ICoreAPI"] = api;
-        }
-
-        public void SetScriptPath(EnumAppSide side)
-        {
-            var scriptDirectory = $"{Mod.SourcePath}/scripts/";
-
-            switch(side)
-            {
-                case EnumAppSide.Client:
-                    scriptSideDirectory = $"{scriptDirectory}client/";
-                break;
-                case EnumAppSide.Server:
-                    scriptSideDirectory = $"{scriptDirectory}server/";
-                break; 
-                case EnumAppSide.Universal:
-                    scriptSideDirectory = $"{scriptDirectory}universal/";
-                break;
-                default: break;
-            }
         }
 
         public override void Dispose()
         {
-            debugServer.Dispose();
             base.Dispose();
         }
     }

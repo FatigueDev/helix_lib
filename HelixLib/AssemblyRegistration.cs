@@ -2,21 +2,9 @@ using System.Reflection;
 using System.Text;
 using MoonSharp.Interpreter;
 using MoonSharp.Interpreter.Interop;
-using Vintagestory;
-using Vintagestory.Common;
+using Namotion.Reflection;
 using Vintagestory.API.Common;
-using Vintagestory.API.Server;
-using Vintagestory.API.Client;
 using Vintagestory.API.Util;
-using VintagestoryLib;
-using VintagestoryLib.Common;
-using HarmonyLib;
-using MoonSharp.Interpreter.Interop.BasicDescriptors;
-using MoonSharp.Interpreter.Interop.StandardDescriptors.HardwiredDescriptors;
-using System.ComponentModel;
-using MoonSharp.Interpreter.Interop.RegistrationPolicies;
-using MoonSharp.Interpreter.Serialization.Json;
-using Vintagestory.Client.NoObf;
 
 namespace HelixLib
 {
@@ -46,235 +34,141 @@ namespace HelixLib
             VISIBLE = 1 << 18
         }
 
-        public static void RegisterAllAssemblies()
+        public static void Register(ICoreAPI api, bool outputAnnotations = false)
         {
-            // Do nothing tee hee
-        }
-
-        public static void RegisterAllAssemblies(ICoreAPI api)
-        {
-            UserData.RegistrationPolicy = InteropRegistrationPolicy.Automatic;
+            UserData.RegistrationPolicy = InteropRegistrationPolicy.Default;
             UserData.DefaultAccessMode = InteropAccessMode.Hardwired;
 
-            // These three lines will generate your LuaLS type definitions. Just uncomment them and join a singleplayer world.
-            //var folderPath = api.GetOrCreateDataPath($"{api.DataBasePath}/ModConfig/helix/");
-            //SaveRegisteredAssemblyDescriptors(folderPath, api);
-            //api.Logger.Event("HELIX: Outputted file to modconfig");
+            GlobalsRegister.RegisterAll();
+            MoonSharpTypeConversions.RegisterAll();
+
+            RegisterVintageStoryAssemblies(api, outputAnnotations);
         }
 
-        // public static void OutputAllTheDefinitions(ICoreAPI api)
-        // {
-        //     var typeAssemblyList = GetRegisteredTypes();
-
-        //     api.Logger.Event($"HELIX: Type classes contains {typeAssemblyList.Count} elements.");
-
-        //     List<Tuple<string, StringBuilder>> stringBuilders = new();
-
-        //     foreach(var typeClass in typeAssemblyList)
-        //     {
-        //         api.Logger.Event($"HELIX: Found {typeClass.Assembly}");
-
-        //         StringBuilder sb = new();
-
-        //         sb.AppendLine($"---@meta {typeClass.Assembly}");
-
-        //         foreach(var classStruct in typeClass.Classes)
-        //         {
-
-        //             string className = classStruct.Name;
-        //             className = className.Replace("`1", "");
-        //             className = className.Replace("`2", "");
-        //             className = className.Replace("`3", "");
-                    
-        //             api.Logger.Event($"HELIX: String building {className}");
-
-        //             sb.Append('\n');
-        //             var classFormat = string.IsNullOrEmpty(classStruct.Inherits) == false ? $"{className}: {classStruct.Inherits}" : className;
-        //             sb.AppendLine($"---@class {classFormat}");
-
-        //             foreach(var method in classStruct.ClassMethods)
-        //             {
-        //                 sb.Append($"---@field ");
-
-        //                 if(method.IsPublic == false)
-        //                 {
-        //                     sb.Append("private ");
-        //                 }
-                        
-        //                 sb.Append($"{method.Name} fun(");
-
-        //                 foreach(ClassMethodParameterStruct param in method.Parameters)
-        //                 {
-        //                     bool isLastParameter = param.GetType() == method.Parameters.Last().GetType();
-        //                     var paramNameFormat = param.IsOptional ? param.Name + "?" : param.Name;
-                            
-        //                     if(string.IsNullOrEmpty(param.Name) == false)
-        //                     {
-        //                         if(isLastParameter)
-        //                         {
-        //                             sb.Append($"{paramNameFormat}: {param.Type.Name}");
-        //                         }
-        //                         else
-        //                         {
-        //                             sb.Append($"{paramNameFormat}: {param.Type.Name}, ");
-        //                         }
-        //                     }
-        //                     else
-        //                     {
-        //                          if(isLastParameter)
-        //                         {
-        //                             sb.Append($"anon: {param.Type.Name}");
-        //                         }
-        //                         else
-        //                         {
-        //                             sb.Append($"anon: {param.Type.Name}, ");
-        //                         }
-        //                     }
-        //                 }
-
-        //                 sb.Append(')');
-
-        //                 if(method.ReturnType != typeof(void))
-        //                 {
-        //                     sb.Append($": {method.ReturnType.Name}");
-        //                 }
-        //                 sb.Append('\n');
-        //             }
-
-        //             // foreach(var member in classStruct.ClassMembers)
-        //             // {
-        //             //     sb.Append($"---@field {member.Name} {member.Type}");
-        //             //     sb.Append('\n');
-        //             // }                    
-
-        //             foreach(var field in classStruct.ClassFields)
-        //             {
-        //                 sb.Append($"---@field ");
-        //                 if(field.IsPublic == false)
-        //                 {
-        //                     sb.Append("private ");
-        //                 }
-        //                 sb.Append($"{field.Name} {field.Type.Name}");
-        //                 sb.Append('\n');
-        //             }
-
-        //             sb.AppendLine($"{className} = {"{}"}");
-
-        //             stringBuilders.Add(new Tuple<string, StringBuilder>(className, sb));
-        //         }
-        //     }
-            
-        //     foreach(var classAndStringBuilder in stringBuilders)
-        //     {
-        //         api.Logger.Event($"HELIX: Trying to write {classAndStringBuilder.Item1}");
-        //         var folderPath = api.GetOrCreateDataPath($"{api.DataBasePath}/ModConfig/helix/");
-        //         // api.StoreModConfig(classAndStringBuilder.Item2.ToString(), folderPath + $"/{classAndStringBuilder.Item1}.lua");
-        //         File.WriteAllText(folderPath + $"/{classAndStringBuilder.Item1}.lua", classAndStringBuilder.Item2.ToString());
-        //     }
-        // }
-
-        // public struct AssemblyTypeStruct
-        // {
-        //     public Assembly Assembly;
-        //     public Type Type;
-        //     public List<ClassStruct> Classes;
-        // }
-
-        // public struct ClassStruct
-        // {
-        //     public bool IsInterface;
-        //     public bool IsPublic;
-        //     public string Inherits;
-        //     public string Name;
-        //     public Assembly Assembly;
-        //     public IEnumerable<ClassMemberStruct> ClassMembers;
-        //     public IEnumerable<ClassMethodStruct> ClassMethods;
-        //     public IEnumerable<ClassFieldStruct> ClassFields;
-        // }
-
-        // public struct ClassMemberStruct
-        // {
-        //     public string Type;
-        //     public string Name;
-        // }
-
-        // public struct ClassMethodStruct
-        // {            
-        //     public bool IsPublic;
-        //     public Type ReturnType;
-        //     public IEnumerable<ClassMethodParameterStruct> Parameters;
-        //     public string Name;
-        // }
-
-        // public struct ClassMethodParameterStruct
-        // {
-        //     public bool IsOptional;
-        //     public Type Type;
-        //     public string? Name;
-        // }
-
-        // public struct ClassFieldStruct
-        // {
-        //     public bool IsPublic;
-        //     public Type Type;
-        //     public string? Name;
-        // }
-
-        public static void SaveRegisteredAssemblyDescriptors(string folderPath, ICoreAPI api)
+        public static Assembly GetAssemblyByName(string assemblyName)
         {
+            return AppDomain.CurrentDomain.GetAssemblies().
+                SingleOrDefault(assembly => assembly.GetName().Name == assemblyName);
+        }
+
+        public struct AssemblyDescriptorGrouping
+        {
+            public Assembly Assembly;
+            public IUserDataDescriptor UserDataDescriptor;
+
+            public AssemblyDescriptorGrouping(Assembly assembly, IUserDataDescriptor userDataDescriptor)
+            {
+                Assembly = assembly;
+                UserDataDescriptor = userDataDescriptor;
+            }
+        }
+
+        public static void RegisterVintageStoryAssemblies(ICoreAPI api, bool outputAnnotations = false)
+        {
+            List<AssemblyDescriptorGrouping> assemblyDescriptors = new();
             List<IUserDataDescriptor> buffer = new();
             List<IUserDataDescriptor> userDataDescriptors = new();
 
-            foreach(Assembly asm in AppDomain.CurrentDomain.GetAssemblies())
+            List<Assembly> vintageStoryAssemblies = new()
             {
-                if(asm.GetName().ToString().Contains("Vintagestory"))
+                GetAssemblyByName("VintagestoryAPI"),
+                GetAssemblyByName("VintagestoryLib")
+            };
+
+            foreach(Assembly asm in vintageStoryAssemblies)
+            {
+                UserData.RegisterAssembly(asm, true);
+
+                api.Logger.Event($"HELIX: Registered assembly - {asm.GetName().Name}");
+
+                foreach(Type type in asm.GetTypes())
                 {
-                    api.Logger.Event($"HELIX: Found assembly with name {asm.GetName()}");
+                    if(UserData.IsTypeRegistered(type)) continue;
 
-                    UserData.RegisterAssembly(asm, true);
-
-                    foreach(Type type in asm.GetTypes())
-                    {
-                        if(UserData.IsTypeRegistered(type)) continue;
-
-                        var regType = UserData.RegisterType(type, InteropAccessMode.Hardwired);
-                        buffer.Add(regType);
-                        userDataDescriptors.Add(regType);
-                    }
-
-                    foreach(var userDataDescriptor in buffer)
-                    {
-                        foreach(Type nestedType in userDataDescriptor.Type.GetAllImplementedTypes())
-                        {
-                            if(UserData.IsTypeRegistered(nestedType)) continue;
-
-                            userDataDescriptors.Add(UserData.RegisterType(nestedType, InteropAccessMode.Hardwired));
-                        }
-                    }
-                }                
+                    var regType = UserData.RegisterType(type, InteropAccessMode.Hardwired);
+                    assemblyDescriptors.Add(new AssemblyDescriptorGrouping(asm, regType));
+                }
             }
 
-            StringBuilder sb = new();
+            if(outputAnnotations == false) return;
 
-            foreach(IUserDataDescriptor desc in userDataDescriptors)
+            StringBuilder sb = new();
+            var folderPath = api.GetOrCreateDataPath($"{api.DataBasePath}/ModConfig/helix/");
+
+            foreach(AssemblyDescriptorGrouping sd in assemblyDescriptors)
             {
+                var assembly = sd.Assembly;
+                var desc = sd.UserDataDescriptor;
+
                 var typeFlags = CalculateFlagsForType(desc.Type);
+
                 if(typeFlags.HasFlag(EnumTypeFlags.NOT_PUBLIC)) continue;
 
-                sb.AppendLine($"---@meta {desc.Type.Name}");
+                sb.AppendLine($"---@meta");
+                sb.AppendLine();
 
                 if(typeFlags.HasFlag(EnumTypeFlags.CLASS) || typeFlags.HasFlag(EnumTypeFlags.INTERFACE))
                 {
-                    var fmtBaseType = desc.Type.BaseType == null ? "" : $": {desc.Type.BaseType.Name}";
+                    var typesImplementingInterface = TypesImplementingInterface(desc.Type);
+                    var typesThatMatchBaseType = from ti in typesImplementingInterface
+                                                where desc.Type.Name != ti.Name
+                                                where ti.Name != "Object"
+                                                group ti by ti.Name into t
+                                                from final in t
+                                                select final.Name;
+
+                    string fmtBaseType = "";
+
+                    if(string.IsNullOrWhiteSpace(desc.Type.BaseType?.Name) == false && desc.Type.BaseType?.Name != "Object")
+                    {
+                        fmtBaseType += $": {desc.Type.BaseType?.Name}";
+
+                        foreach(string inheritance in typesThatMatchBaseType)
+                        {
+                            fmtBaseType += $", {inheritance}";
+                        }
+                    }
+                    else
+                    {                        
+                        foreach(string inheritance in typesThatMatchBaseType)
+                        {
+                            if(typesThatMatchBaseType.First() == inheritance)
+                            {
+                                fmtBaseType += ": ";
+                            }
+                            else
+                            {
+                                fmtBaseType += ",";
+                            }
+                            fmtBaseType += $" {inheritance}";
+                        }
+                    }
+                    
+                    var classSummary = desc.Type.GetXmlDocsSummary();
+                    
+                    if(string.IsNullOrWhiteSpace(classSummary) == false)
+                    {
+                        sb.AppendLine($"-- {classSummary.Replace("\n", " ")}");
+                    }
+
                     sb.AppendLine($"---@class {desc.Type.Name}{fmtBaseType}");
 
                     var constructors = desc.Type.GetConstructors();
                     var methods = desc.Type.GetMethods();
                     var members = desc.Type.GetMembers();
-                    CreateAnnotationsForConstructors(ref sb, constructors);
-                    CreateAnnotationsForMethods(ref sb, methods);
                     CreateAnnotationsForMembers(ref sb, members);
                     sb.AppendLine($"{desc.Type.Name} = {{}}");
+                    
+                    sb.AppendLine();
+
+                    CreateAnnotationsForConstructors(ref sb, constructors, desc.Type);
+
+                    sb.AppendLine();
+
+                    CreateAnnotationsForMethods(ref sb, methods, desc.Type);
+
+                    // sb.AppendLine($"return {desc.Type.Name}");
+                    
                 }
                 else if(typeFlags.HasFlag(EnumTypeFlags.ENUM))
                 {
@@ -284,89 +178,107 @@ namespace HelixLib
                     var enumNames = desc.Type.GetEnumNames();
                     var enumValues = desc.Type.GetEnumValues();
                     CreateAnnotationsForEnum(ref sb, enumNames, enumValues);
+
+                    // sb.AppendLine($"return {desc.Type.Name}");
                 }
                 
-                File.WriteAllText(folderPath + $"/luals_{desc.Type.Name}.lua", sb.ToString());
+                Directory.CreateDirectory(folderPath + $"/{assembly.GetName().Name}");
+                File.WriteAllText(folderPath + $"/{assembly.GetName().Name}/{desc.Type.Name}.lua", sb.ToString());
+                
                 sb.Clear();
             }
-
+            api.Logger.Event("HELIX: Outputted annotations to VintagestoryData/ModConfig/helix/");
         }
 
-        public static void CreateAnnotationsForConstructors(ref StringBuilder sb, ConstructorInfo[] constructorInfos)
+        /// <summary>
+        /// Returns all types in the current AppDomain implementing the interface or inheriting the type. 
+        /// </summary>
+        public static IEnumerable<Type> TypesImplementingInterface(Type desiredType)
         {
-            bool overloadedConstructor = false;
-            List<string> pastNames = new();;
+            return AppDomain
+                .CurrentDomain
+                .GetAssemblies()
+                .SelectMany(assembly => assembly.GetTypes())
+                .Where(type => desiredType.IsAssignableTo(type));
+        }
 
+        public static void CreateAnnotationsForConstructors(ref StringBuilder sb, ConstructorInfo[] constructorInfos, Type createdBy)
+        {
             foreach(ConstructorInfo info in constructorInfos)
             {
                 var parameters = info.GetParameters();
 
-                if(!pastNames.Contains(info.Name))
-                {
-                    overloadedConstructor = false;
-                    pastNames.Add(info.Name);
-                }
+                CreateAnnotationsForParametersAsFieldAnnotations(ref sb, parameters);
 
-                bool hasOverloads = constructorInfos.Where(ci => ci.Name == info.Name).Count() > 1;
-
-                if(hasOverloads && !overloadedConstructor)
-                {
-                    sb.Append($"---@field ctor fun(");
-                    overloadedConstructor = true;
-                }
-                else if(hasOverloads && overloadedConstructor)
-                {
-                    sb.Append($"---@overload fun(");
-                }
-                else if(!hasOverloads)
-                {
-                    sb.Append($"---@field ctor fun(");
-                }
-
+                sb.AppendLine($"---@return {createdBy.Name}");
+                sb.Append($"function {createdBy.Name}.ctor(");
                 CreateAnnotationsForParameters(ref sb, parameters);
-
-                sb.Append($"): {info.DeclaringType?.Name}");
+                sb.Append(") end");
 
                 sb.AppendLine();
             }
         }
 
-        public static void CreateAnnotationsForMethods(ref StringBuilder sb, MethodInfo[] methodInfos)
+        public static void CreateAnnotationsForMethods(ref StringBuilder sb, MethodInfo[] methodInfos, Type createdBy)
         {
-            bool overloadedConstructor = false;
-            List<string> pastNames = new();
-
             foreach(MethodInfo info in methodInfos)
             {
-                
-
                 var parameters = info.GetParameters();
 
-                if(!pastNames.Contains(info.Name))
+                var methodSummary = info.GetXmlDocsSummary();
+
+                if(string.IsNullOrWhiteSpace(methodSummary) == false)
                 {
-                    overloadedConstructor = false;
-                    pastNames.Add(info.Name);
+                    if(methodSummary.Contains("\n"))
+                    {
+                        foreach(string line in methodSummary.Split("\n"))
+                        {
+                            sb.AppendLine($"-- {line}");
+                        }
+                    }
+                    else
+                    {
+                        sb.AppendLine($"-- {methodSummary}");
+                    }
                 }
 
-                bool hasOverloads = methodInfos.Where(ci => ci.Name == info.Name).Count() > 1;
+                CreateAnnotationsForParametersAsFieldAnnotations(ref sb, parameters);
 
-                if(hasOverloads && !overloadedConstructor)
+                if(info.ReturnType.Name != "Void")
                 {
-                    sb.Append($"---@field {info.Name} fun(");
-                    overloadedConstructor = true;
+                    var returnSummary = info.ReturnType.GetXmlDocsSummary().Replace("\n", " ");
+                    if(returnSummary != string.Empty)
+                        sb.AppendLine($"---@return {TypeToLuaTypeString(info.ReturnType)} # {returnSummary}");
+                    else
+                        sb.AppendLine($"---@return {TypeToLuaTypeString(info.ReturnType)}");
                 }
-                else if(hasOverloads && overloadedConstructor)
-                {
-                    sb.Append($"---@overload fun(");
-                }
-                else if(!hasOverloads)
-                {
-                    sb.Append($"---@field {info.Name} fun(");
-                }
-                
+
+                sb.Append($"function {createdBy.Name}.{info.Name}(");
                 CreateAnnotationsForParameters(ref sb, parameters);
+                sb.Append(") end");
+
+                sb.AppendLine();
+                sb.AppendLine();
+            }
+            
+            sb.AppendLine();
+        }
+
+        public static void CreateAnnotationsForParametersAsFieldAnnotations(ref StringBuilder sb, ParameterInfo[] parameterInfos)
+        {
+            foreach(var param in parameterInfos)
+            {
+                var nameFmt = string.IsNullOrWhiteSpace(param.Name) ? "value" : param.Name;
+                nameFmt += param.IsOptional ? "?" : "";
                 
-                sb.Append($"): {TypeToLuaTypeString(info.ReturnType.Name)}");
+                sb.Append($"---@param {nameFmt} {TypeToLuaTypeString(param.ParameterType)}");
+
+                var paramSummary = param.ToContextualParameter().ParameterType.GetXmlDocsSummary();
+
+                if(string.IsNullOrWhiteSpace(paramSummary) == false)
+                {
+                    sb.Append($" {paramSummary.Replace("\n", " ")}");
+                }
 
                 sb.AppendLine();
             }
@@ -381,12 +293,12 @@ namespace HelixLib
                     var nameFmt = string.IsNullOrWhiteSpace(param.Name) ? "value" : param.Name;
 
                     if(parameterInfos.IndexOf(param) == parameterInfos.IndexOf(parameterInfos.Last()))
-                    {                        
-                        sb.Append($"{nameFmt}: {TypeToLuaTypeString(param.ParameterType.Name)}");
+                    {      
+                        sb.Append($"{nameFmt}");
                     }
                     else
                     {
-                        sb.Append($"{nameFmt}: {TypeToLuaTypeString(param.ParameterType.Name)}, ");
+                        sb.Append($"{nameFmt}, ");
                     }
                 }
             }
@@ -399,14 +311,39 @@ namespace HelixLib
                 if(info.MemberType == MemberTypes.Constructor) continue;
                 if(info.MemberType == MemberTypes.Method) continue;
 
-                var property = info.ReflectedType?.GetProperties().FirstOrDefault();
+                Type? memberType;
 
-                if(property == null)
+                switch (info.MemberType)
                 {
-                    continue;
+                    case MemberTypes.Event: memberType = ((EventInfo)info).EventHandlerType; break;
+                    case MemberTypes.Field: memberType = ((FieldInfo)info).FieldType; break;
+                    case MemberTypes.Method: memberType = ((MethodInfo)info).ReturnType; break;
+                    case MemberTypes.Property: memberType = ((PropertyInfo)info).PropertyType; break;
+                    default: memberType = null; break;
                 }
 
-                sb.AppendLine($"---@field {info.Name} {TypeToLuaTypeString(property.PropertyType.Name)}");
+                if(memberType != null)
+                    sb.Append($"---@field {info.Name} {TypeToLuaTypeString(memberType)}");
+                else
+                    sb.Append($"---@field {info.Name} nil");
+
+                var memberSummary = info.GetXmlDocsSummary();
+
+                if(string.IsNullOrWhiteSpace(memberSummary) == false)
+                {
+                    if(memberSummary.Contains("\n"))
+                    {
+                        foreach(string line in memberSummary.Split("\n"))
+                        {
+                            sb.Append($" {line}");
+                        }
+                    }
+                    else
+                    {
+                        sb.Append($" {memberSummary}");
+                    }
+                }          
+                sb.AppendLine();      
             }
         }
 
@@ -427,24 +364,140 @@ namespace HelixLib
                 }
             }
         }
-        public static string TypeToLuaTypeString(string typeName)
-        {
-            if(typeName.Contains("String")) typeName = typeName.Replace("String", "string");
-            if(typeName.Contains("Int32")) typeName = typeName.Replace("Int32", "number");
-            if(typeName.Contains("UInt32")) typeName = typeName.Replace("UInt32", "number");
-            if(typeName.Contains("Boolean")) typeName = typeName.Replace("Boolean", "boolean");
-            if(typeName.Contains("Object"))  typeName = typeName.Replace("Object", "table");
-            if(typeName.Contains("Void")) typeName = typeName.Replace("Void", "nil");
-            if(typeName.Contains("Type")) typeName = typeName.Replace("Type", "any");
-            if(typeName.Contains("Action`1")) typeName = typeName.Replace("Action", "any");
-            if(typeName.Contains("Byte")) typeName = typeName.Replace("Byte", "number");
-            if(typeName.Contains("Dictionary`2")) typeName = typeName.Replace("Dictionary`2", "table<any, any>");
-            if(typeName.Contains("List`1")) typeName = typeName.Replace("List`1", "any[]");
-            if(typeName.Contains("IEnumerable`1")) typeName = typeName.Replace("IEnumerable`1", "any[]");
-            if(typeName.Contains("Collection`1")) typeName = typeName.Replace("Collection`1", "any[]");
-            if(typeName.Contains("Func`2")) typeName = typeName.Replace("Func`2", "fun(outResult: any): any");
 
-            return typeName;
+        public static string TypeToLuaTypeString(Type type)
+        {
+            var name = type.Name;
+
+            string strNumber = "number";
+            string strBoolean = "boolean";
+            string strString = "string";
+            string strFunction = "function";
+            string strUserdata = "userdata";
+            string strTable = "table";
+            string strIterator = "iterator";
+
+            if(name.StartsWith("SByte")) 
+            {
+                name = strNumber;
+            }
+
+            if(name.StartsWith("Byte")) 
+            {
+                name = strNumber;
+            }
+
+            if(name.StartsWith("Int16")) 
+            {
+                name = strNumber;
+            }
+
+            if(name.StartsWith("UInt16")) 
+            {
+                name = strNumber;
+            }
+
+            if(name.StartsWith("Int32")) 
+            {
+                name = strNumber;
+            }
+
+            if(name.StartsWith("UInt32")) 
+            {
+                name = strNumber;
+            }
+
+            if(name.StartsWith("Int64")) 
+            {
+                name = strNumber;
+            }
+
+            if(name.StartsWith("UInt64")) 
+            {
+                name = strNumber;
+            }
+
+            if(name.StartsWith("Single")) 
+            {
+                name = strNumber;
+            }
+
+            if(name.StartsWith("Decimal")) 
+            {
+                name = strNumber;
+            }
+
+            if(name.StartsWith("Double")) 
+            {
+                name = strNumber;
+            }
+
+            if(name.StartsWith("Boolean")) 
+            {
+                name = strBoolean;
+            }
+
+            if(name.StartsWith("String")) 
+            {
+                name = strString;
+            }
+
+            if(name.StartsWith("StringBuilder")) 
+            {
+                name = strString;
+            }
+
+            if(name.StartsWith("Char")) 
+            {
+                name = strString;
+            }
+
+            if(name.StartsWith("Delegate")) 
+            {
+                name = strFunction;
+            }
+
+            if(name.StartsWith("Object")) 
+            {
+                name = strUserdata;
+            }
+
+            if(name.StartsWith("Type")) 
+            {
+                name = strUserdata;
+            }
+
+            if(name.StartsWith("MethodInfo")) 
+            {
+                name = strFunction;
+            }
+
+            if(name.StartsWith("Action")) 
+            {
+                name = strFunction;
+            }
+
+            if(name.StartsWith("List")) 
+            {
+                name = strTable;
+            }
+
+            if(name.StartsWith("Dictionary")) 
+            {
+                name = strTable;
+            }
+
+            if(name.StartsWith("IEnumerable")) 
+            {
+                name = strFunction;
+            }
+
+            if(name.StartsWith("IEnumerator")) 
+            {
+                name = strFunction;
+            }
+            
+            return name;
         }
 
         public static EnumTypeFlags CalculateFlagsForType(Type type)
@@ -479,179 +532,5 @@ namespace HelixLib
             return typeFlags;
 
         }
-
-        
-
-        // public static List<AssemblyTypeStruct> GetRegisteredTypes()
-        // {
-        //     List<AssemblyTypeStruct> assemblyTypeStructs = new();
-
-        //     List<Type> addedTypes = new();
-
-        //     foreach(Type type in UserData.GetRegisteredTypes())
-        //     {
-        //         GetNestedTypes(ref addedTypes, ref assemblyTypeStructs, type);
-        //     }
-
-
-        //     // foreach(AssemblyTypeStruct type in typeList)
-        //     // {
-        //     //     // if(addedTypes.Select(t=>t.Type).Contains(type.Type)) continue;
-
-        //     //     List<ClassStruct> classStructs = new();
-
-        //     //     if(type.Type.IsClass || type.Type.IsInterface)
-        //     //     {
-        //     //         AddClassToClassStructs(ref classStructs, type.Type);
-        //     //     }
-
-        //     //     addedTypes.Add(new AssemblyTypeStruct{
-        //     //         Assembly = type.Assembly,
-        //     //         Type = type.Type,
-        //     //         Classes = classStructs
-        //     //     });
-
-                
-        //     // }
-
-        //     // foreach(AssemblyTypeStruct assemblyTypeStruct in addedTypes)
-        //     // {
-        //     //     // List<ClassStruct> structsToAdd = new();
-        //     //     // structsToAdd = classStructs.Where(cs => cs.Assembly.FullName == assemblyTypeStruct.Assembly.FullName).ToList();
-        //     //     result.Add(assemblyTypeStruct, );
-        //     // }
-
-        //     return assemblyTypeStructs;
-
-
-        //     // return classStructs;
-
-        //     // StringBuilder sb = new();
-
-        //     // sb.AppendLine("---@meta");
-
-        //     // Type? previousClassType = null;
-
-        //     // while(typeList.Any())
-        //     // {
-        //     //     api.Logger.Event("HELIX: Adding " + typeList.First().Type.Name + " from Assembly " + typeList.First().Assembly.GetName());
-        //     //     AddTypeToMeta(ref previousClassType, ref typeList, ref addedTypes, ref sb);
-        //     // }
-			
-        //     // return sb.ToString();
-        // }
-
-        // public static void GetNestedTypes(ref List<Type> addedTypes, ref List<AssemblyTypeStruct> assemblyTypeStructs, Type type)
-        // {
-        //     if(addedTypes.Contains(type)) return;
-        //     addedTypes.Add(type);
-
-        //     // List<Type> typesToProcess = new();
-
-        //     // typesToProcess.AddRange(type.GetAllImplementedTypes());
-        //     // typesToProcess.AddRange(type.GetInterfaces());
-
-        //     // type.GetFields().Foreach(f => {
-        //     //     if(f.ReflectedType != null)
-        //     //         typesToProcess.Add(f.ReflectedType);
-        //     // });
-        //     // type.GetMembers().Foreach(f => {
-        //     //     if(f.ReflectedType != null)
-        //     //         typesToProcess.Add(f.ReflectedType);
-        //     // });
-
-        //     // type.GetMethods().Foreach(f => {
-        //     //     if(f.ReturnType != null)
-        //     //         typesToProcess.Add(f.ReturnType);
-        //     // });
-        //     // type.GetMethods().Foreach(f=>{
-                
-        //     // });
-
-        //     var newTypeAssembly = new AssemblyTypeStruct(){
-        //         Assembly = type.Assembly,
-        //         Type = type,
-        //         Classes = new List<ClassStruct>()
-        //     };
-
-        //     // foreach(var assemblyType in assemblyTypeStructs)
-        //     // {
-
-        //     newTypeAssembly.Classes.Add(AddClassToClassStructs(type));
-
-        //     assemblyTypeStructs.Add(newTypeAssembly);
-
-        //     // foreach(Type typeToProcess in typesToProcess)
-        //     // {
-        //     //     GetNestedTypes(ref addedTypes, ref assemblyTypeStructs, typeToProcess);
-        //     // }
-        // }
-
-
-        // public static ClassStruct AddClassToClassStructs(Type classType)
-        // {
-        //     IEnumerable<MethodInfo> methodInfos = classType.GetMethods();
-        //     IEnumerable<MemberInfo> memberInfos = classType.GetMembers();
-        //     IEnumerable<FieldInfo> fieldInfos = classType.GetFields();
-
-        //     List<ClassMethodStruct> classMethods = new();
-        //     List<ClassMemberStruct> classMembers = new();
-        //     List<ClassFieldStruct> classFields = new();
-
-        //     ClassStruct classToAdd = new()
-        //     {
-        //         Name = classType.Name,
-        //         Inherits = classType.BaseType?.Name ?? string.Empty,
-        //         IsInterface = classType.IsInterface,
-        //         IsPublic = classType.IsPublic
-        //     };
-
-        //     foreach(MethodInfo info in methodInfos)
-        //     {
-        //         IEnumerable<ParameterInfo> parameterInfos = info.GetParameters();
-
-        //         List<ClassMethodParameterStruct> parameterStructs = new();
-
-        //         foreach(ParameterInfo parameterInfo in parameterInfos)
-        //         {
-        //             parameterStructs.Add(new ClassMethodParameterStruct(){
-        //                 IsOptional = parameterInfo.IsOptional,
-        //                 Name = parameterInfo.Name,
-        //                 Type = parameterInfo.ParameterType
-        //             });
-        //         }
-
-        //         classMethods.Add(new ClassMethodStruct(){
-        //             IsPublic = info.IsPublic,
-        //             Name = info.Name,
-        //             Parameters = parameterStructs,
-        //             ReturnType = info.ReturnType
-        //         });
-        //     }
-
-        //     foreach(MemberInfo memberInfo in memberInfos)
-        //     {
-        //         classMembers.Add(new ClassMemberStruct(){
-        //             Name = memberInfo.Name,
-        //             Type = memberInfo.MemberType.ToString(),
-        //         });
-        //     }
-
-        //     foreach(FieldInfo fieldInfo in fieldInfos)
-        //     {
-        //         classFields.Add(new ClassFieldStruct(){
-        //             IsPublic = fieldInfo.IsPublic,
-        //             Name = fieldInfo.Name,
-        //             Type = fieldInfo.FieldType
-        //         });
-        //     }
-
-        //     classToAdd.ClassMethods = classMethods;
-        //     classToAdd.ClassMembers = classMembers;
-        //     classToAdd.ClassFields = classFields;
-
-        //     return classToAdd;
-        // }
-
     }
 }

@@ -1,0 +1,318 @@
+---@meta
+
+---@class GuiElementTextInput: GuiElementEditableTextBase, IDisposable, GuiElement, GuiElementControl, GuiElementEditableTextBase, GuiElementTextBase
+---@field TextLengthWithoutLineBreaks number
+---@field CaretPosWithoutLineBreaks number
+---@field CaretPosLine number
+---@field CaretPosInLine number
+---@field Focusable boolean
+---@field Text string
+---@field Enabled boolean Enables/disables the given element (default is enabled)
+---@field InsideClipBounds ElementBounds If the element is inside a clip or not.
+---@field RenderAsPremultipliedAlpha boolean
+---@field HasFocus boolean Whether or not the element has focus or not.
+---@field DrawOrder number 0 = draw first, 1 = draw last. Only for interactive elements.
+---@field Scale number The scale of the element.
+---@field MouseOverCursor string
+---@field OnCaretPositionChanged function
+---@field OnTextChanged function
+---@field OnTryTextChangeText OnTryTextChangeDelegate
+---@field OnCursorMoved function
+---@field OnKeyPressed function Called when a keyboard key was pressed, received and handled
+---@field WordWrap boolean
+---@field textUtil TextDrawUtil
+---@field textPathMode boolean Whether or not the text path mode is active.
+---@field Font CairoFont The font of the Text Element.
+---@field Bounds ElementBounds The bounds of the element.
+---@field TabIndex number The tab index of the element.
+GuiElementTextInput = {}
+
+---@param capi ICoreClientAPI The core api implemented by the client. The main interface for accessing the client. Contains all sub components and some miscellaneous methods.
+---@param bounds ElementBounds Box sizing model comparable to the box sizing model of cascading style sheets using "position:relative;" Each element has a position, size, padding and margin Padding is counted towards the size of the box, whereas margin is not
+---@param onTextChanged function
+---@param font CairoFont Represent a font with sizing and styling for use in rendering text
+---@return GuiElementTextInput
+function GuiElementTextInput.ctor(capi, bounds, onTextChanged, font) end
+
+-- Tells the text component to hide the characters in the text.
+function GuiElementTextInput.HideCharacters() end
+
+---@param text string
+function GuiElementTextInput.SetPlaceHolderText(text) end
+
+---@param ctx Context
+---@param surface ImageSurface
+function GuiElementTextInput.ComposeTextElements(ctx, surface) end
+
+---@param deltaTime number
+function GuiElementTextInput.RenderInteractiveElements(deltaTime) end
+
+function GuiElementTextInput.OnFocusLost() end
+
+function GuiElementTextInput.OnFocusGained() end
+
+---@param api ICoreClientAPI The core api implemented by the client. The main interface for accessing the client. Contains all sub components and some miscellaneous methods.
+---@param args KeyEvent
+function GuiElementTextInput.OnKeyDown(api, args) end
+
+function GuiElementTextInput.Dispose() end
+
+---@return table
+function GuiElementTextInput.GetLines() end
+
+---@return number
+function GuiElementTextInput.get_TextLengthWithoutLineBreaks() end
+
+---@return number
+function GuiElementTextInput.get_CaretPosWithoutLineBreaks() end
+
+---@param value number
+function GuiElementTextInput.set_CaretPosWithoutLineBreaks(value) end
+
+---@return number
+function GuiElementTextInput.get_CaretPosLine() end
+
+---@param value number
+function GuiElementTextInput.set_CaretPosLine(value) end
+
+---@return number
+function GuiElementTextInput.get_CaretPosInLine() end
+
+---@param value number
+function GuiElementTextInput.set_CaretPosInLine(value) end
+
+---@return boolean
+function GuiElementTextInput.get_Focusable() end
+
+-- Sets the position of the cursor at a given point.
+---@param x number
+---@param y number
+function GuiElementTextInput.SetCaretPos(x, y) end
+
+-- Sets the position of the cursor to a specific character.
+---@param posInLine number
+---@param posLine? number
+function GuiElementTextInput.SetCaretPos(posInLine, posLine) end
+
+-- Sets a numerical value to the text, appending it to the end of the text.
+---@param value number
+function GuiElementTextInput.SetValue(value) end
+
+-- Sets given text, sets the cursor to the end of the text
+---@param text string
+---@param setCaretPosToEnd? boolean
+function GuiElementTextInput.SetValue(text, setCaretPosToEnd) end
+
+-- Sets given texts, leaves cursor position unchanged
+---@param newLines table
+function GuiElementTextInput.LoadValue(newLines) end
+
+---@param text string
+---@return table
+function GuiElementTextInput.Lineize(text) end
+
+---@param api ICoreClientAPI The core api implemented by the client. The main interface for accessing the client. Contains all sub components and some miscellaneous methods.
+---@param args MouseEvent This contains the data for what the mouse is currently doing.
+function GuiElementTextInput.OnMouseDownOnElement(api, args) end
+
+---@return string
+function GuiElementTextInput.GetText() end
+
+---@param api ICoreClientAPI The core api implemented by the client. The main interface for accessing the client. Contains all sub components and some miscellaneous methods.
+---@param args KeyEvent
+function GuiElementTextInput.OnKeyPress(api, args) end
+
+-- Moves the cursor forward and backward by an amount.
+---@param dir number
+---@param wholeWord? boolean
+function GuiElementTextInput.MoveCursor(dir, wholeWord) end
+
+-- Sets the number of lines in the Text Area.
+---@param maxlines number
+function GuiElementTextInput.SetMaxLines(maxlines) end
+
+---@param maxheight number
+function GuiElementTextInput.SetMaxHeight(maxheight) end
+
+---@return string
+function GuiElementTextInput.get_Text() end
+
+---@param value string
+function GuiElementTextInput.set_Text(value) end
+
+---@param ctx Context
+---@param surface ImageSurface
+function GuiElementTextInput.ComposeElements(ctx, surface) end
+
+---@return number
+function GuiElementTextInput.GetMultilineTextHeight() end
+
+---@param ctx Context
+---@param posX number
+---@param posY number
+---@param orientation? EnumTextOrientation
+---@return number
+function GuiElementTextInput.DrawMultilineTextAt(ctx, posX, posY, orientation) end
+
+-- Draws the line of text on a component.
+---@param ctx Context
+---@param text string
+---@param posX number
+---@param posY number
+---@param textPathMode? boolean
+function GuiElementTextInput.DrawTextLineAt(ctx, text, posX, posY, textPathMode) end
+
+---@return boolean
+function GuiElementTextInput.get_Enabled() end
+
+---@param value boolean
+function GuiElementTextInput.set_Enabled(value) end
+
+---@return ElementBounds # Box sizing model comparable to the box sizing model of cascading style sheets using "position:relative;" Each element has a position, size, padding and margin Padding is counted towards the size of the box, whereas margin is not
+function GuiElementTextInput.get_InsideClipBounds() end
+
+---@param value ElementBounds Box sizing model comparable to the box sizing model of cascading style sheets using "position:relative;" Each element has a position, size, padding and margin Padding is counted towards the size of the box, whereas margin is not
+function GuiElementTextInput.set_InsideClipBounds(value) end
+
+---@return boolean
+function GuiElementTextInput.get_RenderAsPremultipliedAlpha() end
+
+---@param value boolean
+function GuiElementTextInput.set_RenderAsPremultipliedAlpha(value) end
+
+---@return boolean
+function GuiElementTextInput.get_HasFocus() end
+
+---@return number
+function GuiElementTextInput.get_DrawOrder() end
+
+---@return number
+function GuiElementTextInput.get_Scale() end
+
+---@param value number
+function GuiElementTextInput.set_Scale(value) end
+
+-- The post render of the interactive element.
+---@param deltaTime number
+function GuiElementTextInput.PostRenderInteractiveElements(deltaTime) end
+
+-- Renders the focus overlay.
+---@param deltaTime number
+function GuiElementTextInput.RenderFocusOverlay(deltaTime) end
+
+function GuiElementTextInput.BeforeCalcBounds() end
+
+-- Creates a rounded rectangle.
+---@param ctx Context
+---@param bounds ElementBounds Box sizing model comparable to the box sizing model of cascading style sheets using "position:relative;" Each element has a position, size, padding and margin Padding is counted towards the size of the box, whereas margin is not
+function GuiElementTextInput.DialogRoundRectangle(ctx, bounds) end
+
+-- Creates a rounded rectangle element.
+---@param ctx Context
+---@param bounds ElementBounds Box sizing model comparable to the box sizing model of cascading style sheets using "position:relative;" Each element has a position, size, padding and margin Padding is counted towards the size of the box, whereas margin is not
+---@param isBackground? boolean
+---@param radius? number
+function GuiElementTextInput.ElementRoundRectangle(ctx, bounds, isBackground, radius) end
+
+-- Shades a path with the given context.
+---@param ctx Context
+---@param thickness? number
+function GuiElementTextInput.ShadePath(ctx, thickness) end
+
+-- Adds an embossed rounded rectangle to the dialog.
+---@param ctx Context
+---@param x number
+---@param y number
+---@param width number
+---@param height number
+---@param inverse? boolean
+function GuiElementTextInput.EmbossRoundRectangleDialog(ctx, x, y, width, height, inverse) end
+
+-- Adds an embossed rounded rectangle to the dialog.
+---@param ctx Context
+---@param x number
+---@param y number
+---@param width number
+---@param height number
+---@param inverse? boolean
+---@param depth? number
+---@param radius? number
+function GuiElementTextInput.EmbossRoundRectangleElement(ctx, x, y, width, height, inverse, depth, radius) end
+
+-- Adds an embossed rounded rectangle to the dialog.
+---@param ctx Context
+---@param bounds ElementBounds Box sizing model comparable to the box sizing model of cascading style sheets using "position:relative;" Each element has a position, size, padding and margin Padding is counted towards the size of the box, whereas margin is not
+---@param inverse? boolean
+---@param depth? number
+---@param radius? number
+function GuiElementTextInput.EmbossRoundRectangleElement(ctx, bounds, inverse, depth, radius) end
+
+function GuiElementTextInput.RenderBoundsDebug() end
+
+-- The event fired when the mouse is down the element is around.  Fires before OnMouseDownOnElement, however OnMouseDownOnElement is called within the base function.
+---@param api ICoreClientAPI The core api implemented by the client. The main interface for accessing the client. Contains all sub components and some miscellaneous methods.
+---@param mouse MouseEvent This contains the data for what the mouse is currently doing.
+function GuiElementTextInput.OnMouseDown(api, mouse) end
+
+-- The event fired when the mouse is released on the element.  Called after OnMouseUp.  
+---@param api ICoreClientAPI The core api implemented by the client. The main interface for accessing the client. Contains all sub components and some miscellaneous methods.
+---@param args MouseEvent This contains the data for what the mouse is currently doing.
+function GuiElementTextInput.OnMouseUpOnElement(api, args) end
+
+-- The event fired when the mouse is released.  
+---@param api ICoreClientAPI The core api implemented by the client. The main interface for accessing the client. Contains all sub components and some miscellaneous methods.
+---@param args MouseEvent This contains the data for what the mouse is currently doing.
+function GuiElementTextInput.OnMouseUp(api, args) end
+
+---@param api ICoreClientAPI The core api implemented by the client. The main interface for accessing the client. Contains all sub components and some miscellaneous methods.
+---@param slot ItemSlot The default item slot to item stacks
+---@return boolean
+function GuiElementTextInput.OnMouseEnterSlot(api, slot) end
+
+---@param api ICoreClientAPI The core api implemented by the client. The main interface for accessing the client. Contains all sub components and some miscellaneous methods.
+---@param slot ItemSlot The default item slot to item stacks
+---@return boolean
+function GuiElementTextInput.OnMouseLeaveSlot(api, slot) end
+
+-- The event fired when the mouse is moved.
+---@param api ICoreClientAPI The core api implemented by the client. The main interface for accessing the client. Contains all sub components and some miscellaneous methods.
+---@param args MouseEvent This contains the data for what the mouse is currently doing.
+function GuiElementTextInput.OnMouseMove(api, args) end
+
+-- The event fired when the mouse wheel is scrolled.
+---@param api ICoreClientAPI The core api implemented by the client. The main interface for accessing the client. Contains all sub components and some miscellaneous methods.
+---@param args MouseWheelEventArgs The event arguments for the mouse.
+function GuiElementTextInput.OnMouseWheel(api, args) end
+
+-- The event fired when a key is held down.
+---@param api ICoreClientAPI The core api implemented by the client. The main interface for accessing the client. Contains all sub components and some miscellaneous methods.
+---@param args KeyEvent
+function GuiElementTextInput.OnKeyUp(api, args) end
+
+-- Whether or not the point on screen is inside the Element's area.
+---@param posX number
+---@param posY number
+---@return boolean
+function GuiElementTextInput.IsPositionInside(posX, posY) end
+
+---@return string
+function GuiElementTextInput.get_MouseOverCursor() end
+
+-- The compressed version of the debug outline color as a single int value.
+---@return number
+function GuiElementTextInput.OutlineColor() end
+
+---@return userdata
+function GuiElementTextInput.GetType() end
+
+---@return string
+function GuiElementTextInput.ToString() end
+
+---@param obj userdata
+---@return boolean
+function GuiElementTextInput.Equals(obj) end
+
+---@return number
+function GuiElementTextInput.GetHashCode() end
+
+

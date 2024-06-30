@@ -3,7 +3,7 @@
     modid: "helix_lib",
     name: "Helix Lib",
     authors: ["Lila"],
-    description: "Create and run Lua files for the client / server / both.",
+    description: "Create and run Lua mods for the client / server / both.",
     version: "1.0.0",
     dependencies: {
         game: "1.19.8" // Will probably fuck me later. - Lila

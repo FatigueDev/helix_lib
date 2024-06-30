@@ -4,6 +4,9 @@
     <TargetFramework>net7.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <OutputPath>bin/Debug/$(AssemblyName)</OutputPath>
   </PropertyGroup>
 
   <ItemGroup>
@@ -19,19 +22,17 @@
       <HintPath>$(VINTAGE_STORY)/Lib/0Harmony.dll</HintPath>
       <Private>false</Private>
     </Reference>
-    <Reference Include="Moonsharp.Interpreter">
-      <HintPath>/lib/MoonSharp.Interpreter.dll</HintPath>
-      <Private>false</Private>
-    </Reference>
-    <Reference Include="Moonsharp.VsCodeDebugger">
-      <HintPath>/lib/Moonsharp.VsCodeDebugger.dll</HintPath>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>$(VINTAGE_STORY)/Lib/Newtonsoft.Json.dll</HintPath>
       <Private>false</Private>
     </Reference>
   </ItemGroup>
 
-  <!-- <ItemGroup Condition=" '$(TargetFramework)' == 'net481' ">
-    
-  </ItemGroup> -->
+  <ItemGroup>
+    <PackageReference Include="MoonSharp" Version="2.0.0" />
+    <PackageReference Include="MoonSharp.Debugger.VsCode" Version="2.0.0" />
+    <PackageReference Include="Namotion.Reflection" Version="3.1.1" />
+  </ItemGroup>
 
   <ItemGroup>
     <Content Include="../modinfo.json">
@@ -40,15 +41,18 @@
   </ItemGroup>
 
   <ItemGroup>
-    <CompiledModFolder Include="./bin/**/*.*"/>
-    <LuaScripts Include="./scripts/**/*.lua"/>
-    <LibraryFolder Include="./lib/**/*.dll"/>
+    <!-- <CompiledModFolder Include="./bin/**/*.*"/> -->
+    <LuaScripts Include="./mods/**/*.lua"/>
   </ItemGroup>
 
   <Target Name="CopyBuildToModDirectory" AfterTargets="AfterBuild">
-    <Copy SourceFiles="@(CompiledModFolder)" DestinationFolder="$(HELIX_MOD_FOLDER)" />
-    <Copy SourceFiles="@(LibraryFolder)" DestinationFolder="$(HELIX_MOD_FOLDER)" />
-    <Copy SourceFiles="@(LuaScripts)" DestinationFolder="$(HELIX_MOD_FOLDER)/scripts/%(RecursiveDir)" />
+    <Copy SourceFiles="@(LuaScripts)" DestinationFolder="$(OutDir)/mods/%(RecursiveDir)" />
   </Target>
+
+  <ItemGroup>
+    <None Include="@(LuaScripts)">
+      <Link>$(OutDir)/mods/%(RecursiveDir)</Link>
+    </None>
+  </ItemGroup>
 
 </Project>

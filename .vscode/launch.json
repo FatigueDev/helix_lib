@@ -1,11 +1,30 @@
 {
     "version": "0.2.0",
-    "configurations": [
-        {
-            "name": "MoonSharp Attach",
-            "type": "moonsharp-debug",
-            "debugServer": 41912,
-            "request": "attach"
-        }
-    ]
-}
+    
+    "configurations": [{
+      "name": "Launch Client",
+      "type": "coreclr",
+      "request": "launch",
+      "preLaunchTask": "Build (Debug)",
+      "program": "${env:VINTAGE_STORY}/Vintagestory",
+      "args": [
+        "--playStyle" , "creativebuilding",
+        "--openWorld" , "Debugging",
+        "--addModPath", "${workspaceFolder}/HelixLib/bin/Debug/"
+      ],
+      "console": "internalConsole",
+      "internalConsoleOptions": "openOnSessionStart",
+    },
+    {
+      "name": "MoonSharp Attach (Client)",
+      "type": "moonsharp-debug",
+      "request": "attach",
+      "debugServer" : 41912,
+    },
+    {
+      "name": "MoonSharp Attach (Server)",
+      "type": "moonsharp-debug",
+      "request": "attach",
+      "debugServer" : 41913,
+    }]
+  }
