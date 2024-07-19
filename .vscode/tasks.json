@@ -18,5 +18,12 @@
       "type": "process",
       "command": "dotnet",
       "args": [ "build", "-c", "Release" ]
-    }]
+    }
+    // {
+    //   "label": "Symlink mod working directory with build directory",
+    //   "type":"shell",
+    //   "command": "sh ./symlink_mods.sh",
+    //   "group": "build"
+    // }
+  ]
   }

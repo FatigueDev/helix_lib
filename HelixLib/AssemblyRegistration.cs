@@ -1,5 +1,6 @@
 using System.Reflection;
 using System.Text;
+using HelixLib.Types;
 using MoonSharp.Interpreter;
 using MoonSharp.Interpreter.Interop;
 using Namotion.Reflection;
@@ -34,13 +35,14 @@ namespace HelixLib
             VISIBLE = 1 << 18
         }
 
+        public static List<Type> globalTypes = new();
+
         public static void Register(ICoreAPI api, bool outputAnnotations = false)
         {
             UserData.RegistrationPolicy = InteropRegistrationPolicy.Default;
             UserData.DefaultAccessMode = InteropAccessMode.Hardwired;
 
-            GlobalsRegister.RegisterAll();
-            MoonSharpTypeConversions.RegisterAll();
+            Types.Register.RegisterAll();
 
             RegisterVintageStoryAssemblies(api, outputAnnotations);
         }
@@ -75,6 +77,13 @@ namespace HelixLib
                 GetAssemblyByName("VintagestoryLib")
             };
 
+            List<string> locationBlacklistPrefix = new()
+            {
+                "System",
+                "Microsoft",
+                "Newtonsoft"
+            };
+
             foreach(Assembly asm in vintageStoryAssemblies)
             {
                 UserData.RegisterAssembly(asm, true);
@@ -85,8 +94,27 @@ namespace HelixLib
                 {
                     if(UserData.IsTypeRegistered(type)) continue;
 
+                    bool blacklisted = false;
+
+                    foreach(string blacklist in locationBlacklistPrefix)
+                    {
+                        if(type.FullName.StartsWith(blacklist))
+                        {
+                            blacklisted = true;
+                            break;
+                        }
+                    }
+
+                    if(blacklisted)
+                        continue;
+
                     var regType = UserData.RegisterType(type, InteropAccessMode.Hardwired);
-                    assemblyDescriptors.Add(new AssemblyDescriptorGrouping(asm, regType));
+                    globalTypes.Add(type);
+
+                    if(outputAnnotations)
+                    {
+                        assemblyDescriptors.Add(new AssemblyDescriptorGrouping(asm, regType));
+                    }
                 }
             }
 

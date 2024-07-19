@@ -1,12 +1,21 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <TargetFramework>net7.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
     <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
-    <OutputPath>bin/Debug/$(AssemblyName)</OutputPath>
+    <OutputPath>bin/$(Configuration)/HelixLib_DevKit</OutputPath>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <OutputPath>bin/$(Configuration)/HelixLib</OutputPath>
   </PropertyGroup>
 
   <ItemGroup>
@@ -30,29 +39,41 @@
 
   <ItemGroup>
     <PackageReference Include="MoonSharp" Version="2.0.0" />
-    <PackageReference Include="MoonSharp.Debugger.VsCode" Version="2.0.0" />
     <PackageReference Include="Namotion.Reflection" Version="3.1.1" />
+    <PackageReference Include="Octokit" Version="13.0.1" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Content Include="../modinfo.json">
+  <ItemGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <PackageReference Include="MoonSharp.Debugger.VsCode" Version="2.0.0" />
+  </ItemGroup>
+
+  <!-- <ItemGroup>
+    <Content Include="../modinfo_release/modinfo.json" Condition=" '$(Configuration)' == 'Release' ">
         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-  </ItemGroup>
+    <Content Include="../modinfo_devkit/modinfo.json" Condition=" '$(Configuration)' == 'Debug' ">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup> -->
 
-  <ItemGroup>
-    <!-- <CompiledModFolder Include="./bin/**/*.*"/> -->
-    <LuaScripts Include="./mods/**/*.lua"/>
-  </ItemGroup>
-
-  <Target Name="CopyBuildToModDirectory" AfterTargets="AfterBuild">
-    <Copy SourceFiles="@(LuaScripts)" DestinationFolder="$(OutDir)/mods/%(RecursiveDir)" />
+  <Target Name="CleanOutputDirectory" AfterTargets="BeforeBuild">
+    <RemoveDir Directories="$(OutDir);" />
   </Target>
 
   <ItemGroup>
-    <None Include="@(LuaScripts)">
-      <Link>$(OutDir)/mods/%(RecursiveDir)</Link>
-    </None>
+    <LuaLibraries Include="./lua_libraries/**/*.lua"/>
+    <LuaAnnotations Include="./annotations/**/*.lua"/>
   </ItemGroup>
+
+  <Target Name="CopyToRelease" AfterTargets="AfterBuild" Condition=" '$(Configuration)' == 'Release' ">
+    <Message Text="### AfterBuild - Release ###" Importance="high" />
+    <Copy SourceFiles="@(LuaLibraries)" DestinationFolder="$(OutDir)/lua_libraries/%(RecursiveDir)" />
+  </Target>
+  
+  <Target Name="CopyToDebug" AfterTargets="AfterBuild" Condition=" '$(Configuration)' == 'Debug' ">
+    <Message Text="### AfterBuild - Debug ###" Importance="high" />
+    <Copy SourceFiles="@(LuaAnnotations)" DestinationFolder="$(OutDir)/annotations/%(RecursiveDir)" />
+    <Copy SourceFiles="@(LuaLibraries)" DestinationFolder="$(OutDir)/lua_libraries/%(RecursiveDir)" />
+  </Target>
 
 </Project>

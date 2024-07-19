@@ -1,0 +1,3 @@
+[submodule "HelixLib/mods/helix_example_mod"]
+	path = HelixLib/mods/helix_example_mod
+	url = https://github.com/FatigueDev/helix_example_mod.git

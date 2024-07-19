@@ -1,8 +1,8 @@
 {
     "version": "0.2.0",
-    
+
     "configurations": [{
-      "name": "Launch Client",
+      "name": "Vintage Story (Server Attachment)",
       "type": "coreclr",
       "request": "launch",
       "preLaunchTask": "Build (Debug)",
@@ -14,17 +14,58 @@
       ],
       "console": "internalConsole",
       "internalConsoleOptions": "openOnSessionStart",
+      "serverReadyAction":
+      {        
+        "pattern": "MoonSharp listening on Server",
+        "action": "startDebugging",
+        "name": "MoonSharp Attach (Server)",
+        "killOnServerStop": true,
+      },
     },
     {
-      "name": "MoonSharp Attach (Client)",
-      "type": "moonsharp-debug",
-      "request": "attach",
-      "debugServer" : 41912,
+      "name": "Vintage Story (Client Attachment)",
+      "type": "coreclr",
+      "request": "launch",
+      "preLaunchTask": "Build (Debug)",
+      "program": "${env:VINTAGE_STORY}/Vintagestory",
+      "args": [
+        "--playStyle" , "creativebuilding",
+        "--openWorld" , "Debugging",
+        "--addModPath", "${workspaceFolder}/HelixLib/bin/Debug/"
+      ],
+      "console": "internalConsole",
+      "internalConsoleOptions": "openOnSessionStart",
+      "serverReadyAction":
+      {        
+        "pattern": "MoonSharp listening on Client",
+        "action": "startDebugging",
+        "name": "MoonSharp Attach (Client)",
+        "killOnServerStop": true,
+      },
     },
     {
       "name": "MoonSharp Attach (Server)",
       "type": "moonsharp-debug",
       "request": "attach",
+      "debugServer" : 41912,
+    },
+    {
+      "name": "MoonSharp Attach (Client)",
+      "type": "moonsharp-debug",
+      "request": "attach",
       "debugServer" : 41913,
-    }]
+
+    },
+  ],
+  // "inputs": [
+  //   {
+  //     "id": "getSide",
+  //     "type": "pickString",
+  //     "default": "",
+  //     "description": "MoonSharp debugger should attach to server first.",
+  //     "options": ["Server", "Client"]
+  //     // "command": "shellCommand.execute",
+  //     // "args": {},
+  //   }
+  // ]
   }
